@@ -1,0 +1,14 @@
+bin/
+obj/
+*.user
+*.suo
+.vs/
+*.DotSettings
+*.nupkg
+*.exe
+*.dll
+*.pdb
+*.so
+*.dylib
+*.cache
+Thumbs.db
