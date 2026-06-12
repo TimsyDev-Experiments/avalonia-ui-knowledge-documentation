@@ -10,7 +10,7 @@ avalonia-version: 12.0.4
 
 **What you'll learn:** How to localize an Avalonia application using ResX files, support runtime language switching, and handle right-to-left layouts.
 
-**Prerequisites:** [001 -- Project Setup](/docs/02-tutorials/basics/001-project-setup.md)
+**Prerequisites:** [001 -- Project Setup](../basics/001-project-setup.md)
 
 ---
 

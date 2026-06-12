@@ -215,5 +215,5 @@ myImage.Source = rtb;
 ## See Also
 
 - [025 — Compositor & Custom Visuals](025-compositor-custom-visuals.md)
-- [059 — Colors, Brushes, and FormattedText](/docs/C:/Users/tmher/source/development-plugin-for-avalonia/references/59-media-colors-brushes-and-formatted-text-practical-usage.md)
+- [059 — Colors, Brushes, and FormattedText](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/59-media-colors-brushes-and-formatted-text-practical-usage.md)
 - [Avalonia Docs: Custom Drawing](https://docs.avaloniaui.net/docs/concepts/custom-drawing)

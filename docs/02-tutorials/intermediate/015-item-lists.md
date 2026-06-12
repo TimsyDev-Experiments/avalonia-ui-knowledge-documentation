@@ -10,7 +10,7 @@ avalonia-version: 12.0.4
 
 **What you'll learn:** Choose the right item control for your data, configure selection, enable sorting, and use virtualization.
 
-**Prerequisites:** [009 — Data Templates Basics](/docs/02-tutorials/basics/009-data-templates-basics.md)
+**Prerequisites:** [009 — Data Templates Basics](../basics/009-data-templates-basics.md)
 
 ---
 
@@ -154,6 +154,6 @@ Items[0] = new TodoItem { Title = "Replaced" };
 
 ## See Also
 
-- [009 — Data Templates Basics](/docs/02-tutorials/basics/009-data-templates-basics.md)
+- [009 — Data Templates Basics](../basics/009-data-templates-basics.md)
 - [020 — ItemsControl, Virtualization, Recycling](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/20-itemscontrol-virtualization-and-recycling.md) (plugin ref)
 - [Avalonia Docs: DataGrid](https://docs.avaloniaui.net/controls/datagrid)

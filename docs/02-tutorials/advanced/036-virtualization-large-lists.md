@@ -10,7 +10,7 @@ avalonia-version: 12.0.4
 
 **What you'll learn:** How to efficiently display thousands of items using `ItemsRepeater`, `VirtualizingStackPanel`, and item recycling patterns in Avalonia.
 
-**Prerequisites:** [009 -- Data Templates and Content Templates](/docs/02-tutorials/basics/009-data-templates-content-templates.md), [015 -- Working with Item Lists and CollectionView](/docs/02-tutorials/intermediate/015-item-lists-collections.md)
+**Prerequisites:** [009 -- Data Templates Basics](../basics/009-data-templates-basics.md), [015 -- Item Lists (ListBox, ItemsRepeater, DataGrid)](../intermediate/015-item-lists.md)
 
 ---
 

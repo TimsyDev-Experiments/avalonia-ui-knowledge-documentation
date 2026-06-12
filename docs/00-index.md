@@ -2,7 +2,7 @@
 
 > **Target:** Avalonia 12.0.4 · .NET 10 · CommunityToolkit.Mvvm 8.x  
 > **Last indexed:** 2026-06-12  
-> **View rendered:** Open with `_assets/templates/render.html`
+> **View rendered:** Open with `_assets/templates/render-template.html`
 
 An organized collection of mini-tutorials, reference guides, patterns, and migration notes for Avalonia UI development. Written for developers who know the basics but need quick refreshers, structured learning, and deep-dive references.
 
@@ -125,7 +125,7 @@ Coverage of the commercial tool suite.
 ## Reference Material
 
 - [Avalonia Official Docs (12.x)](https://docs.avaloniaui.net/)
-- [Plugin: Development Plugin for Avalonia](../references/compendium.md) — 69 specialized reference docs
+- [Plugin: Development Plugin for Avalonia](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/compendium.md) — 69 specialized reference docs
 
 ---
 

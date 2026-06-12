@@ -1,6 +1,7 @@
 ---
 topic: migration
 estimated: 3 min read
+researched: 2026-06-12
 avalonia-version: 12.0.4
 ---
 

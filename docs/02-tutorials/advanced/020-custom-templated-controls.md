@@ -10,7 +10,7 @@ avalonia-version: 12.0.4
 
 **What you'll learn:** Create a reusable templated control with `StyledProperty`, a `ControlTheme`, and designer-friendly defaults.
 
-**Prerequisites:** [012 — Control Themes vs Styles](/docs/02-tutorials/intermediate/012-control-themes-vs-styles.md)
+**Prerequisites:** [012 — Control Themes vs Styles](../intermediate/012-control-themes-vs-styles.md)
 
 ---
 
@@ -173,6 +173,6 @@ This follows the `TemplatedControl` convention — consumers know which named el
 
 ## See Also
 
-- [012 — Control Themes vs Styles](/docs/02-tutorials/intermediate/012-control-themes-vs-styles.md)
+- [012 — Control Themes vs Styles](../intermediate/012-control-themes-vs-styles.md)
 - [021 — Custom Controls from Scratch](021-custom-controls-from-scratch.md)
 - [Avalonia Docs: Templated Controls](https://docs.avaloniaui.net/docs/concepts/templated-controls)

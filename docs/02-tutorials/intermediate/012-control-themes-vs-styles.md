@@ -10,7 +10,7 @@ avalonia-version: 12.0.4
 
 **What you'll learn:** The difference between styles and control themes, when to use each, and how to create a custom control theme.
 
-**Prerequisites:** [003 — Basic Styling](/docs/02-tutorials/basics/003-basic-styling.md)
+**Prerequisites:** [003 — Basic Styling](../basics/003-basic-styling.md)
 
 ---
 
@@ -139,6 +139,6 @@ The `^` in the selector refers to the control the theme is applied to.
 
 ## See Also
 
-- [003 — Basic Styling](/docs/02-tutorials/basics/003-basic-styling.md)
+- [003 — Basic Styling](../basics/003-basic-styling.md)
 - [016 — Theme Switching](016-theme-switching.md)
 - [Avalonia Docs: Control Themes](https://docs.avaloniaui.net/docs/styling/control-themes)

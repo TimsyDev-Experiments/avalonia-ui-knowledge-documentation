@@ -10,7 +10,7 @@ avalonia-version: 12.0.4
 
 **What you'll learn:** How to use the Avalonia Parcel tool to package your application for Windows, macOS, and Linux distribution with platform-specific formats.
 
-**Prerequisites:** [001 -- Project Setup](/docs/02-tutorials/basics/001-project-setup.md), a completed Avalonia 12 application, and the Avalonia Plus subscription for Parcel access.
+**Prerequisites:** [001 -- Project Setup](../basics/001-project-setup.md), a completed Avalonia 12 application, and the Avalonia Plus subscription for Parcel access.
 
 ---
 

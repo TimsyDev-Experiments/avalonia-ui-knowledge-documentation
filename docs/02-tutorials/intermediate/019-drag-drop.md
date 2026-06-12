@@ -10,7 +10,7 @@ avalonia-version: 12.0.4
 
 **What you'll learn:** Implement drag-and-drop operations between controls using Avalonia 12's async drag-drop API.
 
-**Prerequisites:** [002 — Command Binding](/docs/02-tutorials/basics/002-command-binding.md)
+**Prerequisites:** [002 — Command Binding](../basics/002-command-binding.md)
 
 ---
 

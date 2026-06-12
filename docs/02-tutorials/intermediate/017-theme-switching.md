@@ -10,7 +10,7 @@ avalonia-version: 12.0.4
 
 **What you'll learn:** Implement runtime light/dark theme switching, detect system theme preference, and persist the user's choice.
 
-**Prerequisites:** [006 — Resources (Static & Dynamic)](docs/02-tutorials/basics/006-resources.md)
+**Prerequisites:** [006 — Resources (Static & Dynamic)](../basics/006-resources.md)
 
 ---
 
@@ -195,6 +195,6 @@ public void LoadTheme()
 
 ## See Also
 
-- [006 — Resources](docs/02-tutorials/basics/006-resources.md)
+- [006 — Resources](../basics/006-resources.md)
 - [012 — Control Themes vs Styles](012-control-themes-vs-styles.md)
 - [Avalonia Docs: Theme Variants](https://docs.avaloniaui.net/docs/styling/theme-variants)

@@ -178,6 +178,6 @@ public class TodoTemplateSelector : IDataTemplate
 
 ## See Also
 
-- [014 — Item Lists in Depth](../intermediate/014-item-lists.md)
+- [014 — Item Lists in Depth](../intermediate/015-item-lists.md)
 - [038 — Data Templates and IDataTemplate Selector Patterns](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/38-data-templates-and-idatatemplate-selector-patterns.md) (plugin ref)
 - [Avalonia Docs: Data Templates](https://docs.avaloniaui.net/docs/data-binding/data-templates)

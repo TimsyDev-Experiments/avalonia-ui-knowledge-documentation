@@ -10,7 +10,7 @@ avalonia-version: 12.0.4
 
 **What you'll learn:** MultiBinding, priority binding, binding to indexers, dynamic data sources, and creating custom binding expressions.
 
-**Prerequisites:** [011 — Compiled Bindings in Depth](/docs/02-tutorials/intermediate/011-compiled-bindings.md)
+**Prerequisites:** [011 — Compiled Bindings in Depth](../intermediate/011-compiled-bindings.md)
 
 ---
 
@@ -190,6 +190,6 @@ Works with `{ReflectionBinding [Key]}` in XAML.
 
 ## See Also
 
-- [011 — Compiled Bindings in Depth](/docs/02-tutorials/intermediate/011-compiled-bindings.md)
+- [011 — Compiled Bindings in Depth](../intermediate/011-compiled-bindings.md)
 - [045 — Value Converters](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/45-value-converters-single-multi-and-binding-wiring.md) (plugin ref)
 - [Avalonia Docs: Data Binding Syntax](https://docs.avaloniaui.net/docs/data-binding/data-binding-syntax)

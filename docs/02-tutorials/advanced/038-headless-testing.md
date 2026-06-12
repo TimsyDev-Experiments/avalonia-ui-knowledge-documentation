@@ -10,7 +10,7 @@ avalonia-version: 12.0.4
 
 **What you'll learn:** How to write unit tests for Avalonia views and behaviors using the headless test platform, without a real window or display.
 
-**Prerequisites:** [001 -- Project Setup](/docs/02-tutorials/basics/001-project-setup.md), [007 -- Observable Object and Property](/docs/02-tutorials/basics/007-observable-object-property.md)
+**Prerequisites:** [001 -- Project Setup](../basics/001-project-setup.md), [007 -- Observable Object and Property](../basics/007-observable-object-property.md)
 
 ---
 
@@ -186,7 +186,7 @@ public class TestsBase : IDisposable
 ## 8. Mocking platform services
 
 ```csharp
-[AvalonaFact]
+[AvaloniaFact]
 public async Task FileOpen_RequestsStorage()
 {
     var mockStorage = new Mock<IStorageProvider>();

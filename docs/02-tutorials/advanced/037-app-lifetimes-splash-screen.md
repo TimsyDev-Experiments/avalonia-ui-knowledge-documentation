@@ -10,7 +10,7 @@ avalonia-version: 12.0.4
 
 **What you'll learn:** How Avalonia application lifetimes work on desktop, mobile, and browser targets, with patterns for splash screens, single-instance enforcement, and graceful shutdown.
 
-**Prerequisites:** [001 -- Project Setup](/docs/02-tutorials/basics/001-project-setup.md)
+**Prerequisites:** [001 -- Project Setup](../basics/001-project-setup.md)
 
 ---
 
@@ -21,7 +21,7 @@ Avalonia provides three lifetime implementations:
 | Lifetime | Platform | Entry point |
 |----------|----------|-------------|
 | `IClassicDesktopStyleApplicationLifetime` | Windows, macOS, Linux | `StartWithClassicDesktopLifetime` |
-| `ISingleViewApplicationLifetime` | iOS, Android, Browser | `StartWithLinuxLifetime` (wrong — use `UsePlatformDetect`) |
+| `ISingleViewApplicationLifetime` | iOS, Android, Browser | `StartWithClassicDesktopLifetime(args)` for desktop; `StartWithLinuxLifetime(args)` for Linux DEB — use `UsePlatformDetect()` |
 | `IControlledApplicationLifetime` | Desktop | Manual shutdown control |
 
 ## 2. Classic desktop lifetime (standard)
@@ -166,11 +166,18 @@ public override async void OnFrameworkInitializationCompleted()
 ## 7. Single-view lifetime (mobile/browser)
 
 ```csharp
-// Program.cs
+// Program.cs — browser target
 public static void Main(string[] args)
 {
     BuildAvaloniaApp()
-        .StartWithClassicDesktopLifetime(args);
+        .StartWithBrowserPlatform(args);
+}
+
+// Program.cs — Android target
+public static void Main(string[] args)
+{
+    BuildAvaloniaApp()
+        .StartWithAndroidPlatform(args);
 }
 
 // App.axaml.cs

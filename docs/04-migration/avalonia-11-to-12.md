@@ -9,7 +9,7 @@ avalonia-version: 12.0.4
 
 **What you'll learn:** Step-by-step migration of an Avalonia 11.3.x project to 12.0.4, covering packages, API changes, bindings, and project file updates.
 
-**Prerequisites:** [001 — Project Setup](/docs/02-tutorials/basics/001-project-setup.md)
+**Prerequisites:** [001 — Project Setup](../02-tutorials/basics/001-project-setup.md)
 
 ---
 

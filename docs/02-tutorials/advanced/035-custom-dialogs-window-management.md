@@ -10,7 +10,7 @@ avalonia-version: 12.0.4
 
 **What you'll learn:** How to create reusable dialog windows with MVVM, manage multiple windows, prevent close, use custom chrome, and overlay dialogs.
 
-**Prerequisites:** [010 -- Window and Dialog Basics](/docs/02-tutorials/basics/010-window-dialog-basics.md), [016 -- Window and Dialog Management](/docs/02-tutorials/intermediate/016-window-dialog-management.md)
+**Prerequisites:** [010 -- Window and Dialog Basics](../basics/010-window-dialog-basics.md), [016 -- Window and Dialog Management](../intermediate/016-window-dialog-management.md)
 
 ---
 

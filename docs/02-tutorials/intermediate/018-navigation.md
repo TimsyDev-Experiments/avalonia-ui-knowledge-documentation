@@ -10,7 +10,7 @@ avalonia-version: 12.0.4
 
 **What you'll learn:** Implement View-first navigation with a ViewModel-driven approach using `ContentControl` and DI.
 
-**Prerequisites:** [007 — ObservableObject & ObservableProperty](/docs/02-tutorials/basics/007-observable-object-property.md)
+**Prerequisites:** [007 — ObservableObject & ObservableProperty](../basics/007-observable-object-property.md)
 
 ---
 

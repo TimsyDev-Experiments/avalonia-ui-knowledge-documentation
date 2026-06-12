@@ -10,7 +10,7 @@ avalonia-version: 12.0.4
 
 **What you'll learn:** Add validation rules to ViewModels, display error messages in the UI, and use Avalonia 12's simplified validation pipeline.
 
-**Prerequisites:** [007 — ObservableObject & ObservableProperty](/docs/02-tutorials/basics/007-observable-object-property.md)
+**Prerequisites:** [007 — ObservableObject & ObservableProperty](../basics/007-observable-object-property.md)
 
 ---
 
@@ -159,6 +159,6 @@ In v11, you needed to override `UpdateDataValidation` to report errors. In v12, 
 
 ## See Also
 
-- [007 — ObservableObject & ObservableProperty](/docs/02-tutorials/basics/007-observable-object-property.md)
+- [007 — ObservableObject & ObservableProperty](../basics/007-observable-object-property.md)
 - [022 — Validation Pipeline](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/22-validation-pipeline-and-data-errors.md) (plugin ref)
 - [Avalonia Docs: Data Validation](https://docs.avaloniaui.net/docs/data-binding/data-validation)

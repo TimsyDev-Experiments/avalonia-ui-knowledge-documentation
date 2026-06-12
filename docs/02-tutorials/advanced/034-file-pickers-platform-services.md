@@ -10,7 +10,7 @@ avalonia-version: 12.0.4
 
 **What you'll learn:** How to use Avalonia's `StorageProvider` for file and folder pickers, the clipboard service, and other platform services accessed through `TopLevel`.
 
-**Prerequisites:** [001 -- Project Setup](/docs/02-tutorials/basics/001-project-setup.md), [010 -- Window and Dialog Basics](/docs/02-tutorials/basics/010-window-dialog-basics.md)
+**Prerequisites:** [001 -- Project Setup](../basics/001-project-setup.md), [010 -- Window and Dialog Basics](../basics/010-window-dialog-basics.md)
 
 ---
 
@@ -116,9 +116,9 @@ var text = await clipboard.GetTextAsync();
 var formats = await clipboard.GetFormatsAsync();
 
 // Set custom data
-var dataObject = new DataObject();
-dataObject.Set(DataFormats.Text, "Custom data");
-await clipboard.SetDataObjectAsync(dataObject);
+var data = new DataObject();
+data.Set(DataFormats.Text, "Custom data");
+await clipboard.SetDataObjectAsync(data);
 
 // Clear
 await clipboard.ClearAsync();

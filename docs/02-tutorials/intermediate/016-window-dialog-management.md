@@ -10,7 +10,7 @@ avalonia-version: 12.0.4
 
 **What you'll learn:** Manage multiple windows, handle window-to-ViewModel communication, and use service-based dialog patterns with DI.
 
-**Prerequisites:** [010 — Window Basics & Simple Dialogs](/docs/02-tutorials/basics/010-window-dialog-basics.md)
+**Prerequisites:** [010 — Window Basics & Simple Dialogs](../basics/010-window-dialog-basics.md)
 
 ---
 
@@ -169,6 +169,6 @@ window.Opened += (_, _) =>
 
 ## See Also
 
-- [010 — Window Basics & Simple Dialogs](/docs/02-tutorials/basics/010-window-dialog-basics.md)
+- [010 — Window Basics & Simple Dialogs](../basics/010-window-dialog-basics.md)
 - [013 — IMessenger Patterns](014-imessenger-patterns.md)
 - [048 — TopLevel, Window, and Runtime Services](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/48-toplevel-window-and-runtime-services.md)

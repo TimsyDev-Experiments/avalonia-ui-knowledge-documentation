@@ -10,7 +10,7 @@ avalonia-version: 12.0.4
 
 **What you'll learn:** Create attached properties to extend any control, and build reusable attached behaviors for cross-cutting concerns.
 
-**Prerequisites:** [003 — Basic Styling](/docs/02-tutorials/basics/003-basic-styling.md)
+**Prerequisites:** [003 — Basic Styling](../basics/003-basic-styling.md)
 
 ---
 

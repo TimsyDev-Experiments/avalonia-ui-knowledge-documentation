@@ -11,7 +11,7 @@ packages: AvaloniaUI.DiagnosticsSupport 2.2.1
 
 **What you'll learn:** Install, configure, and use the Avalonia DevTools (F12) for live inspection, property editing, and performance profiling.
 
-**Prerequisites:** [001 — Project Setup](/docs/02-tutorials/basics/001-project-setup.md)
+**Prerequisites:** [001 — Project Setup](../basics/001-project-setup.md)
 
 ---
 

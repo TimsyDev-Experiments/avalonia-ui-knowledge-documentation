@@ -10,7 +10,7 @@ avalonia-version: 12.0.4
 
 **What you'll learn:** How to wire CommunityToolkit.Mvvm ViewModels into your Avalonia application using the Microsoft.Extensions.DependencyInjection container.
 
-**Prerequisites:** [001 -- Project Setup](/docs/02-tutorials/basics/001-project-setup.md), [007 -- Observable Object and Property](/docs/02-tutorials/basics/007-observable-object-property.md)
+**Prerequisites:** [001 -- Project Setup](../basics/001-project-setup.md), [007 -- Observable Object and Property](../basics/007-observable-object-property.md)
 
 ---
 

@@ -143,4 +143,4 @@ Press **F12** to open DevTools (requires Avalonia Plus subscription or Community
 
 - [002 — Command Binding](002-command-binding.md)
 - [Avalonia Docs: Create your first project](https://docs.avaloniaui.net/docs/get-started/create-your-first-project)
-- [Avalonia 12 Breaking Changes](/docs/04-migration/avalonia-11-to-12.md)
+- [Avalonia 12 Breaking Changes](../../04-migration/avalonia-11-to-12.md)

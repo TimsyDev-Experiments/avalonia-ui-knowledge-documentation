@@ -1,6 +1,7 @@
 ---
 topic: reference
 estimated: 5 min
+researched: 2026-06-12
 avalonia-version: 12.0.4
 ---
 
@@ -144,4 +145,4 @@ Or via style:
 </ControlTheme>
 ```
 
-See [Tutorial 012](/docs/02-tutorials/intermediate/012-control-themes-vs-styles.md) for detailed walkthrough.
+See [Tutorial 012](../02-tutorials/intermediate/012-control-themes-vs-styles.md) for detailed walkthrough.

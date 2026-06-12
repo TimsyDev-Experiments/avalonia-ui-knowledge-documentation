@@ -39,6 +39,6 @@ Record research findings as a comment block at the top of the document being wri
 ```
 Researched: 2026-06-11
 Avalonia version confirmed: 12.0.4
-CommunityToolkit.Mvvm: 8.4.0
+CommunityToolkit.Mvvm: 8.4.2
 DI package: Microsoft.Extensions.DependencyInjection 9.x
 ```

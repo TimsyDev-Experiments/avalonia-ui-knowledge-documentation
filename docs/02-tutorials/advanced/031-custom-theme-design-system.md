@@ -10,7 +10,7 @@ avalonia-version: 12.0.4
 
 **What you'll learn:** How to create a full custom theme that replaces FluentTheme with your own design tokens, control themes, and component variants.
 
-**Prerequisites:** [012 -- Control Themes vs Styles](/docs/02-tutorials/intermediate/012-control-themes-vs-styles.md), [006 -- Resources](/docs/02-tutorials/basics/006-resources.md)
+**Prerequisites:** [012 -- Control Themes vs Styles](../intermediate/012-control-themes-vs-styles.md), [006 -- Resources](../basics/006-resources.md)
 
 ---
 

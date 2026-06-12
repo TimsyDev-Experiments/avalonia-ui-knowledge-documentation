@@ -10,7 +10,7 @@ avalonia-version: 12.0.4
 
 **What you'll learn:** Create XAML animations with `Style.Animations`, use transitions on controls, build keyframe animations, and use the animation API from code.
 
-**Prerequisites:** [003 — Basic Styling](/docs/02-tutorials/basics/003-basic-styling.md)
+**Prerequisites:** [003 — Basic Styling](../basics/003-basic-styling.md)
 
 ---
 

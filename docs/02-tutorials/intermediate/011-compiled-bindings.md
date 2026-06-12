@@ -10,7 +10,7 @@ avalonia-version: 12.0.4
 
 **What you'll learn:** How compiled bindings work in Avalonia 12, explicit `CompiledBinding` vs `ReflectionBinding`, and patterns for mixed usage.
 
-**Prerequisites:** [002 — Command Binding](/docs/02-tutorials/basics/002-command-binding.md)
+**Prerequisites:** [002 — Command Binding](../basics/002-command-binding.md)
 
 ---
 
@@ -123,6 +123,6 @@ When targeting Native AOT, compiled bindings are required. Reflection-based bind
 
 ## See Also
 
-- [002 — Command Binding](/docs/02-tutorials/basics/002-command-binding.md)
-- [009 — Data Templates Basics](/docs/02-tutorials/basics/009-data-templates-basics.md)
+- [002 — Command Binding](../basics/002-command-binding.md)
+- [009 — Data Templates Basics](../basics/009-data-templates-basics.md)
 - [Avalonia Docs: Compiled Bindings](https://docs.avaloniaui.net/docs/data-binding/compiled-bindings)

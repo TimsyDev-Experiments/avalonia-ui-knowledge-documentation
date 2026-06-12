@@ -1,6 +1,7 @@
 ---
 topic: reference
 estimated: 5 min
+researched: 2026-06-12
 avalonia-version: 12.0.4
 ---
 

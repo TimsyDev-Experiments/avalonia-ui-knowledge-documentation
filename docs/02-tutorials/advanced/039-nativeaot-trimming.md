@@ -10,7 +10,7 @@ avalonia-version: 12.0.4
 
 **What you'll learn:** How to publish an Avalonia application with NativeAOT for fast startup, low memory, and single-file deployment, plus trimming configuration to avoid reflection-related crashes.
 
-**Prerequisites:** [001 -- Project Setup](/docs/02-tutorials/basics/001-project-setup.md)
+**Prerequisites:** [001 -- Project Setup](../basics/001-project-setup.md)
 
 ---
 
