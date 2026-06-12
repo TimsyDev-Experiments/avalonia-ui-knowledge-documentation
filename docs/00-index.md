@@ -1,7 +1,7 @@
 # Avalonia UI 12 — Study & Reference Documentation
 
 > **Target:** Avalonia 12.0.4 · .NET 10 · CommunityToolkit.Mvvm 8.x  
-> **Last indexed:** 2026-06-11  
+> **Last indexed:** 2026-06-12  
 > **View rendered:** Open with `_assets/templates/render.html`
 
 An organized collection of mini-tutorials, reference guides, patterns, and migration notes for Avalonia UI development. Written for developers who know the basics but need quick refreshers, structured learning, and deep-dive references.
@@ -30,6 +30,8 @@ Cheat sheets and one-page summaries for common tasks.
 | [Q02](01-quick-refs/mvvm-source-generators.md) | CommunityToolkit.Mvvm source generator reference |
 | [Q03](01-quick-refs/xaml-selectors.md) | XAML style selectors cheat sheet |
 | [Q04](01-quick-refs/binding-modes.md) | Binding modes cheat sheet |
+| [Q05](01-quick-refs/resource-dictionaries.md) | Resource Dictionaries |
+| [Q06](01-quick-refs/control-themes.md) | Control Themes reference |
 
 ---
 
@@ -71,7 +73,16 @@ Step-by-step guides organized by difficulty.
 8. [027 — Advanced Composite Bindings](02-tutorials/advanced/027-advanced-composite-bindings.md)
 9. [028 — Custom Drawing with Skia](02-tutorials/advanced/028-custom-drawing-skia.md)
 10. [029 — Using Avalonia DevTools](02-tutorials/advanced/029-avalonia-plus-devtools.md)
-11. *(planned)* Custom Skinning & Full Theme Override
+11. [030 — Parcel Packaging & Distribution](02-tutorials/advanced/030-parcel-packaging.md)
+12. [031 — Custom Theme & Design System](02-tutorials/advanced/031-custom-theme-design-system.md)
+13. [032 — MVVM with Dependency Injection](02-tutorials/advanced/032-mvvm-di-wiring.md)
+14. [033 — Localization & i18n](02-tutorials/advanced/033-localization-i18n.md)
+15. [034 — File Pickers & Platform Services](02-tutorials/advanced/034-file-pickers-platform-services.md)
+16. [035 — Custom Dialogs & Window Management](02-tutorials/advanced/035-custom-dialogs-window-management.md)
+17. [036 — Virtualization & Large List Performance](02-tutorials/advanced/036-virtualization-large-lists.md)
+18. [037 — App Lifetimes & Splash Screen](02-tutorials/advanced/037-app-lifetimes-splash-screen.md)
+19. [038 — Headless Testing](02-tutorials/advanced/038-headless-testing.md)
+20. [039 — NativeAOT & Trimming](02-tutorials/advanced/039-nativeaot-trimming.md)
 
 ---
 
@@ -79,12 +90,12 @@ Step-by-step guides organized by difficulty.
 
 Reusable architectural and design patterns.
 
-| Pattern | Status |
-|---|---|
-| MVVM with DI (Microsoft.Extensions.DI) | Planned |
+| Pattern | Covered In |
+|---|---|---|
+| MVVM with DI (Microsoft.Extensions.DI) | [032](02-tutorials/advanced/032-mvvm-di-wiring.md) |
+| App lifetimes & startup patterns | [037](02-tutorials/advanced/037-app-lifetimes-splash-screen.md) |
 | Service locator vs DI | Planned |
 | Modular app with plugin-style views | Planned |
-| Async initialization patterns | Planned |
 
 ---
 
@@ -105,9 +116,9 @@ Moving between versions and platforms.
 Coverage of the commercial tool suite.
 
 | Tool | Status |
-|---|---|
+|---|---|---|
 | [DevTools — setup & usage guide](02-tutorials/advanced/029-avalonia-plus-devtools.md) | Complete |
-| Parcel — packaging walkthrough | Planned |
+| [Parcel — packaging walkthrough](02-tutorials/advanced/030-parcel-packaging.md) | Complete |
 
 ---
 
