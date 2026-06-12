@@ -1,0 +1,87 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:DemoApp.ViewModels"
+        xmlns:models="using:DemoApp.Models"
+        xmlns:converters="using:DemoApp.Converters"
+        x:Class="DemoApp.MainWindow"
+        x:DataType="vm:MainViewModel"
+        Title="Avalonia Demo"
+        Width="800" Height="550">
+
+  <Window.Resources>
+    <converters:BoolToColorConverter x:Key="DoneToColor" />
+  </Window.Resources>
+
+  <DockPanel Margin="12">
+    <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Spacing="8" Margin="0,0,0,12">
+      <Button Content="+ Add"
+              Command="{Binding AddTodoCommand}" />
+      <Button Content="− Remove"
+              Command="{Binding RemoveSelectedTodoCommand}" />
+      <Button Content="{Binding Counter, StringFormat='Increment ({0})'}"
+              Command="{Binding IncrementCommand}" />
+      <Button Content="Load Async"
+              Command="{Binding SimulateWorkCommand}" />
+      <CheckBox IsChecked="{Binding IsDarkMode}"
+                Content="Dark Mode"
+                VerticalAlignment="Center" />
+    </StackPanel>
+
+    <Grid ColumnDefinitions="*,Auto,*">
+      <Border Grid.Column="0" Margin="0,0,6,0"
+              BorderBrush="{StaticResource SystemAccentColor}"
+              BorderThickness="1" CornerRadius="8" Padding="8">
+        <DockPanel>
+          <TextBlock DockPanel.Dock="Top"
+                     FontSize="16" FontWeight="Bold"
+                     Text="Todo List" Margin="0,0,0,8" />
+
+          <ListBox ItemsSource="{Binding Todos}"
+                   SelectedItem="{Binding SelectedTodo}">
+            <ListBox.ItemTemplate>
+              <DataTemplate x:DataType="models:TodoItem">
+                <DockPanel Margin="0,2">
+                  <CheckBox IsChecked="{Binding IsDone}"
+                            DockPanel.Dock="Left"
+                            VerticalAlignment="Center" />
+                  <TextBlock Text="{Binding Title}"
+                             Foreground="{Binding IsDone, Converter={StaticResource DoneToColor}}"
+                             VerticalAlignment="Center"
+                             Margin="8,0,0,0" />
+                  <TextBlock Text="{Binding DueDate}"
+                             DockPanel.Dock="Right"
+                             Foreground="Gray"
+                             FontSize="12" />
+                </DockPanel>
+              </DataTemplate>
+            </ListBox.ItemTemplate>
+          </ListBox>
+
+          <DockPanel DockPanel.Dock="Bottom" Margin="0,8,0,0">
+            <Button DockPanel.Dock="Right"
+                    Content="Add"
+                    Command="{Binding AddTodoCommand}"
+                    Margin="8,0,0,0" />
+            <TextBox Text="{Binding NewItemTitle, Mode=TwoWay}"
+                     PlaceholderText="New todo title..." />
+          </DockPanel>
+        </DockPanel>
+      </Border>
+
+      <GridSplitter Grid.Column="1" Width="4" Background="Transparent" />
+
+      <Border Grid.Column="2" Margin="6,0,0,0"
+              BorderBrush="{StaticResource SystemAccentColor}"
+              BorderThickness="1" CornerRadius="8" Padding="8">
+        <StackPanel Spacing="12" VerticalAlignment="Center">
+          <TextBlock FontSize="14" FontWeight="Bold"
+                     Text="Status" />
+          <TextBlock Text="{Binding Counter, StringFormat='Counter: {0}'}" />
+          <ProgressBar Value="50"
+                       IsIndeterminate="True" />
+          <TextBlock Text="{Binding Todos.Count, StringFormat='Total items: {0}'}" />
+        </StackPanel>
+      </Border>
+    </Grid>
+  </DockPanel>
+</Window>

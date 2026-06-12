@@ -26,9 +26,10 @@ Cheat sheets and one-page summaries for common tasks.
 
 | Ref | Topic |
 |---|---|
-| *(planned)* | Avalonia 12 ↔ 11 breaking changes quick chart |
-| *(planned)* | CommunityToolkit.Mvvm source generator reference |
-| *(planned)* | XAML binding modes cheat sheet |
+| [Q01](01-quick-refs/avalonia-12-breaking-changes.md) | Avalonia 11 → 12 key breaking changes |
+| [Q02](01-quick-refs/mvvm-source-generators.md) | CommunityToolkit.Mvvm source generator reference |
+| [Q03](01-quick-refs/xaml-selectors.md) | XAML style selectors cheat sheet |
+| [Q04](01-quick-refs/binding-modes.md) | Binding modes cheat sheet |
 
 ---
 
@@ -68,8 +69,9 @@ Step-by-step guides organized by difficulty.
 6. [025 — Compositor & Custom Visuals](02-tutorials/advanced/025-compositor-custom-visuals.md)
 7. [026 — Accessibility & Automation](02-tutorials/advanced/026-accessibility-automation.md)
 8. [027 — Advanced Composite Bindings](02-tutorials/advanced/027-advanced-composite-bindings.md)
-9. *(planned)* Custom Drawing with Skia
-10. *(planned)* Custom Skinning & Full Theme Override
+9. [028 — Custom Drawing with Skia](02-tutorials/advanced/028-custom-drawing-skia.md)
+10. [029 — Using Avalonia DevTools](02-tutorials/advanced/029-avalonia-plus-devtools.md)
+11. *(planned)* Custom Skinning & Full Theme Override
 
 ---
 
@@ -92,9 +94,9 @@ Moving between versions and platforms.
 
 | Guide | Status |
 |---|---|
-| Avalonia 11 → 12 Quick Migration | Planned |
-| WPF → Avalonia key mappings | Planned (reference plugin) |
-| Key breaking changes in 12.0.4 | Planned |
+| [Avalonia 11 → 12 Migration](04-migration/avalonia-11-to-12.md) | Complete — 10-phase guide |
+| [WPF → Avalonia Key Mappings](04-migration/wpf-to-avalonia-key-mappings.md) | Complete — control/property/binding/style tables |
+| Key breaking changes in 12.0.4 | See [Q01 quick-ref](01-quick-refs/avalonia-12-breaking-changes.md) |
 
 ---
 
@@ -104,7 +106,7 @@ Coverage of the commercial tool suite.
 
 | Tool | Status |
 |---|---|
-| DevTools — setup & usage guide | Planned |
+| [DevTools — setup & usage guide](02-tutorials/advanced/029-avalonia-plus-devtools.md) | Complete |
 | Parcel — packaging walkthrough | Planned |
 
 ---
