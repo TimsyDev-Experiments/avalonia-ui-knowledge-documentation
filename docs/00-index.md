@@ -61,6 +61,8 @@ Step-by-step guides organized by difficulty.
 7. [017 — Theme Switching (Light/Dark/System)](02-tutorials/intermediate/017-theme-switching.md)
 8. [018 — Navigation Patterns](02-tutorials/intermediate/018-navigation.md)
 9. [019 — Drag & Drop](02-tutorials/intermediate/019-drag-drop.md)
+10. [040 — DataGrid Deep Dive](02-tutorials/intermediate/040-datagrid-deep-dive.md)
+11. [041 — Menus, Context Menus, and System Tray](02-tutorials/intermediate/041-menus-context-menus-tray.md)
 
 ### Advanced
 1. [020 — Custom Templated Controls](02-tutorials/advanced/020-custom-templated-controls.md)
@@ -83,6 +85,7 @@ Step-by-step guides organized by difficulty.
 18. [037 — App Lifetimes & Splash Screen](02-tutorials/advanced/037-app-lifetimes-splash-screen.md)
 19. [038 — Headless Testing](02-tutorials/advanced/038-headless-testing.md)
 20. [039 — NativeAOT & Trimming](02-tutorials/advanced/039-nativeaot-trimming.md)
+21. [042 — Multi-Targeting: Desktop, Browser, Mobile](02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile.md)
 
 ---
 
