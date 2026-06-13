@@ -94,8 +94,9 @@ Reusable architectural and design patterns.
 |---|---|---|
 | MVVM with DI (Microsoft.Extensions.DI) | [032](02-tutorials/advanced/032-mvvm-di-wiring.md) |
 | App lifetimes & startup patterns | [037](02-tutorials/advanced/037-app-lifetimes-splash-screen.md) |
-| Service locator vs DI | Planned |
-| Modular app with plugin-style views | Planned |
+| Service locator vs DI | [Pattern 001](03-patterns/001-service-locator-vs-di.md) |
+| Modular app with plugin-style views | [Pattern 002](03-patterns/002-plugin-architecture.md) |
+| Async initialization patterns | [Pattern 003](03-patterns/003-async-initialization.md) |
 
 ---
 
