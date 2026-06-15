@@ -194,7 +194,7 @@ Attached behaviors are the Avalonia equivalent of WPF's `Interactivity.Behaviors
 
 ## See Also
 
-- [016 — Property System & Attached Properties](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/16-property-system-attached-properties-behaviors-and-style-properties.md) (plugin ref)
+- [022 — Attached Properties & Behaviors](022-attached-properties-behaviors.md) — this tutorial covers property system details inline
 - [021 — Custom Controls from Scratch](021-custom-controls-from-scratch.md)
 - [022E — Attached Properties & Behaviors (examples)](022-attached-properties-behaviors-examples.md)
 - [022V — Attached Properties & Behaviors (verbose companion)](022-attached-properties-behaviors-verbose.md)

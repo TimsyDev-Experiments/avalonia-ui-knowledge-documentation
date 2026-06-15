@@ -231,7 +231,7 @@ In headless tests, you can set the attached property directly via the static set
 
 ## Cross-links
 
-- [016 — Property System & Attached Properties](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/16-property-system-attached-properties-behaviors-and-style-properties.md) (plugin ref)
+- [022 — Attached Properties & Behaviors](022-attached-properties-behaviors.md) — covers property system details inline
 - [020 — Custom Templated Controls](020-custom-templated-controls.md) — attached properties often complement templated controls
 - [022E — Attached Properties & Behaviors (examples)](022-attached-properties-behaviors-examples.md)
 - [026 — Accessibility & Automation](026-accessibility-automation.md) — `AutomationProperties` is an attached-property family

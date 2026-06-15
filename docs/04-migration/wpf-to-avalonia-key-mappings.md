@@ -117,4 +117,4 @@ avalonia-version: 12.0.4
 ## See Also
 
 - [Avalonia official: WPF Migration Guide](https://docs.avaloniaui.net/docs/migration/wpf)
-- [Plugin: WPF to Avalonia Modern UI Conversion Index](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/64-wpf-to-avalonia-modern-ui-conversion-index.md)
+- [Avalonia Official: WPF Migration Guide](https://docs.avaloniaui.net/docs/migration/wpf) — official reference

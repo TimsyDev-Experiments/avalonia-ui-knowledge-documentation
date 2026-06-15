@@ -438,5 +438,5 @@ The chat example uses Avalonia's built-in type-based template matching — you j
 - [009 — Data Templates Basics](009-data-templates-basics.md)
 - [009V — Verbose Companion](009-data-templates-basics-verbose.md)
 - [015 — Item Lists in Depth](../intermediate/015-item-lists.md)
-- [045 — Value Converters](../basics/045-value-converters.md)
+- [004 — Value Converters](../basics/004-value-converters.md) — essential for DataTemplate binding expressions
 - [Avalonia Docs: IDataTemplate](https://docs.avaloniaui.net/docs/data-templates/creating-data-templates-in-code)

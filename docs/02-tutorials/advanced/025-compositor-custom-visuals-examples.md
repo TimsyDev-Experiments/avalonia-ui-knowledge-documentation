@@ -540,5 +540,5 @@ public class MiniMapControl : Control
 - [025V — Compositor & Custom Visuals (verbose companion)](025-compositor-custom-visuals-verbose.md)
 - [024 — Animation & Transitions](024-animation-transitions.md) — UI-thread animation alternative
 - [021 — Custom Controls from Scratch](021-custom-controls-from-scratch.md) — `Render(DrawingContext)` basics
-- [061 — Rendering & Interop Boundaries](../../references/61-rendering-and-interop-boundaries-opengl-vulkan-framebuffer.md) (plugin ref)
+- [025 — Compositor & Custom Visuals](025-compositor-custom-visuals.md) — the compositor rendering model in depth
 - [Avalonia Docs: Compositor](https://docs.avaloniaui.net/docs/concepts/compositor)

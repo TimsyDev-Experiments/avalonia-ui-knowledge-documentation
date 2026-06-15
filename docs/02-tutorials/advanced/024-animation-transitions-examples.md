@@ -237,5 +237,5 @@ public partial class TaskListViewModel : ObservableObject
 - [024 — Animation & Transitions](024-animation-transitions.md)
 - [024V — Animation & Transitions (verbose companion)](024-animation-transitions-verbose.md)
 - [025 — Compositor & Custom Visuals](025-compositor-custom-visuals.md) — GPU-only animation path
-- [012 — Animations, Transitions, Frame Loops](../../references/12-animations-transitions-and-frame-loops.md) (plugin ref)
+- [024 — Animation & Transitions](024-animation-transitions.md) — comprehensive coverage of animation primitives
 - [Avalonia Docs: Animation](https://docs.avaloniaui.net/docs/animation/)

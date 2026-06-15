@@ -345,5 +345,5 @@ See [038 — Headless Testing](../advanced/038-headless-testing.md) for setting 
 
 - [021 — Custom Controls from Scratch](021-custom-controls-from-scratch.md) — when you need Render-override controls instead of templates
 - [020E — Custom Templated Controls (examples)](020-custom-templated-controls-examples.md)
-- [016 — Property System & Attached Properties](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/16-property-system-attached-properties-behaviors-and-style-properties.md) (plugin ref) — deeper dive into property value precedence
+- [016 — Property System & Attached Properties](../../02-tutorials/advanced/022-attached-properties-behaviors.md) — deeper dive into property value precedence
 - [Avalonia Docs: Templated Controls](https://docs.avaloniaui.net/docs/concepts/templated-controls)

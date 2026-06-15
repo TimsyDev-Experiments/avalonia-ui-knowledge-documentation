@@ -274,4 +274,4 @@ Fix: Message types should be immutable (`sealed`, read-only properties). If the 
 - [016 — Window & Dialog Management](016-window-dialog-management.md) (shows messenger for dialog close)
 - [CommunityToolkit.Mvvm Docs: Messenger](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/messenger)
 - [014E — IMessenger Patterns (examples)](014-imessenger-patterns-examples.md)
-- [MVVM Toolkit Messenger Skill](file:///C:/Users/tmher/.config/opencode/skills/mvvm-toolkit-messenger/SKILL.md)
+- MVVM Toolkit Messenger Skill (local skill — available via opencode skill system)

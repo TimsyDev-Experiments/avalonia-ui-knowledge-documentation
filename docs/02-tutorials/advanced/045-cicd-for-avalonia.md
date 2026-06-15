@@ -173,7 +173,7 @@ Avalonia headless testing requires no display server. On Linux the GitHub runner
     echo "DISPLAY=:99" >> $GITHUB_ENV
 ```
 
-See [tutorial 038](../intermediate/038-headless-testing.md) for the test project setup.
+See [tutorial 038](038-headless-testing.md) for the test project setup (same directory).
 
 ## 7. Code signing (Windows)
 

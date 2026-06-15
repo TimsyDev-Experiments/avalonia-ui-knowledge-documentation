@@ -350,7 +350,7 @@ Only applies to `Image` control and `DrawingContext.DrawImage` calls.
 
 - [028 — Custom Drawing with Skia (original)](028-custom-drawing-skia.md)
 - [025 — Compositor & Custom Visuals](025-compositor-custom-visuals.md)
-- [059 — Colors, Brushes, and FormattedText (plugin ref)](../references/59-media-colors-brushes-and-formatted-text-practical-usage.md)
+- [028 — Custom Drawing with Skia](028-custom-drawing-skia.md) — covers colors, brushes, and text rendering
 - [021 — Custom Controls from Scratch](021-custom-controls-from-scratch.md)
 - [Avalonia Docs: Custom Drawing](https://docs.avaloniaui.net/docs/concepts/custom-drawing)
 - [028X — Custom Drawing with Skia (examples)](028-custom-drawing-skia-examples.md)

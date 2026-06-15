@@ -215,7 +215,7 @@ myImage.Source = rtb;
 ## See Also
 
 - [025 — Compositor & Custom Visuals](025-compositor-custom-visuals.md)
-- [059 — Colors, Brushes, and FormattedText](../references/59-media-colors-brushes-and-formatted-text-practical-usage.md)
+- [028 — Custom Drawing with Skia](028-custom-drawing-skia.md) — covers colors, brushes, and text rendering
 - [Avalonia Docs: Custom Drawing](https://docs.avaloniaui.net/docs/concepts/custom-drawing)
 - [028V — Custom Drawing with Skia (verbose companion)](028-custom-drawing-skia-verbose.md)
 - [028X — Custom Drawing with Skia (examples)](028-custom-drawing-skia-examples.md)

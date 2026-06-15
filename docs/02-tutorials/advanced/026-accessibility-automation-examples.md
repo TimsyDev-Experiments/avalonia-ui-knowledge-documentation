@@ -539,6 +539,5 @@ public partial class FileCopyViewModel : ObservableObject
 - [026V — Accessibility & Automation (verbose companion)](026-accessibility-automation-verbose.md)
 - [020 — Custom Templated Controls](020-custom-templated-controls.md) — templated control patterns for accessible design
 - [022 — Attached Properties & Behaviors](022-attached-properties-behaviors.md) — `AutomationProperties` as attached properties
-- [023 — Accessibility & Automation](../../references/23-accessibility-and-automation.md) (plugin ref)
-- [060 — Automation Properties & Attached Behavior Patterns](../../references/60-automation-properties-and-attached-behavior-patterns.md) (plugin ref)
+- [026 — Accessibility & Automation](026-accessibility-automation.md) — complete walkthrough of automation properties and patterns
 - [Avalonia Docs: Accessibility](https://docs.avaloniaui.net/docs/accessibility/)

@@ -229,5 +229,5 @@ await animation.RunAsync(target, cts.Token);
 
 - [025 — Compositor & Custom Visuals](025-compositor-custom-visuals.md) — for GPU-only compositor animations that bypass the UI thread entirely
 - [024E — Animation & Transitions (examples)](024-animation-transitions-examples.md)
-- [012 — Animations, Transitions, Frame Loops](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/12-animations-transitions-and-frame-loops.md) (plugin ref)
+- [024 — Animation & Transitions](024-animation-transitions.md) — comprehensive coverage of animation primitives
 - [Avalonia Docs: Animation](https://docs.avaloniaui.net/docs/animation/)

@@ -186,6 +186,6 @@ public partial class GalleryViewModel : ObservableObject
 
 - [022 — Attached Properties & Behaviors](022-attached-properties-behaviors.md)
 - [022V — Attached Properties & Behaviors (verbose companion)](022-attached-properties-behaviors-verbose.md)
-- [016 — Property System & Attached Properties](../../references/16-property-system-attached-properties-behaviors-and-style-properties.md) (plugin ref)
+- [022 — Attached Properties & Behaviors](022-attached-properties-behaviors.md) — covers property system details inline
 - [026 — Accessibility & Automation](026-accessibility-automation.md) — `AutomationProperties` as an attached-property family
 - [Avalonia Docs: Attached Properties](https://docs.avaloniaui.net/docs/data-binding/attached-properties)

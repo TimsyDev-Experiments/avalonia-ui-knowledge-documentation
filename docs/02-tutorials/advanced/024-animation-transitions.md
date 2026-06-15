@@ -181,7 +181,7 @@ public async Task FadeOut(Control target)
 
 ## See Also
 
-- [012 — Animations, Transitions, Frame Loops](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/12-animations-transitions-and-frame-loops.md) (plugin ref)
+- [024 — Animation & Transitions](024-animation-transitions.md) — comprehensive coverage of animation primitives
 - [025 — Compositor & Custom Visuals](025-compositor-custom-visuals.md)
 - [024E — Animation & Transitions (examples)](024-animation-transitions-examples.md)
 - [024V — Animation & Transitions (verbose companion)](024-animation-transitions-verbose.md)

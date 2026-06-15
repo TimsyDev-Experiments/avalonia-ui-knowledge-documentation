@@ -267,5 +267,5 @@ public partial class ContactViewModel : ObservableObject
 - [027 — Advanced Composite Bindings](027-advanced-composite-bindings.md)
 - [027V — Advanced Composite Bindings (verbose companion)](027-advanced-composite-bindings-verbose.md)
 - [011 — Compiled Bindings in Depth](../intermediate/011-compiled-bindings.md)
-- [045 — Value Converters](../references/45-value-converters-single-multi-and-binding-wiring.md)
+- [004 — Value Converters](../basics/004-value-converters.md) — converter fundamentals extended by composite bindings
 - [Avalonia Docs: Data Binding Syntax](https://docs.avaloniaui.net/docs/data-binding/data-binding-syntax)

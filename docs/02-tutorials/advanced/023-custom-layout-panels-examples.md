@@ -387,5 +387,5 @@ public class AccordionPanel : Panel
 - [023V — Custom Layout Panels (verbose companion)](023-custom-layout-panels-verbose.md)
 - [021 — Custom Controls from Scratch](021-custom-controls-from-scratch.md) — Control base patterns used by Panel
 - [024 — Animation & Transitions](024-animation-transitions.md) — `RenderTransform` transitions for smooth layout changes
-- [030 — Layout Measure/Arrange & Custom Controls](../../references/30-layout-measure-arrange-and-custom-layout-controls.md) (plugin ref)
+- [021 — Custom Controls from Scratch](021-custom-controls-from-scratch.md) — measure/arrange patterns in depth
 - [Avalonia Docs: Custom Layout](https://docs.avaloniaui.net/docs/layout/custom-layout)

@@ -194,7 +194,7 @@ using (var ctx = bitmap.CreateDrawingContext())
 ## See Also
 
 - [024 — Animation & Transitions](024-animation-transitions.md)
-- [061 — Rendering & Interop Boundaries](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/61-rendering-and-interop-boundaries-opengl-vulkan-framebuffer.md) (plugin ref)
+- [025 — Compositor & Custom Visuals](025-compositor-custom-visuals.md) — the compositor rendering model in depth
 - [025E — Compositor & Custom Visuals (examples)](025-compositor-custom-visuals-examples.md)
 - [025V — Compositor & Custom Visuals (verbose companion)](025-compositor-custom-visuals-verbose.md)
 - [Avalonia Docs: Compositor](https://docs.avaloniaui.net/docs/concepts/compositor)

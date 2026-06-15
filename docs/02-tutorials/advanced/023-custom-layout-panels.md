@@ -219,7 +219,7 @@ public class RadialPanel : Panel
 ## See Also
 
 - [021 — Custom Controls from Scratch](021-custom-controls-from-scratch.md)
-- [030 — Layout Measure/Arrange & Custom Controls](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/30-layout-measure-arrange-and-custom-layout-controls.md) (plugin ref)
+- [021 — Custom Controls from Scratch](021-custom-controls-from-scratch.md) — measure/arrange patterns in depth
 - [023E — Custom Layout Panels (examples)](023-custom-layout-panels-examples.md)
 - [023V — Custom Layout Panels (verbose companion)](023-custom-layout-panels-verbose.md)
 - [Avalonia Docs: Custom Layout](https://docs.avaloniaui.net/docs/layout/custom-layout)

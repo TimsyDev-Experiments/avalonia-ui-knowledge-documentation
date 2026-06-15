@@ -244,6 +244,6 @@ Avalonia ships a built-in `WrapPanel` in `Avalonia.Controls`. Write a custom one
 ## Cross-links
 
 - [021 — Custom Controls from Scratch](021-custom-controls-from-scratch.md) — the Control base class patterns that Panel extends
-- [030 — Layout Measure/Arrange & Custom Controls](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/30-layout-measure-arrange-and-custom-layout-controls.md) (plugin ref)
+- [021 — Custom Controls from Scratch](021-custom-controls-from-scratch.md) — measure/arrange patterns in depth
 - [023E — Custom Layout Panels (examples)](023-custom-layout-panels-examples.md)
 - [Avalonia Docs: Custom Layout](https://docs.avaloniaui.net/docs/layout/custom-layout)

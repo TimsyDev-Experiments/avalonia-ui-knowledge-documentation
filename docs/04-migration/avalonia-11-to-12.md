@@ -238,4 +238,4 @@ If you have animations that must run while the control is hidden:
 
 - [Quick reference: Key breaking changes](../01-quick-refs/avalonia-12-breaking-changes.md)
 - [Avalonia Official: Breaking Changes in 12](https://docs.avaloniaui.net/docs/avalonia12-breaking-changes)
-- [Plugin: Avalonia 12 migration guide](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/68-avalonia-12-migration-guide.md)
+- [Avalonia Official: Breaking Changes in 12](https://docs.avaloniaui.net/docs/avalonia12-breaking-changes) — official reference

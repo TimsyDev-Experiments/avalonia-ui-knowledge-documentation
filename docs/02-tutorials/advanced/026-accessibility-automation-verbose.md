@@ -298,7 +298,6 @@ A `TextBlock` that shows "Uploading..." → "Complete" has no live region. Scree
 ## Cross-links
 
 - [020 — Custom Templated Controls](020-custom-templated-controls.md) — templated control patterns that affect automation
-- [023 — Accessibility & Automation](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/23-accessibility-and-automation.md) (plugin ref)
+- [026 — Accessibility & Automation](026-accessibility-automation.md) — complete walkthrough of automation properties and patterns
 - [026E — Accessibility & Automation (examples)](026-accessibility-automation-examples.md)
-- [060 — Automation Properties & Attached Behavior Patterns](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/60-automation-properties-and-attached-behavior-patterns.md) (plugin ref)
 - [Avalonia Docs: Accessibility](https://docs.avaloniaui.net/docs/accessibility/)

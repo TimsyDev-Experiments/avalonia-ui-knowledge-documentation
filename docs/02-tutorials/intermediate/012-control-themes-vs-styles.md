@@ -141,6 +141,6 @@ The `^` in the selector refers to the control the theme is applied to.
 
 - [003 — Basic Styling](../basics/003-basic-styling.md)
 - [012V — Control Themes vs Styles (verbose companion)](012-control-themes-vs-styles-verbose.md)
-- [016 — Theme Switching](016-theme-switching.md)
+- [017 — Theme Switching](017-theme-switching.md)
 - [012E — Control Themes vs Styles (examples)](012-control-themes-vs-styles-examples.md)
 - [Avalonia Docs: Control Themes](https://docs.avaloniaui.net/docs/styling/control-themes)

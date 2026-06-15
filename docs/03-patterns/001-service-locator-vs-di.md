@@ -10,7 +10,7 @@ avalonia-version: 12.0.4
 
 **What you'll learn:** The difference between service locator and dependency injection, why DI is preferred, and when each approach makes sense in an Avalonia application.
 
-**Prerequisites:** [032 -- MVVM with Dependency Injection](/docs/02-tutorials/advanced/032-mvvm-di-wiring.md)
+**Prerequisites:** [032 -- MVVM with Dependency Injection](../02-tutorials/advanced/032-mvvm-di-wiring.md)
 
 ---
 

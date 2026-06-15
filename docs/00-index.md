@@ -242,7 +242,7 @@ Coverage of the commercial tool suite.
 ## Reference Material
 
 - [Avalonia Official Docs (12.x)](https://docs.avaloniaui.net/)
-- [Plugin: Development Plugin for Avalonia](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/compendium.md) — 69 specialized reference docs
+- Plugin: Development Plugin for Avalonia (external — 69 specialized reference docs available in the plugin repo)
 
 ---
 
