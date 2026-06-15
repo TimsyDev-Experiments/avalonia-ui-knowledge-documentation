@@ -467,6 +467,55 @@ public class GradientEditor : Control
 - **Drag goes outside control bounds.** Clamp the offset to 0.0–1.0 on each move. If the pointer leaves the control, `Pointer.Capture` ensures the drag continues until release.
 - **Color format in ViewModel.** `CurrentStopColor` is a `Color` struct. The `TextBox` in the view binds to `Color.ToString()` by default, which produces the hex format (`#AARRGGBB`). Use a value converter for custom color input formats.
 
+## Testing
+
+### Example 1: WaveformViewer
+
+```csharp
+[AvaloniaFact]
+public void WaveformViewer_MeasureOverride_ReturnsCorrectWidth()
+{
+    var viewer = new WaveformViewer
+    {
+        Samples = new float[100],
+        BarWidth = 4,
+        BarSpacing = 1
+    };
+    viewer.Measure(new Size(double.PositiveInfinity, 100));
+    viewer.DesiredSize.Width.Should().Be(100 * (4 + 1));
+}
+
+[AvaloniaFact]
+public void WaveformViewer_NullSamples_DoesNotThrow()
+{
+    var viewer = new WaveformViewer { Samples = null! };
+    viewer.Measure(new Size(200, 100));
+    viewer.Arrange(new Rect(0, 0, 200, 100));
+    Action render = () => viewer.Render(null!);
+    render.Should().NotThrow();
+}
+```
+
+### Example 2: GradientEditor
+
+```csharp
+[AvaloniaFact]
+public void GradientEditor_AddStop_IncreasesStopCount()
+{
+    var vm = new GradientEditorViewModel();
+    var editor = new GradientEditor
+    {
+        DataContext = vm,
+        Stops = vm.Stops,
+    };
+    editor.Measure(new Size(300, 60));
+    editor.Arrange(new Rect(0, 0, 300, 60));
+
+    editor.Stops!.Add(new GradientStop(Colors.Blue, 0.75));
+    vm.Stops.Count.Should().Be(4);
+}
+```
+
 ---
 
 ## What These Examples Demonstrate

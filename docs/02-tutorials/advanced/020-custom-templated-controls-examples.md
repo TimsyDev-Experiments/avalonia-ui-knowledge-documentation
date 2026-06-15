@@ -375,6 +375,53 @@ public class TagInputControl : TemplatedControl
 - **Tags with leading/trailing whitespace.** Trimmed in `AddTag()` before inserting into the collection.
 - **Empty tag list.** The control shows the placeholder text at full width. No chip row is displayed.
 
+## Testing
+
+### Example 1: ColorSwatchPicker
+
+```csharp
+[AvaloniaFact]
+public void ColorSwatchPicker_SelectColor_UpdatesViewModel()
+{
+    var vm = new ColorSwatchPickerViewModel();
+    var picker = new ColorSwatchPicker
+    {
+        DataContext = vm,
+        Colors = vm.Palette,
+    };
+    picker.ApplyTemplate();
+
+    picker.SelectedColor = Colors.Green;
+    vm.SelectedColor.Should().Be(Colors.Green);
+}
+```
+
+### Example 2: TagInputControl
+
+```csharp
+[AvaloniaFact]
+public void TagInputViewModel_AddTag_AddsToCollection()
+{
+    var vm = new TagInputViewModel();
+    vm.InputText = "test-tag";
+    vm.AddTagCommand.Execute(null);
+    vm.Tags.Should().Contain("test-tag");
+    vm.InputText.Should().BeEmpty();
+}
+
+[AvaloniaFact]
+public void TagInputViewModel_ExceedsMaxTags_ShowsError()
+{
+    var vm = new TagInputViewModel();
+    for (int i = 0; i < 10; i++)
+        vm.AddTagCommand.Execute($"tag{i}");
+    vm.HasError.Should().BeFalse();
+
+    vm.AddTagCommand.Execute("extra-tag");
+    vm.HasError.Should().BeTrue();
+}
+```
+
 ---
 
 ## What These Examples Demonstrate

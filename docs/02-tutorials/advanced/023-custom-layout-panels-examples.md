@@ -368,6 +368,75 @@ public class AccordionPanel : Panel
 
 ---
 
+## Testing
+
+### Example 1: MasonryPanel
+
+```csharp
+[AvaloniaFact]
+public void MasonryPanel_ArrangesChildrenInSeparateColumns()
+{
+    var panel = new MasonryPanel { ColumnWidth = 100, ColumnSpacing = 10 };
+    for (int i = 0; i < 3; i++)
+    {
+        panel.Children.Add(new Border { Width = 100, Height = 80 });
+    }
+    panel.Measure(new Size(350, double.PositiveInfinity));
+    panel.Arrange(new Rect(0, 0, 350, panel.DesiredSize.Height));
+
+    var xPositions = panel.Children.Select(c => c.Bounds.X).Distinct().Count();
+    xPositions.Should().Be(3);
+}
+
+[AvaloniaFact]
+public void MasonryPanel_MeasureWithInfiniteWidth_FallsBackToOneColumn()
+{
+    var panel = new MasonryPanel { ColumnWidth = 200, ColumnSpacing = 0 };
+    panel.Children.Add(new Border { Width = 200, Height = 50 });
+    panel.Children.Add(new Border { Width = 200, Height = 50 });
+
+    panel.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
+    panel.DesiredSize.Width.Should().Be(200);
+}
+```
+
+### Example 2: AccordionPanel
+
+```csharp
+[AvaloniaFact]
+public void AccordionPanel_ExpandedChild_GetsFullHeight()
+{
+    var panel = new AccordionPanel { ItemSpacing = 4 };
+    var child1 = new Border { Width = 200, Height = 30 };
+    var child2 = new Border { Width = 200, Height = 100 };
+    panel.Children.Add(child1);
+    panel.Children.Add(child2);
+
+    panel.ExpandedIndex = 1;
+    panel.Measure(new Size(200, double.PositiveInfinity));
+    panel.Arrange(new Rect(0, 0, 200, panel.DesiredSize.Height));
+
+    child2.Bounds.Height.Should().Be(100);
+    child1.Bounds.Y.Should().Be(0);
+    child2.Bounds.Y.Should().BeGreaterThan(child1.Bounds.Y);
+}
+
+[AvaloniaFact]
+public void AccordionPanel_NoExpandedItem_AllCollapsed()
+{
+    var panel = new AccordionPanel();
+    panel.Children.Add(new Border { Width = 200, Height = 50 });
+    panel.Children.Add(new Border { Width = 200, Height = 50 });
+
+    panel.ExpandedIndex = -1;
+    panel.Measure(new Size(200, double.PositiveInfinity));
+    panel.Arrange(new Rect(0, 0, 200, panel.DesiredSize.Height));
+
+    panel.Children[0].Bounds.Height.Should().Be(50);
+    panel.Children[1].Bounds.Height.Should().Be(50);
+}
+```
+
 ## What These Examples Demonstrate
 
 | Aspect | MasonryPanel | AccordionPanel |

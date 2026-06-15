@@ -520,6 +520,81 @@ public partial class FileCopyViewModel : ObservableObject
 
 ---
 
+## Testing
+
+### Example 1: AccessibleTreeView
+
+```csharp
+[AvaloniaFact]
+public void AccessibleTreeView_SelectNodeCommand_SelectsNode()
+{
+    var vm = new FileExplorerViewModel();
+    var child = new TreeNodeViewModel { Name = "child" };
+    var root = new TreeNodeViewModel { Name = "root" };
+    root.Children.Add(child);
+    vm.RootNodes.Add(root);
+
+    vm.SelectNodeCommand.Execute(root);
+    vm.SelectedNode.Should().Be(root);
+    root.IsSelected.Should().BeTrue();
+    child.IsSelected.Should().BeFalse();
+}
+
+[AvaloniaFact]
+public void AccessibleTreeView_ToggleExpand_FlipsState()
+{
+    var vm = new FileExplorerViewModel();
+    var node = new TreeNodeViewModel { Name = "folder" };
+    node.Children.Add(new TreeNodeViewModel { Name = "file" });
+    vm.RootNodes.Add(node);
+
+    vm.ToggleExpandCommand.Execute(node);
+    node.IsExpanded.Should().BeTrue();
+
+    vm.ToggleExpandCommand.Execute(node);
+    node.IsExpanded.Should().BeFalse();
+}
+
+[AvaloniaFact]
+public void AccessibleTreeView_OnCreateAutomationPeer_ReturnsTreeViewPeer()
+{
+    var treeView = new AccessibleTreeView();
+    var peer = treeView.GetAutomationPeer();
+    peer.Should().BeOfType<TreeViewAutomationPeer>();
+}
+```
+
+### Example 2: BackgroundOperationDialog
+
+```csharp
+[AvaloniaFact]
+public async Task FileCopyViewModel_StartCopy_UpdatesProgress()
+{
+    var vm = new FileCopyViewModel { TotalFiles = 5 };
+
+    await vm.StartCopyCommand.ExecuteAsync(null);
+
+    vm.FilesCopied.Should().Be(5);
+    vm.Progress.Should().Be(100);
+    vm.IsComplete.Should().BeTrue();
+    vm.IsRunning.Should().BeFalse();
+}
+
+[AvaloniaFact]
+public async Task FileCopyViewModel_CopyWithError_ReportsError()
+{
+    var vm = new FileCopyViewModel { TotalFiles = 10 };
+
+    await vm.StartCopyCommand.ExecuteAsync(null);
+
+    vm.ErrorMessage.Should().NotBeNullOrEmpty();
+    vm.IsComplete.Should().BeTrue();
+    vm.AccessibilityAnnouncement.Should().Contain("error");
+}
+```
+
+---
+
 ## What These Examples Demonstrate
 
 | Aspect | AccessibleTreeView | BackgroundOperationDialog |

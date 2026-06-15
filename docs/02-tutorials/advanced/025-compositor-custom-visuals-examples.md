@@ -521,6 +521,61 @@ public class MiniMapControl : Control
 
 ---
 
+## Testing
+
+### Example 1: ParallaxStarfield
+
+```csharp
+[AvaloniaFact]
+public void ParallaxStarfield_CreatesStarsOnAttach()
+{
+    var starfield = new ParallaxStarfield { StarCount = 50 };
+    starfield.Measure(new Size(800, 600));
+    starfield.Arrange(new Rect(0, 0, 800, 600));
+
+    starfield.VisualChildren.Count.Should().Be(50);
+}
+
+[AvaloniaFact]
+public void ParallaxStarfield_StarCountChange_RecreatesStars()
+{
+    var starfield = new ParallaxStarfield { StarCount = 10 };
+    starfield.Measure(new Size(800, 600));
+    starfield.Arrange(new Rect(0, 0, 800, 600));
+
+    starfield.StarCount = 20;
+    starfield.VisualChildren.Count.Should().Be(20);
+}
+```
+
+### Example 2: MiniMapControl
+
+```csharp
+[AvaloniaFact]
+public void MiniMapControl_ScrollOffsetChange_UpdatesTwoWayBinding()
+{
+    var vm = new EditorViewModel();
+    var minimap = new MiniMapControl
+    {
+        DataContext = vm,
+        ScrollableWidth = 2000,
+        ScrollableHeight = 2000,
+        ViewportWidth = 800,
+        ViewportHeight = 600,
+    };
+    ((IBindable)minimap).Bind(MiniMapControl.ScrollOffsetXProperty,
+        new Binding("ScrollOffsetX", BindingMode.TwoWay));
+    ((IBindable)minimap).Bind(MiniMapControl.ScrollOffsetYProperty,
+        new Binding("ScrollOffsetY", BindingMode.TwoWay));
+
+    minimap.ScrollOffsetX = 250;
+    minimap.ScrollOffsetY = 150;
+
+    vm.ScrollOffsetX.Should().Be(250);
+    vm.ScrollOffsetY.Should().Be(150);
+}
+```
+
 ## What These Examples Demonstrate
 
 | Aspect | ParallaxStarfield | MiniMapControl |
