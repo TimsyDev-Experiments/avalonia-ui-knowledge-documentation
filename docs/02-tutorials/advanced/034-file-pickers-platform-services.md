@@ -162,3 +162,11 @@ if (storage.CanPickFolder)
 - File type filters use platform-specific hints (patterns, UTIs, MIME types)
 - Check `CanOpen`/`CanSave`/`CanPickFolder` before showing pickers
 - Bookmark IDs persist access across app restarts (macOS sandbox, Android)
+
+## See Also
+
+- [034E — File Pickers and Platform Services (examples)](034-file-pickers-platform-services-examples.md)
+- [034V — File Pickers and Platform Services (verbose companion)](034-file-pickers-platform-services-verbose.md)
+- [037 — App Lifetimes and Splash Screen](037-app-lifetimes-splash-screen.md)
+- [042 — Multi-Targeting: Desktop, Browser, Mobile](042-multi-targeting-desktop-browser-mobile.md)
+- [Avalonia Docs: StorageProvider](https://docs.avaloniaui.net/docs/concepts/storage-provider)

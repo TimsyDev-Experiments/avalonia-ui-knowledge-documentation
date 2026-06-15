@@ -282,6 +282,8 @@ Alternating rows:
 
 ## See Also
 
-- [015 -- Item Lists (ListBox, ItemsRepeater, DataGrid)](015-item-lists.md)
-- [036 -- Virtualization and Large List Performance](../advanced/036-virtualization-large-lists.md)
+- [040V — DataGrid Deep Dive (verbose companion)](040-datagrid-deep-dive-verbose.md)
+- [040E — DataGrid Deep Dive (examples)](040-datagrid-deep-dive-examples.md)
+- [015 — Item Lists (ListBox, ItemsRepeater, DataGrid)](015-item-lists.md)
+- [036 — Virtualization and Large List Performance](../advanced/036-virtualization-large-lists.md)
 - [Avalonia Docs: DataGrid](https://docs.avaloniaui.net/controls/datagrid)

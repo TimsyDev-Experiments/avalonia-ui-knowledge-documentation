@@ -140,6 +140,8 @@ private async Task DownloadAsync(IProgress<double> progress)
 
 ## See Also
 
+- [008V — RelayCommand in Depth (verbose companion)](008-relay-command-verbose.md)
+- [008X — RelayCommand in Depth (examples)](008-relay-command-examples.md)
 - [002 — Command Binding](002-command-binding.md)
 - [007 — ObservableObject & ObservableProperty](007-observable-object-property.md)
 - [CommunityToolkit.Mvvm Docs: RelayCommand](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/relaycommand)

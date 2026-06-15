@@ -183,4 +183,6 @@ myStatusText.Text = "Document saved successfully";
 
 - [023 — Accessibility & Automation](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/23-accessibility-and-automation.md) (plugin ref)
 - [060 — Automation Properties & Attached Behavior Patterns](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/60-automation-properties-and-attached-behavior-patterns.md) (plugin ref)
+- [026E — Accessibility & Automation (examples)](026-accessibility-automation-examples.md)
+- [026V — Accessibility & Automation (verbose companion)](026-accessibility-automation-verbose.md)
 - [Avalonia Docs: Accessibility](https://docs.avaloniaui.net/docs/accessibility/)

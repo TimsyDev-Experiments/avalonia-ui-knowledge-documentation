@@ -175,3 +175,14 @@ public partial class SettingsViewModel : ObservableObject,
 - Register `IMessenger` in the container for decoupled ViewModel communication
 
 > **Warning:** Do not call `Program.AppHost.Services.GetRequiredService` before `Program.AppHost` is built. The host is available after `Host.CreateDefaultBuilder().Build()`.
+
+## See Also
+
+- [001 — Project Setup](../basics/001-project-setup.md)
+- [007 — Observable Object and Property](../basics/007-observable-object-property.md)
+- [032V — MVVM Dependency Injection (verbose companion)](032-mvvm-di-wiring-verbose.md)
+- [033 — Localization i18n](033-localization-i18n.md)
+- [027 — Advanced Composite Bindings](027-advanced-composite-bindings.md)
+- [Avalonia Docs: Dependency Injection](https://docs.avaloniaui.net/docs/guides/implementation-guides/dependency-injection)
+- [CommunityToolkit.Mvvm: Messenger docs](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/messenger)
+- [032X — MVVM Dependency Injection (examples)](032-mvvm-di-wiring-examples.md)

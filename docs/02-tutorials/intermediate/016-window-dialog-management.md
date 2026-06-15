@@ -170,5 +170,7 @@ window.Opened += (_, _) =>
 ## See Also
 
 - [010 — Window Basics & Simple Dialogs](../basics/010-window-dialog-basics.md)
-- [013 — IMessenger Patterns](014-imessenger-patterns.md)
-- [048 — TopLevel, Window, and Runtime Services](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/48-toplevel-window-and-runtime-services.md)
+- [014 — IMessenger Patterns](014-imessenger-patterns.md)
+- [016V — Window & Dialog Management (verbose companion)](016-window-dialog-management-verbose.md)
+- [016E — Window & Dialog Management (examples)](016-window-dialog-management-examples.md)
+- [018 — Navigation Patterns](018-navigation.md)

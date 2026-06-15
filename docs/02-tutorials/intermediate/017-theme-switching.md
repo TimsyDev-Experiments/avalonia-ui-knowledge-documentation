@@ -197,4 +197,6 @@ public void LoadTheme()
 
 - [006 — Resources](../basics/006-resources.md)
 - [012 — Control Themes vs Styles](012-control-themes-vs-styles.md)
+- [017V — Theme Switching (verbose companion)](017-theme-switching-verbose.md)
+- [017E — Theme Switching (examples)](017-theme-switching-examples.md)
 - [Avalonia Docs: Theme Variants](https://docs.avaloniaui.net/docs/styling/theme-variants)

@@ -156,3 +156,5 @@ The Accessibility tab shows:
 - [026 — Accessibility & Automation](026-accessibility-automation.md)
 - [027 — Advanced Composite Bindings](027-advanced-composite-bindings.md)
 - [Avalonia Docs: DevTools](https://docs.avaloniaui.net/tools/developer-tools/installation)
+- [029V — Using Avalonia DevTools (verbose companion)](029-avalonia-plus-devtools-verbose.md)
+- [029X — Using Avalonia DevTools (examples)](029-avalonia-plus-devtools-examples.md)

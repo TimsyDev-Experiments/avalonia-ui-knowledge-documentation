@@ -175,4 +175,6 @@ This follows the `TemplatedControl` convention — consumers know which named el
 
 - [012 — Control Themes vs Styles](../intermediate/012-control-themes-vs-styles.md)
 - [021 — Custom Controls from Scratch](021-custom-controls-from-scratch.md)
+- [020E — Custom Templated Controls (examples)](020-custom-templated-controls-examples.md)
+- [020V — Custom Templated Controls (verbose companion)](020-custom-templated-controls-verbose.md)
 - [Avalonia Docs: Templated Controls](https://docs.avaloniaui.net/docs/concepts/templated-controls)

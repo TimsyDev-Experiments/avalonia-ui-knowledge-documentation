@@ -172,3 +172,12 @@ jobs:
 - CI pipelines can build for all platforms in parallel
 - The same `.parcel` file works across Windows, macOS, and Linux build agents
 - Set `IncludeNativeLibrariesForSelfExtract` to `false` for macOS compatibility
+
+## See Also
+
+- [001 — Project Setup](../basics/001-project-setup.md)
+- [029 — Using Avalonia DevTools](029-avalonia-plus-devtools.md)
+- [030V — Packaging and Distribution with Parcel (verbose companion)](030-parcel-packaging-verbose.md)
+- [Avalonia Parcel Documentation](https://docs.avaloniaui.net/tools/parcel/overview)
+- [Azure Trusted Signing documentation](https://learn.microsoft.com/en-us/azure/trusted-signing/)
+- [030X — Packaging and Distribution with Parcel (examples)](030-parcel-packaging-examples.md)

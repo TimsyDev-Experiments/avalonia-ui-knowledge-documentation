@@ -124,7 +124,7 @@ Usage:
 | Use for | Coloring, sizing, font changes | Complete visual overhaul of a control |
 | Syntax | `<Style Selector="Button.primary">` | `<ControlTheme TargetType="Button">` |
 
-Control themes are covered in [011 — Control Themes vs Styles](../intermediate/011-control-themes-vs-styles.md).
+Control themes are covered in [012 — Control Themes vs Styles](../intermediate/012-control-themes-vs-styles.md).
 
 ---
 
@@ -139,6 +139,8 @@ Control themes are covered in [011 — Control Themes vs Styles](../intermediate
 
 ## See Also
 
-- [011 — Control Themes vs Styles](../intermediate/011-control-themes-vs-styles.md)
+- [003V — Basic Styling (verbose companion)](003-basic-styling-verbose.md)
+- [003X — Basic Styling (examples)](003-basic-styling-examples.md)
+- [012 — Control Themes vs Styles](../intermediate/012-control-themes-vs-styles.md)
 - [006 — Resources (Static & Dynamic)](006-resources.md)
 - [Avalonia Docs: Styles](https://docs.avaloniaui.net/docs/styling/styles)

@@ -306,3 +306,13 @@ In `App.axaml`, replace `FluentTheme` with your custom theme:
 - Theme dictionaries provide light/dark variants referenced via `DynamicResource`
 - Named theme variants (`BasedOn` a base theme) provide component modifiers
 - Removing FluentTheme gives full control but requires themes for every control used
+
+## See Also
+
+- [012 — Control Themes vs Styles](../intermediate/012-control-themes-vs-styles.md)
+- [006 — Resources](../basics/006-resources.md)
+- [027 — Advanced Composite Bindings](027-advanced-composite-bindings.md)
+- [031V — Building a Complete Custom Theme (verbose companion)](031-custom-theme-design-system-verbose.md)
+- [Avalonia Docs: Control Themes](https://docs.avaloniaui.net/docs/styling/control-themes)
+- [Avalonia Docs: Resources](https://docs.avaloniaui.net/docs/styling/resources)
+- [031X — Building a Complete Custom Theme (examples)](031-custom-theme-design-system-examples.md)

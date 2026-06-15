@@ -191,5 +191,7 @@ Works with `{ReflectionBinding [Key]}` in XAML.
 ## See Also
 
 - [011 — Compiled Bindings in Depth](../intermediate/011-compiled-bindings.md)
-- [045 — Value Converters](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/45-value-converters-single-multi-and-binding-wiring.md) (plugin ref)
+- [045 — Value Converters](../references/45-value-converters-single-multi-and-binding-wiring.md) (plugin ref)
 - [Avalonia Docs: Data Binding Syntax](https://docs.avaloniaui.net/docs/data-binding/data-binding-syntax)
+- [027V — Advanced Composite Bindings (verbose companion)](027-advanced-composite-bindings-verbose.md)
+- [027X — Advanced Composite Bindings (examples)](027-advanced-composite-bindings-examples.md)

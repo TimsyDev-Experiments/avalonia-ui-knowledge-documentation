@@ -224,5 +224,7 @@ _navigation.NavigateTo<DetailViewModel>(vm =>
 ## See Also
 
 - [015 — Item Lists](015-item-lists.md)
-- [038 — Data Templates and IDataTemplate Selectors](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/38-data-templates-and-idatatemplate-selector-patterns.md)
+- [016 — Window & Dialog Management](016-window-dialog-management.md)
+- [018V — Navigation Patterns (verbose companion)](018-navigation-verbose.md)
+- [018E — Navigation Patterns (examples)](018-navigation-examples.md)
 - [Avalonia Docs: View Locator](https://docs.avaloniaui.net/docs/concepts/view-locator)

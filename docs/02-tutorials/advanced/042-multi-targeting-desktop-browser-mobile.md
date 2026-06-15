@@ -387,6 +387,8 @@ dotnet build -t:Run -f net10.0-ios --project src/MyApp.iOS
 
 ## See Also
 
+- [042E — Multi-Targeting: Desktop, Browser, and Mobile (examples)](042-multi-targeting-desktop-browser-mobile-examples.md)
+- [042V — Multi-Targeting: Desktop, Browser, and Mobile (verbose companion)](042-multi-targeting-desktop-browser-mobile-verbose.md)
 - [037 -- App Lifetimes and Splash Screen](037-app-lifetimes-splash-screen.md)
 - [034 -- File Pickers and Platform Services](034-file-pickers-platform-services.md)
 - [039 -- NativeAOT and Trimming](039-nativeaot-trimming.md)

@@ -157,5 +157,7 @@ Combine with `DragDrop.DoDragDropAsync` response to apply the selected effect.
 
 ## See Also
 
-- [034 — Drag & Drop Workflows](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/34-dragdrop-workflows.md) (plugin ref)
+- [015 — Item Lists](015-item-lists.md)
+- [019V — Drag & Drop (verbose companion)](019-drag-drop-verbose.md)
+- [019E — Drag & Drop (examples)](019-drag-drop-examples.md)
 - [Avalonia Docs: Drag & Drop](https://docs.avaloniaui.net/docs/input/drag-and-drop)

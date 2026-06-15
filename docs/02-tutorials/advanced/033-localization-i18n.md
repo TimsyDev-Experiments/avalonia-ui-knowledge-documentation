@@ -160,3 +160,13 @@ Thread.CurrentThread.CurrentUICulture = new CultureInfo("de-DE");
 - `FlowDirection="RightToLeft"` mirrors the layout for Arabic, Hebrew, Persian
 - `StringFormat` in bindings follows `Thread.CurrentThread.CurrentCulture`
 - Resource files produce satellite assemblies per locale automatically
+
+## See Also
+
+- [001 — Project Setup](../basics/001-project-setup.md)
+- [032 — MVVM DI Wiring](032-mvvm-di-wiring.md)
+- [033V — Localization and Internationalization (verbose companion)](033-localization-i18n-verbose.md)
+- [027 — Advanced Composite Bindings](027-advanced-composite-bindings.md)
+- [Avalonia Docs: Localization](https://docs.avaloniaui.net/docs/guides/implementation-guides/localization)
+- [.NET Resource Manager docs](https://learn.microsoft.com/en-us/dotnet/core/extensions/resources)
+- [033X — Localization and Internationalization (examples)](033-localization-i18n-examples.md)

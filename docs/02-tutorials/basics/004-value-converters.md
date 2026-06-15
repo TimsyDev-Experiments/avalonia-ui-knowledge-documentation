@@ -154,5 +154,7 @@ Or use `StringFormat` directly on the binding (no converter needed):
 
 ## See Also
 
+- [004V — Value Converters (verbose companion)](004-value-converters-verbose.md)
+- [004X — Value Converters (examples)](004-value-converters-examples.md)
 - [005 — Binding Modes](005-binding-modes.md)
 - [Avalonia Docs: Value Converters](https://docs.avaloniaui.net/docs/data-binding/value-converters)

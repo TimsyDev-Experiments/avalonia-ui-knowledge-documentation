@@ -34,11 +34,12 @@
 ## Document Types
 
 | Type | Template | Location |
-|---|---|---|
+|---|---|---|---|
 | Mini-tutorial | `tutorial-template.md` | `docs/02-tutorials/{tier}/` |
 | Quick reference | `quickref-template.md` | `docs/01-quick-refs/` |
 | Pattern guide | `pattern-template.md` | `docs/03-patterns/` |
 | Migration guide | `migration-template.md` | `docs/04-migration/` |
+| Example walkthrough | `example-template.md` | `docs/02-tutorials/{tier}/` |
 
 ## Naming Convention
 

@@ -179,5 +179,8 @@ public partial class MyViewModel : ObservableRecipient
 
 ## See Also
 
+- [014V — IMessenger Patterns (verbose companion)](014-imessenger-patterns-verbose.md)
+- [013 — Data Validation](013-data-validation.md)
+- [016 — Window & Dialog Management](016-window-dialog-management.md)
+- [014E — IMessenger Patterns (examples)](014-imessenger-patterns-examples.md)
 - [CommunityToolkit.Mvvm Docs: Messenger](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/messenger)
-- [MVVM Toolkit Messenger Skill](file:///C:/Users/tmher/.config/opencode/skills/mvvm-toolkit-messenger/SKILL.md)

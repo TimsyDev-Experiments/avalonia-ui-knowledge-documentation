@@ -122,6 +122,8 @@ Theme dictionaries like `FluentTheme` define resources such as `SystemAccentColo
 
 ## See Also
 
+- [006V — Resources (verbose companion)](006-resources-verbose.md)
+- [006X — Resources (examples)](006-resources-examples.md)
 - [003 — Basic Styling](003-basic-styling.md)
-- [016 — Theme Switching](../intermediate/016-theme-switching.md)
+- [017 — Theme Switching](../intermediate/017-theme-switching.md)
 - [Avalonia Docs: Resources](https://docs.avaloniaui.net/docs/styling/resources)

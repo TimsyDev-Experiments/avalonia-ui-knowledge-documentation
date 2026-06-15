@@ -141,6 +141,8 @@ The button auto-disables when `CanSave()` returns `false`. Call `SaveCommand.Not
 
 ## See Also
 
+- [002V — Command Binding (verbose companion)](002-command-binding-verbose.md)
+- [002X — Command Binding (examples)](002-command-binding-examples.md)
 - [007 — ObservableObject & ObservableProperty](007-observable-object-property.md)
 - [008 — RelayCommand in Depth](008-relay-command.md)
 - [CommunityToolkit.Mvvm Docs: RelayCommand](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/relaycommand)

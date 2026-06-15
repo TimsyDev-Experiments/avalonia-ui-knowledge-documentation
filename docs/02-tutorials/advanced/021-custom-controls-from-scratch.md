@@ -191,5 +191,7 @@ public class SignaturePad : Control
 ## See Also
 
 - [020 — Custom Templated Controls](020-custom-templated-controls.md)
-- [022 — Custom Layout Panels](022-custom-layout-panels.md)
+- [023 — Custom Layout Panels](023-custom-layout-panels.md)
+- [021E — Custom Controls from Scratch (examples)](021-custom-controls-from-scratch-examples.md)
+- [021V — Custom Controls from Scratch (verbose companion)](021-custom-controls-from-scratch-verbose.md)
 - [Avalonia Docs: Custom Controls](https://docs.avaloniaui.net/docs/concepts/custom-controls)

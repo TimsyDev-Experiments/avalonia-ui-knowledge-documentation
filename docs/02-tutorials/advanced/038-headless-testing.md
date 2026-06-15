@@ -210,3 +210,11 @@ public async Task FileOpen_RequestsStorage()
 - Test focus and keyboard input by showing a `Window` and calling `Focus()`
 - Mock `IStorageProvider` and other platform services for unit tests
 - Apply themes in a test `Application` subclass to get access to styles and brushes
+
+## See Also
+
+- [038E — Headless Testing with Avalonia.Headless (examples)](038-headless-testing-examples.md)
+- [038V — Headless Testing with Avalonia.Headless (verbose companion)](038-headless-testing-verbose.md)
+- [039 — NativeAOT and Trimming](039-nativeaot-trimming.md)
+- [007 — Observable Object and Property](../basics/007-observable-object-property.md)
+- [Avalonia Docs: Headless Testing](https://docs.avaloniaui.net/docs/concepts/headless-testing)

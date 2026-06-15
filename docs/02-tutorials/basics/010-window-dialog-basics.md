@@ -125,6 +125,8 @@ var folders = await TopLevel.GetTopLevel(this)!.StorageProvider
 
 ## See Also
 
-- [015 — Window & Dialog Management](../intermediate/016-window-dialog-management.md)
-- [048 — TopLevel, Window, and Runtime Services](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/48-toplevel-window-and-runtime-services.md)
+- [010V — Window Basics and Simple Dialogs (verbose companion)](010-window-dialog-basics-verbose.md)
+- [010X — Window Basics and Simple Dialogs (examples)](010-window-dialog-basics-examples.md)
+- [016 — Window & Dialog Management](../intermediate/016-window-dialog-management.md)
+- [Avalonia API: TopLevel](https://reference.avaloniaui.net/api/Avalonia.Controls/TopLevel/)
 - [Avalonia Docs: Windows](https://docs.avaloniaui.net/docs/windows/)

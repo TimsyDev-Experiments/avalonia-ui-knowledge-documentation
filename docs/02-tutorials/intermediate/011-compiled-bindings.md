@@ -125,4 +125,6 @@ When targeting Native AOT, compiled bindings are required. Reflection-based bind
 
 - [002 — Command Binding](../basics/002-command-binding.md)
 - [009 — Data Templates Basics](../basics/009-data-templates-basics.md)
+- [011V — Compiled Bindings (verbose companion)](011-compiled-bindings-verbose.md)
+- [011E — Compiled Bindings (examples)](011-compiled-bindings-examples.md)
 - [Avalonia Docs: Compiled Bindings](https://docs.avaloniaui.net/docs/data-binding/compiled-bindings)

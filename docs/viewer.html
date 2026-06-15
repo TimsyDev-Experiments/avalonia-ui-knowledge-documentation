@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Avalonia Docs</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/catppuccin-mocha.min.css" />
+<link rel="stylesheet" href="_assets/css/doc-theme.css" />
+<style>
+  /* Viewer chrome */
+  html, body { height: 100%; }
+  body { display: flex; flex-direction: column; }
+
+  #toolbar {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+    padding: .5rem 1.5rem;
+    display: flex; align-items: center; gap: .75rem;
+    font-size: .85rem;
+    backdrop-filter: blur(6px);
+  }
+
+  #toolbar label { color: var(--text-secondary); white-space: nowrap; }
+  #toolbar select {
+    flex: 1; max-width: 500px;
+    padding: .35rem .5rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--bg-card);
+    color: var(--text-primary);
+    font-size: .85rem;
+  }
+  #toolbar select:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+  #toolbar a {
+    color: var(--accent); text-decoration: none;
+    padding: .3rem .6rem; border-radius: var(--radius-sm);
+    white-space: nowrap;
+  }
+  #toolbar a:hover { background: var(--accent-light); }
+
+  .doc-wrapper {
+    display: flex; flex: 1;
+    max-width: 1140px; margin: 0 auto; width: 100%;
+  }
+
+  .doc-content {
+    flex: 1; min-width: 0;
+    padding: 2rem 2rem 4rem;
+  }
+
+  /* TOC sidebar within viewer */
+  .doc-toc {
+    position: sticky; top: 3.5rem;
+    width: 240px; max-height: calc(100vh - 4rem);
+    overflow-y: auto; flex-shrink: 0;
+    padding: 2rem 1rem 1rem 1.5rem;
+    border-left: 1px solid var(--border);
+    display: none;
+    font-size: .8rem;
+  }
+  .doc-toc h4 {
+    font-size: .7rem; text-transform: uppercase;
+    letter-spacing: .08em; color: var(--text-secondary);
+    margin: 0 0 .5rem;
+  }
+  .doc-toc a {
+    display: block; color: var(--text-secondary); text-decoration: none;
+    padding: .2rem 0; line-height: 1.4;
+  }
+  .doc-toc a:hover { color: var(--accent); }
+  .doc-toc .h2 { font-weight: 500; }
+  .doc-toc .h3 { padding-left: .75rem; }
+
+  @media (min-width: 1100px) { .doc-toc { display: block; } }
+
+  /* front-matter notice */
+  .front-matter-notice {
+    font-size: .8rem; color: var(--text-secondary);
+    background: var(--bg-secondary);
+    border-radius: var(--radius);
+    padding: .5rem 1rem; margin-bottom: 1.5rem;
+    border: 1px solid var(--border);
+  }
+
+  /* loading / error states */
+  #loading, #error {
+    text-align: center; padding: 4rem 2rem;
+    color: var(--text-secondary);
+  }
+  #error { color: var(--error); }
+
+  /* Don't show empty TOC */
+  .doc-toc:empty { display: none !important; }
+
+  /* fix front matter display */
+  .doc-content .front-matter { display: none; }
+</style>
+</head>
+<body>
+
+<div id="toolbar">
+  <label for="docSelect">📄</label>
+  <select id="docSelect"></select>
+  <a href="00-index.md" id="homeLink">Index</a>
+  <a href="https://github.com/anomalyco/opencode-projects/tree/main/avalonia-general/docs" target="_blank" title="Source on GitHub">GitHub</a>
+</div>
+
+<div class="doc-wrapper">
+  <main class="doc-content" id="content">
+    <div id="loading">Loading…</div>
+  </main>
+  <nav class="doc-toc" id="toc"></nav>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/15.0.7/marked.min.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js">
+</script>
+<script>
+// ─── Configure marked ───────────────────────────────────────────────
+marked.setOptions({
+  breaks: false,
+  gfm: true,
+  highlight: (code, lang) => {
+    if (lang && hljs.getLanguage(lang))
+      return hljs.highlight(code, { language: lang }).value;
+    return hljs.highlightAuto(code).value;
+  }
+});
+
+// ─── Document index (all .md files in docs/) ────────────────────────
+const DOC_INDEX = [
+  // ---- Quick References ----
+  { label: "Q01 — Breaking Changes 11→12",          file: "01-quick-refs/avalonia-12-breaking-changes.md" },
+  { label: "Q02 — MVVM Source Generators",           file: "01-quick-refs/mvvm-source-generators.md" },
+  { label: "Q03 — XAML Selectors",                   file: "01-quick-refs/xaml-selectors.md" },
+  { label: "Q04 — Binding Modes",                    file: "01-quick-refs/binding-modes.md" },
+  { label: "Q05 — Resource Dictionaries",            file: "01-quick-refs/resource-dictionaries.md" },
+  { label: "Q06 — Control Themes",                   file: "01-quick-refs/control-themes.md" },
+  { label: "Q07 — Common Controls Reference",        file: "01-quick-refs/common-controls-reference.md" },
+
+  // ---- Basics ----
+  { label: "001 — Project Setup",                    file: "02-tutorials/basics/001-project-setup.md" },
+  { label: "001V — Project Setup (verbose)",          file: "02-tutorials/basics/001-project-setup-verbose.md" },
+  { label: "001X — Project Setup (examples)",         file: "02-tutorials/basics/001-project-setup-examples.md" },
+  { label: "002 — Command Binding",                  file: "02-tutorials/basics/002-command-binding.md" },
+  { label: "002V — Command Binding (verbose)",        file: "02-tutorials/basics/002-command-binding-verbose.md" },
+  { label: "002X — Command Binding (examples)",       file: "02-tutorials/basics/002-command-binding-examples.md" },
+  { label: "003 — Basic Styling",                    file: "02-tutorials/basics/003-basic-styling.md" },
+  { label: "003V — Basic Styling (verbose)",          file: "02-tutorials/basics/003-basic-styling-verbose.md" },
+  { label: "003X — Basic Styling (examples)",         file: "02-tutorials/basics/003-basic-styling-examples.md" },
+  { label: "004 — Value Converters",                 file: "02-tutorials/basics/004-value-converters.md" },
+  { label: "004V — Value Converters (verbose)",       file: "02-tutorials/basics/004-value-converters-verbose.md" },
+  { label: "004X — Value Converters (examples)",      file: "02-tutorials/basics/004-value-converters-examples.md" },
+  { label: "005 — Binding Modes",                    file: "02-tutorials/basics/005-binding-modes.md" },
+  { label: "005V — Binding Modes (verbose)",          file: "02-tutorials/basics/005-binding-modes-verbose.md" },
+  { label: "005X — Binding Modes (examples)",         file: "02-tutorials/basics/005-binding-modes-examples.md" },
+  { label: "006 — Static & Dynamic Resources",       file: "02-tutorials/basics/006-resources.md" },
+  { label: "006V — Resources (verbose)",              file: "02-tutorials/basics/006-resources-verbose.md" },
+  { label: "006X — Resources (examples)",             file: "02-tutorials/basics/006-resources-examples.md" },
+  { label: "007 — ObservableObject & Property",      file: "02-tutorials/basics/007-observable-object-property.md" },
+  { label: "007V — ObservableObject (verbose)",       file: "02-tutorials/basics/007-observable-object-property-verbose.md" },
+  { label: "007X — ObservableObject (examples)",      file: "02-tutorials/basics/007-observable-object-property-examples.md" },
+  { label: "008 — RelayCommand",                     file: "02-tutorials/basics/008-relay-command.md" },
+  { label: "008V — RelayCommand (verbose)",           file: "02-tutorials/basics/008-relay-command-verbose.md" },
+  { label: "008X — RelayCommand (examples)",          file: "02-tutorials/basics/008-relay-command-examples.md" },
+  { label: "009 — Data Templates Basics",            file: "02-tutorials/basics/009-data-templates-basics.md" },
+  { label: "009V — Data Templates (verbose)",        file: "02-tutorials/basics/009-data-templates-basics-verbose.md" },
+  { label: "009X — Data Templates (examples)",       file: "02-tutorials/basics/009-data-templates-examples.md" },
+  { label: "010 — Window & Dialogs Basics",          file: "02-tutorials/basics/010-window-dialog-basics.md" },
+  { label: "010V — Window & Dialogs (verbose)",      file: "02-tutorials/basics/010-window-dialog-basics-verbose.md" },
+  { label: "010X — Window & Dialogs (examples)",     file: "02-tutorials/basics/010-window-dialog-basics-examples.md" },
+
+  // ---- Intermediate ----
+  { label: "011 — Compiled Bindings",                file: "02-tutorials/intermediate/011-compiled-bindings.md" },
+  { label: "011V — Compiled Bindings (verbose)",     file: "02-tutorials/intermediate/011-compiled-bindings-verbose.md" },
+  { label: "011X — Compiled Bindings (examples)",    file: "02-tutorials/intermediate/011-compiled-bindings-examples.md" },
+  { label: "012 — Control Themes vs Styles",         file: "02-tutorials/intermediate/012-control-themes-vs-styles.md" },
+  { label: "012V — Control Themes (verbose)",        file: "02-tutorials/intermediate/012-control-themes-vs-styles-verbose.md" },
+  { label: "012X — Control Themes (examples)",       file: "02-tutorials/intermediate/012-control-themes-vs-styles-examples.md" },
+  { label: "013 — Data Validation",                  file: "02-tutorials/intermediate/013-data-validation.md" },
+  { label: "013V — Data Validation (verbose)",       file: "02-tutorials/intermediate/013-data-validation-verbose.md" },
+  { label: "013X — Data Validation (examples)",      file: "02-tutorials/intermediate/013-data-validation-examples.md" },
+  { label: "014 — IMessenger Patterns",              file: "02-tutorials/intermediate/014-imessenger-patterns.md" },
+  { label: "014V — IMessenger Patterns (verbose)",   file: "02-tutorials/intermediate/014-imessenger-patterns-verbose.md" },
+  { label: "014X — IMessenger Patterns (examples)",  file: "02-tutorials/intermediate/014-imessenger-patterns-examples.md" },
+  { label: "015 — Item Lists",                       file: "02-tutorials/intermediate/015-item-lists.md" },
+  { label: "015V — Item Lists (verbose)",            file: "02-tutorials/intermediate/015-item-lists-verbose.md" },
+  { label: "015X — Item Lists (examples)",           file: "02-tutorials/intermediate/015-item-lists-examples.md" },
+  { label: "016 — Window & Dialog Mgmt",             file: "02-tutorials/intermediate/016-window-dialog-management.md" },
+  { label: "016V — Window & Dialog Mgmt (verbose)",  file: "02-tutorials/intermediate/016-window-dialog-management-verbose.md" },
+  { label: "016X — Window & Dialog Mgmt (examples)", file: "02-tutorials/intermediate/016-window-dialog-management-examples.md" },
+  { label: "017 — Theme Switching",                  file: "02-tutorials/intermediate/017-theme-switching.md" },
+  { label: "017V — Theme Switching (verbose)",       file: "02-tutorials/intermediate/017-theme-switching-verbose.md" },
+  { label: "017X — Theme Switching (examples)",      file: "02-tutorials/intermediate/017-theme-switching-examples.md" },
+  { label: "018 — Navigation",                       file: "02-tutorials/intermediate/018-navigation.md" },
+  { label: "018V — Navigation (verbose)",            file: "02-tutorials/intermediate/018-navigation-verbose.md" },
+  { label: "018X — Navigation (examples)",           file: "02-tutorials/intermediate/018-navigation-examples.md" },
+  { label: "019 — Drag & Drop",                      file: "02-tutorials/intermediate/019-drag-drop.md" },
+  { label: "019V — Drag & Drop (verbose)",           file: "02-tutorials/intermediate/019-drag-drop-verbose.md" },
+  { label: "019X — Drag & Drop (examples)",          file: "02-tutorials/intermediate/019-drag-drop-examples.md" },
+  { label: "040 — DataGrid Deep Dive",               file: "02-tutorials/intermediate/040-datagrid-deep-dive.md" },
+  { label: "040V — DataGrid Deep Dive (verbose)",    file: "02-tutorials/intermediate/040-datagrid-deep-dive-verbose.md" },
+  { label: "040X — DataGrid Deep Dive (examples)",   file: "02-tutorials/intermediate/040-datagrid-deep-dive-examples.md" },
+  { label: "041 — Menus & Tray",                     file: "02-tutorials/intermediate/041-menus-context-menus-tray.md" },
+  { label: "041V — Menus & Tray (verbose)",          file: "02-tutorials/intermediate/041-menus-context-menus-tray-verbose.md" },
+  { label: "041X — Menus & Tray (examples)",          file: "02-tutorials/intermediate/041-menus-context-menus-tray-examples.md" },
+  { label: "043 — TreeView Hierarchical Data",       file: "02-tutorials/intermediate/043-treeview-hierarchical-data.md" },
+  { label: "043V — TreeView (verbose)",              file: "02-tutorials/intermediate/043-treeview-hierarchical-data-verbose.md" },
+  { label: "043X — TreeView (examples)",             file: "02-tutorials/intermediate/043-treeview-hierarchical-data-examples.md" },
+
+  // ---- Advanced ----
+  { label: "020 — Custom Templated Controls",        file: "02-tutorials/advanced/020-custom-templated-controls.md" },
+  { label: "020V — Custom Templated Controls (verbose)",        file: "02-tutorials/advanced/020-custom-templated-controls-verbose.md" },
+  { label: "020X — Custom Templated Controls (examples)",        file: "02-tutorials/advanced/020-custom-templated-controls-examples.md" },
+  { label: "021 — Custom Controls from Scratch",     file: "02-tutorials/advanced/021-custom-controls-from-scratch.md" },
+  { label: "021V — Custom Controls from Scratch (verbose)",     file: "02-tutorials/advanced/021-custom-controls-from-scratch-verbose.md" },
+  { label: "021X — Custom Controls from Scratch (examples)",     file: "02-tutorials/advanced/021-custom-controls-from-scratch-examples.md" },
+  { label: "022 — Attached Properties & Behaviors",  file: "02-tutorials/advanced/022-attached-properties-behaviors.md" },
+  { label: "022V — Attached Properties (verbose)",   file: "02-tutorials/advanced/022-attached-properties-behaviors-verbose.md" },
+  { label: "022X — Attached Properties (examples)",  file: "02-tutorials/advanced/022-attached-properties-behaviors-examples.md" },
+  { label: "023 — Custom Layout Panels",             file: "02-tutorials/advanced/023-custom-layout-panels.md" },
+  { label: "023V — Custom Layout Panels (verbose)",  file: "02-tutorials/advanced/023-custom-layout-panels-verbose.md" },
+  { label: "023X — Custom Layout Panels (examples)", file: "02-tutorials/advanced/023-custom-layout-panels-examples.md" },
+  { label: "024 — Animation & Transitions",          file: "02-tutorials/advanced/024-animation-transitions.md" },
+  { label: "024V — Animation & Transitions (verbose)",          file: "02-tutorials/advanced/024-animation-transitions-verbose.md" },
+  { label: "024X — Animation & Transitions (examples)",          file: "02-tutorials/advanced/024-animation-transitions-examples.md" },
+  { label: "025 — Compositor & Custom Visuals",      file: "02-tutorials/advanced/025-compositor-custom-visuals.md" },
+  { label: "025V — Compositor & Custom Visuals (verbose)",      file: "02-tutorials/advanced/025-compositor-custom-visuals-verbose.md" },
+  { label: "025X — Compositor & Custom Visuals (examples)",      file: "02-tutorials/advanced/025-compositor-custom-visuals-examples.md" },
+  { label: "026 — Accessibility & Automation",       file: "02-tutorials/advanced/026-accessibility-automation.md" },
+  { label: "026V — Accessibility & Automation (verbose)",       file: "02-tutorials/advanced/026-accessibility-automation-verbose.md" },
+  { label: "026X — Accessibility & Automation (examples)",       file: "02-tutorials/advanced/026-accessibility-automation-examples.md" },
+  { label: "027 — Advanced Composite Bindings",      file: "02-tutorials/advanced/027-advanced-composite-bindings.md" },
+  { label: "027V — Advanced Composite Bindings (verbose)",      file: "02-tutorials/advanced/027-advanced-composite-bindings-verbose.md" },
+  { label: "027X — Advanced Composite Bindings (examples)",      file: "02-tutorials/advanced/027-advanced-composite-bindings-examples.md" },
+  { label: "028 — Custom Drawing with Skia",         file: "02-tutorials/advanced/028-custom-drawing-skia.md" },
+  { label: "028V — Custom Drawing with Skia (verbose)",         file: "02-tutorials/advanced/028-custom-drawing-skia-verbose.md" },
+  { label: "028X — Custom Drawing with Skia (examples)",         file: "02-tutorials/advanced/028-custom-drawing-skia-examples.md" },
+  { label: "029 — DevTools",                         file: "02-tutorials/advanced/029-avalonia-plus-devtools.md" },
+  { label: "029V — DevTools (verbose)",              file: "02-tutorials/advanced/029-avalonia-plus-devtools-verbose.md" },
+  { label: "029X — DevTools (examples)",             file: "02-tutorials/advanced/029-avalonia-plus-devtools-examples.md" },
+  { label: "030 — Parcel Packaging",                 file: "02-tutorials/advanced/030-parcel-packaging.md" },
+  { label: "030V — Parcel Packaging (verbose)",      file: "02-tutorials/advanced/030-parcel-packaging-verbose.md" },
+  { label: "030X — Parcel Packaging (examples)",     file: "02-tutorials/advanced/030-parcel-packaging-examples.md" },
+  { label: "031 — Custom Theme & Design System",     file: "02-tutorials/advanced/031-custom-theme-design-system.md" },
+  { label: "031V — Custom Theme (verbose)",          file: "02-tutorials/advanced/031-custom-theme-design-system-verbose.md" },
+  { label: "031X — Custom Theme (examples)",          file: "02-tutorials/advanced/031-custom-theme-design-system-examples.md" },
+  { label: "032 — MVVM DI Wiring",                   file: "02-tutorials/advanced/032-mvvm-di-wiring.md" },
+  { label: "032V — MVVM DI Wiring (verbose)",        file: "02-tutorials/advanced/032-mvvm-di-wiring-verbose.md" },
+  { label: "032X — MVVM DI Wiring (examples)",       file: "02-tutorials/advanced/032-mvvm-di-wiring-examples.md" },
+  { label: "033 — Localization & i18n",              file: "02-tutorials/advanced/033-localization-i18n.md" },
+  { label: "033V — Localization & i18n (verbose)",   file: "02-tutorials/advanced/033-localization-i18n-verbose.md" },
+  { label: "033X — Localization & i18n (examples)",  file: "02-tutorials/advanced/033-localization-i18n-examples.md" },
+  { label: "034 — File Pickers & Platform",          file: "02-tutorials/advanced/034-file-pickers-platform-services.md" },
+  { label: "034V — File Pickers & Platform (verbose)",          file: "02-tutorials/advanced/034-file-pickers-platform-services-verbose.md" },
+  { label: "034X — File Pickers & Platform (examples)",          file: "02-tutorials/advanced/034-file-pickers-platform-services-examples.md" },
+  { label: "035 — Custom Dialogs",                   file: "02-tutorials/advanced/035-custom-dialogs-window-management.md" },
+  { label: "035V — Custom Dialogs (verbose)",        file: "02-tutorials/advanced/035-custom-dialogs-window-management-verbose.md" },
+  { label: "035X — Custom Dialogs (examples)",       file: "02-tutorials/advanced/035-custom-dialogs-window-management-examples.md" },
+  { label: "036 — Virtualization & Large Lists",     file: "02-tutorials/advanced/036-virtualization-large-lists.md" },
+  { label: "036V — Virtualization & Large Lists (verbose)",     file: "02-tutorials/advanced/036-virtualization-large-lists-verbose.md" },
+  { label: "036X — Virtualization & Large Lists (examples)",     file: "02-tutorials/advanced/036-virtualization-large-lists-examples.md" },
+  { label: "037 — App Lifetimes & Splash Screen",    file: "02-tutorials/advanced/037-app-lifetimes-splash-screen.md" },
+  { label: "037V — App Lifetimes & Splash Screen (verbose)",    file: "02-tutorials/advanced/037-app-lifetimes-splash-screen-verbose.md" },
+  { label: "037X — App Lifetimes & Splash Screen (examples)",    file: "02-tutorials/advanced/037-app-lifetimes-splash-screen-examples.md" },
+  { label: "038 — Headless Testing",                 file: "02-tutorials/advanced/038-headless-testing.md" },
+  { label: "038V — Headless Testing (verbose)",      file: "02-tutorials/advanced/038-headless-testing-verbose.md" },
+  { label: "038X — Headless Testing (examples)",     file: "02-tutorials/advanced/038-headless-testing-examples.md" },
+  { label: "039 — NativeAOT & Trimming",             file: "02-tutorials/advanced/039-nativeaot-trimming.md" },
+  { label: "039V — NativeAOT & Trimming (verbose)",  file: "02-tutorials/advanced/039-nativeaot-trimming-verbose.md" },
+  { label: "039X — NativeAOT & Trimming (examples)", file: "02-tutorials/advanced/039-nativeaot-trimming-examples.md" },
+  { label: "042 — Multi-Targeting",                  file: "02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile.md" },
+  { label: "042V — Multi-Targeting (verbose)",       file: "02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-verbose.md" },
+  { label: "042X — Multi-Targeting (examples)",      file: "02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-examples.md" },
+  { label: "044 — Background Services & Progress",   file: "02-tutorials/advanced/044-background-services-and-progress.md" },
+  { label: "044V — Background Services & Progress (verbose)",   file: "02-tutorials/advanced/044-background-services-and-progress-verbose.md" },
+  { label: "044X — Background Services & Progress (examples)",   file: "02-tutorials/advanced/044-background-services-and-progress-examples.md" },
+  { label: "045 — CI/CD for Avalonia",               file: "02-tutorials/advanced/045-cicd-for-avalonia.md" },
+  { label: "045V — CI/CD for Avalonia (verbose)",    file: "02-tutorials/advanced/045-cicd-for-avalonia-verbose.md" },
+  { label: "045X — CI/CD for Avalonia (examples)",   file: "02-tutorials/advanced/045-cicd-for-avalonia-examples.md" },
+  { label: "046 — Logging & Telemetry",              file: "02-tutorials/advanced/046-logging-telemetry.md" },
+  { label: "046V — Logging & Telemetry (verbose)",   file: "02-tutorials/advanced/046-logging-telemetry-verbose.md" },
+  { label: "046X — Logging & Telemetry (examples)",  file: "02-tutorials/advanced/046-logging-telemetry-examples.md" },
+  { label: "047 — Charts & Data Visualization",      file: "02-tutorials/intermediate/047-charts-data-visualization.md" },
+  { label: "047V — Charts & Data Viz (verbose)",     file: "02-tutorials/intermediate/047-charts-data-visualization-verbose.md" },
+  { label: "047X — Charts & Data Viz (examples)",    file: "02-tutorials/intermediate/047-charts-data-visualization-examples.md" },
+  { label: "048 — SQLite / Local Database",          file: "02-tutorials/intermediate/048-sqlite-local-database.md" },
+  { label: "048V — SQLite / Local DB (verbose)",     file: "02-tutorials/intermediate/048-sqlite-local-database-verbose.md" },
+  { label: "048X — SQLite / Local DB (examples)",    file: "02-tutorials/intermediate/048-sqlite-local-database-examples.md" },
+  { label: "049 — Printing",                         file: "02-tutorials/advanced/049-printing.md" },
+  { label: "049V — Printing (verbose)",              file: "02-tutorials/advanced/049-printing-verbose.md" },
+  { label: "049X — Printing (examples)",             file: "02-tutorials/advanced/049-printing-examples.md" },
+  { label: "050 — App Update / Auto-Updater",        file: "02-tutorials/advanced/050-auto-updater.md" },
+  { label: "050V — App Update / Auto-Updater (verbose)",        file: "02-tutorials/advanced/050-auto-updater-verbose.md" },
+  { label: "050X — App Update / Auto-Updater (examples)",        file: "02-tutorials/advanced/050-auto-updater-examples.md" },
+
+  // ---- Patterns ----
+  { label: "Pattern 001 — Service Locator vs DI",    file: "03-patterns/001-service-locator-vs-di.md" },
+  { label: "Pattern 002 — Plugin Architecture",      file: "03-patterns/002-plugin-architecture.md" },
+  { label: "Pattern 003 — Async Initialization",     file: "03-patterns/003-async-initialization.md" },
+  { label: "Pattern 004 — State Management",         file: "03-patterns/004-state-management.md" },
+  { label: "Pattern 005 — Repository / Unit of Work",file: "03-patterns/005-repository-unit-of-work.md" },
+  { label: "Pattern 006 — Logging Patterns",         file: "03-patterns/006-logging-patterns.md" },
+  { label: "Pattern 007 — Editor Architecture",     file: "03-patterns/007-editor-application-architecture.md" },
+
+  // ---- Migration ----
+  { label: "Migration — Avalonia 11→12",             file: "04-migration/avalonia-11-to-12.md" },
+  { label: "Migration — WPF→Avalonia",               file: "04-migration/wpf-to-avalonia-key-mappings.md" },
+];
+
+// ─── Populate dropdown ──────────────────────────────────────────────
+const select = document.getElementById('docSelect');
+
+function buildGroupedOptions() {
+  const groups = {
+    "Quick Reference":  DOC_INDEX.filter(d => d.file.startsWith("01-")),
+    "Basics":           DOC_INDEX.filter(d => d.file.includes("/basics/")),
+    "Intermediate":     DOC_INDEX.filter(d => d.file.includes("/intermediate/")),
+    "Advanced":         DOC_INDEX.filter(d => d.file.includes("/advanced/")),
+    "Patterns":         DOC_INDEX.filter(d => d.file.startsWith("03-")),
+    "Migration":        DOC_INDEX.filter(d => d.file.startsWith("04-")),
+  };
+
+  Object.entries(groups).forEach(([label, items]) => {
+    if (!items.length) return;
+    const group = document.createElement('optgroup');
+    group.label = label;
+    items.forEach(item => {
+      const opt = document.createElement('option');
+      opt.value = item.file;
+      opt.textContent = item.label;
+      group.appendChild(opt);
+    });
+    select.appendChild(group);
+  });
+}
+buildGroupedOptions();
+
+// ─── Load and render ────────────────────────────────────────────────
+const contentDiv = document.getElementById('content');
+const tocDiv    = document.getElementById('toc');
+
+function stripFrontMatter(md) {
+  return md.replace(/^---\n[\s\S]*?\n---\n/, '');
+}
+
+function extractFrontMatter(md) {
+  const m = md.match(/^---\n([\s\S]*?)\n---\n/);
+  return m ? m[1] : '';
+}
+
+function renderTOC(html) {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, 'text/html');
+  const headings = doc.querySelectorAll('h2, h3');
+  let tocHTML = '<h4>On this page</h4>';
+  headings.forEach(h => {
+    const id = h.textContent.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    h.id = id;
+    tocHTML += `<a href="#${id}" class="${h.tagName.toLowerCase()}">${h.textContent}</a>`;
+  });
+  return { html: doc.body.innerHTML, toc: tocHTML };
+}
+
+async function loadDoc(file) {
+  contentDiv.innerHTML = '<div id="loading">Loading…</div>';
+  tocDiv.innerHTML = '';
+
+  try {
+    const resp = await fetch(file);
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+
+    const md = await resp.text();
+    const fm = extractFrontMatter(md);
+    const body = stripFrontMatter(md);
+    const rawHtml = marked.parse(body);
+    const { html, toc } = renderTOC(rawHtml);
+
+    let fmHtml = '';
+    if (fm) {
+      const lines = fm.split('\n').map(l => l.trim()).filter(l => l);
+      fmHtml = `<div class="front-matter-notice">`;
+      lines.forEach(l => {
+        const [k, ...rest] = l.split(':');
+        if (k) fmHtml += `<strong>${k.trim()}</strong>: ${rest.join(':').trim()}<br>`;
+      });
+      fmHtml += `</div>`;
+    }
+
+    contentDiv.innerHTML = fmHtml + html;
+    tocDiv.innerHTML = toc;
+
+    // Highlight all code blocks
+    contentDiv.querySelectorAll('pre code').forEach(block => {
+      hljs.highlightElement(block);
+    });
+
+    // Update URL hash
+    history.replaceState(null, '', `?file=${encodeURIComponent(file)}`);
+    document.title = file.split('/').pop().replace('.md', '') + ' — Avalonia Docs';
+
+  } catch (err) {
+    contentDiv.innerHTML = `<div id="error">
+      <h2>Failed to load document</h2>
+      <p>${err.message}</p>
+      <p><code>${file}</code></p>
+      <p>Make sure you're opening this file via a local HTTP server, not directly as <code>file://</code>.
+         See instructions below.</p>
+    </div>`;
+  }
+}
+
+// ─── Event handlers ──────────────────────────────────────────────────
+select.addEventListener('change', () => {
+  if (select.value) loadDoc(select.value);
+});
+
+// ─── Load from URL param or default ──────────────────────────────────
+const params = new URLSearchParams(location.search);
+const fileParam = params.get('file');
+
+if (fileParam) {
+  select.value = fileParam;
+  loadDoc(fileParam);
+} else {
+  // default: index
+  loadDoc('00-index.md');
+}
+
+// ─── Intercept internal links → load via viewer ──────────────────────
+contentDiv.addEventListener('click', e => {
+  const link = e.target.closest('a[href]');
+  if (!link) return;
+  const href = link.getAttribute('href');
+  if (!href.endsWith('.md')) return;
+  if (href.startsWith('http://') || href.startsWith('https://')) return;
+  if (href.startsWith('#')) return;
+
+  e.preventDefault();
+  // Resolve relative paths against the current file's directory
+  const currentFile = select.value || '00-index.md';
+  const base = currentFile.substring(0, currentFile.lastIndexOf('/') + 1);
+  const resolved = new URL(href, `http://localhost/${base}`).pathname.substring(1);
+
+  select.value = resolved;
+  loadDoc(resolved);
+});
+
+// Also intercept the home link
+document.getElementById('homeLink').addEventListener('click', e => {
+  e.preventDefault();
+  select.value = '00-index.md';
+  loadDoc('00-index.md');
+});
+
+// ─── Keyboard shortcut ───────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+  if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+    e.preventDefault();
+    select.focus();
+  }
+});
+</script>
+</body>
+</html>

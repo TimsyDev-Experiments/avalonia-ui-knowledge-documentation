@@ -76,5 +76,7 @@ avalonia-version: 12.0.4
 
 ## See Also
 
+- [005V — Binding Modes (verbose companion)](005-binding-modes-verbose.md)
+- [005X — Binding Modes (examples)](005-binding-modes-examples.md)
 - [004 — Value Converters](004-value-converters.md)
 - [Avalonia Docs: Data Binding](https://docs.avaloniaui.net/docs/data-binding/data-binding-syntax)

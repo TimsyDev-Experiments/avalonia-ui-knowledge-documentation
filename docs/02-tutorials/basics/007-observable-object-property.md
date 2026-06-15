@@ -124,7 +124,9 @@ partial void OnEmailChanging(string value)
 
 ## See Also
 
+- [007V — ObservableObject & ObservableProperty (verbose companion)](007-observable-object-property-verbose.md)
+- [007X — ObservableObject & ObservableProperty (examples)](007-observable-object-property-examples.md)
 - [002 — Command Binding](002-command-binding.md)
 - [008 — RelayCommand in Depth](008-relay-command.md)
-- [012 — Data Validation with ObservableValidator](../intermediate/013-data-validation.md)
+- [013 — Data Validation with ObservableValidator](../intermediate/013-data-validation.md)
 - [CommunityToolkit.Mvvm Docs: ObservableProperty](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/observableproperty)

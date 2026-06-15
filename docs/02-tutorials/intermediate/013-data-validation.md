@@ -160,5 +160,6 @@ In v11, you needed to override `UpdateDataValidation` to report errors. In v12, 
 ## See Also
 
 - [007 — ObservableObject & ObservableProperty](../basics/007-observable-object-property.md)
-- [022 — Validation Pipeline](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/22-validation-pipeline-and-data-errors.md) (plugin ref)
+- [013V — Data Validation (verbose companion)](013-data-validation-verbose.md)
+- [013E — Data Validation (examples)](013-data-validation-examples.md)
 - [Avalonia Docs: Data Validation](https://docs.avaloniaui.net/docs/data-binding/data-validation)

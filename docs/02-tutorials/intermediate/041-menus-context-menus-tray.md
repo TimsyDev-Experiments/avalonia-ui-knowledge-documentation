@@ -341,7 +341,9 @@ Popup submenu styling:
 
 ## See Also
 
-- [010 -- Window Basics and Dialog Basics](../basics/010-window-dialog-basics.md)
-- [035 -- Custom Dialogs and Window Management](../advanced/035-custom-dialogs-window-management.md)
+- [041V — Menus, Context Menus, and System Tray (verbose companion)](041-menus-context-menus-tray-verbose.md)
+- [041E — Menus, Context Menus, and System Tray (examples)](041-menus-context-menus-tray-examples.md)
+- [010 — Window Basics and Dialog Basics](../basics/010-window-dialog-basics.md)
+- [035 — Custom Dialogs and Window Management](../advanced/035-custom-dialogs-window-management.md)
 - [Avalonia Docs: TrayIcon](https://docs.avaloniaui.net/controls/navigation/trayicon)
 - [Avalonia Docs: Menu](https://docs.avaloniaui.net/controls/navigation/menu)

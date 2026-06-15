@@ -155,5 +155,6 @@ Items[0] = new TodoItem { Title = "Replaced" };
 ## See Also
 
 - [009 — Data Templates Basics](../basics/009-data-templates-basics.md)
-- [020 — ItemsControl, Virtualization, Recycling](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/20-itemscontrol-virtualization-and-recycling.md) (plugin ref)
+- [015V — Item Lists (verbose companion)](015-item-lists-verbose.md)
+- [015E — Item Lists (examples)](015-item-lists-examples.md)
 - [Avalonia Docs: DataGrid](https://docs.avaloniaui.net/controls/datagrid)

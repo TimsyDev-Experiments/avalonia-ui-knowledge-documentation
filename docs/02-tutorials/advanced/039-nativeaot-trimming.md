@@ -179,3 +179,11 @@ dotnet publish -c Release -r osx-arm64 --self-contained
 - Dynamic resource loading by string key fails under trim; use `StaticResource`
 - `rd.xml` preserves assemblies and types needed at runtime
 - Test AOT publish early in development -- fixing trim issues late is costly
+
+## See Also
+
+- [039E — NativeAOT and Trimming (examples)](039-nativeaot-trimming-examples.md)
+- [039V — NativeAOT and Trimming (verbose companion)](039-nativeaot-trimming-verbose.md)
+- [038 — Headless Testing](038-headless-testing.md)
+- [042 — Multi-Targeting: Desktop, Browser, Mobile](042-multi-targeting-desktop-browser-mobile.md)
+- [Avalonia Docs: NativeAOT](https://docs.avaloniaui.net/docs/concepts/native-aot)

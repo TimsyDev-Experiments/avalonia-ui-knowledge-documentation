@@ -243,3 +243,12 @@ For platforms without separate windows (WASM, mobile), use an overlay:
 - `WindowDecorationProperties.ElementRole` enables custom title bars with native drag
 - Overlay dialogs work on platforms that cannot open separate windows
 - Use `TopLevel.GetTopLevel(control) as Window` to find the parent from any view
+
+## See Also
+
+- [035E — Custom Dialogs and Window Management (examples)](035-custom-dialogs-window-management-examples.md)
+- [035V — Custom Dialogs and Advanced Window Management (verbose companion)](035-custom-dialogs-window-management-verbose.md)
+- [016 — Window and Dialog Management](../intermediate/016-window-dialog-management.md)
+- [037 — App Lifetimes and Splash Screen](037-app-lifetimes-splash-screen.md)
+- [042 — Multi-Targeting: Desktop, Browser, Mobile](042-multi-targeting-desktop-browser-mobile.md)
+- [Avalonia Docs: Windows](https://docs.avaloniaui.net/docs/concepts/windows)

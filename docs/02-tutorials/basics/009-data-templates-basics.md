@@ -178,6 +178,8 @@ public class TodoTemplateSelector : IDataTemplate
 
 ## See Also
 
-- [014 — Item Lists in Depth](../intermediate/015-item-lists.md)
-- [038 — Data Templates and IDataTemplate Selector Patterns](file:///C:/Users/tmher/source/development-plugin-for-avalonia/references/38-data-templates-and-idatatemplate-selector-patterns.md) (plugin ref)
+- [015 — Item Lists in Depth](../intermediate/015-item-lists.md)
+- [043 — TreeView with Hierarchical Data](../intermediate/043-treeview-hierarchical-data.md)
 - [Avalonia Docs: Data Templates](https://docs.avaloniaui.net/docs/data-binding/data-templates)
+- [009V — Data Templates: Verbose Companion](009-data-templates-basics-verbose.md)
+- [009X — Data Templates: Real-World Examples](009-data-templates-examples.md)

@@ -181,3 +181,10 @@ public static class ItemsRepeaterSelection
 - Use incremental loading with `ScrollViewer.ScrollChanged` for infinite scroll
 - Do not store mutable state in recycled containers; use data binding
 - `DataGrid` virtualizes rows automatically; disable only when all rows must be realized
+
+## See Also
+
+- [036E — Virtualization and Large List Performance (examples)](036-virtualization-large-lists-examples.md)
+- [036V — Virtualization and Large List Performance (verbose companion)](036-virtualization-large-lists-verbose.md)
+- [015 — Item Lists (ListBox, ItemsRepeater, DataGrid)](../intermediate/015-item-lists.md)
+- [Avalonia Docs: ItemsRepeater](https://docs.avaloniaui.net/docs/concepts/itemsrepeater)

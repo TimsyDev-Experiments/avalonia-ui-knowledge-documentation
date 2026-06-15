@@ -213,3 +213,11 @@ private void ExitApplication()
 - Single-instance enforcement uses `Mutex` at the OS level
 - Splash screens use a lightweight `Window` shown before the main window
 - Use `Shutdown()` in ViewModels through `Application.Current.ApplicationLifetime`
+
+## See Also
+
+- [037E — App Lifetimes and Splash Screen (examples)](037-app-lifetimes-splash-screen-examples.md)
+- [037V — App Lifetimes and Splash Screen (verbose companion)](037-app-lifetimes-splash-screen-verbose.md)
+- [042 — Multi-Targeting: Desktop, Browser, Mobile](042-multi-targeting-desktop-browser-mobile.md)
+- [034 — File Pickers and Platform Services](034-file-pickers-platform-services.md)
+- [Avalonia Docs: Application Lifetimes](https://docs.avaloniaui.net/docs/concepts/application-lifetimes)
