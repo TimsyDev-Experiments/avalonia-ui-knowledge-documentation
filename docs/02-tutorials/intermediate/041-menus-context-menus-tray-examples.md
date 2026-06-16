@@ -263,7 +263,7 @@ public partial class BackgroundServiceViewModel : ObservableObject
     {
         // Seed with sample entries
         AddEntry("Info", "Service started", "BackgroundWorker");
-        AddEntry("Info", "Monitoring directory: C:\logs\incoming", "FileWatcher");
+        AddEntry("Info", @"Monitoring directory: C:\logs\incoming", "FileWatcher");
     }
 
     private void AddEntry(string level, string message, string source)
