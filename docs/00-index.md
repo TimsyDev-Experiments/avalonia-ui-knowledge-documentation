@@ -1,7 +1,7 @@
 # Avalonia UI 12 — Study & Reference Documentation
 
 > **Target:** Avalonia 12.0.4 · .NET 10 · CommunityToolkit.Mvvm 8.x  
-> **Last indexed:** 2026-06-14  
+> **Last indexed:** 2026-06-15  
 > **View rendered:** Open `viewer.html` via a local HTTP server (see below)
 
 An organized collection of mini-tutorials, reference guides, patterns, and migration notes for Avalonia UI development. Written for developers who know the basics but need quick refreshers, structured learning, and deep-dive references.
@@ -270,4 +270,22 @@ dotnet serve --directory . --port 8080
 
 The viewer provides styled rendering, a table of contents sidebar, syntax-highlighted code blocks, dark mode (system preference), and a dropdown to navigate between all documents.
 
-*Maintained with the [audit-skill](../docs/_skills/audit-skill.md) workflow. Found an issue? Open a discussion.*
+### Quiz Layer
+
+Each tutorial has a companion quiz (e.g., `001Q — Project Setup (quiz)`) under the same number prefix. Quizzes use ````quiz` fenced code blocks rendered as interactive graded widgets by `viewer.html`. See [quiz-creation-skill](./_skills/quiz-creation-skill.md) for format rules and the [quiz template](./_assets/templates/quiz-template.md) for a blank starter.
+
+### Behind the Scenes
+
+| Resource | Purpose |
+|---|---|
+| [`_skills/quiz-creation-skill.md`](./_skills/quiz-creation-skill.md) | Quiz format, workflow, implementation reference |
+| [`_skills/verbose-creation-skill.md`](./_skills/verbose-creation-skill.md) | Verbose companion creation workflow |
+| [`_skills/audit-skill.md`](./_skills/audit-skill.md) | Post-creation audit checks |
+| [`_skills/documentation-skill.md`](./_skills/documentation-skill.md) | Base tone and style rules |
+| [`_skills/research-skill.md`](./_skills/research-skill.md) | API and version research |
+| [`_assets/templates/quiz-template.md`](./_assets/templates/quiz-template.md) | Blank quiz file |
+| [`_assets/templates/tutorial-template.md`](./_assets/templates/tutorial-template.md) | Blank tutorial file |
+| [`_assets/templates/example-template.md`](./_assets/templates/example-template.md) | Blank example file |
+| [`link-audit.ps1`](./link-audit.ps1) | Cross-reference link validation script |
+
+*Found an issue? Open a discussion.*
