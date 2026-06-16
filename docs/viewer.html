@@ -183,6 +183,23 @@
 
   .quiz-option-text { flex: 1; line-height: 1.4; }
 
+  .quiz-option-explanation {
+    display: none;
+    margin-top: .35rem;
+    padding: .35rem .5rem;
+    font-size: .8rem;
+    line-height: 1.4;
+    color: var(--text-secondary);
+    border-radius: var(--radius-sm);
+    background: var(--bg-secondary);
+  }
+  .quiz-option.correct .quiz-option-explanation {
+    border-left: 2px solid #4ab67a;
+  }
+  .quiz-option.incorrect .quiz-option-explanation {
+    border-left: 2px solid #e86363;
+  }
+
   .quiz-explanation {
     display: none;
     margin-top: .65rem;
@@ -611,78 +628,119 @@ document.getElementById('homeLink').addEventListener('click', e => {
 });
 
 // ─── Quiz system ─────────────────────────────────────────────────────
+// Merges all ```quiz blocks on a page into a single graded quiz.
+// Format per block:
+//   Q: Question text
+//   A. Option 1 (correct) || Why this is right.
+//   B. Option 2 || Why this is wrong.
+//   Explanation: Overall explanation covering key points.
+
+function escapeHtml(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 function initQuizzes(container) {
-  container.querySelectorAll('pre code.language-quiz').forEach(codeEl => {
-    const pre = codeEl.parentElement;
-    const text = codeEl.textContent;
-    const questions = parseQuizText(text);
-    if (questions.length === 0) return;
-    const quizDiv = buildQuizWidget(questions);
-    pre.replaceWith(quizDiv);
+  var blocks = container.querySelectorAll('pre code.language-quiz');
+  if (blocks.length === 0) return;
+
+  var allQuestions = [];
+  var firstPre = blocks[0].parentElement;
+
+  blocks.forEach(function (codeEl) {
+    var text = codeEl.textContent;
+    var questions = parseQuizText(text);
+    questions.forEach(function (q) { allQuestions.push(q); });
+    codeEl.parentElement.remove();
   });
+
+  if (allQuestions.length === 0) return;
+
+  var quizDiv = buildQuizWidget(allQuestions);
+  firstPre.parentElement.insertBefore(quizDiv, firstPre);
+  firstPre.remove();
 }
 
 function parseQuizText(text) {
-  const blocks = text.trim().split(/\n\n+/);
-  return blocks.map(block => {
-    const lines = block.trim().split('\n');
-    let question = '';
-    const options = [];
-    let explanation = '';
+  var blocks = text.trim().split(/\n\n+/);
+  return blocks.map(function (block) {
+    var lines = block.trim().split('\n');
+    var question = '';
+    var options = [];
+    var explanation = '';
 
-    lines.forEach(line => {
-      const trimmed = line.trim();
+    lines.forEach(function (line) {
+      var trimmed = line.trim();
       if (trimmed.startsWith('Q:')) {
         question = trimmed.slice(2).trim();
       } else if (/^[A-Z]\.\s/.test(trimmed)) {
-        const isCorrect = trimmed.includes('(correct)');
-        const optText = trimmed
-          .replace(/^[A-Z]\.\s+/, '')
+        var isCorrect = trimmed.includes('(correct)');
+        var afterLetter = trimmed.replace(/^[A-Z]\.\s+/, '');
+        // Split on || for per-option explanation
+        var parts = afterLetter.split('||');
+        var optText = parts[0]
           .replace(/\s*\(correct\)\s*$/, '')
           .trim();
-        if (optText) options.push({ text: optText, correct: isCorrect });
+        var optExplanation = parts.length > 1 ? parts.slice(1).join('||').trim() : '';
+        if (optText) options.push({ text: optText, correct: isCorrect, explanation: optExplanation });
       } else if (trimmed.startsWith('Explanation:')) {
         explanation = trimmed.slice('Explanation:'.length).trim();
       }
     });
 
-    return { question, options, explanation };
-  }).filter(q => q.question && q.options.length > 0);
+    return { question: question, options: options, explanation: explanation };
+  }).filter(function (q) { return q.question && q.options.length > 0; });
 }
 
 function buildQuizWidget(questions) {
-  const container = document.createElement('div');
+  var container = document.createElement('div');
   container.className = 'quiz-container';
 
-  // header
-  const header = document.createElement('div');
+  // header with question count
+  var header = document.createElement('div');
   header.className = 'quiz-header';
-  header.innerHTML = '<span class="quiz-header-row"><span class="quiz-badge">Quiz</span></span>';
+  header.innerHTML = '<span class="quiz-header-row"><span class="quiz-badge">Quiz</span> <span>' + questions.length + ' questions</span></span>';
   container.appendChild(header);
 
   // questions
-  questions.forEach((q, qi) => {
-    const qDiv = document.createElement('div');
+  questions.forEach(function (q, qi) {
+    var qDiv = document.createElement('div');
     qDiv.className = 'quiz-question';
     qDiv.dataset.questionIndex = qi;
 
-    const qText = document.createElement('div');
+    var qText = document.createElement('div');
     qText.className = 'quiz-question-text';
-    qText.innerHTML = (qi + 1) + '. ' + q.question;
+    qText.textContent = (qi + 1) + '. ' + q.question;
     qDiv.appendChild(qText);
 
-    const optList = document.createElement('div');
+    var optList = document.createElement('div');
     optList.className = 'quiz-options';
     optList.dataset.questionIndex = qi;
 
-    q.options.forEach((opt, oi) => {
-      const optEl = document.createElement('div');
+    q.options.forEach(function (opt, oi) {
+      var optEl = document.createElement('div');
       optEl.className = 'quiz-option';
       optEl.dataset.optionIndex = oi;
       optEl.dataset.correct = opt.correct;
-      optEl.innerHTML =
-        '<span class="quiz-option-marker">' + String.fromCharCode(65 + oi) + '</span>' +
-        '<span class="quiz-option-text">' + opt.text + '</span>';
+
+      var marker = document.createElement('span');
+      marker.className = 'quiz-option-marker';
+      marker.textContent = String.fromCharCode(65 + oi);
+      optEl.appendChild(marker);
+
+      var textSpan = document.createElement('span');
+      textSpan.className = 'quiz-option-text';
+      textSpan.textContent = opt.text;
+      optEl.appendChild(textSpan);
+
+      // per-option explanation (hidden until complete)
+      if (opt.explanation) {
+        var optExpl = document.createElement('div');
+        optExpl.className = 'quiz-option-explanation';
+        optExpl.textContent = opt.explanation;
+        optEl.appendChild(optExpl);
+      }
 
       optEl.addEventListener('click', function () {
         if (container.classList.contains('quiz-completed')) return;
@@ -697,18 +755,19 @@ function buildQuizWidget(questions) {
 
     qDiv.appendChild(optList);
 
-    const expl = document.createElement('div');
+    // overall explanation (hidden until complete)
+    var expl = document.createElement('div');
     expl.className = 'quiz-explanation';
-    expl.innerHTML = q.explanation;
+    expl.textContent = q.explanation;
     qDiv.appendChild(expl);
 
     container.appendChild(qDiv);
   });
 
-  // actions
-  const actions = document.createElement('div');
+  // actions — one button for the entire quiz
+  var actions = document.createElement('div');
   actions.className = 'quiz-actions';
-  const btn = document.createElement('button');
+  var btn = document.createElement('button');
   btn.className = 'quiz-complete-btn';
   btn.textContent = 'Complete Quiz';
   btn.addEventListener('click', function () { completeQuiz(container); });
@@ -716,7 +775,7 @@ function buildQuizWidget(questions) {
   container.appendChild(actions);
 
   // result area
-  const result = document.createElement('div');
+  var result = document.createElement('div');
   result.className = 'quiz-result';
   container.appendChild(result);
 
@@ -726,13 +785,13 @@ function buildQuizWidget(questions) {
 function completeQuiz(quizDiv) {
   quizDiv.classList.add('quiz-completed');
 
-  const questions = quizDiv.querySelectorAll('.quiz-question');
-  let correct = 0;
-  const total = questions.length;
+  var questions = quizDiv.querySelectorAll('.quiz-question');
+  var correct = 0;
+  var total = questions.length;
 
   questions.forEach(function (q) {
-    const selected = q.querySelector('.quiz-option.selected');
-    const isCorrect = selected ? selected.dataset.correct === 'true' : false;
+    var selected = q.querySelector('.quiz-option.selected');
+    var isCorrect = selected ? selected.dataset.correct === 'true' : false;
 
     q.querySelectorAll('.quiz-option').forEach(function (opt) {
       opt.classList.add('disabled');
@@ -740,21 +799,25 @@ function completeQuiz(quizDiv) {
       if (opt.classList.contains('selected') && opt.dataset.correct !== 'true') {
         opt.classList.add('incorrect');
       }
+      // show per-option explanation
+      var optExpl = opt.querySelector('.quiz-option-explanation');
+      if (optExpl) optExpl.style.display = 'block';
     });
 
-    const expl = q.querySelector('.quiz-explanation');
+    // show overall explanation
+    var expl = q.querySelector('.quiz-explanation');
     if (expl) expl.style.display = 'block';
 
     if (isCorrect) correct++;
   });
 
   // score
-  const result = quizDiv.querySelector('.quiz-result');
-  const pct = Math.round((correct / total) * 100);
-  let status, cls;
+  var result = quizDiv.querySelector('.quiz-result');
+  var pct = Math.round((correct / total) * 100);
+  var status, cls;
   if (pct === 100)       { status = 'Perfect score!';          cls = 'perfect'; }
   else if (pct >= 70)    { status = 'Good job!';               cls = 'good'; }
-  else                   { status = 'Review the explanations';  cls = 'needs-work'; }
+  else                   { status = 'Review the explanations below';  cls = 'needs-work'; }
 
   result.innerHTML =
     '<div class="quiz-score ' + cls + '">' +
@@ -762,7 +825,7 @@ function completeQuiz(quizDiv) {
     '</div>';
   result.style.display = 'block';
 
-  const btn = quizDiv.querySelector('.quiz-complete-btn');
+  var btn = quizDiv.querySelector('.quiz-complete-btn');
   btn.textContent = 'Completed';
   btn.disabled = true;
 }
