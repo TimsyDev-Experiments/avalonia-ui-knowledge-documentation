@@ -646,20 +646,22 @@ function initQuizzes(container) {
   if (blocks.length === 0) return;
 
   var allQuestions = [];
-  var firstPre = blocks[0].parentElement;
+  var pres = [];
 
   blocks.forEach(function (codeEl) {
+    pres.push(codeEl.parentElement);
     var text = codeEl.textContent;
     var questions = parseQuizText(text);
     questions.forEach(function (q) { allQuestions.push(q); });
-    codeEl.parentElement.remove();
   });
 
   if (allQuestions.length === 0) return;
 
   var quizDiv = buildQuizWidget(allQuestions);
+  var firstPre = pres[0];
   firstPre.parentElement.insertBefore(quizDiv, firstPre);
-  firstPre.remove();
+
+  pres.forEach(function (pre) { pre.remove(); });
 }
 
 function parseQuizText(text) {
