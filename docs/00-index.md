@@ -44,6 +44,7 @@ Step-by-step guides organized by difficulty.
 1. [001 — Project Setup](02-tutorials/basics/001-project-setup.md)
    ⌞ [001V — Project Setup (verbose companion)](02-tutorials/basics/001-project-setup-verbose.md)
    ⌞ [001X — Project Setup (examples)](02-tutorials/basics/001-project-setup-examples.md)
+   ⌞ [001Q — Project Setup (quiz)](02-tutorials/basics/001-project-setup-quiz.md)
 2. [002 — Command Binding](02-tutorials/basics/002-command-binding.md)
    ⌞ [002V — Command Binding (verbose companion)](02-tutorials/basics/002-command-binding-verbose.md)
    ⌞ [002X — Command Binding (examples)](02-tutorials/basics/002-command-binding-examples.md)

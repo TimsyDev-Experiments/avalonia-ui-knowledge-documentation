@@ -96,6 +96,155 @@
 
   /* fix front matter display */
   .doc-content .front-matter { display: none; }
+
+  /* ─── Quiz styles ─────────────────────────────────────────────────── */
+  .quiz-container {
+    margin: 1.5rem 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-card);
+    overflow: hidden;
+  }
+
+  .quiz-header {
+    padding: 1rem 1.25rem .5rem;
+    font-size: .95rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .quiz-question {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border-light, var(--border));
+  }
+  .quiz-question:last-of-type { border-bottom: none; }
+
+  .quiz-question-text {
+    font-weight: 600;
+    margin-bottom: .65rem;
+    line-height: 1.4;
+  }
+
+  .quiz-option {
+    display: flex;
+    align-items: flex-start;
+    gap: .5rem;
+    padding: .5rem .75rem;
+    margin: .25rem 0;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background .12s, border-color .12s;
+    border: 1px solid transparent;
+    user-select: none;
+  }
+  .quiz-option:hover:not(.disabled) {
+    background: var(--accent-light, rgba(99,140,232,0.08));
+    border-color: var(--accent-muted, rgba(99,140,232,0.3));
+  }
+  .quiz-option.selected {
+    background: var(--accent-light, rgba(99,140,232,0.12));
+    border-color: var(--accent);
+  }
+  .quiz-option.correct {
+    background: rgba(74, 182, 122, 0.12);
+    border-color: #4ab67a;
+  }
+  .quiz-option.incorrect {
+    background: rgba(232, 99, 99, 0.1);
+    border-color: #e86363;
+  }
+  .quiz-option.disabled { cursor: default; opacity: .8; }
+
+  .quiz-option-marker {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    font-size: .75rem;
+    font-weight: 600;
+    flex-shrink: 0;
+    margin-top: .05rem;
+  }
+  .quiz-option.selected .quiz-option-marker {
+    background: var(--accent);
+    color: #fff;
+  }
+  .quiz-option.correct .quiz-option-marker {
+    background: #4ab67a;
+    color: #fff;
+  }
+  .quiz-option.incorrect .quiz-option-marker {
+    background: #e86363;
+    color: #fff;
+  }
+
+  .quiz-option-text { flex: 1; line-height: 1.4; }
+
+  .quiz-explanation {
+    display: none;
+    margin-top: .65rem;
+    padding: .65rem .75rem;
+    border-radius: var(--radius-sm);
+    background: var(--bg-secondary);
+    font-size: .85rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    border-left: 3px solid var(--accent);
+  }
+
+  .quiz-actions {
+    padding: 1rem 1.25rem;
+    text-align: center;
+    border-top: 1px solid var(--border);
+  }
+
+  .quiz-complete-btn {
+    padding: .55rem 1.5rem;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--accent);
+    color: #fff;
+    font-size: .9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity .15s;
+  }
+  .quiz-complete-btn:hover { opacity: .85; }
+  .quiz-complete-btn:disabled { opacity: .5; cursor: default; }
+
+  .quiz-result {
+    display: none;
+    padding: 1rem 1.25rem;
+    text-align: center;
+    font-size: .95rem;
+    border-top: 1px solid var(--border);
+  }
+  .quiz-score.perfect { color: #4ab67a; }
+  .quiz-score.good    { color: var(--accent); }
+  .quiz-score.needs-work { color: #e8a04a; }
+
+  .quiz-icon-pass { color: #4ab67a; font-weight: 700; }
+  .quiz-icon-fail { color: #e86363; font-weight: 700; }
+  .quiz-icon-neutral { color: var(--text-secondary); }
+
+  .quiz-header-row {
+    display: flex; align-items: center; gap: .5rem;
+    margin-bottom: .25rem;
+  }
+  .quiz-header-row .quiz-badge {
+    display: inline-block;
+    padding: .1rem .4rem;
+    border-radius: 3px;
+    font-size: .65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    background: var(--accent);
+    color: #fff;
+  }
 </style>
 </head>
 <body>
@@ -145,6 +294,7 @@ const DOC_INDEX = [
   { label: "001 — Project Setup",                    file: "02-tutorials/basics/001-project-setup.md" },
   { label: "001V — Project Setup (verbose)",          file: "02-tutorials/basics/001-project-setup-verbose.md" },
   { label: "001X — Project Setup (examples)",         file: "02-tutorials/basics/001-project-setup-examples.md" },
+  { label: "001Q — Project Setup (quiz)",              file: "02-tutorials/basics/001-project-setup-quiz.md" },
   { label: "002 — Command Binding",                  file: "02-tutorials/basics/002-command-binding.md" },
   { label: "002V — Command Binding (verbose)",        file: "02-tutorials/basics/002-command-binding-verbose.md" },
   { label: "002X — Command Binding (examples)",       file: "02-tutorials/basics/002-command-binding-examples.md" },
@@ -395,8 +545,12 @@ async function loadDoc(file) {
 
     // Highlight all code blocks
     contentDiv.querySelectorAll('pre code').forEach(block => {
+      if (block.classList.contains('language-quiz')) return; // skip quiz blocks
       hljs.highlightElement(block);
     });
+
+    // Initialize interactive quizzes
+    initQuizzes(contentDiv);
 
     // Update URL hash
     history.replaceState(null, '', `?file=${encodeURIComponent(file)}`);
@@ -455,6 +609,163 @@ document.getElementById('homeLink').addEventListener('click', e => {
   select.value = '00-index.md';
   loadDoc('00-index.md');
 });
+
+// ─── Quiz system ─────────────────────────────────────────────────────
+function initQuizzes(container) {
+  container.querySelectorAll('pre code.language-quiz').forEach(codeEl => {
+    const pre = codeEl.parentElement;
+    const text = codeEl.textContent;
+    const questions = parseQuizText(text);
+    if (questions.length === 0) return;
+    const quizDiv = buildQuizWidget(questions);
+    pre.replaceWith(quizDiv);
+  });
+}
+
+function parseQuizText(text) {
+  const blocks = text.trim().split(/\n\n+/);
+  return blocks.map(block => {
+    const lines = block.trim().split('\n');
+    let question = '';
+    const options = [];
+    let explanation = '';
+
+    lines.forEach(line => {
+      const trimmed = line.trim();
+      if (trimmed.startsWith('Q:')) {
+        question = trimmed.slice(2).trim();
+      } else if (/^[A-Z]\.\s/.test(trimmed)) {
+        const isCorrect = trimmed.includes('(correct)');
+        const optText = trimmed
+          .replace(/^[A-Z]\.\s+/, '')
+          .replace(/\s*\(correct\)\s*$/, '')
+          .trim();
+        if (optText) options.push({ text: optText, correct: isCorrect });
+      } else if (trimmed.startsWith('Explanation:')) {
+        explanation = trimmed.slice('Explanation:'.length).trim();
+      }
+    });
+
+    return { question, options, explanation };
+  }).filter(q => q.question && q.options.length > 0);
+}
+
+function buildQuizWidget(questions) {
+  const container = document.createElement('div');
+  container.className = 'quiz-container';
+
+  // header
+  const header = document.createElement('div');
+  header.className = 'quiz-header';
+  header.innerHTML = '<span class="quiz-header-row"><span class="quiz-badge">Quiz</span></span>';
+  container.appendChild(header);
+
+  // questions
+  questions.forEach((q, qi) => {
+    const qDiv = document.createElement('div');
+    qDiv.className = 'quiz-question';
+    qDiv.dataset.questionIndex = qi;
+
+    const qText = document.createElement('div');
+    qText.className = 'quiz-question-text';
+    qText.innerHTML = (qi + 1) + '. ' + q.question;
+    qDiv.appendChild(qText);
+
+    const optList = document.createElement('div');
+    optList.className = 'quiz-options';
+    optList.dataset.questionIndex = qi;
+
+    q.options.forEach((opt, oi) => {
+      const optEl = document.createElement('div');
+      optEl.className = 'quiz-option';
+      optEl.dataset.optionIndex = oi;
+      optEl.dataset.correct = opt.correct;
+      optEl.innerHTML =
+        '<span class="quiz-option-marker">' + String.fromCharCode(65 + oi) + '</span>' +
+        '<span class="quiz-option-text">' + opt.text + '</span>';
+
+      optEl.addEventListener('click', function () {
+        if (container.classList.contains('quiz-completed')) return;
+        optList.querySelectorAll('.quiz-option').forEach(function (o) {
+          o.classList.remove('selected');
+        });
+        this.classList.add('selected');
+      });
+
+      optList.appendChild(optEl);
+    });
+
+    qDiv.appendChild(optList);
+
+    const expl = document.createElement('div');
+    expl.className = 'quiz-explanation';
+    expl.innerHTML = q.explanation;
+    qDiv.appendChild(expl);
+
+    container.appendChild(qDiv);
+  });
+
+  // actions
+  const actions = document.createElement('div');
+  actions.className = 'quiz-actions';
+  const btn = document.createElement('button');
+  btn.className = 'quiz-complete-btn';
+  btn.textContent = 'Complete Quiz';
+  btn.addEventListener('click', function () { completeQuiz(container); });
+  actions.appendChild(btn);
+  container.appendChild(actions);
+
+  // result area
+  const result = document.createElement('div');
+  result.className = 'quiz-result';
+  container.appendChild(result);
+
+  return container;
+}
+
+function completeQuiz(quizDiv) {
+  quizDiv.classList.add('quiz-completed');
+
+  const questions = quizDiv.querySelectorAll('.quiz-question');
+  let correct = 0;
+  const total = questions.length;
+
+  questions.forEach(function (q) {
+    const selected = q.querySelector('.quiz-option.selected');
+    const isCorrect = selected ? selected.dataset.correct === 'true' : false;
+
+    q.querySelectorAll('.quiz-option').forEach(function (opt) {
+      opt.classList.add('disabled');
+      if (opt.dataset.correct === 'true') opt.classList.add('correct');
+      if (opt.classList.contains('selected') && opt.dataset.correct !== 'true') {
+        opt.classList.add('incorrect');
+      }
+    });
+
+    const expl = q.querySelector('.quiz-explanation');
+    if (expl) expl.style.display = 'block';
+
+    if (isCorrect) correct++;
+  });
+
+  // score
+  const result = quizDiv.querySelector('.quiz-result');
+  const pct = Math.round((correct / total) * 100);
+  let status, cls;
+  if (pct === 100)       { status = 'Perfect score!';          cls = 'perfect'; }
+  else if (pct >= 70)    { status = 'Good job!';               cls = 'good'; }
+  else                   { status = 'Review the explanations';  cls = 'needs-work'; }
+
+  result.innerHTML =
+    '<div class="quiz-score ' + cls + '">' +
+    '<strong>' + correct + '/' + total + '</strong> correct (' + pct + '%) — ' + status +
+    '</div>';
+  result.style.display = 'block';
+
+  const btn = quizDiv.querySelector('.quiz-complete-btn');
+  btn.textContent = 'Completed';
+  btn.disabled = true;
+}
 
 // ─── Keyboard shortcut ───────────────────────────────────────────────
 document.addEventListener('keydown', e => {
