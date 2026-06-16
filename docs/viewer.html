@@ -127,6 +127,7 @@
 
   .quiz-option {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     gap: .5rem;
     padding: .5rem .75rem;
@@ -181,35 +182,53 @@
     color: #fff;
   }
 
-  .quiz-option-text { flex: 1; line-height: 1.4; }
+  .quiz-option-text { flex: 1; line-height: 1.4; min-width: 0; }
 
   .quiz-option-explanation {
-    display: none;
-    margin-top: .35rem;
-    padding: .35rem .5rem;
+    flex-basis: 100%;
+    margin-left: calc(1.5rem + .5rem);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
     font-size: .8rem;
     line-height: 1.4;
     color: var(--text-secondary);
     border-radius: var(--radius-sm);
     background: var(--bg-secondary);
+    border-left: 2px solid transparent;
+    word-break: break-word;
+    transition: max-height .35s ease, opacity .35s ease, padding .35s ease, border-color .35s ease;
+  }
+  .quiz-completed .quiz-option-explanation {
+    max-height: 300px;
+    opacity: 1;
+    padding: .4rem .5rem;
   }
   .quiz-option.correct .quiz-option-explanation {
-    border-left: 2px solid #4ab67a;
+    border-left-color: #4ab67a;
   }
   .quiz-option.incorrect .quiz-option-explanation {
-    border-left: 2px solid #e86363;
+    border-left-color: #e86363;
   }
 
   .quiz-explanation {
-    display: none;
-    margin-top: .65rem;
-    padding: .65rem .75rem;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
     border-radius: var(--radius-sm);
     background: var(--bg-secondary);
     font-size: .85rem;
     line-height: 1.5;
     color: var(--text-secondary);
     border-left: 3px solid var(--accent);
+    word-break: break-word;
+    transition: max-height .35s ease, opacity .35s ease, padding .35s ease, margin .35s ease;
+  }
+  .quiz-completed .quiz-explanation {
+    max-height: 500px;
+    opacity: 1;
+    padding: .75rem .85rem;
+    margin-top: .65rem;
   }
 
   .quiz-actions {
@@ -801,14 +820,7 @@ function completeQuiz(quizDiv) {
       if (opt.classList.contains('selected') && opt.dataset.correct !== 'true') {
         opt.classList.add('incorrect');
       }
-      // show per-option explanation
-      var optExpl = opt.querySelector('.quiz-option-explanation');
-      if (optExpl) optExpl.style.display = 'block';
     });
-
-    // show overall explanation
-    var expl = q.querySelector('.quiz-explanation');
-    if (expl) expl.style.display = 'block';
 
     if (isCorrect) correct++;
   });
