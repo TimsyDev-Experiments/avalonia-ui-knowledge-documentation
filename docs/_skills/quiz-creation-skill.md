@@ -27,7 +27,7 @@ Same directory as the original tutorial. Quiz lives alongside, not in a separate
 ---
 tier: basics|intermediate|advanced
 topic: <same as original>
-estimated: 3-5 min
+estimated: 1-2 min per question
 researched: YYYY-MM-DD
 avalonia-version: 12.0.4
 example-of: NNN-topic.md
@@ -89,9 +89,15 @@ Explanation: Overall explanation covering the key concept.
 
 ---
 
-## 5-Question Convention
+## Question Count
 
-Each quiz should have **exactly 5 questions** unless the tutorial is unusually short or long. This keeps quiz duration predictable (~3-5 min) and the widget balanced.
+The number of questions should reflect the topic material — cover what the tutorial teaches. Gauge by:
+
+- How many distinct concepts or APIs the tutorial introduces
+- What the reader needs to demonstrate to prove comprehension
+- The depth of the material (a 2-step basics tutorial needs fewer than a 10-step advanced tutorial)
+
+If a topic is broad enough that a single quiz would feel bloated, split into smaller quizzes (e.g., `001A-quiz.md` and `001B-quiz.md`). The quiz must ensure the user understands the concept or topic *and* can apply it — include at least one question requiring the reader to identify the correct code or spot the error.
 
 ---
 
@@ -208,7 +214,7 @@ All user-facing text in the quiz widget is set via `textContent` (not `innerHTML
 ## Audit Checklist
 
 - [ ] Front-matter uses `example-of`, not `companion-to`.
-- [ ] Exactly 5 questions (unless justified shorter/longer).
+- [ ] Question count matches the topic depth (not an arbitrary default).
 - [ ] Each question has exactly 1 `(correct)` marker.
 - [ ] Every option has a ` || ` per-option explanation.
 - [ ] Every question has an `Explanation:` line.

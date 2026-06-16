@@ -1,7 +1,7 @@
 ---
 tier: basics|intermediate|advanced
 topic:
-estimated: 3-5 min
+estimated: 1-2 min per question
 researched: YYYY-MM-DD
 avalonia-version: 12.0.4
 example-of: NNN-topic.md
@@ -22,18 +22,9 @@ distractors are wrong. Connect back to the tutorial's key takeaway.
 ```
 
 ```quiz
-Q: Second question — what does this API return?
-A. A string value || Explanation for wrong option A.
-B. An integer value (correct) || Explanation for correct option — mention the return type and when it's used.
-C. A boolean value || Explanation for wrong option C.
-D. A Task object || Explanation for wrong option D.
-Explanation: Overall explanation for question 2. Clarify the API contract.
-```
-
-```quiz
 Q: Which of these correctly demonstrates the pattern from the tutorial?
 A. `Wrong code example` || This fails because of reason X.
-B. `Right code example` (correct) || This works because of reason Y.
+B. `Right code example` (correct) || This works because reason Y.
 C. `Another wrong code example` || This fails because of reason Z.
 D. `Yet another wrong code example` || This fails because of reason W.
 Explanation: Summary explaining the pattern and why only one variant is correct.
