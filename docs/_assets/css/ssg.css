@@ -3,18 +3,18 @@
   --toc-width: 240px;
   --bg: #1e1e2e;
   --bg-alt: #181825;
-  --bg-card: #252536;
+  --bg-card: #2e2e42;
   --text: #cdd6f4;
-  --text-dim: #6c7086;
+  --text-dim: #b0b6d0;
   --accent: #89b4fa;
   --accent-hover: #74c7ec;
-  --border: #313244;
-  --search-bg: #313244;
+  --border: #3a3a50;
+  --search-bg: #36364c;
   --search-text: #cdd6f4;
-  --nav-active-bg: #313244;
-  --nav-hover-bg: #252536;
+  --nav-active-bg: #36364c;
+  --nav-hover-bg: #2e2e42;
   --code-bg: #181825;
-  --code-border: #313244;
+  --code-border: #3a3a50;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -56,7 +56,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helv
 .doc-content pre code { background: none; border: none; padding: 0; font-size: 0.875rem; }
 .doc-content ul, .doc-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
 .doc-content li { margin-bottom: 0.375rem; }
-.doc-content blockquote { border-left: 4px solid var(--accent); padding: 0.75rem 1rem; margin-bottom: 1rem; background: var(--bg-card); border-radius: 0 6px 6px 0; color: var(--text-dim); }
+.doc-content blockquote { border-left: 4px solid var(--accent); padding: 0.75rem 1rem; margin-bottom: 1rem; background: var(--bg-card); border-radius: 0 6px 6px 0; color: var(--text); }
 .doc-content table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
 .doc-content th, .doc-content td { border: 1px solid var(--border); padding: 0.5rem 0.75rem; text-align: left; font-size: 0.875rem; }
 .doc-content th { background: var(--bg-alt); font-weight: 700; }
