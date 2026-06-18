@@ -1,20 +1,20 @@
 :root {
   --sidebar-width: 280px;
   --toc-width: 240px;
-  --bg: #1e1e2e;
-  --bg-alt: #181825;
-  --bg-card: #2e2e42;
-  --text: #cdd6f4;
-  --text-dim: #b0b6d0;
-  --accent: #89b4fa;
-  --accent-hover: #74c7ec;
-  --border: #3a3a50;
-  --search-bg: #36364c;
-  --search-text: #cdd6f4;
-  --nav-active-bg: #36364c;
-  --nav-hover-bg: #2e2e42;
-  --code-bg: #181825;
-  --code-border: #3a3a50;
+  --bg: #0d1117;
+  --bg-alt: #151b23;
+  --bg-card: #1c2129;
+  --text: #e6edf3;
+  --text-dim: #b3c4d8;
+  --accent: #58a6ff;
+  --accent-hover: #79c0ff;
+  --border: #30363d;
+  --search-bg: #151b23;
+  --search-text: #e6edf3;
+  --nav-active-bg: #1c2129;
+  --nav-hover-bg: #1c2129;
+  --code-bg: #0d1117;
+  --code-border: #30363d;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -51,9 +51,13 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helv
 .doc-content p { margin-bottom: 1rem; }
 .doc-content a { color: var(--accent); text-decoration: none; }
 .doc-content a:hover { text-decoration: underline; }
-.doc-content code { background: var(--code-bg); border: 1px solid var(--code-border); border-radius: 4px; padding: 0.125rem 0.375rem; font-size: 0.875em; font-family: "JetBrains Mono", "Fira Code", Consolas, monospace; }
-.doc-content pre { background: var(--code-bg); border: 1px solid var(--code-border); border-radius: 8px; padding: 1rem; overflow-x: auto; margin-bottom: 1rem; }
-.doc-content pre code { background: none; border: none; padding: 0; font-size: 0.875rem; }
+.doc-content code { background: #161b22; border: 1px solid var(--code-border); border-radius: 4px; padding: 0.125rem 0.375rem; font-size: 0.875em; font-family: "JetBrains Mono", "Fira Code", Consolas, monospace; }
+.doc-content pre { background: #161b22; border: 1px solid var(--code-border); border-left: 3px solid var(--accent); border-radius: 8px; padding: 1rem; overflow-x: auto; margin-bottom: 1rem; line-height: 1.5; tab-size: 4; }
+.doc-content pre code { background: none; border: none; padding: 0; font-size: 0.875rem; line-height: inherit; }
+.doc-content pre::-webkit-scrollbar { height: 8px; }
+.doc-content pre::-webkit-scrollbar-track { background: transparent; }
+.doc-content pre::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+.doc-content pre::-webkit-scrollbar-thumb:hover { background: #484f58; }
 .doc-content ul, .doc-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
 .doc-content li { margin-bottom: 0.375rem; }
 .doc-content blockquote { border-left: 4px solid var(--accent); padding: 0.75rem 1rem; margin-bottom: 1rem; background: var(--bg-card); border-radius: 0 6px 6px 0; color: var(--text); }
@@ -85,9 +89,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helv
 .quiz-container .quiz-option .option-label { font-weight: 600; min-width: 1.5rem; }
 .quiz-container .quiz-option .option-text { flex: 1; }
 .quiz-container .quiz-option .option-explanation { width: 100%; max-height: 0; opacity: 0; overflow: hidden; transition: max-height 0.3s ease, opacity 0.3s ease, margin 0.3s ease; font-size: 0.8125rem; color: var(--text-dim); margin-top: 0; }
-.quiz-container .quiz-option.correct { border-color: #a6e3a1; background: rgba(166, 227, 161, 0.1); }
-.quiz-container .quiz-option.incorrect { border-color: #f38ba8; background: rgba(243, 139, 168, 0.1); }
-.quiz-container .quiz-option.correct .option-explanation, .quiz-container .quiz-option.incorrect .option-explanation { max-height: 200px; opacity: 1; margin-top: 0.375rem; }
+.quiz-container.quiz-completed .quiz-option.correct { border-color: #a6e3a1; background: rgba(166, 227, 161, 0.1); }
+.quiz-container.quiz-completed .quiz-option.incorrect { border-color: #f38ba8; background: rgba(243, 139, 168, 0.1); }
+.quiz-container.quiz-completed .quiz-option .option-explanation { max-height: 200px; opacity: 1; margin-top: 0.375rem; }
 .quiz-container .quiz-option .option-explanation::before { content: "→ "; }
 .quiz-container .quiz-feedback { margin-top: 0.75rem; font-weight: 600; display: none; }
 .quiz-container .quiz-feedback.show { display: block; }
