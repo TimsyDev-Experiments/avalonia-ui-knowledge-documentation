@@ -130,7 +130,11 @@ Step-by-step guides organized by difficulty.
 12. [043 — TreeView with Hierarchical Data](02-tutorials/intermediate/043-treeview-hierarchical-data.md)
     ⌞ [043V — TreeView (verbose companion)](02-tutorials/intermediate/043-treeview-hierarchical-data-verbose.md)
     ⌞ [043X — TreeView (examples)](02-tutorials/intermediate/043-treeview-hierarchical-data-examples.md)
-   ⌞ [043Q — TreeView (quiz)](02-tutorials/intermediate/043-treeview-hierarchical-data-quiz.md)
+    ⌞ [043Q — TreeView (quiz)](02-tutorials/intermediate/043-treeview-hierarchical-data-quiz.md)
+13. [051 — Routed Events](02-tutorials/intermediate/051-routed-events.md)
+     ⌞ [051V — Routed Events (verbose companion)](02-tutorials/intermediate/051-routed-events-verbose.md)
+     ⌞ [051X — Routed Events (examples)](02-tutorials/intermediate/051-routed-events-examples.md)
+    ⌞ [051Q — Routed Events (quiz)](02-tutorials/intermediate/051-routed-events-quiz.md)
 
 ### Advanced
 1. [020 — Custom Templated Controls](02-tutorials/advanced/020-custom-templated-controls.md)
