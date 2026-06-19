@@ -1,0 +1,1171 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>architecture — Avalonia Docs</title><link rel="stylesheet" href="../_assets/css/ssg.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='12' font-size='12'>A</text></svg>"></head><body><div class="layout"><nav class="sidebar" id="sidebar"><div class="sidebar-header"><h2><a href="../index.html" style="color:inherit;text-decoration:none">Avalonia Docs</a></h2></div><div class="search-box"><input type="text" id="searchInput" placeholder="Search docs..." autocomplete="off"></div><div id="searchResults" class="search-results" style="display:none"></div><ul class="nav-tree" id="navTree"><li class="nav-group"><span class="nav-group-label">Quick References</span><ul class="nav-items"><li class="nav-item"><a href="../01-quick-refs/accessibility-automation.html">Accessibility Automation</a></li><li class="nav-item"><a href="../01-quick-refs/avalonia-12-breaking-changes.html">Avalonia 12 Breaking Changes</a></li><li class="nav-item"><a href="../01-quick-refs/binding-modes.html">Binding Modes</a></li><li class="nav-item"><a href="../01-quick-refs/brushes-colors-reference.html">Brushes Colors Reference</a></li><li class="nav-item"><a href="../01-quick-refs/common-controls-reference.html">Common Controls Reference</a></li><li class="nav-item"><a href="../01-quick-refs/common-converters.html">Common Converters</a></li><li class="nav-item"><a href="../01-quick-refs/control-themes.html">Control Themes</a></li><li class="nav-item"><a href="../01-quick-refs/dispatcher-timers-quick-ref.html">Dispatcher Timers Quick Ref</a></li><li class="nav-item"><a href="../01-quick-refs/font-typography-reference.html">Font Typography Reference</a></li><li class="nav-item"><a href="../01-quick-refs/icons-reference.html">Icons Reference</a></li><li class="nav-item"><a href="../01-quick-refs/input-gestures.html">Input Gestures</a></li><li class="nav-item"><a href="../01-quick-refs/mvvm-source-generators.html">Mvvm Source Generators</a></li><li class="nav-item"><a href="../01-quick-refs/naming-conventions.html">Naming Conventions</a></li><li class="nav-item"><a href="../01-quick-refs/property-system-quick-ref.html">Property System Quick Ref</a></li><li class="nav-item"><a href="../01-quick-refs/resource-dictionaries.html">Resource Dictionaries</a></li><li class="nav-item"><a href="../01-quick-refs/routed-events-quick-ref.html">Routed Events Quick Ref</a></li><li class="nav-item"><a href="../01-quick-refs/shapes-geometries.html">Shapes Geometries</a></li><li class="nav-item"><a href="../01-quick-refs/xaml-selectors.html">Xaml Selectors</a></li><li class="nav-group"><span class="nav-group-label">Basics</span><ul class="nav-items"><li class="nav-item"><a href="../02-tutorials/basics/001-project-setup.html">Project Setup</a></li><li class="nav-item"><a href="../02-tutorials/basics/001-project-setup-verbose.html">Project Setup (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/basics/001-project-setup-examples.html">Project Setup (examples)</a></li><li class="nav-item"><a href="../02-tutorials/basics/001-project-setup-quiz.html">Project Setup (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/basics/002-command-binding.html">Command Binding</a></li><li class="nav-item"><a href="../02-tutorials/basics/002-command-binding-verbose.html">Command Binding (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/basics/002-command-binding-examples.html">Command Binding (examples)</a></li><li class="nav-item"><a href="../02-tutorials/basics/002-command-binding-quiz.html">Command Binding (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/basics/003-basic-styling.html">Basic Styling</a></li><li class="nav-item"><a href="../02-tutorials/basics/003-basic-styling-verbose.html">Basic Styling (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/basics/003-basic-styling-examples.html">Basic Styling (examples)</a></li><li class="nav-item"><a href="../02-tutorials/basics/003-basic-styling-quiz.html">Basic Styling (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/basics/004-value-converters.html">Value Converters</a></li><li class="nav-item"><a href="../02-tutorials/basics/004-value-converters-verbose.html">Value Converters (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/basics/004-value-converters-examples.html">Value Converters (examples)</a></li><li class="nav-item"><a href="../02-tutorials/basics/004-value-converters-quiz.html">Value Converters (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/basics/005-binding-modes.html">Binding Modes</a></li><li class="nav-item"><a href="../02-tutorials/basics/005-binding-modes-verbose.html">Binding Modes (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/basics/005-binding-modes-examples.html">Binding Modes (examples)</a></li><li class="nav-item"><a href="../02-tutorials/basics/005-binding-modes-quiz.html">Binding Modes (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/basics/006-resources.html">Resources</a></li><li class="nav-item"><a href="../02-tutorials/basics/006-resources-verbose.html">Resources (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/basics/006-resources-examples.html">Resources (examples)</a></li><li class="nav-item"><a href="../02-tutorials/basics/006-resources-quiz.html">Resources (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/basics/007-observable-object-property.html">Observable Object Property</a></li><li class="nav-item"><a href="../02-tutorials/basics/007-observable-object-property-verbose.html">Observable Object Property (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/basics/007-observable-object-property-examples.html">Observable Object Property (examples)</a></li><li class="nav-item"><a href="../02-tutorials/basics/007-observable-object-property-quiz.html">Observable Object Property (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/basics/008-relay-command.html">Relay Command</a></li><li class="nav-item"><a href="../02-tutorials/basics/008-relay-command-verbose.html">Relay Command (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/basics/008-relay-command-examples.html">Relay Command (examples)</a></li><li class="nav-item"><a href="../02-tutorials/basics/008-relay-command-quiz.html">Relay Command (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/basics/009-data-templates-examples.html">Data Templates (examples)</a></li><li class="nav-item"><a href="../02-tutorials/basics/009-data-templates-basics.html">Data Templates Basics</a></li><li class="nav-item"><a href="../02-tutorials/basics/009-data-templates-basics-verbose.html">Data Templates Basics (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/basics/009-data-templates-basics-quiz.html">Data Templates Basics (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/basics/010-window-dialog-basics.html">Window Dialog Basics</a></li><li class="nav-item"><a href="../02-tutorials/basics/010-window-dialog-basics-verbose.html">Window Dialog Basics (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/basics/010-window-dialog-basics-examples.html">Window Dialog Basics (examples)</a></li><li class="nav-item"><a href="../02-tutorials/basics/010-window-dialog-basics-quiz.html">Window Dialog Basics (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Intermediate</span><ul class="nav-items"><li class="nav-item"><a href="../02-tutorials/intermediate/011-compiled-bindings.html">Compiled Bindings</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/011-compiled-bindings-verbose.html">Compiled Bindings (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/011-compiled-bindings-examples.html">Compiled Bindings (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/011-compiled-bindings-quiz.html">Compiled Bindings (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/012-control-themes-vs-styles.html">Control Themes Vs Styles</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/012-control-themes-vs-styles-verbose.html">Control Themes Vs Styles (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/012-control-themes-vs-styles-examples.html">Control Themes Vs Styles (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/012-control-themes-vs-styles-quiz.html">Control Themes Vs Styles (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/013-data-validation.html">Data Validation</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/013-data-validation-verbose.html">Data Validation (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/013-data-validation-examples.html">Data Validation (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/013-data-validation-quiz.html">Data Validation (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/014-imessenger-patterns.html">Imessenger Patterns</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/014-imessenger-patterns-verbose.html">Imessenger Patterns (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/014-imessenger-patterns-examples.html">Imessenger Patterns (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/014-imessenger-patterns-quiz.html">Imessenger Patterns (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/015-item-lists.html">Item Lists</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/015-item-lists-verbose.html">Item Lists (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/015-item-lists-examples.html">Item Lists (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/015-item-lists-quiz.html">Item Lists (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/016-window-dialog-management.html">Window Dialog Management</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/016-window-dialog-management-verbose.html">Window Dialog Management (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/016-window-dialog-management-examples.html">Window Dialog Management (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/016-window-dialog-management-quiz.html">Window Dialog Management (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/017-theme-switching.html">Theme Switching</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/017-theme-switching-verbose.html">Theme Switching (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/017-theme-switching-examples.html">Theme Switching (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/017-theme-switching-quiz.html">Theme Switching (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/018-navigation.html">Navigation</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/018-navigation-verbose.html">Navigation (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/018-navigation-examples.html">Navigation (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/018-navigation-quiz.html">Navigation (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/019-drag-drop.html">Drag Drop</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/019-drag-drop-verbose.html">Drag Drop (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/019-drag-drop-examples.html">Drag Drop (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/019-drag-drop-quiz.html">Drag Drop (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/040-datagrid-deep-dive.html">Datagrid Deep Dive</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/040-datagrid-deep-dive-verbose.html">Datagrid Deep Dive (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/040-datagrid-deep-dive-examples.html">Datagrid Deep Dive (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/040-datagrid-deep-dive-quiz.html">Datagrid Deep Dive (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/041-menus-context-menus-tray.html">Menus Context Menus Tray</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/041-menus-context-menus-tray-verbose.html">Menus Context Menus Tray (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/041-menus-context-menus-tray-examples.html">Menus Context Menus Tray (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/041-menus-context-menus-tray-quiz.html">Menus Context Menus Tray (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/043-treeview-hierarchical-data.html">Treeview Hierarchical Data</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/043-treeview-hierarchical-data-verbose.html">Treeview Hierarchical Data (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/043-treeview-hierarchical-data-examples.html">Treeview Hierarchical Data (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/043-treeview-hierarchical-data-quiz.html">Treeview Hierarchical Data (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/047-charts-data-visualization.html">Charts Data Visualization</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/047-charts-data-visualization-verbose.html">Charts Data Visualization (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/047-charts-data-visualization-examples.html">Charts Data Visualization (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/047-charts-data-visualization-quiz.html">Charts Data Visualization (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/048-sqlite-local-database.html">Sqlite Local Database</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/048-sqlite-local-database-verbose.html">Sqlite Local Database (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/048-sqlite-local-database-examples.html">Sqlite Local Database (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/048-sqlite-local-database-quiz.html">Sqlite Local Database (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/051-routed-events.html">Routed Events</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/051-routed-events-verbose.html">Routed Events (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/051-routed-events-examples.html">Routed Events (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/051-routed-events-quiz.html">Routed Events (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/052-property-system.html">Property System</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/052-property-system-verbose.html">Property System (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/052-property-system-examples.html">Property System (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/052-property-system-quiz.html">Property System (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/053-threading-dispatcher.html">Threading Dispatcher</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/053-threading-dispatcher-verbose.html">Threading Dispatcher (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/053-threading-dispatcher-examples.html">Threading Dispatcher (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/053-threading-dispatcher-quiz.html">Threading Dispatcher (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/054-focus-management.html">Focus Management</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/054-focus-management-verbose.html">Focus Management (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/054-focus-management-examples.html">Focus Management (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/054-focus-management-quiz.html">Focus Management (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/055-keyboard-hotkeys.html">Keyboard Hotkeys</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/055-keyboard-hotkeys-verbose.html">Keyboard Hotkeys (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/055-keyboard-hotkeys-examples.html">Keyboard Hotkeys (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/055-keyboard-hotkeys-quiz.html">Keyboard Hotkeys (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/056-input-events.html">Input Events</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/056-input-events-verbose.html">Input Events (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/056-input-events-examples.html">Input Events (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/056-input-events-quiz.html">Input Events (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/057-gesture-recognizers.html">Gesture Recognizers</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/057-gesture-recognizers-verbose.html">Gesture Recognizers (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/057-gesture-recognizers-examples.html">Gesture Recognizers (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/057-gesture-recognizers-quiz.html">Gesture Recognizers (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/058-scrollviewer-scrollbar.html">Scrollviewer Scrollbar</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/058-scrollviewer-scrollbar-verbose.html">Scrollviewer Scrollbar (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/058-scrollviewer-scrollbar-examples.html">Scrollviewer Scrollbar (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/058-scrollviewer-scrollbar-quiz.html">Scrollviewer Scrollbar (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/059-textbox-text-input.html">Textbox Text Input</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/059-textbox-text-input-verbose.html">Textbox Text Input (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/059-textbox-text-input-examples.html">Textbox Text Input (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/059-textbox-text-input-quiz.html">Textbox Text Input (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/060-multibinding-prioritybinding.html">Multibinding Prioritybinding</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/060-multibinding-prioritybinding-verbose.html">Multibinding Prioritybinding (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/060-multibinding-prioritybinding-examples.html">Multibinding Prioritybinding (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/060-multibinding-prioritybinding-quiz.html">Multibinding Prioritybinding (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/061-collection-views.html">Collection Views</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/061-collection-views-verbose.html">Collection Views (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/061-collection-views-examples.html">Collection Views (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/061-collection-views-quiz.html">Collection Views (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/062-clipboard-launcher.html">Clipboard Launcher</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/062-clipboard-launcher-verbose.html">Clipboard Launcher (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/062-clipboard-launcher-examples.html">Clipboard Launcher (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/062-clipboard-launcher-quiz.html">Clipboard Launcher (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/063-storage-service.html">Storage Service</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/063-storage-service-verbose.html">Storage Service (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/063-storage-service-examples.html">Storage Service (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/063-storage-service-quiz.html">Storage Service (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/064-selection-controls.html">Selection Controls</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/064-selection-controls-verbose.html">Selection Controls (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/064-selection-controls-examples.html">Selection Controls (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/064-selection-controls-quiz.html">Selection Controls (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/065-range-toggle-controls.html">Range Toggle Controls</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/065-range-toggle-controls-verbose.html">Range Toggle Controls (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/065-range-toggle-controls-examples.html">Range Toggle Controls (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/065-range-toggle-controls-quiz.html">Range Toggle Controls (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/066-tabcontrol-expander-splitview.html">Tabcontrol Expander Splitview</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/066-tabcontrol-expander-splitview-verbose.html">Tabcontrol Expander Splitview (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/066-tabcontrol-expander-splitview-examples.html">Tabcontrol Expander Splitview (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/066-tabcontrol-expander-splitview-quiz.html">Tabcontrol Expander Splitview (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Advanced</span><ul class="nav-items"><li class="nav-item"><a href="../02-tutorials/advanced/020-custom-templated-controls.html">Custom Templated Controls</a></li><li class="nav-item"><a href="../02-tutorials/advanced/020-custom-templated-controls-verbose.html">Custom Templated Controls (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/020-custom-templated-controls-examples.html">Custom Templated Controls (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/020-custom-templated-controls-quiz.html">Custom Templated Controls (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/021-custom-controls-from-scratch.html">Custom Controls From Scratch</a></li><li class="nav-item"><a href="../02-tutorials/advanced/021-custom-controls-from-scratch-verbose.html">Custom Controls From Scratch (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/021-custom-controls-from-scratch-examples.html">Custom Controls From Scratch (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/021-custom-controls-from-scratch-quiz.html">Custom Controls From Scratch (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/022-attached-properties-behaviors.html">Attached Properties Behaviors</a></li><li class="nav-item"><a href="../02-tutorials/advanced/022-attached-properties-behaviors-verbose.html">Attached Properties Behaviors (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/022-attached-properties-behaviors-examples.html">Attached Properties Behaviors (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/022-attached-properties-behaviors-quiz.html">Attached Properties Behaviors (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/023-custom-layout-panels.html">Custom Layout Panels</a></li><li class="nav-item"><a href="../02-tutorials/advanced/023-custom-layout-panels-verbose.html">Custom Layout Panels (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/023-custom-layout-panels-examples.html">Custom Layout Panels (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/023-custom-layout-panels-quiz.html">Custom Layout Panels (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/024-animation-transitions.html">Animation Transitions</a></li><li class="nav-item"><a href="../02-tutorials/advanced/024-animation-transitions-verbose.html">Animation Transitions (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/024-animation-transitions-examples.html">Animation Transitions (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/024-animation-transitions-quiz.html">Animation Transitions (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/025-compositor-custom-visuals.html">Compositor Custom Visuals</a></li><li class="nav-item"><a href="../02-tutorials/advanced/025-compositor-custom-visuals-verbose.html">Compositor Custom Visuals (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/025-compositor-custom-visuals-examples.html">Compositor Custom Visuals (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/025-compositor-custom-visuals-quiz.html">Compositor Custom Visuals (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/026-accessibility-automation.html">Accessibility Automation</a></li><li class="nav-item"><a href="../02-tutorials/advanced/026-accessibility-automation-verbose.html">Accessibility Automation (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/026-accessibility-automation-examples.html">Accessibility Automation (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/026-accessibility-automation-quiz.html">Accessibility Automation (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/027-advanced-composite-bindings.html">Advanced Composite Bindings</a></li><li class="nav-item"><a href="../02-tutorials/advanced/027-advanced-composite-bindings-verbose.html">Advanced Composite Bindings (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/027-advanced-composite-bindings-examples.html">Advanced Composite Bindings (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/027-advanced-composite-bindings-quiz.html">Advanced Composite Bindings (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/028-custom-drawing-skia.html">Custom Drawing Skia</a></li><li class="nav-item"><a href="../02-tutorials/advanced/028-custom-drawing-skia-verbose.html">Custom Drawing Skia (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/028-custom-drawing-skia-examples.html">Custom Drawing Skia (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/028-custom-drawing-skia-quiz.html">Custom Drawing Skia (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/029-avalonia-plus-devtools.html">Avalonia Plus Devtools</a></li><li class="nav-item"><a href="../02-tutorials/advanced/029-avalonia-plus-devtools-verbose.html">Avalonia Plus Devtools (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/029-avalonia-plus-devtools-examples.html">Avalonia Plus Devtools (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/029-avalonia-plus-devtools-quiz.html">Avalonia Plus Devtools (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/030-parcel-packaging.html">Parcel Packaging</a></li><li class="nav-item"><a href="../02-tutorials/advanced/030-parcel-packaging-verbose.html">Parcel Packaging (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/030-parcel-packaging-examples.html">Parcel Packaging (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/030-parcel-packaging-quiz.html">Parcel Packaging (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/031-custom-theme-design-system.html">Custom Theme Design System</a></li><li class="nav-item"><a href="../02-tutorials/advanced/031-custom-theme-design-system-verbose.html">Custom Theme Design System (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/031-custom-theme-design-system-examples.html">Custom Theme Design System (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/031-custom-theme-design-system-quiz.html">Custom Theme Design System (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/032-mvvm-di-wiring.html">Mvvm Di Wiring</a></li><li class="nav-item"><a href="../02-tutorials/advanced/032-mvvm-di-wiring-verbose.html">Mvvm Di Wiring (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/032-mvvm-di-wiring-examples.html">Mvvm Di Wiring (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/032-mvvm-di-wiring-quiz.html">Mvvm Di Wiring (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/033-localization-i18n.html">Localization I18n</a></li><li class="nav-item"><a href="../02-tutorials/advanced/033-localization-i18n-verbose.html">Localization I18n (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/033-localization-i18n-examples.html">Localization I18n (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/033-localization-i18n-quiz.html">Localization I18n (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/034-file-pickers-platform-services.html">File Pickers Platform Services</a></li><li class="nav-item"><a href="../02-tutorials/advanced/034-file-pickers-platform-services-verbose.html">File Pickers Platform Services (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/034-file-pickers-platform-services-examples.html">File Pickers Platform Services (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/034-file-pickers-platform-services-quiz.html">File Pickers Platform Services (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/035-custom-dialogs-window-management.html">Custom Dialogs Window Management</a></li><li class="nav-item"><a href="../02-tutorials/advanced/035-custom-dialogs-window-management-verbose.html">Custom Dialogs Window Management (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/035-custom-dialogs-window-management-examples.html">Custom Dialogs Window Management (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/035-custom-dialogs-window-management-quiz.html">Custom Dialogs Window Management (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/036-virtualization-large-lists.html">Virtualization Large Lists</a></li><li class="nav-item"><a href="../02-tutorials/advanced/036-virtualization-large-lists-verbose.html">Virtualization Large Lists (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/036-virtualization-large-lists-examples.html">Virtualization Large Lists (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/036-virtualization-large-lists-quiz.html">Virtualization Large Lists (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/037-app-lifetimes-splash-screen.html">App Lifetimes Splash Screen</a></li><li class="nav-item"><a href="../02-tutorials/advanced/037-app-lifetimes-splash-screen-verbose.html">App Lifetimes Splash Screen (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/037-app-lifetimes-splash-screen-examples.html">App Lifetimes Splash Screen (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/037-app-lifetimes-splash-screen-quiz.html">App Lifetimes Splash Screen (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/038-headless-testing.html">Headless Testing</a></li><li class="nav-item"><a href="../02-tutorials/advanced/038-headless-testing-verbose.html">Headless Testing (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/038-headless-testing-examples.html">Headless Testing (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/038-headless-testing-quiz.html">Headless Testing (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/039-nativeaot-trimming.html">Nativeaot Trimming</a></li><li class="nav-item"><a href="../02-tutorials/advanced/039-nativeaot-trimming-verbose.html">Nativeaot Trimming (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/039-nativeaot-trimming-examples.html">Nativeaot Trimming (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/039-nativeaot-trimming-quiz.html">Nativeaot Trimming (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile.html">Multi Targeting Desktop Browser Mobile</a></li><li class="nav-item"><a href="../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-verbose.html">Multi Targeting Desktop Browser Mobile (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-examples.html">Multi Targeting Desktop Browser Mobile (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-quiz.html">Multi Targeting Desktop Browser Mobile (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/044-background-services-and-progress.html">Background Services And Progress</a></li><li class="nav-item"><a href="../02-tutorials/advanced/044-background-services-and-progress-verbose.html">Background Services And Progress (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/044-background-services-and-progress-examples.html">Background Services And Progress (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/044-background-services-and-progress-quiz.html">Background Services And Progress (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/045-cicd-for-avalonia.html">Cicd For Avalonia</a></li><li class="nav-item"><a href="../02-tutorials/advanced/045-cicd-for-avalonia-verbose.html">Cicd For Avalonia (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/045-cicd-for-avalonia-examples.html">Cicd For Avalonia (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/045-cicd-for-avalonia-quiz.html">Cicd For Avalonia (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/046-logging-telemetry.html">Logging Telemetry</a></li><li class="nav-item"><a href="../02-tutorials/advanced/046-logging-telemetry-verbose.html">Logging Telemetry (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/046-logging-telemetry-examples.html">Logging Telemetry (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/046-logging-telemetry-quiz.html">Logging Telemetry (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/049-printing.html">Printing</a></li><li class="nav-item"><a href="../02-tutorials/advanced/049-printing-verbose.html">Printing (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/049-printing-examples.html">Printing (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/049-printing-quiz.html">Printing (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/050-auto-updater.html">Auto Updater</a></li><li class="nav-item"><a href="../02-tutorials/advanced/050-auto-updater-verbose.html">Auto Updater (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/050-auto-updater-examples.html">Auto Updater (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/050-auto-updater-quiz.html">Auto Updater (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/080-layout-system-deep-dive.html">Layout System Deep Dive</a></li><li class="nav-item"><a href="../02-tutorials/advanced/080-layout-system-deep-dive-verbose.html">Layout System Deep Dive (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/080-layout-system-deep-dive-examples.html">Layout System Deep Dive (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/080-layout-system-deep-dive-quiz.html">Layout System Deep Dive (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/081-animation-system-deep-dive.html">Animation System Deep Dive</a></li><li class="nav-item"><a href="../02-tutorials/advanced/081-animation-system-deep-dive-verbose.html">Animation System Deep Dive (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/081-animation-system-deep-dive-examples.html">Animation System Deep Dive (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/081-animation-system-deep-dive-quiz.html">Animation System Deep Dive (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/082-graphics-drawing-reference.html">Graphics Drawing Reference</a></li><li class="nav-item"><a href="../02-tutorials/advanced/082-graphics-drawing-reference-verbose.html">Graphics Drawing Reference (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/082-graphics-drawing-reference-examples.html">Graphics Drawing Reference (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/082-graphics-drawing-reference-quiz.html">Graphics Drawing Reference (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/083-container-queries-responsive-layout.html">Container Queries Responsive Layout</a></li><li class="nav-item"><a href="../02-tutorials/advanced/083-container-queries-responsive-layout-verbose.html">Container Queries Responsive Layout (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/083-container-queries-responsive-layout-examples.html">Container Queries Responsive Layout (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/083-container-queries-responsive-layout-quiz.html">Container Queries Responsive Layout (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/084-typography-text-features.html">Typography Text Features</a></li><li class="nav-item"><a href="../02-tutorials/advanced/084-typography-text-features-verbose.html">Typography Text Features (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/084-typography-text-features-examples.html">Typography Text Features (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/084-typography-text-features-quiz.html">Typography Text Features (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/085-performance-profiling.html">Performance Profiling</a></li><li class="nav-item"><a href="../02-tutorials/advanced/085-performance-profiling-verbose.html">Performance Profiling (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/085-performance-profiling-examples.html">Performance Profiling (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/085-performance-profiling-quiz.html">Performance Profiling (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/086-platform-specific-windows.html">Platform Specific Windows</a></li><li class="nav-item"><a href="../02-tutorials/advanced/086-platform-specific-windows-verbose.html">Platform Specific Windows (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/086-platform-specific-windows-examples.html">Platform Specific Windows (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/086-platform-specific-windows-quiz.html">Platform Specific Windows (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/087-platform-specific-macos-linux.html">Platform Specific Macos Linux</a></li><li class="nav-item"><a href="../02-tutorials/advanced/087-platform-specific-macos-linux-verbose.html">Platform Specific Macos Linux (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/087-platform-specific-macos-linux-examples.html">Platform Specific Macos Linux (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/087-platform-specific-macos-linux-quiz.html">Platform Specific Macos Linux (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/088-xaml-previewer-hot-reload.html">Xaml Previewer Hot Reload</a></li><li class="nav-item"><a href="../02-tutorials/advanced/088-xaml-previewer-hot-reload-verbose.html">Xaml Previewer Hot Reload (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/088-xaml-previewer-hot-reload-examples.html">Xaml Previewer Hot Reload (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/088-xaml-previewer-hot-reload-quiz.html">Xaml Previewer Hot Reload (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/089-custom-flyout-popup.html">Custom Flyout Popup</a></li><li class="nav-item"><a href="../02-tutorials/advanced/089-custom-flyout-popup-verbose.html">Custom Flyout Popup (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/089-custom-flyout-popup-examples.html">Custom Flyout Popup (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/089-custom-flyout-popup-quiz.html">Custom Flyout Popup (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Patterns</span><ul class="nav-items"><li class="nav-item"><a href="../03-patterns/001-service-locator-vs-di.html">Service Locator Vs Di</a></li><li class="nav-item"><a href="../03-patterns/001-service-locator-vs-di-verbose.html">Service Locator Vs Di (in depth)</a></li><li class="nav-item"><a href="../03-patterns/001-service-locator-vs-di-examples.html">Service Locator Vs Di (examples)</a></li><li class="nav-item"><a href="../03-patterns/001-service-locator-vs-di-quiz.html">Service Locator Vs Di (quiz)</a></li><li class="nav-item"><a href="../03-patterns/002-plugin-architecture.html">Plugin Architecture</a></li><li class="nav-item"><a href="../03-patterns/002-plugin-architecture-verbose.html">Plugin Architecture (in depth)</a></li><li class="nav-item"><a href="../03-patterns/002-plugin-architecture-examples.html">Plugin Architecture (examples)</a></li><li class="nav-item"><a href="../03-patterns/002-plugin-architecture-quiz.html">Plugin Architecture (quiz)</a></li><li class="nav-item"><a href="../03-patterns/003-async-initialization.html">Async Initialization</a></li><li class="nav-item"><a href="../03-patterns/003-async-initialization-verbose.html">Async Initialization (in depth)</a></li><li class="nav-item"><a href="../03-patterns/003-async-initialization-examples.html">Async Initialization (examples)</a></li><li class="nav-item"><a href="../03-patterns/003-async-initialization-quiz.html">Async Initialization (quiz)</a></li><li class="nav-item"><a href="../03-patterns/004-state-management.html">State Management</a></li><li class="nav-item"><a href="../03-patterns/004-state-management-verbose.html">State Management (in depth)</a></li><li class="nav-item"><a href="../03-patterns/004-state-management-examples.html">State Management (examples)</a></li><li class="nav-item"><a href="../03-patterns/004-state-management-quiz.html">State Management (quiz)</a></li><li class="nav-item"><a href="../03-patterns/005-repository-unit-of-work.html">Repository Unit Of Work</a></li><li class="nav-item"><a href="../03-patterns/005-repository-unit-of-work-verbose.html">Repository Unit Of Work (in depth)</a></li><li class="nav-item"><a href="../03-patterns/005-repository-unit-of-work-examples.html">Repository Unit Of Work (examples)</a></li><li class="nav-item"><a href="../03-patterns/005-repository-unit-of-work-quiz.html">Repository Unit Of Work (quiz)</a></li><li class="nav-item"><a href="../03-patterns/006-logging-patterns.html">Logging Patterns</a></li><li class="nav-item"><a href="../03-patterns/006-logging-patterns-verbose.html">Logging Patterns (in depth)</a></li><li class="nav-item"><a href="../03-patterns/006-logging-patterns-examples.html">Logging Patterns (examples)</a></li><li class="nav-item"><a href="../03-patterns/006-logging-patterns-quiz.html">Logging Patterns (quiz)</a></li><li class="nav-item"><a href="../03-patterns/007-editor-application-architecture.html">Editor Application Architecture</a></li><li class="nav-item active"><a href="../03-patterns/007-editor-application-architecture-verbose.html">Editor Application Architecture (in depth)</a></li><li class="nav-item"><a href="../03-patterns/007-editor-application-architecture-examples.html">Editor Application Architecture (examples)</a></li><li class="nav-item"><a href="../03-patterns/007-editor-application-architecture-quiz.html">Editor Application Architecture (quiz)</a></li><li class="nav-item"><a href="../03-patterns/008-focus-keyboard-navigation.html">Focus Keyboard Navigation</a></li><li class="nav-item"><a href="../03-patterns/008-focus-keyboard-navigation-verbose.html">Focus Keyboard Navigation (in depth)</a></li><li class="nav-item"><a href="../03-patterns/008-focus-keyboard-navigation-examples.html">Focus Keyboard Navigation (examples)</a></li><li class="nav-item"><a href="../03-patterns/008-focus-keyboard-navigation-quiz.html">Focus Keyboard Navigation (quiz)</a></li><li class="nav-item"><a href="../03-patterns/008-toggle-state-pattern.html">Toggle State Pattern</a></li><li class="nav-item"><a href="../03-patterns/008-toggle-state-pattern-verbose.html">Toggle State Pattern (in depth)</a></li><li class="nav-item"><a href="../03-patterns/008-toggle-state-pattern-examples.html">Toggle State Pattern (examples)</a></li><li class="nav-item"><a href="../03-patterns/008-toggle-state-pattern-quiz.html">Toggle State Pattern (quiz)</a></li><li class="nav-item"><a href="../03-patterns/009-lazy-load-virtual-scrolling.html">Lazy Load Virtual Scrolling</a></li><li class="nav-item"><a href="../03-patterns/009-lazy-load-virtual-scrolling-verbose.html">Lazy Load Virtual Scrolling (in depth)</a></li><li class="nav-item"><a href="../03-patterns/009-lazy-load-virtual-scrolling-examples.html">Lazy Load Virtual Scrolling (examples)</a></li><li class="nav-item"><a href="../03-patterns/009-lazy-load-virtual-scrolling-quiz.html">Lazy Load Virtual Scrolling (quiz)</a></li><li class="nav-item"><a href="../03-patterns/009-storage-file-io-pipeline.html">Storage File Io Pipeline</a></li><li class="nav-item"><a href="../03-patterns/009-storage-file-io-pipeline-verbose.html">Storage File Io Pipeline (in depth)</a></li><li class="nav-item"><a href="../03-patterns/009-storage-file-io-pipeline-examples.html">Storage File Io Pipeline (examples)</a></li><li class="nav-item"><a href="../03-patterns/009-storage-file-io-pipeline-quiz.html">Storage File Io Pipeline (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Migration</span><ul class="nav-items"><li class="nav-item"><a href="../04-migration/avalonia-11-to-12.html">Avalonia 11 To 12</a></li><li class="nav-item"><a href="../04-migration/wpf-to-avalonia-key-mappings.html">Wpf To Avalonia Key Mappings</a></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></nav><main class="doc-content" id="docContent"><h1>007V — Editor Application Architecture: An In-Depth Companion</h1>
+<p>You should already have read: <a href="007-editor-application-architecture.html">007 — Editor Application Architecture</a> for the quick-start version. This file goes deeper on every section.</p>
+<hr />
+<h2>1. Why Standard MVVM Breaks at Editor Scale</h2>
+<p>A content-creation tool has fundamentally different state-sharing requirements than a line-of-business app. In a typical CRUD app, each page owns its own ViewModel and data context. In an editor:</p>
+<ul>
+<li><strong>Ten panels observe the same selection.</strong> When the user clicks a node in the hierarchy tree, the inspector, property grid, canvas, status bar, and console all need to react. If each panel fetches selection from its own ViewModel property, you get stale reads and synchronization bugs.</li>
+<li><strong>One action triggers multi-step domain changes.</strong> Deleting a node also removes its connections, updates the document's dirty flag, adjusts the scene graph's bounding box, and may invalidate a cached render. A ViewModel-bound <code>DeleteCommand</code> that only removes an item from an <code>ObservableCollection</code> cannot express these side effects.</li>
+<li><strong>The inspector is not a form — it is a UI factory.</strong> The properties panel renders completely different controls depending on whether a <code>LightNode</code>, <code>CameraNode</code>, or <code>MeshNode</code> is selected. Hard-coding that dispatch in XAML with <code>DataTemplate</code> selectors works for three types but fails at thirty.</li>
+<li><strong>Undo/redo must span documents, panels, and services.</strong> A single user action (&quot;paint stroke&quot;, &quot;move handle&quot;, &quot;composite command&quot;) touches multiple domain objects. Property-value snapshots or <code>INotifyPropertyChanged</code> rollback are insufficient — you need first-class command objects that encapsulate inverse operations.</li>
+</ul>
+<p><strong>Core insight:</strong> The ViewModel layer in an editor is thin — it only exists to bridge services to XAML bindings. All real state lives in the service layer.</p>
+<hr />
+<h2>2. Service Layer Deep Dive</h2>
+<h3>Singleton Registration Rules</h3>
+<p>Every service must be registered as singleton because:</p>
+<ul>
+<li>Two instances of <code>SelectionService</code> would mean two sources of truth</li>
+<li><code>UndoService</code> owns a stack that must be global</li>
+<li><code>DocumentManager</code> tracks every open document</li>
+</ul>
+<pre><code class="language-csharp">// Program.cs — full editor service registration
+builder.Services.AddSingleton&lt;SelectionService&gt;();
+builder.Services.AddSingleton&lt;UndoService&gt;();
+builder.Services.AddSingleton&lt;DocumentManager&gt;();
+builder.Services.AddSingleton&lt;WorkspaceService&gt;();
+builder.Services.AddSingleton&lt;PluginService&gt;();
+builder.Services.AddSingleton&lt;ProjectService&gt;();
+builder.Services.AddSingleton&lt;IEditorProviderRegistry, EditorProviderRegistry&gt;();
+builder.Services.AddSingleton&lt;IDockingLayoutService, DockingLayoutService&gt;();
+</code></pre>
+<h3>SelectionService as the Architecture Hub</h3>
+<p>The <code>SelectionService</code> is the single most important service in an editor. Every panel depends on it directly or indirectly.</p>
+<p><strong>Design decisions:</strong></p>
+<ul>
+<li>Expose both an event (<code>SelectionChanged</code>) and a message-bus message (<code>SelectionChangedMessage</code>). The event is for strongly-typed observers (ViewModels that need a direct reference), the message is for decoupled observers (plugins, logging, telemetry).</li>
+<li>Selection is always a list, not a single object. Even single-select editors use a list internally to simplify the API.</li>
+<li>The service is stateless with respect to <em>what</em> is selected — it only tracks <em>which</em> objects. The interpretation of a selection is the responsibility of each panel.</li>
+</ul>
+<pre><code class="language-csharp">public sealed class SelectionService
+{
+    private readonly IMessageBus _bus;
+    private readonly List&lt;object&gt; _selected = new();
+    private readonly HashSet&lt;object&gt; _selectedSet = new(); // O(1) contains check
+
+    public IReadOnlyList&lt;object&gt; SelectedObjects =&gt; _selected;
+    public int Count =&gt; _selected.Count;
+    public bool IsSelected(object target) =&gt; _selectedSet.Contains(target);
+
+    public event Action&lt;SelectionChangedArgs&gt;? SelectionChanged;
+
+    public SelectionService(IMessageBus bus) =&gt; _bus = bus;
+
+    public void Select(object target)
+    {
+        _selected.Clear();
+        _selectedSet.Clear();
+        _selected.Add(target);
+        _selectedSet.Add(target);
+        NotifyChanged();
+    }
+
+    public void SelectRange(IEnumerable&lt;object&gt; targets)
+    {
+        _selected.Clear();
+        _selectedSet.Clear();
+        foreach (var t in targets)
+        {
+            _selected.Add(t);
+            _selectedSet.Add(t);
+        }
+        NotifyChanged();
+    }
+
+    public void ToggleSelection(object target)
+    {
+        if (_selectedSet.Remove(target))
+            _selected.Remove(target);
+        else
+        {
+            _selected.Add(target);
+            _selectedSet.Add(target);
+        }
+        NotifyChanged();
+    }
+
+    public void Clear()
+    {
+        _selected.Clear();
+        _selectedSet.Clear();
+        NotifyChanged();
+    }
+
+    private void NotifyChanged()
+    {
+        var args = new SelectionChangedArgs(_selected);
+        SelectionChanged?.Invoke(args);
+        _bus.Publish(new SelectionChangedMessage(_selected));
+    }
+}
+</code></pre>
+<h3>WorkspaceService — Panel Layout State</h3>
+<p>The <code>WorkspaceService</code> owns the layout model: which panels are open, where they are docked, their sizes, and whether they are pinned or auto-hidden. It serializes to and deserializes from JSON so the editor restores its layout on restart.</p>
+<pre><code class="language-csharp">public sealed class WorkspaceService
+{
+    private readonly List&lt;ToolWindowDescriptor&gt; _toolWindows = new();
+    public IReadOnlyList&lt;ToolWindowDescriptor&gt; ToolWindows =&gt; _toolWindows;
+
+    public event Action? LayoutChanged;
+
+    public void RegisterToolWindow(ToolWindowDescriptor descriptor)
+    {
+        _toolWindows.Add(descriptor);
+        LayoutChanged?.Invoke();
+    }
+
+    public void ToggleToolWindow(string viewModelTypeName)
+    {
+        var existing = _toolWindows.FirstOrDefault(t =&gt; t.ViewModelTypeName == viewModelTypeName);
+        if (existing is not null)
+        {
+            existing.IsVisible = !existing.IsVisible;
+            LayoutChanged?.Invoke();
+        }
+    }
+
+    public string SerializeLayout()
+    {
+        return JsonSerializer.Serialize(_toolWindows.Select(t =&gt; new
+        {
+            t.ViewModelTypeName, t.DefaultDock, t.IsVisible, t.IsPinned
+        }));
+    }
+
+    public void DeserializeLayout(string json)
+    {
+        // Restore saved positions, sizes, visibility
+    }
+}
+
+public sealed class ToolWindowDescriptor
+{
+    public string ViewModelTypeName { get; init; }
+    public string Title { get; init; }
+    public string DefaultDock { get; init; }
+    public bool IsVisible { get; set; } = true;
+    public bool IsPinned { get; set; } = true;
+}
+</code></pre>
+<hr />
+<h2>3. Document-View Architecture Deep Dive</h2>
+<h3>Why Documents Are Not ViewModels</h3>
+<p>In MVVM, the ViewModel wraps the Model and exposes properties for binding. In an editor, this coupling is harmful:</p>
+<ul>
+<li>A document has multiple views (outline tree, canvas, text source, property panel). If the document <em>is</em> a ViewModel, every view shares the same data context — you cannot have independent representations.</li>
+<li>Documents manage their own persistence. A ViewModel should not know about file paths, serialization formats, or save dialogs.</li>
+<li>Documents are long-lived and can outlive the panels that display them. When the user closes the outline tree and reopens it later, the same document instance should be bound.</li>
+</ul>
+<pre><code class="language-csharp">// IDocument — pure domain contract
+public interface IDocument
+{
+    string Name { get; }
+    string FilePath { get; }
+    bool IsDirty { get; }
+    Task&lt;bool&gt; SaveAsync(string? path = null);
+    Task&lt;bool&gt; LoadAsync(string path);
+    event Action? DirtyStateChanged;
+    event Action? DocumentChanged;
+}
+
+// Concrete document — no UI concerns
+public sealed class SceneDocument : IDocument
+{
+    public string Name { get; private set; } = &quot;Untitled&quot;;
+    public string FilePath { get; private set; } = &quot;&quot;;
+    public bool IsDirty { get; private set; }
+
+    public SceneGraph SceneGraph { get; } = new();
+    public AssetLibrary Assets { get; } = new();
+
+    public event Action? DirtyStateChanged;
+    public event Action? DocumentChanged;
+
+    public async Task&lt;bool&gt; LoadAsync(string path)
+    {
+        FilePath = path;
+        Name = Path.GetFileNameWithoutExtension(path);
+        await using var stream = File.OpenRead(path);
+        // Deserialize scene graph, assets, metadata
+        IsDirty = false;
+        DirtyStateChanged?.Invoke();
+        DocumentChanged?.Invoke();
+        return true;
+    }
+
+    public async Task&lt;bool&gt; SaveAsync(string? path = null)
+    {
+        path ??= FilePath;
+        await using var stream = File.Create(path);
+        // Serialize scene graph
+        IsDirty = false;
+        DirtyStateChanged?.Invoke();
+        return true;
+    }
+
+    public void MarkDirty()
+    {
+        IsDirty = true;
+        DirtyStateChanged?.Invoke();
+    }
+}
+</code></pre>
+<h3>DocumentManager as the Document Registry</h3>
+<p>The <code>DocumentManager</code> owns the list of open documents, tracks the active document, and orchestrates open/save/close workflows.</p>
+<pre><code class="language-csharp">public sealed class DocumentManager
+{
+    private readonly IMessageBus _bus;
+    private readonly IDocumentFactory _factory;
+    private readonly List&lt;IDocument&gt; _documents = new();
+
+    public IReadOnlyList&lt;IDocument&gt; OpenDocuments =&gt; _documents;
+    public IDocument? ActiveDocument { get; private set; }
+
+    public event Action&lt;IDocument&gt;? DocumentOpened;
+    public event Action&lt;IDocument&gt;? DocumentClosed;
+    public event Action&lt;IDocument&gt;? ActiveDocumentChanged;
+
+    public DocumentManager(IMessageBus bus, IDocumentFactory factory)
+    {
+        _bus = bus;
+        _factory = factory;
+    }
+
+    public async Task&lt;IDocument&gt; OpenAsync(string path)
+    {
+        var doc = _factory.CreateForPath(path);
+        await doc.LoadAsync(path);
+        _documents.Add(doc);
+        ActiveDocument = doc;
+        DocumentOpened?.Invoke(doc);
+        _bus.Publish(new DocumentOpenedMessage(doc));
+        return doc;
+    }
+
+    public async Task&lt;bool&gt; SaveAsync(IDocument doc)
+    {
+        var success = await doc.SaveAsync();
+        if (success)
+            _bus.Publish(new DocumentSavedMessage(doc));
+        return success;
+    }
+
+    public async Task&lt;bool&gt; SaveAllAsync()
+    {
+        foreach (var doc in _documents)
+            await doc.SaveAsync();
+        return true;
+    }
+
+    public async Task&lt;bool&gt; CloseAsync(IDocument doc)
+    {
+        if (doc.IsDirty)
+        {
+            // Prompt save dialog — delegate to a dialog service
+            var result = await _dialogService.ConfirmSaveAsync(doc.Name);
+            if (result == SaveResult.Cancel) return false;
+            if (result == SaveResult.Save) await SaveAsync(doc);
+        }
+        _documents.Remove(doc);
+        if (ActiveDocument == doc)
+            ActiveDocument = _documents.LastOrDefault();
+        DocumentClosed?.Invoke(doc);
+        _bus.Publish(new DocumentClosedMessage(doc));
+        return true;
+    }
+
+    public void Activate(IDocument doc)
+    {
+        if (ActiveDocument != doc)
+        {
+            ActiveDocument = doc;
+            ActiveDocumentChanged?.Invoke(doc);
+            _bus.Publish(new DocumentActivatedMessage(doc));
+        }
+    }
+}
+</code></pre>
+<h3>The Shell ViewModel</h3>
+<p>The shell window's ViewModel owns the top-level chrome and composes tool windows dynamically.</p>
+<pre><code class="language-csharp">public sealed partial class ShellViewModel : ObservableObject
+{
+    private readonly WorkspaceService _workspace;
+    private readonly DocumentManager _docManager;
+    private readonly IViewLocator _viewLocator;
+
+    [ObservableProperty]
+    private string _title = &quot;Editor — Untitled&quot;;
+
+    [ObservableProperty]
+    private IDocument? _activeDocument;
+
+    public ObservableCollection&lt;ToolWindowViewModel&gt; ToolWindows { get; } = new();
+
+    public ShellViewModel(
+        WorkspaceService workspace,
+        DocumentManager docManager,
+        IViewLocator viewLocator)
+    {
+        _workspace = workspace;
+        _docManager = docManager;
+        _viewLocator = viewLocator;
+
+        docManager.DocumentOpened += OnDocumentOpened;
+        docManager.ActiveDocumentChanged += OnActiveDocumentChanged;
+        workspace.LayoutChanged += RebuildToolWindows;
+
+        RebuildToolWindows();
+    }
+
+    private void OnDocumentOpened(IDocument doc)
+    {
+        Title = $&quot;Editor — {doc.Name}&quot;;
+    }
+
+    private void OnActiveDocumentChanged(IDocument? doc)
+    {
+        ActiveDocument = doc;
+        Title = doc is not null ? $&quot;Editor — {doc.Name}&quot; : &quot;Editor — Untitled&quot;;
+    }
+
+    private void RebuildToolWindows()
+    {
+        ToolWindows.Clear();
+        foreach (var descriptor in _workspace.ToolWindows.Where(t =&gt; t.IsVisible))
+        {
+            var vm = _viewLocator.CreateViewModel(descriptor.ViewModelTypeName);
+            if (vm is ToolWindowViewModel twvm)
+                ToolWindows.Add(twvm);
+        }
+    }
+}
+</code></pre>
+<hr />
+<h2>4. Command Pattern &amp; UndoService — Advanced Topics</h2>
+<h3>Transactional Command Execution</h3>
+<p>The naive <code>UndoService</code> executes the command immediately inside <code>Record()</code>. In practice, commands may fail halfway through. A robust implementation wraps execution in a try/catch and supports rollback:</p>
+<pre><code class="language-csharp">public sealed class TransactionalUndoService
+{
+    private readonly Stack&lt;IUndoableCommand&gt; _undoStack = new();
+    private readonly Stack&lt;IUndoableCommand&gt; _redoStack = new();
+    private const int MaxHistory = 500;
+
+    public bool CanUndo =&gt; _undoStack.Count &gt; 0;
+    public bool CanRedo =&gt; _redoStack.Count &gt; 0;
+    public event Action? HistoryChanged;
+    public event Action&lt;string&gt;? CommandFailed;
+
+    public bool Record(IUndoableCommand command)
+    {
+        try
+        {
+            command.Execute();
+            _undoStack.Push(command);
+            _redoStack.Clear();
+            TrimHistory();
+            HistoryChanged?.Invoke();
+            return true;
+        }
+        catch (Exception ex)
+        {
+            CommandFailed?.Invoke($&quot;Command '{command.Name}' failed: {ex.Message}&quot;);
+            // Attempt rollback if command exposes a rollback method
+            if (command is IRecoverableCommand recoverable)
+                recoverable.Rollback();
+            return false;
+        }
+    }
+
+    public bool Undo()
+    {
+        if (_undoStack.TryPop(out var cmd))
+        {
+            try
+            {
+                cmd.Undo();
+                _redoStack.Push(cmd);
+                HistoryChanged?.Invoke();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                CommandFailed?.Invoke($&quot;Undo failed for '{cmd.Name}': {ex.Message}&quot;);
+                return false;
+            }
+        }
+        return false;
+    }
+
+    public bool Redo()
+    {
+        if (_redoStack.TryPop(out var cmd))
+        {
+            try
+            {
+                cmd.Redo();
+                _undoStack.Push(cmd);
+                HistoryChanged?.Invoke();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                CommandFailed?.Invoke($&quot;Redo failed for '{cmd.Name}': {ex.Message}&quot;);
+                return false;
+            }
+        }
+        return false;
+    }
+
+    public void Clear()
+    {
+        _undoStack.Clear();
+        _redoStack.Clear();
+        HistoryChanged?.Invoke();
+    }
+
+    private void TrimHistory()
+    {
+        if (_undoStack.Count &gt; MaxHistory)
+        {
+            var trimmed = _undoStack.Reverse().TakeLast(MaxHistory).Reverse().ToList();
+            _undoStack.Clear();
+            foreach (var c in trimmed) _undoStack.Push(c);
+        }
+    }
+}
+
+// Interface for commands that can recover from partial execution
+public interface IRecoverableCommand
+{
+    void Rollback();
+}
+</code></pre>
+<h3>CompositeCommand with Macro Recording</h3>
+<p>For complex operations (paste, duplicate, batch transform), use <code>CompositeCommand</code> to group multiple atomic commands into one undo step. An advanced variant supports live macro recording:</p>
+<pre><code class="language-csharp">public sealed class MacroRecorder
+{
+    private readonly UndoService _undoService;
+    private List&lt;IUndoableCommand&gt;? _recording;
+
+    public MacroRecorder(UndoService undoService) =&gt; _undoService = undoService;
+
+    public bool IsRecording =&gt; _recording is not null;
+
+    public void StartRecording(string macroName)
+    {
+        _recording = new List&lt;IUndoableCommand&gt;();
+    }
+
+    public void Capture(IUndoableCommand command)
+    {
+        _recording?.Add(command);
+    }
+
+    public void StopRecording()
+    {
+        if (_recording is null) return;
+        if (_recording.Count &gt; 0)
+        {
+            var composite = new CompositeCommand(&quot;Macro&quot;, _recording);
+            _undoService.Record(composite);
+        }
+        _recording = null;
+    }
+
+    public void CancelRecording()
+    {
+        _recording = null;
+    }
+}
+</code></pre>
+<h3>PropertyBagCommand — Generic Undoable Property Changes</h3>
+<p>For simple property edits (rename a node, change a float value), writing a dedicated command class for every property is tedious. A generic <code>PropertyBagCommand</code> covers 80% of cases:</p>
+<pre><code class="language-csharp">public sealed class PropertyBagCommand : IUndoableCommand
+{
+    public string Name { get; }
+
+    private readonly object _target;
+    private readonly Dictionary&lt;string, object?&gt; _oldValues = new();
+    private readonly Dictionary&lt;string, object?&gt; _newValues = new();
+
+    public PropertyBagCommand(string name, object target,
+        Dictionary&lt;string, object?&gt; newValues,
+        Dictionary&lt;string, object?&gt; oldValues)
+    {
+        Name = name;
+        _target = target;
+        _newValues = newValues;
+        _oldValues = oldValues;
+    }
+
+    public void Execute()
+    {
+        ApplyValues(_newValues);
+    }
+
+    public void Undo()
+    {
+        ApplyValues(_oldValues);
+    }
+
+    public void Redo() =&gt; Execute();
+
+    private void ApplyValues(Dictionary&lt;string, object?&gt; values)
+    {
+        foreach (var (propName, value) in values)
+        {
+            var prop = _target.GetType().GetProperty(propName);
+            prop?.SetValue(_target, value);
+        }
+    }
+}
+
+// Usage
+var oldValues = new Dictionary&lt;string, object?&gt; { [&quot;Position&quot;] = oldPos, [&quot;Rotation&quot;] = oldRot };
+var newValues = new Dictionary&lt;string, object?&gt; { [&quot;Position&quot;] = newPos, [&quot;Rotation&quot;] = newRot };
+var cmd = new PropertyBagCommand(&quot;Transform&quot;, node, newValues, oldValues);
+_undoService.Record(cmd);
+</code></pre>
+<hr />
+<h2>5. Dynamic Inspector — Strategy Pattern In Depth</h2>
+<h3>Editor Provider Registry</h3>
+<p>Rather than injecting <code>IEnumerable&lt;IEditorProvider&gt;</code> directly into each inspector ViewModel, use a registry that orders providers by priority and caches results:</p>
+<pre><code class="language-csharp">public interface IEditorProviderRegistry
+{
+    IEditorProvider? GetProvider(Type type);
+    void Register(IEditorProvider provider, int priority = 0);
+}
+
+public sealed class EditorProviderRegistry : IEditorProviderRegistry
+{
+    private readonly List&lt;(IEditorProvider Provider, int Priority)&gt; _providers = new();
+    private readonly Dictionary&lt;Type, IEditorProvider&gt; _cache = new();
+
+    public void Register(IEditorProvider provider, int priority = 0)
+    {
+        _providers.Add((provider, priority));
+        _cache.Clear(); // invalidate cache
+    }
+
+    public IEditorProvider? GetProvider(Type type)
+    {
+        if (_cache.TryGetValue(type, out var cached))
+            return cached;
+
+        foreach (var (provider, _) in _providers.OrderByDescending(p =&gt; p.Priority))
+        {
+            if (provider.CanHandle(type))
+            {
+                _cache[type] = provider;
+                return provider;
+            }
+        }
+
+        return null;
+    }
+}
+</code></pre>
+<h3>Composite Providers for Complex Types</h3>
+<p>A composite provider chains multiple sub-providers to build a multi-field editor:</p>
+<pre><code class="language-csharp">public sealed class CompositeEditorProvider : IEditorProvider
+{
+    private readonly IEditorProviderRegistry _registry;
+
+    public CompositeEditorProvider(IEditorProviderRegistry registry) =&gt; _registry = registry;
+
+    public bool CanHandle(Type type) =&gt; true; // fallback: decompose into properties
+
+    public Control CreateEditor(object target)
+    {
+        var panel = new StackPanel { Spacing = 4 };
+        foreach (var prop in target.GetType().GetProperties(
+            BindingFlags.Public | BindingFlags.Instance))
+        {
+            var subProvider = _registry.GetProvider(prop.PropertyType);
+            if (subProvider is not null)
+            {
+                var label = new TextBlock
+                {
+                    Text = prop.Name,
+                    FontWeight = FontWeight.SemiBold,
+                    Margin = new Thickness(0, 4, 0, 0)
+                };
+                var editor = subProvider.CreateEditor(prop.GetValue(target)!);
+                panel.Children.Add(label);
+                panel.Children.Add(editor);
+            }
+        }
+        return new ScrollViewer { Content = panel };
+    }
+}
+</code></pre>
+<h3>InspectorViewModel — Reacting to Selection Changes</h3>
+<p>The inspector ViewModel orchestrates providers and manages the lifetime of created editors:</p>
+<pre><code class="language-csharp">public sealed partial class InspectorViewModel : ObservableObject
+{
+    private readonly SelectionService _selection;
+    private readonly IEditorProviderRegistry _providers;
+
+    [ObservableProperty]
+    private Control? _currentEditor;
+
+    [ObservableProperty]
+    private string _header = &quot;No selection&quot;;
+
+    [ObservableProperty]
+    private bool _hasSelection;
+
+    private IDisposable? _previousSubscription;
+
+    public InspectorViewModel(SelectionService selection, IEditorProviderRegistry providers)
+    {
+        _selection = selection;
+        _providers = providers;
+        _selection.SelectionChanged += OnSelectionChanged;
+    }
+
+    private void OnSelectionChanged(SelectionChangedArgs args)
+    {
+        _previousSubscription?.Dispose();
+        _previousSubscription = null;
+
+        if (args.Selection.Count == 0)
+        {
+            CurrentEditor = null;
+            Header = &quot;No selection&quot;;
+            HasSelection = false;
+            return;
+        }
+
+        var target = args.Selection[0];
+        Header = $&quot;{target.GetType().Name}&quot;;
+        HasSelection = true;
+
+        var provider = _providers.GetProvider(target.GetType());
+        if (provider is not null)
+        {
+            CurrentEditor = provider.CreateEditor(target);
+
+            // If the target is observable, subscribe to changes
+            if (target is INotifyPropertyChanged inpc)
+            {
+                PropertyChangedEventHandler handler = (_, e) =&gt;
+                {
+                    // Rebuild editor for the changed property
+                    CurrentEditor = provider.CreateEditor(target);
+                };
+                inpc.PropertyChanged += handler;
+                _previousSubscription = Disposable.Create(() =&gt; inpc.PropertyChanged -= handler);
+            }
+        }
+        else
+        {
+            CurrentEditor = new TextBlock
+            {
+                Text = $&quot;No editor for {target.GetType().Name}&quot;,
+                Foreground = Brushes.Gray,
+            };
+        }
+    }
+}
+</code></pre>
+<hr />
+<h2>6. Message Bus — Decoupling at Scale</h2>
+<h3>Message Design Guidelines</h3>
+<ul>
+<li><strong>Immutable records.</strong> Every message should be a <code>sealed record</code>. Immutability guarantees thread safety.</li>
+<li><strong>Fine-grained types.</strong> Do not use a single <code>GenericMessage&lt;object&gt;</code> — typed messages enable the bus to use <code>System.Reactive</code> <code>.OfType&lt;T&gt;()</code> filtering.</li>
+<li><strong>No payload references to UI objects.</strong> Messages carry domain objects or IDs, never <code>Control</code> references. A <code>SelectionChangedMessage</code> carries domain <code>INode</code> references, not the <code>ListBoxItem</code> that was clicked.</li>
+</ul>
+<pre><code class="language-csharp">// Comprehensive message catalog for an editor
+public sealed record SelectionChangedMessage(IReadOnlyList&lt;object&gt; Selection);
+public sealed record SelectionClearedMessage;
+public sealed record DocumentOpenedMessage(IDocument Document);
+public sealed record DocumentClosedMessage(IDocument Document);
+public sealed record DocumentSavedMessage(IDocument Document);
+public sealed record DocumentActivatedMessage(IDocument Document);
+public sealed record UndoRedoPerformedMessage(string ActionName);
+public sealed record ProjectLoadedMessage(string ProjectPath);
+public sealed record ToolChangedMessage(string ToolName);
+public sealed record WorkspaceModifiedMessage(string PropertyName);
+public sealed record NodeAddedMessage(INode Parent, INode Child, int Index);
+public sealed record NodeRemovedMessage(INode Parent, INode Child, int Index);
+public sealed record NodeMovedMessage(INode Node, INode OldParent, int OldIndex, INode NewParent, int NewIndex);
+public sealed record AssetImportedMessage(string AssetPath, string Type);
+public sealed record ProgressMessage(string Operation, double Progress);
+</code></pre>
+<h3>Message Bus Implementation</h3>
+<p>A lightweight in-process message bus that doesn't require external packages:</p>
+<pre><code class="language-csharp">public interface IMessageBus
+{
+    void Publish&lt;T&gt;(T message) where T : class;
+    IDisposable Subscribe&lt;T&gt;(Action&lt;T&gt; handler) where T : class;
+}
+
+public sealed class MessageBus : IMessageBus
+{
+    private readonly ConcurrentDictionary&lt;Type, List&lt;WeakReference&lt;object&gt;&gt;&gt; _handlers = new();
+    private readonly object _lock = new();
+
+    public void Publish&lt;T&gt;(T message) where T : class
+    {
+        if (_handlers.TryGetValue(typeof(T), out var weakRefs))
+        {
+            List&lt;Action&lt;T&gt;&gt; live = new();
+            lock (_lock)
+            {
+                var dead = new List&lt;WeakReference&lt;object&gt;&gt;();
+                foreach (var wr in weakRefs)
+                {
+                    if (wr.TryGetTarget(out var raw) &amp;&amp; raw is Action&lt;T&gt; handler)
+                        live.Add(handler);
+                    else
+                        dead.Add(wr);
+                }
+                foreach (var d in dead) weakRefs.Remove(d);
+            }
+            foreach (var handler in live)
+                handler(message);
+        }
+    }
+
+    public IDisposable Subscribe&lt;T&gt;(Action&lt;T&gt; handler) where T : class
+    {
+        var wr = new WeakReference&lt;object&gt;(handler);
+        var handlers = _handlers.GetOrAdd(typeof(T), _ =&gt; new List&lt;WeakReference&lt;object&gt;&gt;());
+        lock (_lock) handlers.Add(wr);
+        return Disposable.Create(() =&gt;
+        {
+            lock (_lock) handlers.Remove(wr);
+        });
+    }
+}
+</code></pre>
+<hr />
+<h2>7. Tool Window Architecture — ViewModel + View per Panel</h2>
+<h3>ToolWindowAttribute and Discovery</h3>
+<p>The <code>ToolWindowAttribute</code> decorates ViewModel classes so the <code>WorkspaceService</code> can discover and instantiate tool windows automatically:</p>
+<pre><code class="language-csharp">[AttributeUsage(AttributeTargets.Class, Inherited = false)]
+public sealed class ToolWindowAttribute : Attribute
+{
+    public string Title { get; }
+    public string DefaultDock { get; }
+    public Type ViewType { get; }
+
+    public ToolWindowAttribute(string title, string defaultDock = &quot;Right&quot;, Type? viewType = null)
+    {
+        Title = title;
+        DefaultDock = defaultDock;
+        ViewType = viewType ?? typeof(object);
+    }
+}
+
+// Concrete tool window ViewModel
+[ToolWindow(&quot;Hierarchy&quot;, &quot;Left&quot;)]
+public sealed partial class HierarchyViewModel : ObservableObject
+{
+    private readonly SelectionService _selection;
+    private readonly DocumentManager _docManager;
+    private readonly IMessageBus _bus;
+
+    [ObservableProperty]
+    private IReadOnlyList&lt;INode&gt; _nodes = Array.Empty&lt;INode&gt;();
+
+    [ObservableProperty]
+    private INode? _selectedNode;
+
+    public HierarchyViewModel(
+        SelectionService selection,
+        DocumentManager docManager,
+        IMessageBus bus)
+    {
+        _selection = selection;
+        _docManager = docManager;
+        _bus = bus;
+
+        _docManager.DocumentOpened += OnDocumentOpened;
+    }
+
+    private void OnDocumentOpened(IDocument doc)
+    {
+        if (doc is SceneDocument scene)
+            Nodes = scene.SceneGraph.RootNodes;
+    }
+
+    [RelayCommand]
+    private void SelectNode(INode node)
+    {
+        SelectedNode = node;
+        _selection.Select(node);
+    }
+
+    [RelayCommand]
+    private void DeleteNode(INode node)
+    {
+        // Create undoable command and record it
+        var cmd = new DeleteNodeCommand(node, GetActiveSceneGraph());
+        // Resolve UndoService via service locator or DI
+    }
+}
+
+// Corresponding view
+public partial class HierarchyView : UserControl
+{
+    public HierarchyView()
+    {
+        InitializeComponent();
+    }
+}
+</code></pre>
+<h3>ToolWindowViewModel Base Class</h3>
+<p>All tool window ViewModels share a common base for lifecycle, visibility, and docking metadata:</p>
+<pre><code class="language-csharp">public abstract class ToolWindowViewModel : ObservableObject
+{
+    public string Title { get; protected set; } = &quot;Tool Window&quot;;
+    public string DefaultDock { get; protected set; } = &quot;Right&quot;;
+
+    [ObservableProperty]
+    private bool _isVisible = true;
+
+    [ObservableProperty]
+    private bool _isPinned = true;
+
+    protected ToolWindowViewModel() { }
+
+    protected ToolWindowViewModel(string title, string defaultDock)
+    {
+        Title = title;
+        DefaultDock = defaultDock;
+    }
+
+    public virtual Task InitializeAsync() =&gt; Task.CompletedTask;
+    public virtual void OnClosed() { }
+}
+</code></pre>
+<hr />
+<h2>8. Plugin / Extensibility System — Deep Dive</h2>
+<h3>Discovery Strategies</h3>
+<p>There are three approaches to plugin discovery in Avalonia:</p>
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>Pros</th>
+<th>Cons</th>
+<th>Best for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MEF</strong> (<code>System.ComponentModel.Composition</code>)</td>
+<td>Runtime discovery, no compile-time reference</td>
+<td>Reflection overhead, no AOT</td>
+<td>Desktop-only, third-party plugins loaded from disk</td>
+</tr>
+<tr>
+<td><strong>Keyed DI</strong> (<code>Microsoft.Extensions.DependencyInjection</code>)</td>
+<td>AOT-safe, compile-time verified</td>
+<td>Plugin must be referenced at build time</td>
+<td>First-party plugins, internal modules</td>
+</tr>
+<tr>
+<td><strong>Source Generators</strong></td>
+<td>Fastest, AOT-safe</td>
+<td>Complex to implement</td>
+<td>Large teams, closed-ecosystem plugins</td>
+</tr>
+</tbody>
+</table>
+<h3>MEF-Based Plugin Service</h3>
+<pre><code class="language-csharp">public sealed class PluginService
+{
+    private readonly CompositionContainer _container;
+    private readonly IMessageBus _bus;
+
+    [ImportMany]
+    private IEnumerable&lt;IMenuContributor&gt; MenuContributors = Array.Empty&lt;IMenuContributor&gt;();
+
+    [ImportMany]
+    private IEnumerable&lt;IToolWindowContributor&gt; ToolWindowContributors = Array.Empty&lt;IToolWindowContributor&gt;();
+
+    [ImportMany]
+    private IEnumerable&lt;IEditorProvider&gt; EditorProviders = Array.Empty&lt;IEditorProvider&gt;();
+
+    public PluginService(IMessageBus bus)
+    {
+        _bus = bus;
+        var catalog = new DirectoryCatalog(&quot;./plugins&quot;);
+        _container = new CompositionContainer(catalog);
+        _container.ComposeParts(this);
+    }
+
+    public void Initialize(IEditorProviderRegistry editorRegistry, WorkspaceService workspace)
+    {
+        foreach (var contributor in MenuContributors)
+            contributor.BuildMenu(new MenuBuilder(_bus));
+
+        foreach (var contributor in ToolWindowContributors)
+        {
+            var descriptor = new ToolWindowDescriptor
+            {
+                Title = contributor.Title,
+                ViewModelTypeName = contributor.GetType().FullName!,
+                DefaultDock = &quot;Right&quot;,
+                IsVisible = contributor.IsVisibleByDefault
+            };
+            workspace.RegisterToolWindow(descriptor);
+        }
+
+        foreach (var provider in EditorProviders)
+            editorRegistry.Register(provider);
+    }
+}
+
+// Plugin contract interfaces
+public interface IMenuContributor
+{
+    void BuildMenu(IMenuBuilder builder);
+}
+
+public interface IToolWindowContributor
+{
+    string Title { get; }
+    bool IsVisibleByDefault { get; }
+    Control CreateView();
+    object CreateViewModel();
+}
+
+// Example plugin
+[Export(typeof(IMenuContributor))]
+[Export(typeof(IToolWindowContributor))]
+public sealed class DebugPlugin : IMenuContributor, IToolWindowContributor
+{
+    public string Title =&gt; &quot;Debug Console&quot;;
+    public bool IsVisibleByDefault =&gt; false;
+
+    public void BuildMenu(IMenuBuilder builder)
+    {
+        builder.Add(&quot;Tools/Debug Console&quot;, () =&gt;
+        {
+            // Toggle debug console visibility
+        });
+    }
+
+    public Control CreateView() =&gt; new DebugConsoleView();
+    public object CreateViewModel() =&gt; new DebugConsoleViewModel();
+}
+</code></pre>
+<h3>IMenuBuilder Interface</h3>
+<pre><code class="language-csharp">public interface IMenuBuilder
+{
+    void Add(string path, Action action);
+    void AddSeparator(string path);
+    void AddToggle(string path, bool isChecked, Action&lt;bool&gt; onToggle);
+    void AddSubmenu(string path, Action&lt;IMenuBuilder&gt; buildSubmenu);
+}
+
+public sealed class MenuBuilder : IMenuBuilder
+{
+    private readonly IMessageBus _bus;
+    private readonly List&lt;MenuItemDescriptor&gt; _items = new();
+
+    public MenuBuilder(IMessageBus bus) =&gt; _bus = bus;
+
+    public void Add(string path, Action action)
+    {
+        _items.Add(new MenuItemDescriptor { Path = path, Action = action, IsSeparator = false });
+    }
+
+    public void AddSeparator(string path)
+    {
+        _items.Add(new MenuItemDescriptor { Path = path, IsSeparator = true });
+    }
+
+    public void AddToggle(string path, bool isChecked, Action&lt;bool&gt; onToggle)
+    {
+        _items.Add(new MenuItemDescriptor { Path = path, IsToggle = true, IsChecked = isChecked, ToggleAction = onToggle });
+    }
+
+    public void AddSubmenu(string path, Action&lt;IMenuBuilder&gt; buildSubmenu)
+    {
+        var subBuilder = new MenuBuilder(_bus);
+        buildSubmenu(subBuilder);
+        _items.Add(new MenuItemDescriptor { Path = path, IsSubmenu = true, SubItems = subBuilder._items });
+    }
+
+    public IReadOnlyList&lt;MenuItemDescriptor&gt; Build() =&gt; _items;
+}
+</code></pre>
+<hr />
+<h2>9. Concrete Flow: User Deletes a Node — Full Trace</h2>
+<p>Stepping through the full lifecycle with code traces:</p>
+<h3>Step 1: User clicks Delete in Hierarchy panel</h3>
+<pre><code class="language-csharp">// HierarchyViewModel
+[RelayCommand]
+private void DeleteNode(INode node)
+{
+    var graph = GetActiveSceneGraph();
+    var cmd = new DeleteNodeCommand(node, graph);
+    _undoService.Record(cmd);
+}
+</code></pre>
+<h3>Step 2: UndoService.Record() executes and pushes</h3>
+<pre><code class="language-csharp">// Inside DeleteNodeCommand.Execute()
+public void Execute()
+{
+    _graph.RemoveNode(_node);
+    // RemoveNode publishes NodeRemovedMessage via IMessageBus
+}
+</code></pre>
+<h3>Step 3: Cascade via message bus</h3>
+<pre><code class="language-csharp">// SceneGraph.RemoveNode
+public void RemoveNode(INode node)
+{
+    var index = _nodes.IndexOf(node);
+    _nodes.Remove(node);
+    _bus.Publish(new NodeRemovedMessage(_parent, node, index));
+    MarkDirty();
+}
+
+// CanvasViewModel — subscriber
+_bus.Subscribe&lt;NodeRemovedMessage&gt;(msg =&gt;
+{
+    if (msg.Node == _selectedNode)
+        _selection.Clear();
+    InvalidateRender();
+});
+
+// InspectorViewModel — subscriber
+_bus.Subscribe&lt;NodeRemovedMessage&gt;(msg =&gt;
+{
+    if (msg.Node == _selection.SelectedObjects.FirstOrDefault())
+        _selection.Clear();
+});
+
+// OutlineViewModel — subscriber (handles tree update)
+_bus.Subscribe&lt;NodeRemovedMessage&gt;(msg =&gt;
+{
+    var parentVm = FindViewModel(msg.Parent);
+    parentVm?.Children.Remove(msg.Node);
+});
+</code></pre>
+<h3>Step 4: UI updates automatically via bindings</h3>
+<p>The shell title, status bar text, and undo/redo labels all update because their ViewModels observed the <code>SelectionService</code>, <code>DocumentManager</code>, or <code>UndoService</code> events:</p>
+<pre><code class="language-csharp">// UndoService fires HistoryChanged
+HistoryChanged?.Invoke();
+
+// ShellViewModel subscribes to HistoryChanged
+_undoService.HistoryChanged += () =&gt;
+{
+    UndoLabel = $&quot;Undo {_undoService.UndoName}&quot;;
+    RedoLabel = $&quot;Redo {_undoService.RedoName}&quot;;
+    CanUndo = _undoService.CanUndo;
+    CanRedo = _undoService.CanRedo;
+};
+</code></pre>
+<hr />
+<h2>10. Performance Considerations</h2>
+<h3>Command Stack Memory</h3>
+<p>With <code>MaxHistory = 200</code>, each command can hold references to domain objects. For large commands (duplicate of 1000 nodes), consider:</p>
+<ul>
+<li>Storing only IDs or weak references in the command, not full object graphs</li>
+<li>Implementing <code>IUndoableCommand.Dispose()</code> to release references when the command is evicted from the stack</li>
+<li>Using the <code>TrimHistory()</code> strategy that removes the oldest half, not just the oldest one</li>
+</ul>
+<h3>Selection Notification Throttling</h3>
+<p>When the user drags across 500 objects in the canvas, <code>SelectRange</code> fires once at the end of the drag operation, not per-object. Implement a debounce:</p>
+<pre><code class="language-csharp">public void SelectRangeBulk(IEnumerable&lt;object&gt; targets)
+{
+    _selected.Clear();
+    _selectedSet.Clear();
+    foreach (var t in targets)
+    {
+        _selected.Add(t);
+        _selectedSet.Add(t);
+    }
+    // Debounce — batch the notification
+    _debouncer.Debounce(50, NotifyChanged);
+}
+</code></pre>
+<h3>Inspector Editor Pooling</h3>
+<p>Creating new <code>Control</code> instances on every selection change causes allocation pressure. Pool editors for commonly selected types:</p>
+<pre><code class="language-csharp">public sealed class PooledEditorProvider : IEditorProvider
+{
+    private readonly IEditorProvider _inner;
+    private readonly Dictionary&lt;object, Control&gt; _pool = new();
+
+    public PooledEditorProvider(IEditorProvider inner) =&gt; _inner = inner;
+
+    public bool CanHandle(Type type) =&gt; _inner.CanHandle(type);
+
+    public Control CreateEditor(object target)
+    {
+        if (_pool.TryGetValue(target, out var existing))
+            return existing;
+        var editor = _inner.CreateEditor(target);
+        _pool[target] = editor;
+        return editor;
+    }
+
+    public void Release(object target) =&gt; _pool.Remove(target);
+}
+</code></pre>
+<hr />
+<h2>Summary Comparison: Core vs. In-Depth</h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Core Coverage</th>
+<th>Verbose Additions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Service Layer</td>
+<td>Singleton registration, basic <code>SelectionService</code></td>
+<td><code>SelectionService</code> with <code>HashSet</code>, <code>WorkspaceService</code> with layout serialization</td>
+</tr>
+<tr>
+<td>Document-View</td>
+<td>Basic <code>IDocument</code> + <code>DocumentManager</code></td>
+<td><code>DocumentManager</code> with close flow, save prompts, <code>IDocumentFactory</code>, <code>ShellViewModel</code></td>
+</tr>
+<tr>
+<td>Command Pattern</td>
+<td><code>IUndoableCommand</code>, <code>UndoService</code>, <code>CompositeCommand</code></td>
+<td>Transactional execution, <code>MacroRecorder</code>, <code>PropertyBagCommand</code>, <code>IRecoverableCommand</code></td>
+</tr>
+<tr>
+<td>Dynamic Inspector</td>
+<td><code>IEditorProvider</code>, basic providers, <code>InspectorViewModel</code></td>
+<td><code>EditorProviderRegistry</code> with caching/priority, composite provider, pooled editors</td>
+</tr>
+<tr>
+<td>Message Bus</td>
+<td>Message records, <code>StatusBarViewModel</code> subscription</td>
+<td>Full <code>IMessageBus</code> implementation with weak references, message design guidelines, comprehensive catalog</td>
+</tr>
+<tr>
+<td>Tool Windows</td>
+<td><code>ToolWindowAttribute</code>, <code>HierarchyViewModel</code></td>
+<td><code>ToolWindowViewModel</code> base class, full lifecycle, dock metadata</td>
+</tr>
+<tr>
+<td>Plugin System</td>
+<td>MEF contracts, <code>PluginService</code></td>
+<td>MEF vs keyed DI vs source generators comparison, <code>IMenuBuilder</code>, full plugin example</td>
+</tr>
+<tr>
+<td>Concrete Flow</td>
+<td>10-step delete flow</td>
+<td>Code-level trace with actual method calls and message bus subscribers</td>
+</tr>
+<tr>
+<td>Performance</td>
+<td>—</td>
+<td>Command memory, notification throttling, editor pooling</td>
+</tr>
+</tbody>
+</table>
+</main><nav class="doc-toc" id="toc"></nav></div><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/powershell.min.js"></script><script src="../_assets/js/search-index.js"></script><script>const CURRENT_PAGE="../03-patterns/007-editor-application-architecture-verbose.html";</script><script src="../_assets/js/ssg.js"></script></body></html>

@@ -1,0 +1,669 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>accessibility — Avalonia Docs</title><link rel="stylesheet" href="../_assets/css/ssg.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='12' font-size='12'>A</text></svg>"></head><body><div class="layout"><nav class="sidebar" id="sidebar"><div class="sidebar-header"><h2><a href="../index.html" style="color:inherit;text-decoration:none">Avalonia Docs</a></h2></div><div class="search-box"><input type="text" id="searchInput" placeholder="Search docs..." autocomplete="off"></div><div id="searchResults" class="search-results" style="display:none"></div><ul class="nav-tree" id="navTree"><li class="nav-group"><span class="nav-group-label">Quick References</span><ul class="nav-items"><li class="nav-item"><a href="../01-quick-refs/accessibility-automation.html">Accessibility Automation</a></li><li class="nav-item"><a href="../01-quick-refs/avalonia-12-breaking-changes.html">Avalonia 12 Breaking Changes</a></li><li class="nav-item"><a href="../01-quick-refs/binding-modes.html">Binding Modes</a></li><li class="nav-item"><a href="../01-quick-refs/brushes-colors-reference.html">Brushes Colors Reference</a></li><li class="nav-item"><a href="../01-quick-refs/common-controls-reference.html">Common Controls Reference</a></li><li class="nav-item"><a href="../01-quick-refs/common-converters.html">Common Converters</a></li><li class="nav-item"><a href="../01-quick-refs/control-themes.html">Control Themes</a></li><li class="nav-item"><a href="../01-quick-refs/dispatcher-timers-quick-ref.html">Dispatcher Timers Quick Ref</a></li><li class="nav-item"><a href="../01-quick-refs/font-typography-reference.html">Font Typography Reference</a></li><li class="nav-item"><a href="../01-quick-refs/icons-reference.html">Icons Reference</a></li><li class="nav-item"><a href="../01-quick-refs/input-gestures.html">Input Gestures</a></li><li class="nav-item"><a href="../01-quick-refs/mvvm-source-generators.html">Mvvm Source Generators</a></li><li class="nav-item"><a href="../01-quick-refs/naming-conventions.html">Naming Conventions</a></li><li class="nav-item"><a href="../01-quick-refs/property-system-quick-ref.html">Property System Quick Ref</a></li><li class="nav-item"><a href="../01-quick-refs/resource-dictionaries.html">Resource Dictionaries</a></li><li class="nav-item"><a href="../01-quick-refs/routed-events-quick-ref.html">Routed Events Quick Ref</a></li><li class="nav-item"><a href="../01-quick-refs/shapes-geometries.html">Shapes Geometries</a></li><li class="nav-item"><a href="../01-quick-refs/xaml-selectors.html">Xaml Selectors</a></li><li class="nav-group"><span class="nav-group-label">Basics</span><ul class="nav-items"><li class="nav-item"><a href="../02-tutorials/basics/001-project-setup.html">Project Setup</a></li><li class="nav-item"><a href="../02-tutorials/basics/001-project-setup-verbose.html">Project Setup (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/basics/001-project-setup-examples.html">Project Setup (examples)</a></li><li class="nav-item"><a href="../02-tutorials/basics/001-project-setup-quiz.html">Project Setup (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/basics/002-command-binding.html">Command Binding</a></li><li class="nav-item"><a href="../02-tutorials/basics/002-command-binding-verbose.html">Command Binding (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/basics/002-command-binding-examples.html">Command Binding (examples)</a></li><li class="nav-item"><a href="../02-tutorials/basics/002-command-binding-quiz.html">Command Binding (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/basics/003-basic-styling.html">Basic Styling</a></li><li class="nav-item"><a href="../02-tutorials/basics/003-basic-styling-verbose.html">Basic Styling (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/basics/003-basic-styling-examples.html">Basic Styling (examples)</a></li><li class="nav-item"><a href="../02-tutorials/basics/003-basic-styling-quiz.html">Basic Styling (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/basics/004-value-converters.html">Value Converters</a></li><li class="nav-item"><a href="../02-tutorials/basics/004-value-converters-verbose.html">Value Converters (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/basics/004-value-converters-examples.html">Value Converters (examples)</a></li><li class="nav-item"><a href="../02-tutorials/basics/004-value-converters-quiz.html">Value Converters (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/basics/005-binding-modes.html">Binding Modes</a></li><li class="nav-item"><a href="../02-tutorials/basics/005-binding-modes-verbose.html">Binding Modes (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/basics/005-binding-modes-examples.html">Binding Modes (examples)</a></li><li class="nav-item"><a href="../02-tutorials/basics/005-binding-modes-quiz.html">Binding Modes (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/basics/006-resources.html">Resources</a></li><li class="nav-item"><a href="../02-tutorials/basics/006-resources-verbose.html">Resources (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/basics/006-resources-examples.html">Resources (examples)</a></li><li class="nav-item"><a href="../02-tutorials/basics/006-resources-quiz.html">Resources (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/basics/007-observable-object-property.html">Observable Object Property</a></li><li class="nav-item"><a href="../02-tutorials/basics/007-observable-object-property-verbose.html">Observable Object Property (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/basics/007-observable-object-property-examples.html">Observable Object Property (examples)</a></li><li class="nav-item"><a href="../02-tutorials/basics/007-observable-object-property-quiz.html">Observable Object Property (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/basics/008-relay-command.html">Relay Command</a></li><li class="nav-item"><a href="../02-tutorials/basics/008-relay-command-verbose.html">Relay Command (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/basics/008-relay-command-examples.html">Relay Command (examples)</a></li><li class="nav-item"><a href="../02-tutorials/basics/008-relay-command-quiz.html">Relay Command (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/basics/009-data-templates-examples.html">Data Templates (examples)</a></li><li class="nav-item"><a href="../02-tutorials/basics/009-data-templates-basics.html">Data Templates Basics</a></li><li class="nav-item"><a href="../02-tutorials/basics/009-data-templates-basics-verbose.html">Data Templates Basics (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/basics/009-data-templates-basics-quiz.html">Data Templates Basics (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/basics/010-window-dialog-basics.html">Window Dialog Basics</a></li><li class="nav-item"><a href="../02-tutorials/basics/010-window-dialog-basics-verbose.html">Window Dialog Basics (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/basics/010-window-dialog-basics-examples.html">Window Dialog Basics (examples)</a></li><li class="nav-item"><a href="../02-tutorials/basics/010-window-dialog-basics-quiz.html">Window Dialog Basics (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Intermediate</span><ul class="nav-items"><li class="nav-item"><a href="../02-tutorials/intermediate/011-compiled-bindings.html">Compiled Bindings</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/011-compiled-bindings-verbose.html">Compiled Bindings (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/011-compiled-bindings-examples.html">Compiled Bindings (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/011-compiled-bindings-quiz.html">Compiled Bindings (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/012-control-themes-vs-styles.html">Control Themes Vs Styles</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/012-control-themes-vs-styles-verbose.html">Control Themes Vs Styles (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/012-control-themes-vs-styles-examples.html">Control Themes Vs Styles (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/012-control-themes-vs-styles-quiz.html">Control Themes Vs Styles (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/013-data-validation.html">Data Validation</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/013-data-validation-verbose.html">Data Validation (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/013-data-validation-examples.html">Data Validation (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/013-data-validation-quiz.html">Data Validation (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/014-imessenger-patterns.html">Imessenger Patterns</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/014-imessenger-patterns-verbose.html">Imessenger Patterns (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/014-imessenger-patterns-examples.html">Imessenger Patterns (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/014-imessenger-patterns-quiz.html">Imessenger Patterns (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/015-item-lists.html">Item Lists</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/015-item-lists-verbose.html">Item Lists (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/015-item-lists-examples.html">Item Lists (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/015-item-lists-quiz.html">Item Lists (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/016-window-dialog-management.html">Window Dialog Management</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/016-window-dialog-management-verbose.html">Window Dialog Management (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/016-window-dialog-management-examples.html">Window Dialog Management (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/016-window-dialog-management-quiz.html">Window Dialog Management (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/017-theme-switching.html">Theme Switching</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/017-theme-switching-verbose.html">Theme Switching (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/017-theme-switching-examples.html">Theme Switching (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/017-theme-switching-quiz.html">Theme Switching (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/018-navigation.html">Navigation</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/018-navigation-verbose.html">Navigation (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/018-navigation-examples.html">Navigation (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/018-navigation-quiz.html">Navigation (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/019-drag-drop.html">Drag Drop</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/019-drag-drop-verbose.html">Drag Drop (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/019-drag-drop-examples.html">Drag Drop (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/019-drag-drop-quiz.html">Drag Drop (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/040-datagrid-deep-dive.html">Datagrid Deep Dive</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/040-datagrid-deep-dive-verbose.html">Datagrid Deep Dive (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/040-datagrid-deep-dive-examples.html">Datagrid Deep Dive (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/040-datagrid-deep-dive-quiz.html">Datagrid Deep Dive (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/041-menus-context-menus-tray.html">Menus Context Menus Tray</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/041-menus-context-menus-tray-verbose.html">Menus Context Menus Tray (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/041-menus-context-menus-tray-examples.html">Menus Context Menus Tray (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/041-menus-context-menus-tray-quiz.html">Menus Context Menus Tray (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/043-treeview-hierarchical-data.html">Treeview Hierarchical Data</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/043-treeview-hierarchical-data-verbose.html">Treeview Hierarchical Data (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/043-treeview-hierarchical-data-examples.html">Treeview Hierarchical Data (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/043-treeview-hierarchical-data-quiz.html">Treeview Hierarchical Data (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/047-charts-data-visualization.html">Charts Data Visualization</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/047-charts-data-visualization-verbose.html">Charts Data Visualization (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/047-charts-data-visualization-examples.html">Charts Data Visualization (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/047-charts-data-visualization-quiz.html">Charts Data Visualization (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/048-sqlite-local-database.html">Sqlite Local Database</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/048-sqlite-local-database-verbose.html">Sqlite Local Database (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/048-sqlite-local-database-examples.html">Sqlite Local Database (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/048-sqlite-local-database-quiz.html">Sqlite Local Database (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/051-routed-events.html">Routed Events</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/051-routed-events-verbose.html">Routed Events (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/051-routed-events-examples.html">Routed Events (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/051-routed-events-quiz.html">Routed Events (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/052-property-system.html">Property System</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/052-property-system-verbose.html">Property System (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/052-property-system-examples.html">Property System (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/052-property-system-quiz.html">Property System (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/053-threading-dispatcher.html">Threading Dispatcher</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/053-threading-dispatcher-verbose.html">Threading Dispatcher (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/053-threading-dispatcher-examples.html">Threading Dispatcher (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/053-threading-dispatcher-quiz.html">Threading Dispatcher (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/054-focus-management.html">Focus Management</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/054-focus-management-verbose.html">Focus Management (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/054-focus-management-examples.html">Focus Management (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/054-focus-management-quiz.html">Focus Management (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/055-keyboard-hotkeys.html">Keyboard Hotkeys</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/055-keyboard-hotkeys-verbose.html">Keyboard Hotkeys (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/055-keyboard-hotkeys-examples.html">Keyboard Hotkeys (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/055-keyboard-hotkeys-quiz.html">Keyboard Hotkeys (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/056-input-events.html">Input Events</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/056-input-events-verbose.html">Input Events (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/056-input-events-examples.html">Input Events (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/056-input-events-quiz.html">Input Events (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/057-gesture-recognizers.html">Gesture Recognizers</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/057-gesture-recognizers-verbose.html">Gesture Recognizers (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/057-gesture-recognizers-examples.html">Gesture Recognizers (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/057-gesture-recognizers-quiz.html">Gesture Recognizers (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/058-scrollviewer-scrollbar.html">Scrollviewer Scrollbar</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/058-scrollviewer-scrollbar-verbose.html">Scrollviewer Scrollbar (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/058-scrollviewer-scrollbar-examples.html">Scrollviewer Scrollbar (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/058-scrollviewer-scrollbar-quiz.html">Scrollviewer Scrollbar (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/059-textbox-text-input.html">Textbox Text Input</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/059-textbox-text-input-verbose.html">Textbox Text Input (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/059-textbox-text-input-examples.html">Textbox Text Input (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/059-textbox-text-input-quiz.html">Textbox Text Input (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/060-multibinding-prioritybinding.html">Multibinding Prioritybinding</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/060-multibinding-prioritybinding-verbose.html">Multibinding Prioritybinding (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/060-multibinding-prioritybinding-examples.html">Multibinding Prioritybinding (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/060-multibinding-prioritybinding-quiz.html">Multibinding Prioritybinding (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/061-collection-views.html">Collection Views</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/061-collection-views-verbose.html">Collection Views (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/061-collection-views-examples.html">Collection Views (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/061-collection-views-quiz.html">Collection Views (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/062-clipboard-launcher.html">Clipboard Launcher</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/062-clipboard-launcher-verbose.html">Clipboard Launcher (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/062-clipboard-launcher-examples.html">Clipboard Launcher (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/062-clipboard-launcher-quiz.html">Clipboard Launcher (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/063-storage-service.html">Storage Service</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/063-storage-service-verbose.html">Storage Service (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/063-storage-service-examples.html">Storage Service (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/063-storage-service-quiz.html">Storage Service (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/064-selection-controls.html">Selection Controls</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/064-selection-controls-verbose.html">Selection Controls (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/064-selection-controls-examples.html">Selection Controls (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/064-selection-controls-quiz.html">Selection Controls (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/065-range-toggle-controls.html">Range Toggle Controls</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/065-range-toggle-controls-verbose.html">Range Toggle Controls (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/065-range-toggle-controls-examples.html">Range Toggle Controls (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/065-range-toggle-controls-quiz.html">Range Toggle Controls (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/066-tabcontrol-expander-splitview.html">Tabcontrol Expander Splitview</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/066-tabcontrol-expander-splitview-verbose.html">Tabcontrol Expander Splitview (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/066-tabcontrol-expander-splitview-examples.html">Tabcontrol Expander Splitview (examples)</a></li><li class="nav-item"><a href="../02-tutorials/intermediate/066-tabcontrol-expander-splitview-quiz.html">Tabcontrol Expander Splitview (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Advanced</span><ul class="nav-items"><li class="nav-item"><a href="../02-tutorials/advanced/020-custom-templated-controls.html">Custom Templated Controls</a></li><li class="nav-item"><a href="../02-tutorials/advanced/020-custom-templated-controls-verbose.html">Custom Templated Controls (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/020-custom-templated-controls-examples.html">Custom Templated Controls (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/020-custom-templated-controls-quiz.html">Custom Templated Controls (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/021-custom-controls-from-scratch.html">Custom Controls From Scratch</a></li><li class="nav-item"><a href="../02-tutorials/advanced/021-custom-controls-from-scratch-verbose.html">Custom Controls From Scratch (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/021-custom-controls-from-scratch-examples.html">Custom Controls From Scratch (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/021-custom-controls-from-scratch-quiz.html">Custom Controls From Scratch (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/022-attached-properties-behaviors.html">Attached Properties Behaviors</a></li><li class="nav-item"><a href="../02-tutorials/advanced/022-attached-properties-behaviors-verbose.html">Attached Properties Behaviors (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/022-attached-properties-behaviors-examples.html">Attached Properties Behaviors (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/022-attached-properties-behaviors-quiz.html">Attached Properties Behaviors (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/023-custom-layout-panels.html">Custom Layout Panels</a></li><li class="nav-item"><a href="../02-tutorials/advanced/023-custom-layout-panels-verbose.html">Custom Layout Panels (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/023-custom-layout-panels-examples.html">Custom Layout Panels (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/023-custom-layout-panels-quiz.html">Custom Layout Panels (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/024-animation-transitions.html">Animation Transitions</a></li><li class="nav-item"><a href="../02-tutorials/advanced/024-animation-transitions-verbose.html">Animation Transitions (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/024-animation-transitions-examples.html">Animation Transitions (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/024-animation-transitions-quiz.html">Animation Transitions (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/025-compositor-custom-visuals.html">Compositor Custom Visuals</a></li><li class="nav-item"><a href="../02-tutorials/advanced/025-compositor-custom-visuals-verbose.html">Compositor Custom Visuals (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/025-compositor-custom-visuals-examples.html">Compositor Custom Visuals (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/025-compositor-custom-visuals-quiz.html">Compositor Custom Visuals (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/026-accessibility-automation.html">Accessibility Automation</a></li><li class="nav-item"><a href="../02-tutorials/advanced/026-accessibility-automation-verbose.html">Accessibility Automation (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/026-accessibility-automation-examples.html">Accessibility Automation (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/026-accessibility-automation-quiz.html">Accessibility Automation (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/027-advanced-composite-bindings.html">Advanced Composite Bindings</a></li><li class="nav-item"><a href="../02-tutorials/advanced/027-advanced-composite-bindings-verbose.html">Advanced Composite Bindings (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/027-advanced-composite-bindings-examples.html">Advanced Composite Bindings (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/027-advanced-composite-bindings-quiz.html">Advanced Composite Bindings (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/028-custom-drawing-skia.html">Custom Drawing Skia</a></li><li class="nav-item"><a href="../02-tutorials/advanced/028-custom-drawing-skia-verbose.html">Custom Drawing Skia (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/028-custom-drawing-skia-examples.html">Custom Drawing Skia (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/028-custom-drawing-skia-quiz.html">Custom Drawing Skia (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/029-avalonia-plus-devtools.html">Avalonia Plus Devtools</a></li><li class="nav-item"><a href="../02-tutorials/advanced/029-avalonia-plus-devtools-verbose.html">Avalonia Plus Devtools (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/029-avalonia-plus-devtools-examples.html">Avalonia Plus Devtools (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/029-avalonia-plus-devtools-quiz.html">Avalonia Plus Devtools (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/030-parcel-packaging.html">Parcel Packaging</a></li><li class="nav-item"><a href="../02-tutorials/advanced/030-parcel-packaging-verbose.html">Parcel Packaging (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/030-parcel-packaging-examples.html">Parcel Packaging (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/030-parcel-packaging-quiz.html">Parcel Packaging (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/031-custom-theme-design-system.html">Custom Theme Design System</a></li><li class="nav-item"><a href="../02-tutorials/advanced/031-custom-theme-design-system-verbose.html">Custom Theme Design System (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/031-custom-theme-design-system-examples.html">Custom Theme Design System (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/031-custom-theme-design-system-quiz.html">Custom Theme Design System (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/032-mvvm-di-wiring.html">Mvvm Di Wiring</a></li><li class="nav-item"><a href="../02-tutorials/advanced/032-mvvm-di-wiring-verbose.html">Mvvm Di Wiring (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/032-mvvm-di-wiring-examples.html">Mvvm Di Wiring (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/032-mvvm-di-wiring-quiz.html">Mvvm Di Wiring (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/033-localization-i18n.html">Localization I18n</a></li><li class="nav-item"><a href="../02-tutorials/advanced/033-localization-i18n-verbose.html">Localization I18n (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/033-localization-i18n-examples.html">Localization I18n (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/033-localization-i18n-quiz.html">Localization I18n (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/034-file-pickers-platform-services.html">File Pickers Platform Services</a></li><li class="nav-item"><a href="../02-tutorials/advanced/034-file-pickers-platform-services-verbose.html">File Pickers Platform Services (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/034-file-pickers-platform-services-examples.html">File Pickers Platform Services (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/034-file-pickers-platform-services-quiz.html">File Pickers Platform Services (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/035-custom-dialogs-window-management.html">Custom Dialogs Window Management</a></li><li class="nav-item"><a href="../02-tutorials/advanced/035-custom-dialogs-window-management-verbose.html">Custom Dialogs Window Management (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/035-custom-dialogs-window-management-examples.html">Custom Dialogs Window Management (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/035-custom-dialogs-window-management-quiz.html">Custom Dialogs Window Management (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/036-virtualization-large-lists.html">Virtualization Large Lists</a></li><li class="nav-item"><a href="../02-tutorials/advanced/036-virtualization-large-lists-verbose.html">Virtualization Large Lists (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/036-virtualization-large-lists-examples.html">Virtualization Large Lists (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/036-virtualization-large-lists-quiz.html">Virtualization Large Lists (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/037-app-lifetimes-splash-screen.html">App Lifetimes Splash Screen</a></li><li class="nav-item"><a href="../02-tutorials/advanced/037-app-lifetimes-splash-screen-verbose.html">App Lifetimes Splash Screen (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/037-app-lifetimes-splash-screen-examples.html">App Lifetimes Splash Screen (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/037-app-lifetimes-splash-screen-quiz.html">App Lifetimes Splash Screen (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/038-headless-testing.html">Headless Testing</a></li><li class="nav-item"><a href="../02-tutorials/advanced/038-headless-testing-verbose.html">Headless Testing (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/038-headless-testing-examples.html">Headless Testing (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/038-headless-testing-quiz.html">Headless Testing (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/039-nativeaot-trimming.html">Nativeaot Trimming</a></li><li class="nav-item"><a href="../02-tutorials/advanced/039-nativeaot-trimming-verbose.html">Nativeaot Trimming (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/039-nativeaot-trimming-examples.html">Nativeaot Trimming (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/039-nativeaot-trimming-quiz.html">Nativeaot Trimming (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile.html">Multi Targeting Desktop Browser Mobile</a></li><li class="nav-item"><a href="../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-verbose.html">Multi Targeting Desktop Browser Mobile (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-examples.html">Multi Targeting Desktop Browser Mobile (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-quiz.html">Multi Targeting Desktop Browser Mobile (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/044-background-services-and-progress.html">Background Services And Progress</a></li><li class="nav-item"><a href="../02-tutorials/advanced/044-background-services-and-progress-verbose.html">Background Services And Progress (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/044-background-services-and-progress-examples.html">Background Services And Progress (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/044-background-services-and-progress-quiz.html">Background Services And Progress (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/045-cicd-for-avalonia.html">Cicd For Avalonia</a></li><li class="nav-item"><a href="../02-tutorials/advanced/045-cicd-for-avalonia-verbose.html">Cicd For Avalonia (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/045-cicd-for-avalonia-examples.html">Cicd For Avalonia (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/045-cicd-for-avalonia-quiz.html">Cicd For Avalonia (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/046-logging-telemetry.html">Logging Telemetry</a></li><li class="nav-item"><a href="../02-tutorials/advanced/046-logging-telemetry-verbose.html">Logging Telemetry (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/046-logging-telemetry-examples.html">Logging Telemetry (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/046-logging-telemetry-quiz.html">Logging Telemetry (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/049-printing.html">Printing</a></li><li class="nav-item"><a href="../02-tutorials/advanced/049-printing-verbose.html">Printing (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/049-printing-examples.html">Printing (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/049-printing-quiz.html">Printing (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/050-auto-updater.html">Auto Updater</a></li><li class="nav-item"><a href="../02-tutorials/advanced/050-auto-updater-verbose.html">Auto Updater (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/050-auto-updater-examples.html">Auto Updater (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/050-auto-updater-quiz.html">Auto Updater (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/080-layout-system-deep-dive.html">Layout System Deep Dive</a></li><li class="nav-item"><a href="../02-tutorials/advanced/080-layout-system-deep-dive-verbose.html">Layout System Deep Dive (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/080-layout-system-deep-dive-examples.html">Layout System Deep Dive (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/080-layout-system-deep-dive-quiz.html">Layout System Deep Dive (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/081-animation-system-deep-dive.html">Animation System Deep Dive</a></li><li class="nav-item"><a href="../02-tutorials/advanced/081-animation-system-deep-dive-verbose.html">Animation System Deep Dive (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/081-animation-system-deep-dive-examples.html">Animation System Deep Dive (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/081-animation-system-deep-dive-quiz.html">Animation System Deep Dive (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/082-graphics-drawing-reference.html">Graphics Drawing Reference</a></li><li class="nav-item"><a href="../02-tutorials/advanced/082-graphics-drawing-reference-verbose.html">Graphics Drawing Reference (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/082-graphics-drawing-reference-examples.html">Graphics Drawing Reference (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/082-graphics-drawing-reference-quiz.html">Graphics Drawing Reference (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/083-container-queries-responsive-layout.html">Container Queries Responsive Layout</a></li><li class="nav-item"><a href="../02-tutorials/advanced/083-container-queries-responsive-layout-verbose.html">Container Queries Responsive Layout (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/083-container-queries-responsive-layout-examples.html">Container Queries Responsive Layout (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/083-container-queries-responsive-layout-quiz.html">Container Queries Responsive Layout (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/084-typography-text-features.html">Typography Text Features</a></li><li class="nav-item"><a href="../02-tutorials/advanced/084-typography-text-features-verbose.html">Typography Text Features (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/084-typography-text-features-examples.html">Typography Text Features (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/084-typography-text-features-quiz.html">Typography Text Features (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/085-performance-profiling.html">Performance Profiling</a></li><li class="nav-item"><a href="../02-tutorials/advanced/085-performance-profiling-verbose.html">Performance Profiling (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/085-performance-profiling-examples.html">Performance Profiling (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/085-performance-profiling-quiz.html">Performance Profiling (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/086-platform-specific-windows.html">Platform Specific Windows</a></li><li class="nav-item"><a href="../02-tutorials/advanced/086-platform-specific-windows-verbose.html">Platform Specific Windows (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/086-platform-specific-windows-examples.html">Platform Specific Windows (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/086-platform-specific-windows-quiz.html">Platform Specific Windows (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/087-platform-specific-macos-linux.html">Platform Specific Macos Linux</a></li><li class="nav-item"><a href="../02-tutorials/advanced/087-platform-specific-macos-linux-verbose.html">Platform Specific Macos Linux (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/087-platform-specific-macos-linux-examples.html">Platform Specific Macos Linux (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/087-platform-specific-macos-linux-quiz.html">Platform Specific Macos Linux (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/088-xaml-previewer-hot-reload.html">Xaml Previewer Hot Reload</a></li><li class="nav-item"><a href="../02-tutorials/advanced/088-xaml-previewer-hot-reload-verbose.html">Xaml Previewer Hot Reload (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/088-xaml-previewer-hot-reload-examples.html">Xaml Previewer Hot Reload (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/088-xaml-previewer-hot-reload-quiz.html">Xaml Previewer Hot Reload (quiz)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/089-custom-flyout-popup.html">Custom Flyout Popup</a></li><li class="nav-item"><a href="../02-tutorials/advanced/089-custom-flyout-popup-verbose.html">Custom Flyout Popup (in depth)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/089-custom-flyout-popup-examples.html">Custom Flyout Popup (examples)</a></li><li class="nav-item"><a href="../02-tutorials/advanced/089-custom-flyout-popup-quiz.html">Custom Flyout Popup (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Patterns</span><ul class="nav-items"><li class="nav-item"><a href="../03-patterns/001-service-locator-vs-di.html">Service Locator Vs Di</a></li><li class="nav-item"><a href="../03-patterns/001-service-locator-vs-di-verbose.html">Service Locator Vs Di (in depth)</a></li><li class="nav-item"><a href="../03-patterns/001-service-locator-vs-di-examples.html">Service Locator Vs Di (examples)</a></li><li class="nav-item"><a href="../03-patterns/001-service-locator-vs-di-quiz.html">Service Locator Vs Di (quiz)</a></li><li class="nav-item"><a href="../03-patterns/002-plugin-architecture.html">Plugin Architecture</a></li><li class="nav-item"><a href="../03-patterns/002-plugin-architecture-verbose.html">Plugin Architecture (in depth)</a></li><li class="nav-item"><a href="../03-patterns/002-plugin-architecture-examples.html">Plugin Architecture (examples)</a></li><li class="nav-item"><a href="../03-patterns/002-plugin-architecture-quiz.html">Plugin Architecture (quiz)</a></li><li class="nav-item"><a href="../03-patterns/003-async-initialization.html">Async Initialization</a></li><li class="nav-item"><a href="../03-patterns/003-async-initialization-verbose.html">Async Initialization (in depth)</a></li><li class="nav-item"><a href="../03-patterns/003-async-initialization-examples.html">Async Initialization (examples)</a></li><li class="nav-item"><a href="../03-patterns/003-async-initialization-quiz.html">Async Initialization (quiz)</a></li><li class="nav-item"><a href="../03-patterns/004-state-management.html">State Management</a></li><li class="nav-item"><a href="../03-patterns/004-state-management-verbose.html">State Management (in depth)</a></li><li class="nav-item"><a href="../03-patterns/004-state-management-examples.html">State Management (examples)</a></li><li class="nav-item"><a href="../03-patterns/004-state-management-quiz.html">State Management (quiz)</a></li><li class="nav-item"><a href="../03-patterns/005-repository-unit-of-work.html">Repository Unit Of Work</a></li><li class="nav-item"><a href="../03-patterns/005-repository-unit-of-work-verbose.html">Repository Unit Of Work (in depth)</a></li><li class="nav-item"><a href="../03-patterns/005-repository-unit-of-work-examples.html">Repository Unit Of Work (examples)</a></li><li class="nav-item"><a href="../03-patterns/005-repository-unit-of-work-quiz.html">Repository Unit Of Work (quiz)</a></li><li class="nav-item"><a href="../03-patterns/006-logging-patterns.html">Logging Patterns</a></li><li class="nav-item"><a href="../03-patterns/006-logging-patterns-verbose.html">Logging Patterns (in depth)</a></li><li class="nav-item"><a href="../03-patterns/006-logging-patterns-examples.html">Logging Patterns (examples)</a></li><li class="nav-item"><a href="../03-patterns/006-logging-patterns-quiz.html">Logging Patterns (quiz)</a></li><li class="nav-item"><a href="../03-patterns/007-editor-application-architecture.html">Editor Application Architecture</a></li><li class="nav-item"><a href="../03-patterns/007-editor-application-architecture-verbose.html">Editor Application Architecture (in depth)</a></li><li class="nav-item"><a href="../03-patterns/007-editor-application-architecture-examples.html">Editor Application Architecture (examples)</a></li><li class="nav-item"><a href="../03-patterns/007-editor-application-architecture-quiz.html">Editor Application Architecture (quiz)</a></li><li class="nav-item"><a href="../03-patterns/008-focus-keyboard-navigation.html">Focus Keyboard Navigation</a></li><li class="nav-item active"><a href="../03-patterns/008-focus-keyboard-navigation-verbose.html">Focus Keyboard Navigation (in depth)</a></li><li class="nav-item"><a href="../03-patterns/008-focus-keyboard-navigation-examples.html">Focus Keyboard Navigation (examples)</a></li><li class="nav-item"><a href="../03-patterns/008-focus-keyboard-navigation-quiz.html">Focus Keyboard Navigation (quiz)</a></li><li class="nav-item"><a href="../03-patterns/008-toggle-state-pattern.html">Toggle State Pattern</a></li><li class="nav-item"><a href="../03-patterns/008-toggle-state-pattern-verbose.html">Toggle State Pattern (in depth)</a></li><li class="nav-item"><a href="../03-patterns/008-toggle-state-pattern-examples.html">Toggle State Pattern (examples)</a></li><li class="nav-item"><a href="../03-patterns/008-toggle-state-pattern-quiz.html">Toggle State Pattern (quiz)</a></li><li class="nav-item"><a href="../03-patterns/009-lazy-load-virtual-scrolling.html">Lazy Load Virtual Scrolling</a></li><li class="nav-item"><a href="../03-patterns/009-lazy-load-virtual-scrolling-verbose.html">Lazy Load Virtual Scrolling (in depth)</a></li><li class="nav-item"><a href="../03-patterns/009-lazy-load-virtual-scrolling-examples.html">Lazy Load Virtual Scrolling (examples)</a></li><li class="nav-item"><a href="../03-patterns/009-lazy-load-virtual-scrolling-quiz.html">Lazy Load Virtual Scrolling (quiz)</a></li><li class="nav-item"><a href="../03-patterns/009-storage-file-io-pipeline.html">Storage File Io Pipeline</a></li><li class="nav-item"><a href="../03-patterns/009-storage-file-io-pipeline-verbose.html">Storage File Io Pipeline (in depth)</a></li><li class="nav-item"><a href="../03-patterns/009-storage-file-io-pipeline-examples.html">Storage File Io Pipeline (examples)</a></li><li class="nav-item"><a href="../03-patterns/009-storage-file-io-pipeline-quiz.html">Storage File Io Pipeline (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Migration</span><ul class="nav-items"><li class="nav-item"><a href="../04-migration/avalonia-11-to-12.html">Avalonia 11 To 12</a></li><li class="nav-item"><a href="../04-migration/wpf-to-avalonia-key-mappings.html">Wpf To Avalonia Key Mappings</a></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></nav><main class="doc-content" id="docContent"><h1>008V — Focus &amp; Keyboard Navigation: An In-Depth Companion</h1>
+<p>You should already have read: <a href="008-focus-keyboard-navigation.html">008 — Focus &amp; Keyboard Navigation</a> for the quick-start version. This file goes deeper on every section.</p>
+<hr />
+<h2>1. Understanding the Avalonia Focus System</h2>
+<h3>FocusScope — The Fundamental Unit</h3>
+<p>A <code>FocusScope</code> is a logical boundary inside which tab and arrow navigation operates independently. Every <code>Window</code> and <code>UserControl</code> is implicitly a focus scope. Nested focus scopes create a tree:</p>
+<pre><code>Window (root focus scope)
+├── ToolBar (focus scope — Once mode)
+│   ├── Button &quot;New&quot;
+│   ├── Button &quot;Open&quot;
+│   └── Button &quot;Save&quot;
+├── ContentPanel (focus scope — Local mode)
+│   ├── TextBox &quot;Name&quot;
+│   ├── TextBox &quot;Email&quot;
+│   └── Button &quot;Submit&quot;
+└── StatusBar (focus scope — Contained mode)
+    ├── TextBlock (not focusable)
+    └── HyperlinkButton
+</code></pre>
+<p>When the user presses Tab, focus moves through focusable elements within the current scope according to the scope's <code>TabNavigation</code> mode. When the end of a scope is reached, focus jumps to the next scope in the parent's tab order.</p>
+<h3>KeyboardNavigation.TabNavigation Values — Detailed Behavior</h3>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Tab Behavior</th>
+<th>Arrow Key Behavior</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Local</code> (default)</td>
+<td>Tab moves through children by <code>TabIndex</code></td>
+<td>Arrow keys move focus inside scope</td>
+<td>Standard forms, property panels</td>
+</tr>
+<tr>
+<td><code>Cycle</code></td>
+<td>Tab wraps from last child to first</td>
+<td>Arrow keys move focus inside scope</td>
+<td>Toolbars, palette windows</td>
+</tr>
+<tr>
+<td><code>Once</code></td>
+<td>Tab enters scope and focuses the first child; subsequent tabs leave the scope</td>
+<td>Arrow keys move inside scope after focus enters</td>
+<td>Tree views, list boxes that want arrow-key navigation</td>
+</tr>
+<tr>
+<td><code>Contained</code></td>
+<td>Tab circulates within scope; focus never leaves</td>
+<td>Arrow keys move inside scope</td>
+<td>Modal sub-panels, editable lists, grid cells</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>2. Programmatic Focus Management</h2>
+<h3>FocusNavigation Helper Class (Extended)</h3>
+<pre><code class="language-csharp">public static class FocusNavigation
+{
+    public static void MoveFocusNext(Control from) =&gt;
+        FocusManager.GetFocusManager(from)?.MoveFocus(
+            NavigationDirection.Next, from, false);
+
+    public static void MoveFocusPrevious(Control from) =&gt;
+        FocusManager.GetFocusManager(from)?.MoveFocus(
+            NavigationDirection.Previous, from, false);
+
+    public static void MoveFocusUp(Control from) =&gt;
+        FocusManager.GetFocusManager(from)?.MoveFocus(
+            NavigationDirection.Up, from, false);
+
+    public static void MoveFocusDown(Control from) =&gt;
+        FocusManager.GetFocusManager(from)?.MoveFocus(
+            NavigationDirection.Down, from, false);
+
+    public static void MoveFocusLeft(Control from) =&gt;
+        FocusManager.GetFocusManager(from)?.MoveFocus(
+            NavigationDirection.Left, from, false);
+
+    public static void MoveFocusRight(Control from) =&gt;
+        FocusManager.GetFocusManager(from)?.MoveFocus(
+            NavigationDirection.Right, from, false);
+
+    public static void FocusFirst(Control scope)
+    {
+        var focusManager = FocusManager.GetFocusManager(scope);
+        if (focusManager?.GetFocusScope(scope) is { } fs)
+            focusManager.MoveFocus(NavigationDirection.First, fs, false);
+    }
+
+    public static void FocusLast(Control scope)
+    {
+        var focusManager = FocusManager.GetFocusManager(scope);
+        if (focusManager?.GetFocusScope(scope) is { } fs)
+            focusManager.MoveFocus(NavigationDirection.Last, fs, false);
+    }
+
+    public static bool TryFocus(Control control)
+    {
+        if (control?.Focusable == true)
+        {
+            control.Focus();
+            return control.IsFocused;
+        }
+        return false;
+    }
+}
+</code></pre>
+<h3>Focus Events Lifecycle</h3>
+<p>Understanding when focus events fire is critical for correct behavior:</p>
+<pre><code class="language-csharp">// GotFocus — fires when the element receives focus
+// LostFocus — fires when the element loses focus
+// IsFocusedPropertyChanged — fires on either transition
+
+public partial class FocusLogger : ObservableObject
+{
+    [ObservableProperty]
+    private string _focusedElement = &quot;&quot;;
+
+    public FocusLogger(Control root)
+    {
+        root.AddHandler(InputElement.GotFocusEvent, (_, e) =&gt;
+        {
+            var source = e.Source as Control;
+            FocusedElement = $&quot;Got focus: {source?.GetType().Name} '{source?.Name}'&quot;;
+
+            // Recurse to find the logical parent chain
+            var chain = new List&lt;string&gt;();
+            var current = source;
+            while (current is not null)
+            {
+                chain.Add($&quot;{current.GetType().Name} '{current.Name}'&quot;);
+                current = current.Parent as Control;
+            }
+            FocusChain = string.Join(&quot; &gt; &quot;, chain);
+        }, RoutingStrategies.Bubble);
+
+        root.AddHandler(InputElement.LostFocusEvent, (_, e) =&gt;
+        {
+            var source = e.Source as Control;
+            FocusedElement = $&quot;Lost focus: {source?.GetType().Name} '{source?.Name}'&quot;;
+        }, RoutingStrategies.Bubble);
+    }
+
+    [ObservableProperty]
+    private string _focusChain = &quot;&quot;;
+}
+</code></pre>
+<hr />
+<h2>3. Tab Order Management — Deep Dive</h2>
+<h3>TabIndex Priority</h3>
+<p>Tab order follows these rules in order of precedence:</p>
+<ol>
+<li><strong>Scope containment</strong> — focus moves within the current scope first</li>
+<li><strong>TabIndex value</strong> — lower values receive focus first</li>
+<li><strong>Visual tree order</strong> — elements with the same TabIndex are ordered by their position in the visual tree</li>
+<li><strong>Z-order</strong> — if visual tree order is ambiguous, elements rendered later (higher Z) come first</li>
+</ol>
+<pre><code class="language-xml">&lt;StackPanel KeyboardNavigation.TabNavigation=&quot;Local&quot;&gt;
+  &lt;TextBox KeyboardNavigation.TabIndex=&quot;20&quot; Name=&quot;Second&quot; /&gt;
+  &lt;TextBox KeyboardNavigation.TabIndex=&quot;10&quot; Name=&quot;First&quot; /&gt;
+  &lt;!-- Despite being declared second, &quot;First&quot; receives tab focus first --&gt;
+  &lt;!-- because TabIndex=&quot;10&quot; &lt; TabIndex=&quot;20&quot; --&gt;
+&lt;/StackPanel&gt;
+</code></pre>
+<h3>IsTabStop — Skip Elements in Tab Navigation</h3>
+<p>Set <code>IsTabStop=&quot;False&quot;</code> to skip an element during tab traversal while keeping it focusable programmatically:</p>
+<pre><code class="language-xml">&lt;!-- Search box — tab skips over it, but clicking or Shift+F6 still focuses it --&gt;
+&lt;TextBox Name=&quot;SearchBox&quot;
+         KeyboardNavigation.IsTabStop=&quot;False&quot;
+         Watermark=&quot;Search (Ctrl+F)&quot; /&gt;
+
+&lt;!-- The &quot;Clear&quot; button next to the search box is also skipped --&gt;
+&lt;Button Content=&quot;Clear&quot;
+        KeyboardNavigation.IsTabStop=&quot;False&quot;
+        Command=&quot;{Binding ClearSearchCommand}&quot; /&gt;
+</code></pre>
+<h3>Tab Navigation Mode on Containers</h3>
+<p><code>KeyboardNavigation.TabNavigation</code> can be set on any <code>Control</code> that contains children. The mode applies to all direct focusable children:</p>
+<pre><code class="language-xml">&lt;!-- Cycle mode — after last field, wraps to first --&gt;
+&lt;StackPanel KeyboardNavigation.TabNavigation=&quot;Cycle&quot;&gt;
+  &lt;TextBox Name=&quot;Field1&quot; /&gt;
+  &lt;TextBox Name=&quot;Field2&quot; /&gt;
+  &lt;TextBox Name=&quot;Field3&quot; /&gt;
+&lt;/StackPanel&gt;
+
+&lt;!-- Contained mode — tab never leaves this group --&gt;
+&lt;Border KeyboardNavigation.TabNavigation=&quot;Contained&quot;
+        BorderBrush=&quot;LightGray&quot; BorderThickness=&quot;1&quot; Padding=&quot;8&quot;&gt;
+  &lt;StackPanel&gt;
+    &lt;TextBlock Text=&quot;Search Filters&quot; FontWeight=&quot;SemiBold&quot; /&gt;
+    &lt;TextBox Name=&quot;FilterName&quot; /&gt;
+    &lt;ComboBox Name=&quot;FilterCategory&quot; /&gt;
+    &lt;Button Content=&quot;Apply Filter&quot; /&gt;
+  &lt;/StackPanel&gt;
+&lt;/Border&gt;
+</code></pre>
+<hr />
+<h2>4. Custom Arrow-Key Navigation</h2>
+<h3>Editable List with Full Keyboard Support</h3>
+<pre><code class="language-csharp">public sealed partial class EditableListViewModel : ObservableObject
+{
+    [ObservableProperty]
+    private ObservableCollection&lt;string&gt; _items = new();
+
+    [ObservableProperty]
+    private int _selectedIndex = -1;
+
+    [ObservableProperty]
+    private bool _isEditing;
+
+    private readonly ListBox _listBox;
+
+    public EditableListViewModel(ListBox listBox)
+    {
+        _listBox = listBox;
+    }
+
+    [RelayCommand]
+    private void HandleListKeyDown(KeyEventArgs e)
+    {
+        switch (e.Key)
+        {
+            case Key.Up:
+                if (SelectedIndex &gt; 0)
+                {
+                    SelectedIndex--;
+                    ScrollIntoView(SelectedIndex);
+                }
+                e.Handled = true;
+                break;
+
+            case Key.Down:
+                if (SelectedIndex &lt; Items.Count - 1)
+                {
+                    SelectedIndex++;
+                    ScrollIntoView(SelectedIndex);
+                }
+                e.Handled = true;
+                break;
+
+            case Key.Home:
+                SelectedIndex = 0;
+                ScrollIntoView(0);
+                e.Handled = true;
+                break;
+
+            case Key.End:
+                SelectedIndex = Items.Count - 1;
+                ScrollIntoView(SelectedIndex);
+                e.Handled = true;
+                break;
+
+            case Key.Enter:
+                if (SelectedIndex &gt;= 0)
+                    IsEditing = true;
+                e.Handled = true;
+                break;
+
+            case Key.F2:
+                if (SelectedIndex &gt;= 0)
+                    IsEditing = true;
+                e.Handled = true;
+                break;
+
+            case Key.Escape:
+                if (IsEditing)
+                {
+                    IsEditing = false;
+                    e.Handled = true;
+                }
+                break;
+
+            case Key.Delete:
+                if (SelectedIndex &gt;= 0 &amp;&amp; !IsEditing)
+                {
+                    Items.RemoveAt(SelectedIndex);
+                    SelectedIndex = Math.Min(SelectedIndex, Items.Count - 1);
+                }
+                e.Handled = true;
+                break;
+
+            case Key.Insert:
+                var newItem = $&quot;Item {Items.Count + 1}&quot;;
+                Items.Insert(SelectedIndex + 1, newItem);
+                SelectedIndex++;
+                IsEditing = true;
+                e.Handled = true;
+                break;
+        }
+    }
+
+    private void ScrollIntoView(int index)
+    {
+        if (_listBox?.ItemContainerGenerator.ContainerFromIndex(index) is Control container)
+            container.BringIntoView();
+    }
+}
+</code></pre>
+<h3>Arrow-Key Navigation Between Focus Scopes</h3>
+<p>For panel-to-panel arrow navigation (e.g., splitting a window into quadrants), use directional navigation:</p>
+<pre><code class="language-csharp">public static class DirectionalFocus
+{
+    public static void Attach(Control from, Control? up, Control? down, Control? left, Control? right)
+    {
+        from.KeyDown += (_, e) =&gt;
+        {
+            var target = e.Key switch
+            {
+                Key.Up =&gt; up,
+                Key.Down =&gt; down,
+                Key.Left =&gt; left,
+                Key.Right =&gt; right,
+                _ =&gt; null
+            };
+
+            if (target is not null)
+            {
+                target.Focus();
+                e.Handled = true;
+            }
+        };
+    }
+}
+
+// Usage
+DirectionalFocus.Attach(panelA, up: null, down: panelC, left: null, right: panelB);
+DirectionalFocus.Attach(panelB, up: null, down: panelD, left: panelA, right: null);
+</code></pre>
+<hr />
+<h2>5. Global vs. Local Key Bindings</h2>
+<h3>Binding Priority and Routing</h3>
+<p>Key bindings are evaluated in the following order:</p>
+<ol>
+<li><strong>Focused control's KeyBindings</strong> — the specific element that has focus</li>
+<li><strong>Ancestor chain</strong> — parent controls up to the Window</li>
+<li><strong>Window.KeyBindings</strong> — the top-level window</li>
+<li><strong>Application.KeyBindings</strong> — application-wide hotkeys (always active)</li>
+</ol>
+<p>If a handler sets <code>e.Handled = true</code>, the event stops propagating to higher levels.</p>
+<pre><code class="language-csharp">// Local — only active when TextBox has focus
+&lt;TextBox Text=&quot;{Binding SearchText}&quot;&gt;
+  &lt;TextBox.KeyBindings&gt;
+    &lt;KeyBinding Gesture=&quot;Enter&quot; Command=&quot;{Binding SearchCommand}&quot; /&gt;
+    &lt;KeyBinding Gesture=&quot;Escape&quot; Command=&quot;{Binding ClearSearchCommand}&quot; /&gt;
+  &lt;/TextBox.KeyBindings&gt;
+&lt;/TextBox&gt;
+
+// Window-level — active for any focused element in the window, unless handled lower
+&lt;Window.KeyBindings&gt;
+  &lt;KeyBinding Gesture=&quot;Ctrl+N&quot; Command=&quot;{Binding NewDocumentCommand}&quot; /&gt;
+  &lt;KeyBinding Gesture=&quot;Ctrl+O&quot; Command=&quot;{Binding OpenDocumentCommand}&quot; /&gt;
+  &lt;KeyBinding Gesture=&quot;Ctrl+S&quot; Command=&quot;{Binding SaveCommand}&quot; /&gt;
+  &lt;KeyBinding Gesture=&quot;Ctrl+Shift+S&quot; Command=&quot;{Binding SaveAsCommand}&quot; /&gt;
+  &lt;KeyBinding Gesture=&quot;Ctrl+Z&quot; Command=&quot;{Binding UndoCommand}&quot; /&gt;
+  &lt;KeyBinding Gesture=&quot;Ctrl+Y&quot; Command=&quot;{Binding RedoCommand}&quot; /&gt;
+  &lt;KeyBinding Gesture=&quot;Ctrl+A&quot; Command=&quot;{Binding SelectAllCommand}&quot; /&gt;
+  &lt;KeyBinding Gesture=&quot;Delete&quot; Command=&quot;{Binding DeleteCommand}&quot; /&gt;
+  &lt;KeyBinding Gesture=&quot;F5&quot; Command=&quot;{Binding RunCommand}&quot; /&gt;
+&lt;/Window.KeyBindings&gt;
+
+// Application-level — always active, even when no window is focused
+Application.Current.KeyBindings.Add(new KeyBinding
+{
+    Gesture = new KeyGesture(Key.D, KeyModifiers.Ctrl | KeyModifiers.Shift),
+    Command = new RelayCommand(() =&gt; ShowDeveloperTools())
+});
+</code></pre>
+<h3>Dynamic Key Binding Registration</h3>
+<p>For plugin systems or user-configurable shortcuts:</p>
+<pre><code class="language-csharp">public sealed class KeyBindingService
+{
+    private readonly Dictionary&lt;string, KeyBinding&gt; _bindings = new();
+
+    public void Register(string name, KeyGesture gesture, ICommand command)
+    {
+        var binding = new KeyBinding
+        {
+            Gesture = gesture,
+            Command = command
+        };
+
+        // Add to every open window
+        foreach (var window in Application.Current?.Windows ?? Array.Empty&lt;Window&gt;())
+        {
+            window.KeyBindings.Add(binding);
+        }
+
+        // Also add to Application for non-window contexts
+        Application.Current?.KeyBindings.Add(binding);
+
+        _bindings[name] = binding;
+    }
+
+    public void Unregister(string name)
+    {
+        if (_bindings.TryGetValue(name, out var binding))
+        {
+            foreach (var window in Application.Current?.Windows ?? Array.Empty&lt;Window&gt;())
+                window.KeyBindings.Remove(binding);
+            Application.Current?.KeyBindings.Remove(binding);
+            _bindings.Remove(name);
+        }
+    }
+
+    public void Remap(string name, KeyGesture newGesture)
+    {
+        if (_bindings.TryGetValue(name, out var binding))
+            binding.Gesture = newGesture;
+    }
+}
+</code></pre>
+<hr />
+<h2>6. Roving Tab Stops</h2>
+<h3>Toolbar with Roving TabStop Pattern</h3>
+<p>In a toolbar, only the active tool button should be a tab stop. When the user navigates into the toolbar (via Tab), focus goes to the active tool. Arrow keys move between tools. Tab leaves the toolbar entirely.</p>
+<pre><code class="language-csharp">public sealed partial class ToolBarViewModel : ObservableObject
+{
+    private readonly List&lt;ToolButton&gt; _tools = new();
+
+    [ObservableProperty]
+    private int _activeToolIndex;
+
+    public IReadOnlyList&lt;ToolButton&gt; Tools =&gt; _tools;
+
+    public ToolBarViewModel()
+    {
+        _tools.Add(new ToolButton(&quot;Select&quot;, &quot;select&quot;));
+        _tools.Add(new ToolButton(&quot;Move&quot;, &quot;move&quot;));
+        _tools.Add(new ToolButton(&quot;Rotate&quot;, &quot;rotate&quot;));
+        _tools.Add(new ToolButton(&quot;Scale&quot;, &quot;scale&quot;));
+    }
+
+    public void UpdateTabStops()
+    {
+        foreach (var tool in _tools)
+            tool.IsTabStop = false;
+        if (_activeToolIndex &gt;= 0 &amp;&amp; _activeToolIndex &lt; _tools.Count)
+            _tools[_activeToolIndex].IsTabStop = true;
+    }
+
+    [RelayCommand]
+    private void ActivateTool(string toolId)
+    {
+        var index = _tools.FindIndex(t =&gt; t.Id == toolId);
+        if (index &gt;= 0)
+        {
+            _activeToolIndex = index;
+            UpdateTabStops();
+        }
+    }
+
+    [RelayCommand]
+    private void HandleToolBarKeyDown(KeyEventArgs e)
+    {
+        switch (e.Key)
+        {
+            case Key.Left:
+                ActivatePreviousTool();
+                e.Handled = true;
+                break;
+            case Key.Right:
+                ActivateNextTool();
+                e.Handled = true;
+                break;
+        }
+    }
+
+    private void ActivateNextTool()
+    {
+        _activeToolIndex = (_activeToolIndex + 1) % _tools.Count;
+        UpdateTabStops();
+    }
+
+    private void ActivatePreviousTool()
+    {
+        _activeToolIndex = (_activeToolIndex - 1 + _tools.Count) % _tools.Count;
+        UpdateTabStops();
+    }
+}
+
+public sealed class ToolButton : ObservableObject
+{
+    public string Name { get; }
+    public string Id { get; }
+
+    [ObservableProperty]
+    private bool _isTabStop;
+
+    [ObservableProperty]
+    private bool _isActive;
+
+    public ToolButton(string name, string id)
+    {
+        Name = name;
+        Id = id;
+    }
+}
+</code></pre>
+<h3>XAML for Roving TabStop Toolbar</h3>
+<pre><code class="language-xml">&lt;ToolBar KeyboardNavigation.TabNavigation=&quot;Once&quot;
+         KeyDown=&quot;OnToolBarKeyDown&quot;&gt;
+  &lt;ItemsControl Items=&quot;{Binding Tools}&quot;&gt;
+    &lt;ItemsControl.ItemTemplate&gt;
+      &lt;DataTemplate&gt;
+        &lt;ToggleButton Content=&quot;{Binding Name}&quot;
+                      IsChecked=&quot;{Binding IsActive}&quot;
+                      KeyboardNavigation.IsTabStop=&quot;{Binding IsTabStop}&quot;
+                      Command=&quot;{Binding $parent[ItemsControl].DataContext.ActivateToolCommand}&quot;
+                      CommandParameter=&quot;{Binding Id}&quot;
+                      ToolTip.Tip=&quot;{Binding Name}&quot; /&gt;
+      &lt;/DataTemplate&gt;
+    &lt;/ItemsControl.ItemTemplate&gt;
+  &lt;/ItemsControl&gt;
+&lt;/ToolBar&gt;
+</code></pre>
+<hr />
+<h2>7. FocusScope and Modal Dialogs</h2>
+<h3>Creating a Modal Focus Trap</h3>
+<p>For custom dialogs or popups that must trap focus:</p>
+<pre><code class="language-csharp">public sealed class FocusTrap : IDisposable
+{
+    private readonly Control _scope;
+    private readonly Control _firstElement;
+    private readonly Control _lastElement;
+
+    public FocusTrap(Control scope, Control first, Control last)
+    {
+        _scope = scope;
+        _firstElement = first;
+        _lastElement = last;
+
+        // Intercept Tab and Shift+Tab at the scope boundary
+        scope.PreviewKeyDown += OnPreviewKeyDown;
+
+        // Focus the first element
+        _firstElement.Focus();
+    }
+
+    private void OnPreviewKeyDown(object? sender, KeyEventArgs e)
+    {
+        if (e.KeyModifiers.HasFlag(KeyModifiers.Shift) &amp;&amp; e.Key == Key.Tab)
+        {
+            if (FocusManager.GetFocusManager(_scope)?.Current == _firstElement)
+            {
+                _lastElement.Focus();
+                e.Handled = true;
+            }
+        }
+        else if (e.Key == Key.Tab)
+        {
+            if (FocusManager.GetFocusManager(_scope)?.Current == _lastElement)
+            {
+                _firstElement.Focus();
+                e.Handled = true;
+            }
+        }
+        else if (e.Key == Key.Escape)
+        {
+            // Close the dialog
+            CloseRequested?.Invoke();
+            e.Handled = true;
+        }
+    }
+
+    public event Action? CloseRequested;
+
+    public void Dispose()
+    {
+        _scope.PreviewKeyDown -= OnPreviewKeyDown;
+    }
+}
+</code></pre>
+<hr />
+<h2>8. Testing Keyboard Navigation</h2>
+<pre><code class="language-csharp">[TestClass]
+public sealed class FocusNavigationTests
+{
+    [TestMethod]
+    public void MoveFocusNext_MovesToNextTabIndex()
+    {
+        var stack = new StackPanel { KeyboardNavigation.TabNavigation = KeyboardNavigationMode.Local };
+        var first = new TextBox { KeyboardNavigation.TabIndex = 10 };
+        var second = new TextBox { KeyboardNavigation.TabIndex = 20 };
+        stack.Children.Add(first);
+        stack.Children.Add(second);
+
+        first.Focus();
+        Assert.IsTrue(first.IsFocused);
+
+        FocusNavigation.MoveFocusNext(first);
+        Assert.IsTrue(second.IsFocused);
+    }
+
+    [TestMethod]
+    public void FocusFirst_FocusesFirstElementInScope()
+    {
+        var window = new Window();
+        var panel = new StackPanel();
+        var first = new TextBox { KeyboardNavigation.TabIndex = 10 };
+        var second = new TextBox { KeyboardNavigation.TabIndex = 20 };
+        panel.Children.Add(first);
+        panel.Children.Add(second);
+        window.Content = panel;
+
+        window.Show();
+        FocusNavigation.FocusFirst(panel);
+        Assert.IsTrue(first.IsFocused);
+        window.Close();
+    }
+}
+</code></pre>
+<hr />
+<h2>Summary: Core vs. Verbose</h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Core</th>
+<th>Verbose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TabNavigation values</td>
+<td>Basic table</td>
+<td>Detailed behavior table with use-case guidance</td>
+</tr>
+<tr>
+<td>FocusNavigation</td>
+<td>3 methods</td>
+<td>Full set with <code>First</code>, <code>Last</code>, <code>TryFocus</code></td>
+</tr>
+<tr>
+<td>Tab order</td>
+<td>Simple example</td>
+<td>Priority rules, <code>IsTabStop</code>, <code>Cycle</code> wrap</td>
+</tr>
+<tr>
+<td>Arrow-key handler</td>
+<td>Single <code>switch</code></td>
+<td>Full keyboard model: Home/End/F2/Insert/Delete</td>
+</tr>
+<tr>
+<td>Key bindings</td>
+<td>Window + App level</td>
+<td>Priority chain, dynamic registration, remapping</td>
+</tr>
+<tr>
+<td>Roving tab stop</td>
+<td>One-line example</td>
+<td>Full ViewModel + XAML with update logic</td>
+</tr>
+<tr>
+<td>Focus trap</td>
+<td>—</td>
+<td><code>FocusTrap</code> implementation for modal dialogs</td>
+</tr>
+<tr>
+<td>Testing</td>
+<td>—</td>
+<td>Unit tests with <code>[TestClass]</code></td>
+</tr>
+</tbody>
+</table>
+</main><nav class="doc-toc" id="toc"></nav></div><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/powershell.min.js"></script><script src="../_assets/js/search-index.js"></script><script>const CURRENT_PAGE="../03-patterns/008-focus-keyboard-navigation-verbose.html";</script><script src="../_assets/js/ssg.js"></script></body></html>

@@ -367,21 +367,52 @@ Step-by-step guides organized by difficulty.
 
 Reusable architectural and design patterns.
 
-| Pattern | Covered In |
-|---|---|
-| MVVM with DI (Microsoft.Extensions.DI) | [032](02-tutorials/advanced/032-mvvm-di-wiring.md) |
-| App lifetimes & startup patterns | [037](02-tutorials/advanced/037-app-lifetimes-splash-screen.md) |
-| Service locator vs DI | [Pattern 001](03-patterns/001-service-locator-vs-di.md) |
-| Modular app with plugin-style views | [Pattern 002](03-patterns/002-plugin-architecture.md) |
-| Async initialization patterns | [Pattern 003](03-patterns/003-async-initialization.md) |
-| State management (Flux / singleton / IMessenger) | [Pattern 004](03-patterns/004-state-management.md) |
-| Repository / Unit of Work | [Pattern 005](03-patterns/005-repository-unit-of-work.md) |
-| Logging patterns | [Pattern 006](03-patterns/006-logging-patterns.md) |
-| Editor application architecture | [Pattern 007](03-patterns/007-editor-application-architecture.md) |
-| Toggle & state management | [Pattern 008](03-patterns/008-toggle-state-pattern.md) |
-| Focus & keyboard navigation | [Pattern 008b](03-patterns/008-focus-keyboard-navigation.md) |
-| Lazy load / virtual scrolling | [Pattern 009](03-patterns/009-lazy-load-virtual-scrolling.md) |
-| Storage & file I/O pipeline | [Pattern 009b](03-patterns/009-storage-file-io-pipeline.md) |
+1. [Pattern 001 — Service Locator vs DI](03-patterns/001-service-locator-vs-di.md)
+   ⌞ [001V — Service Locator vs DI (verbose companion)](03-patterns/001-service-locator-vs-di-verbose.md)
+   ⌞ [001X — Service Locator vs DI (examples)](03-patterns/001-service-locator-vs-di-examples.md)
+   ⌞ [001Q — Service Locator vs DI (quiz)](03-patterns/001-service-locator-vs-di-quiz.md)
+2. [Pattern 002 — Plugin Architecture](03-patterns/002-plugin-architecture.md)
+   ⌞ [002V — Plugin Architecture (verbose companion)](03-patterns/002-plugin-architecture-verbose.md)
+   ⌞ [002X — Plugin Architecture (examples)](03-patterns/002-plugin-architecture-examples.md)
+   ⌞ [002Q — Plugin Architecture (quiz)](03-patterns/002-plugin-architecture-quiz.md)
+3. [Pattern 003 — Async Initialization Patterns](03-patterns/003-async-initialization.md)
+   ⌞ [003V — Async Initialization (verbose companion)](03-patterns/003-async-initialization-verbose.md)
+   ⌞ [003X — Async Initialization (examples)](03-patterns/003-async-initialization-examples.md)
+   ⌞ [003Q — Async Initialization (quiz)](03-patterns/003-async-initialization-quiz.md)
+4. [Pattern 004 — State Management](03-patterns/004-state-management.md)
+   ⌞ [004V — State Management (verbose companion)](03-patterns/004-state-management-verbose.md)
+   ⌞ [004X — State Management (examples)](03-patterns/004-state-management-examples.md)
+   ⌞ [004Q — State Management (quiz)](03-patterns/004-state-management-quiz.md)
+5. [Pattern 005 — Repository / Unit of Work](03-patterns/005-repository-unit-of-work.md)
+   ⌞ [005V — Repository / Unit of Work (verbose companion)](03-patterns/005-repository-unit-of-work-verbose.md)
+   ⌞ [005X — Repository / Unit of Work (examples)](03-patterns/005-repository-unit-of-work-examples.md)
+   ⌞ [005Q — Repository / Unit of Work (quiz)](03-patterns/005-repository-unit-of-work-quiz.md)
+6. [Pattern 006 — Logging Patterns](03-patterns/006-logging-patterns.md)
+   ⌞ [006V — Logging Patterns (verbose companion)](03-patterns/006-logging-patterns-verbose.md)
+   ⌞ [006X — Logging Patterns (examples)](03-patterns/006-logging-patterns-examples.md)
+   ⌞ [006Q — Logging Patterns (quiz)](03-patterns/006-logging-patterns-quiz.md)
+7. [Pattern 007 — Editor Application Architecture](03-patterns/007-editor-application-architecture.md)
+   ⌞ [007V — Editor Architecture (verbose companion)](03-patterns/007-editor-application-architecture-verbose.md)
+   ⌞ [007X — Editor Architecture (examples)](03-patterns/007-editor-application-architecture-examples.md)
+   ⌞ [007Q — Editor Architecture (quiz)](03-patterns/007-editor-application-architecture-quiz.md)
+8. [Pattern 008a — Toggle & State](03-patterns/008-toggle-state-pattern.md)
+   ⌞ [008aV — Toggle & State (verbose companion)](03-patterns/008-toggle-state-pattern-verbose.md)
+   ⌞ [008aX — Toggle & State (examples)](03-patterns/008-toggle-state-pattern-examples.md)
+   ⌞ [008aQ — Toggle & State (quiz)](03-patterns/008-toggle-state-pattern-quiz.md)
+9. [Pattern 008b — Focus & Keyboard Navigation](03-patterns/008-focus-keyboard-navigation.md)
+   ⌞ [008bV — Focus & Keyboard Nav (verbose companion)](03-patterns/008-focus-keyboard-navigation-verbose.md)
+   ⌞ [008bX — Focus & Keyboard Nav (examples)](03-patterns/008-focus-keyboard-navigation-examples.md)
+   ⌞ [008bQ — Focus & Keyboard Nav (quiz)](03-patterns/008-focus-keyboard-navigation-quiz.md)
+10. [Pattern 009a — Lazy Load / Virtual Scrolling](03-patterns/009-lazy-load-virtual-scrolling.md)
+    ⌞ [009aV — Lazy Load (verbose companion)](03-patterns/009-lazy-load-virtual-scrolling-verbose.md)
+    ⌞ [009aX — Lazy Load (examples)](03-patterns/009-lazy-load-virtual-scrolling-examples.md)
+    ⌞ [009aQ — Lazy Load (quiz)](03-patterns/009-lazy-load-virtual-scrolling-quiz.md)
+11. [Pattern 009b — Storage & File I/O Pipeline](03-patterns/009-storage-file-io-pipeline.md)
+    ⌞ [009bV — Storage & File I/O (verbose companion)](03-patterns/009-storage-file-io-pipeline-verbose.md)
+    ⌞ [009bX — Storage & File I/O (examples)](03-patterns/009-storage-file-io-pipeline-examples.md)
+    ⌞ [009bQ — Storage & File I/O (quiz)](03-patterns/009-storage-file-io-pipeline-quiz.md)
+
+Also see related tutorials: [032 — MVVM with DI](02-tutorials/advanced/032-mvvm-di-wiring.md), [037 — App Lifetimes](02-tutorials/advanced/037-app-lifetimes-splash-screen.md)
 
 ---
 
