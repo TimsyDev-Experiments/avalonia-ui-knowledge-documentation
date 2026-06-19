@@ -1,7 +1,7 @@
 # Avalonia UI 12 — Study & Reference Documentation
 
 > **Target:** Avalonia 12.0.4 · .NET 10 · CommunityToolkit.Mvvm 8.x  
-> **Last indexed:** 2026-06-15  
+> **Last indexed:** 2026-06-18  
 > **View rendered:** Open `viewer.html` via a local HTTP server (see below)
 
 An organized collection of mini-tutorials, reference guides, patterns, and migration notes for Avalonia UI development. Written for developers who know the basics but need quick refreshers, structured learning, and deep-dive references.
@@ -33,6 +33,17 @@ Cheat sheets and one-page summaries for common tasks.
 | [Q05](01-quick-refs/resource-dictionaries.md) | Resource Dictionaries |
 | [Q06](01-quick-refs/control-themes.md) | Control Themes reference |
 | [Q07](01-quick-refs/common-controls-reference.md) | Common Controls reference (15 controls) |
+| [Q08](01-quick-refs/naming-conventions.md) | Naming Conventions — files, classes, x:Name, resources |
+| [Q09](01-quick-refs/common-converters.md) | Common Converters — BoolToVis, StringNotEmpty, EnumToBool, MultiValue |
+| [Q10](01-quick-refs/accessibility-automation.md) | Accessibility & Automation IDs — AutomationProperties, focus order |
+| [Q11](01-quick-refs/input-gestures.md) | Input Gestures — syntax, modifiers, mouse, scroll, common shortcuts |
+| [Q12](01-quick-refs/shapes-geometries.md) | Shapes & Geometries — Shape controls, Geometry types, path mini-language |
+| [Q13](01-quick-refs/icons-reference.md) | Icons Reference — image files, icon fonts, path icons, menu icons |
+| [Routed Events](01-quick-refs/routed-events-quick-ref.md) | Routed events quick ref — strategies, registration, common events, handlers |
+| [Property System](01-quick-refs/property-system-quick-ref.md) | Property system quick ref — Styled/Direct/Attached, registration, precedence |
+| [Dispatcher & Timers](01-quick-refs/dispatcher-timers-quick-ref.md) | Dispatcher & timers quick ref — priorities, DispatcherTimer, sync context |
+| [Brushes & Colors](01-quick-refs/brushes-colors-reference.md) | Brushes & colors reference — all brush types, gradients, acrylic, named colors |
+| [Font & Typography](01-quick-refs/font-typography-reference.md) | Font & typography reference — families, weights, FormattedText, custom fonts |
 
 ---
 
@@ -134,7 +145,67 @@ Step-by-step guides organized by difficulty.
 13. [051 — Routed Events](02-tutorials/intermediate/051-routed-events.md)
      ⌞ [051V — Routed Events (verbose companion)](02-tutorials/intermediate/051-routed-events-verbose.md)
      ⌞ [051X — Routed Events (examples)](02-tutorials/intermediate/051-routed-events-examples.md)
-    ⌞ [051Q — Routed Events (quiz)](02-tutorials/intermediate/051-routed-events-quiz.md)
+     ⌞ [051Q — Routed Events (quiz)](02-tutorials/intermediate/051-routed-events-quiz.md)
+14. [052 — Property System](02-tutorials/intermediate/052-property-system.md)
+     ⌞ [052V — Property System (verbose companion)](02-tutorials/intermediate/052-property-system-verbose.md)
+     ⌞ [052X — Property System (examples)](02-tutorials/intermediate/052-property-system-examples.md)
+    ⌞ [052Q — Property System (quiz)](02-tutorials/intermediate/052-property-system-quiz.md)
+15. [053 — Threading & Dispatcher](02-tutorials/intermediate/053-threading-dispatcher.md)
+     ⌞ [053V — Threading & Dispatcher (verbose companion)](02-tutorials/intermediate/053-threading-dispatcher-verbose.md)
+     ⌞ [053X — Threading & Dispatcher (examples)](02-tutorials/intermediate/053-threading-dispatcher-examples.md)
+    ⌞ [053Q — Threading & Dispatcher (quiz)](02-tutorials/intermediate/053-threading-dispatcher-quiz.md)
+16. [054 — Focus Management](02-tutorials/intermediate/054-focus-management.md)
+     ⌞ [054V — Focus Management (verbose companion)](02-tutorials/intermediate/054-focus-management-verbose.md)
+     ⌞ [054X — Focus Management (examples)](02-tutorials/intermediate/054-focus-management-examples.md)
+     ⌞ [054Q — Focus Management (quiz)](02-tutorials/intermediate/054-focus-management-quiz.md)
+17. [055 — Keyboard & Hotkeys](02-tutorials/intermediate/055-keyboard-hotkeys.md)
+     ⌞ [055V — Keyboard & Hotkeys (verbose companion)](02-tutorials/intermediate/055-keyboard-hotkeys-verbose.md)
+     ⌞ [055X — Keyboard & Hotkeys (examples)](02-tutorials/intermediate/055-keyboard-hotkeys-examples.md)
+     ⌞ [055Q — Keyboard & Hotkeys (quiz)](02-tutorials/intermediate/055-keyboard-hotkeys-quiz.md)
+18. [056 — Input Events](02-tutorials/intermediate/056-input-events.md)
+     ⌞ [056V — Input Events (verbose companion)](02-tutorials/intermediate/056-input-events-verbose.md)
+     ⌞ [056X — Input Events (examples)](02-tutorials/intermediate/056-input-events-examples.md)
+     ⌞ [056Q — Input Events (quiz)](02-tutorials/intermediate/056-input-events-quiz.md)
+19. [057 — Gesture Recognizers](02-tutorials/intermediate/057-gesture-recognizers.md)
+     ⌞ [057V — Gesture Recognizers (verbose companion)](02-tutorials/intermediate/057-gesture-recognizers-verbose.md)
+     ⌞ [057X — Gesture Recognizers (examples)](02-tutorials/intermediate/057-gesture-recognizers-examples.md)
+     ⌞ [057Q — Gesture Recognizers (quiz)](02-tutorials/intermediate/057-gesture-recognizers-quiz.md)
+20. [058 — ScrollViewer & ScrollBar](02-tutorials/intermediate/058-scrollviewer-scrollbar.md)
+     ⌞ [058V — ScrollViewer & ScrollBar (verbose companion)](02-tutorials/intermediate/058-scrollviewer-scrollbar-verbose.md)
+     ⌞ [058X — ScrollViewer & ScrollBar (examples)](02-tutorials/intermediate/058-scrollviewer-scrollbar-examples.md)
+     ⌞ [058Q — ScrollViewer & ScrollBar (quiz)](02-tutorials/intermediate/058-scrollviewer-scrollbar-quiz.md)
+21. [059 — TextBox & Text Input](02-tutorials/intermediate/059-textbox-text-input.md)
+     ⌞ [059V — TextBox & Text Input (verbose companion)](02-tutorials/intermediate/059-textbox-text-input-verbose.md)
+     ⌞ [059X — TextBox & Text Input (examples)](02-tutorials/intermediate/059-textbox-text-input-examples.md)
+     ⌞ [059Q — TextBox & Text Input (quiz)](02-tutorials/intermediate/059-textbox-text-input-quiz.md)
+22. [060 — MultiBinding & PriorityBinding](02-tutorials/intermediate/060-multibinding-prioritybinding.md)
+     ⌞ [060V — MultiBinding & PriorityBinding (verbose companion)](02-tutorials/intermediate/060-multibinding-prioritybinding-verbose.md)
+     ⌞ [060X — MultiBinding & PriorityBinding (examples)](02-tutorials/intermediate/060-multibinding-prioritybinding-examples.md)
+     ⌞ [060Q — MultiBinding & PriorityBinding (quiz)](02-tutorials/intermediate/060-multibinding-prioritybinding-quiz.md)
+23. [061 — Collection Views](02-tutorials/intermediate/061-collection-views.md)
+     ⌞ [061V — Collection Views (verbose companion)](02-tutorials/intermediate/061-collection-views-verbose.md)
+     ⌞ [061X — Collection Views (examples)](02-tutorials/intermediate/061-collection-views-examples.md)
+     ⌞ [061Q — Collection Views (quiz)](02-tutorials/intermediate/061-collection-views-quiz.md)
+24. [062 — Clipboard & Launcher](02-tutorials/intermediate/062-clipboard-launcher.md)
+     ⌞ [062V — Clipboard & Launcher (verbose companion)](02-tutorials/intermediate/062-clipboard-launcher-verbose.md)
+     ⌞ [062X — Clipboard & Launcher (examples)](02-tutorials/intermediate/062-clipboard-launcher-examples.md)
+     ⌞ [062Q — Clipboard & Launcher (quiz)](02-tutorials/intermediate/062-clipboard-launcher-quiz.md)
+25. [063 — Storage Service](02-tutorials/intermediate/063-storage-service.md)
+     ⌞ [063V — Storage Service (verbose companion)](02-tutorials/intermediate/063-storage-service-verbose.md)
+     ⌞ [063X — Storage Service (examples)](02-tutorials/intermediate/063-storage-service-examples.md)
+      ⌞ [063Q — Storage Service (quiz)](02-tutorials/intermediate/063-storage-service-quiz.md)
+26. [064 — Selection Controls: ComboBox & ListBox](02-tutorials/intermediate/064-selection-controls.md)
+      ⌞ [064V — Selection Controls (verbose companion)](02-tutorials/intermediate/064-selection-controls-verbose.md)
+      ⌞ [064X — Selection Controls (examples)](02-tutorials/intermediate/064-selection-controls-examples.md)
+      ⌞ [064Q — Selection Controls (quiz)](02-tutorials/intermediate/064-selection-controls-quiz.md)
+27. [065 — Range & Toggle Controls](02-tutorials/intermediate/065-range-toggle-controls.md)
+      ⌞ [065V — Range & Toggle Controls (verbose companion)](02-tutorials/intermediate/065-range-toggle-controls-verbose.md)
+      ⌞ [065X — Range & Toggle Controls (examples)](02-tutorials/intermediate/065-range-toggle-controls-examples.md)
+      ⌞ [065Q — Range & Toggle Controls (quiz)](02-tutorials/intermediate/065-range-toggle-controls-quiz.md)
+28. [066 — TabControl, Expander & SplitView](02-tutorials/intermediate/066-tabcontrol-expander-splitview.md)
+      ⌞ [066V — TabControl, Expander & SplitView (verbose companion)](02-tutorials/intermediate/066-tabcontrol-expander-splitview-verbose.md)
+      ⌞ [066X — TabControl, Expander & SplitView (examples)](02-tutorials/intermediate/066-tabcontrol-expander-splitview-examples.md)
+      ⌞ [066Q — TabControl, Expander & SplitView (quiz)](02-tutorials/intermediate/066-tabcontrol-expander-splitview-quiz.md)
 
 ### Advanced
 1. [020 — Custom Templated Controls](02-tutorials/advanced/020-custom-templated-controls.md)
@@ -246,9 +317,49 @@ Step-by-step guides organized by difficulty.
     ⌞ [049X — Printing (examples)](02-tutorials/advanced/049-printing-examples.md)
    ⌞ [049Q — Printing (quiz)](02-tutorials/advanced/049-printing-quiz.md)
 28. [050 — App Update / Auto-Updater](02-tutorials/advanced/050-auto-updater.md)
-    ⌞ [050V — App Update / Auto-Updater (verbose companion)](02-tutorials/advanced/050-auto-updater-verbose.md)
-    ⌞ [050X — App Update / Auto-Updater (examples)](02-tutorials/advanced/050-auto-updater-examples.md)
-   ⌞ [050Q — App Update / Auto-Updater (quiz)](02-tutorials/advanced/050-auto-updater-quiz.md)
+     ⌞ [050V — App Update / Auto-Updater (verbose companion)](02-tutorials/advanced/050-auto-updater-verbose.md)
+     ⌞ [050X — App Update / Auto-Updater (examples)](02-tutorials/advanced/050-auto-updater-examples.md)
+    ⌞ [050Q — App Update / Auto-Updater (quiz)](02-tutorials/advanced/050-auto-updater-quiz.md)
+29. [080 — Layout System Deep Dive](02-tutorials/advanced/080-layout-system-deep-dive.md)
+     ⌞ [080V — Layout System Deep Dive (verbose companion)](02-tutorials/advanced/080-layout-system-deep-dive-verbose.md)
+     ⌞ [080X — Layout System Deep Dive (examples)](02-tutorials/advanced/080-layout-system-deep-dive-examples.md)
+    ⌞ [080Q — Layout System Deep Dive (quiz)](02-tutorials/advanced/080-layout-system-deep-dive-quiz.md)
+30. [081 — Animation System Deep Dive](02-tutorials/advanced/081-animation-system-deep-dive.md)
+     ⌞ [081V — Animation System Deep Dive (verbose companion)](02-tutorials/advanced/081-animation-system-deep-dive-verbose.md)
+     ⌞ [081X — Animation System Deep Dive (examples)](02-tutorials/advanced/081-animation-system-deep-dive-examples.md)
+    ⌞ [081Q — Animation System Deep Dive (quiz)](02-tutorials/advanced/081-animation-system-deep-dive-quiz.md)
+31. [082 — Graphics & Drawing Reference](02-tutorials/advanced/082-graphics-drawing-reference.md)
+     ⌞ [082V — Graphics & Drawing Reference (verbose companion)](02-tutorials/advanced/082-graphics-drawing-reference-verbose.md)
+     ⌞ [082X — Graphics & Drawing Reference (examples)](02-tutorials/advanced/082-graphics-drawing-reference-examples.md)
+    ⌞ [082Q — Graphics & Drawing Reference (quiz)](02-tutorials/advanced/082-graphics-drawing-reference-quiz.md)
+32. [083 — Container Queries & Responsive Layout](02-tutorials/advanced/083-container-queries-responsive-layout.md)
+     ⌞ [083V — Container Queries & Responsive Layout (verbose companion)](02-tutorials/advanced/083-container-queries-responsive-layout-verbose.md)
+     ⌞ [083X — Container Queries & Responsive Layout (examples)](02-tutorials/advanced/083-container-queries-responsive-layout-examples.md)
+    ⌞ [083Q — Container Queries & Responsive Layout (quiz)](02-tutorials/advanced/083-container-queries-responsive-layout-quiz.md)
+34. [084 — Typography & Text Features](02-tutorials/advanced/084-typography-text-features.md)
+     ⌞ [084V — Typography & Text Features (verbose companion)](02-tutorials/advanced/084-typography-text-features-verbose.md)
+     ⌞ [084X — Typography & Text Features (examples)](02-tutorials/advanced/084-typography-text-features-examples.md)
+    ⌞ [084Q — Typography & Text Features (quiz)](02-tutorials/advanced/084-typography-text-features-quiz.md)
+35. [085 — Performance & Profiling](02-tutorials/advanced/085-performance-profiling.md)
+     ⌞ [085V — Performance & Profiling (verbose companion)](02-tutorials/advanced/085-performance-profiling-verbose.md)
+     ⌞ [085X — Performance & Profiling (examples)](02-tutorials/advanced/085-performance-profiling-examples.md)
+    ⌞ [085Q — Performance & Profiling (quiz)](02-tutorials/advanced/085-performance-profiling-quiz.md)
+36. [086 — Platform-Specific: Windows](02-tutorials/advanced/086-platform-specific-windows.md)
+     ⌞ [086V — Platform-Specific: Windows (verbose companion)](02-tutorials/advanced/086-platform-specific-windows-verbose.md)
+     ⌞ [086X — Platform-Specific: Windows (examples)](02-tutorials/advanced/086-platform-specific-windows-examples.md)
+    ⌞ [086Q — Platform-Specific: Windows (quiz)](02-tutorials/advanced/086-platform-specific-windows-quiz.md)
+37. [087 — Platform-Specific: macOS & Linux](02-tutorials/advanced/087-platform-specific-macos-linux.md)
+      ⌞ [087V — Platform-Specific: macOS & Linux (verbose companion)](02-tutorials/advanced/087-platform-specific-macos-linux-verbose.md)
+      ⌞ [087X — Platform-Specific: macOS & Linux (examples)](02-tutorials/advanced/087-platform-specific-macos-linux-examples.md)
+     ⌞ [087Q — Platform-Specific: macOS & Linux (quiz)](02-tutorials/advanced/087-platform-specific-macos-linux-quiz.md)
+38. [088 — XAML Previewer & Hot Reload](02-tutorials/advanced/088-xaml-previewer-hot-reload.md)
+      ⌞ [088V — XAML Previewer & Hot Reload (verbose companion)](02-tutorials/advanced/088-xaml-previewer-hot-reload-verbose.md)
+      ⌞ [088X — XAML Previewer & Hot Reload (examples)](02-tutorials/advanced/088-xaml-previewer-hot-reload-examples.md)
+     ⌞ [088Q — XAML Previewer & Hot Reload (quiz)](02-tutorials/advanced/088-xaml-previewer-hot-reload-quiz.md)
+39. [089 — Custom Flyout & Popup](02-tutorials/advanced/089-custom-flyout-popup.md)
+      ⌞ [089V — Custom Flyout & Popup (verbose companion)](02-tutorials/advanced/089-custom-flyout-popup-verbose.md)
+      ⌞ [089X — Custom Flyout & Popup (examples)](02-tutorials/advanced/089-custom-flyout-popup-examples.md)
+     ⌞ [089Q — Custom Flyout & Popup (quiz)](02-tutorials/advanced/089-custom-flyout-popup-quiz.md)
 
 ---
 
@@ -267,6 +378,10 @@ Reusable architectural and design patterns.
 | Repository / Unit of Work | [Pattern 005](03-patterns/005-repository-unit-of-work.md) |
 | Logging patterns | [Pattern 006](03-patterns/006-logging-patterns.md) |
 | Editor application architecture | [Pattern 007](03-patterns/007-editor-application-architecture.md) |
+| Toggle & state management | [Pattern 008](03-patterns/008-toggle-state-pattern.md) |
+| Focus & keyboard navigation | [Pattern 008b](03-patterns/008-focus-keyboard-navigation.md) |
+| Lazy load / virtual scrolling | [Pattern 009](03-patterns/009-lazy-load-virtual-scrolling.md) |
+| Storage & file I/O pipeline | [Pattern 009b](03-patterns/009-storage-file-io-pipeline.md) |
 
 ---
 
