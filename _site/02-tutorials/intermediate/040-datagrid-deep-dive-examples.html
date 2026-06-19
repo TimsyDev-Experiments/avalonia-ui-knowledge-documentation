@@ -1,0 +1,509 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>data display — Avalonia Docs</title><link rel="stylesheet" href="../../_assets/css/ssg.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='12' font-size='12'>A</text></svg>"></head><body><div class="layout"><nav class="sidebar" id="sidebar"><div class="sidebar-header"><h2><a href="../../index.html" style="color:inherit;text-decoration:none">Avalonia Docs</a></h2></div><div class="search-box"><input type="text" id="searchInput" placeholder="Search docs..." autocomplete="off"></div><div id="searchResults" class="search-results" style="display:none"></div><ul class="nav-tree" id="navTree"><li class="nav-group"><span class="nav-group-label">Quick References</span><ul class="nav-items"><li class="nav-item"><a href="../../01-quick-refs/accessibility-automation.html">Accessibility Automation</a></li><li class="nav-item"><a href="../../01-quick-refs/avalonia-12-breaking-changes.html">Avalonia 12 Breaking Changes</a></li><li class="nav-item"><a href="../../01-quick-refs/binding-modes.html">Binding Modes</a></li><li class="nav-item"><a href="../../01-quick-refs/brushes-colors-reference.html">Brushes Colors Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/common-controls-reference.html">Common Controls Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/common-converters.html">Common Converters</a></li><li class="nav-item"><a href="../../01-quick-refs/control-themes.html">Control Themes</a></li><li class="nav-item"><a href="../../01-quick-refs/dispatcher-timers-quick-ref.html">Dispatcher Timers Quick Ref</a></li><li class="nav-item"><a href="../../01-quick-refs/font-typography-reference.html">Font Typography Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/icons-reference.html">Icons Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/input-gestures.html">Input Gestures</a></li><li class="nav-item"><a href="../../01-quick-refs/mvvm-source-generators.html">Mvvm Source Generators</a></li><li class="nav-item"><a href="../../01-quick-refs/naming-conventions.html">Naming Conventions</a></li><li class="nav-item"><a href="../../01-quick-refs/property-system-quick-ref.html">Property System Quick Ref</a></li><li class="nav-item"><a href="../../01-quick-refs/resource-dictionaries.html">Resource Dictionaries</a></li><li class="nav-item"><a href="../../01-quick-refs/routed-events-quick-ref.html">Routed Events Quick Ref</a></li><li class="nav-item"><a href="../../01-quick-refs/shapes-geometries.html">Shapes Geometries</a></li><li class="nav-item"><a href="../../01-quick-refs/xaml-selectors.html">Xaml Selectors</a></li><li class="nav-group"><span class="nav-group-label">Basics</span><ul class="nav-items"><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup.html">Project Setup</a></li><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup-verbose.html">Project Setup (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup-examples.html">Project Setup (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup-quiz.html">Project Setup (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding.html">Command Binding</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding-verbose.html">Command Binding (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding-examples.html">Command Binding (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding-quiz.html">Command Binding (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling.html">Basic Styling</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling-verbose.html">Basic Styling (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling-examples.html">Basic Styling (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling-quiz.html">Basic Styling (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters.html">Value Converters</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters-verbose.html">Value Converters (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters-examples.html">Value Converters (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters-quiz.html">Value Converters (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes.html">Binding Modes</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes-verbose.html">Binding Modes (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes-examples.html">Binding Modes (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes-quiz.html">Binding Modes (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources.html">Resources</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources-verbose.html">Resources (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources-examples.html">Resources (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources-quiz.html">Resources (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property.html">Observable Object Property</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property-verbose.html">Observable Object Property (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property-examples.html">Observable Object Property (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property-quiz.html">Observable Object Property (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command.html">Relay Command</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command-verbose.html">Relay Command (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command-examples.html">Relay Command (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command-quiz.html">Relay Command (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-examples.html">Data Templates (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-basics.html">Data Templates Basics</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-basics-verbose.html">Data Templates Basics (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-basics-quiz.html">Data Templates Basics (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics.html">Window Dialog Basics</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics-verbose.html">Window Dialog Basics (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics-examples.html">Window Dialog Basics (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics-quiz.html">Window Dialog Basics (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Intermediate</span><ul class="nav-items"><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings.html">Compiled Bindings</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings-verbose.html">Compiled Bindings (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings-examples.html">Compiled Bindings (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings-quiz.html">Compiled Bindings (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles.html">Control Themes Vs Styles</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles-verbose.html">Control Themes Vs Styles (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles-examples.html">Control Themes Vs Styles (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles-quiz.html">Control Themes Vs Styles (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation.html">Data Validation</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation-verbose.html">Data Validation (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation-examples.html">Data Validation (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation-quiz.html">Data Validation (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns.html">Imessenger Patterns</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns-verbose.html">Imessenger Patterns (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns-examples.html">Imessenger Patterns (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns-quiz.html">Imessenger Patterns (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists.html">Item Lists</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists-verbose.html">Item Lists (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists-examples.html">Item Lists (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists-quiz.html">Item Lists (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management.html">Window Dialog Management</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management-verbose.html">Window Dialog Management (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management-examples.html">Window Dialog Management (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management-quiz.html">Window Dialog Management (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching.html">Theme Switching</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching-verbose.html">Theme Switching (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching-examples.html">Theme Switching (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching-quiz.html">Theme Switching (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation.html">Navigation</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation-verbose.html">Navigation (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation-examples.html">Navigation (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation-quiz.html">Navigation (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop.html">Drag Drop</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop-verbose.html">Drag Drop (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop-examples.html">Drag Drop (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop-quiz.html">Drag Drop (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive.html">Datagrid Deep Dive</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive-verbose.html">Datagrid Deep Dive (in depth)</a></li><li class="nav-item active"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive-examples.html">Datagrid Deep Dive (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive-quiz.html">Datagrid Deep Dive (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray.html">Menus Context Menus Tray</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray-verbose.html">Menus Context Menus Tray (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray-examples.html">Menus Context Menus Tray (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray-quiz.html">Menus Context Menus Tray (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data.html">Treeview Hierarchical Data</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data-verbose.html">Treeview Hierarchical Data (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data-examples.html">Treeview Hierarchical Data (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data-quiz.html">Treeview Hierarchical Data (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization.html">Charts Data Visualization</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization-verbose.html">Charts Data Visualization (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization-examples.html">Charts Data Visualization (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization-quiz.html">Charts Data Visualization (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database.html">Sqlite Local Database</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database-verbose.html">Sqlite Local Database (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database-examples.html">Sqlite Local Database (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database-quiz.html">Sqlite Local Database (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events.html">Routed Events</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events-verbose.html">Routed Events (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events-examples.html">Routed Events (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events-quiz.html">Routed Events (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system.html">Property System</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system-verbose.html">Property System (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system-examples.html">Property System (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system-quiz.html">Property System (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher.html">Threading Dispatcher</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher-verbose.html">Threading Dispatcher (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher-examples.html">Threading Dispatcher (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher-quiz.html">Threading Dispatcher (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management.html">Focus Management</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management-verbose.html">Focus Management (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management-examples.html">Focus Management (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management-quiz.html">Focus Management (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys.html">Keyboard Hotkeys</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys-verbose.html">Keyboard Hotkeys (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys-examples.html">Keyboard Hotkeys (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys-quiz.html">Keyboard Hotkeys (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events.html">Input Events</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events-verbose.html">Input Events (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events-examples.html">Input Events (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events-quiz.html">Input Events (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers.html">Gesture Recognizers</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers-verbose.html">Gesture Recognizers (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers-examples.html">Gesture Recognizers (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers-quiz.html">Gesture Recognizers (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar.html">Scrollviewer Scrollbar</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar-verbose.html">Scrollviewer Scrollbar (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar-examples.html">Scrollviewer Scrollbar (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar-quiz.html">Scrollviewer Scrollbar (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input.html">Textbox Text Input</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input-verbose.html">Textbox Text Input (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input-examples.html">Textbox Text Input (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input-quiz.html">Textbox Text Input (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding.html">Multibinding Prioritybinding</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding-verbose.html">Multibinding Prioritybinding (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding-examples.html">Multibinding Prioritybinding (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding-quiz.html">Multibinding Prioritybinding (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views.html">Collection Views</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views-verbose.html">Collection Views (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views-examples.html">Collection Views (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views-quiz.html">Collection Views (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher.html">Clipboard Launcher</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher-verbose.html">Clipboard Launcher (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher-examples.html">Clipboard Launcher (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher-quiz.html">Clipboard Launcher (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service.html">Storage Service</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service-verbose.html">Storage Service (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service-examples.html">Storage Service (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service-quiz.html">Storage Service (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls.html">Selection Controls</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls-verbose.html">Selection Controls (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls-examples.html">Selection Controls (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls-quiz.html">Selection Controls (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls.html">Range Toggle Controls</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls-verbose.html">Range Toggle Controls (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls-examples.html">Range Toggle Controls (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls-quiz.html">Range Toggle Controls (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview.html">Tabcontrol Expander Splitview</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview-verbose.html">Tabcontrol Expander Splitview (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview-examples.html">Tabcontrol Expander Splitview (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview-quiz.html">Tabcontrol Expander Splitview (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Advanced</span><ul class="nav-items"><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls.html">Custom Templated Controls</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls-verbose.html">Custom Templated Controls (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls-examples.html">Custom Templated Controls (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls-quiz.html">Custom Templated Controls (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch.html">Custom Controls From Scratch</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch-verbose.html">Custom Controls From Scratch (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch-examples.html">Custom Controls From Scratch (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch-quiz.html">Custom Controls From Scratch (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors.html">Attached Properties Behaviors</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors-verbose.html">Attached Properties Behaviors (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors-examples.html">Attached Properties Behaviors (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors-quiz.html">Attached Properties Behaviors (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels.html">Custom Layout Panels</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels-verbose.html">Custom Layout Panels (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels-examples.html">Custom Layout Panels (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels-quiz.html">Custom Layout Panels (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions.html">Animation Transitions</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions-verbose.html">Animation Transitions (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions-examples.html">Animation Transitions (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions-quiz.html">Animation Transitions (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals.html">Compositor Custom Visuals</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals-verbose.html">Compositor Custom Visuals (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals-examples.html">Compositor Custom Visuals (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals-quiz.html">Compositor Custom Visuals (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation.html">Accessibility Automation</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation-verbose.html">Accessibility Automation (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation-examples.html">Accessibility Automation (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation-quiz.html">Accessibility Automation (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings.html">Advanced Composite Bindings</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings-verbose.html">Advanced Composite Bindings (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings-examples.html">Advanced Composite Bindings (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings-quiz.html">Advanced Composite Bindings (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia.html">Custom Drawing Skia</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia-verbose.html">Custom Drawing Skia (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia-examples.html">Custom Drawing Skia (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia-quiz.html">Custom Drawing Skia (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools.html">Avalonia Plus Devtools</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools-verbose.html">Avalonia Plus Devtools (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools-examples.html">Avalonia Plus Devtools (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools-quiz.html">Avalonia Plus Devtools (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging.html">Parcel Packaging</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging-verbose.html">Parcel Packaging (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging-examples.html">Parcel Packaging (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging-quiz.html">Parcel Packaging (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system.html">Custom Theme Design System</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system-verbose.html">Custom Theme Design System (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system-examples.html">Custom Theme Design System (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system-quiz.html">Custom Theme Design System (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring.html">Mvvm Di Wiring</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring-verbose.html">Mvvm Di Wiring (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring-examples.html">Mvvm Di Wiring (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring-quiz.html">Mvvm Di Wiring (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n.html">Localization I18n</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n-verbose.html">Localization I18n (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n-examples.html">Localization I18n (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n-quiz.html">Localization I18n (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services.html">File Pickers Platform Services</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services-verbose.html">File Pickers Platform Services (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services-examples.html">File Pickers Platform Services (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services-quiz.html">File Pickers Platform Services (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management.html">Custom Dialogs Window Management</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management-verbose.html">Custom Dialogs Window Management (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management-examples.html">Custom Dialogs Window Management (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management-quiz.html">Custom Dialogs Window Management (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists.html">Virtualization Large Lists</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists-verbose.html">Virtualization Large Lists (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists-examples.html">Virtualization Large Lists (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists-quiz.html">Virtualization Large Lists (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen.html">App Lifetimes Splash Screen</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen-verbose.html">App Lifetimes Splash Screen (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen-examples.html">App Lifetimes Splash Screen (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen-quiz.html">App Lifetimes Splash Screen (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing.html">Headless Testing</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing-verbose.html">Headless Testing (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing-examples.html">Headless Testing (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing-quiz.html">Headless Testing (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming.html">Nativeaot Trimming</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming-verbose.html">Nativeaot Trimming (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming-examples.html">Nativeaot Trimming (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming-quiz.html">Nativeaot Trimming (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile.html">Multi Targeting Desktop Browser Mobile</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-verbose.html">Multi Targeting Desktop Browser Mobile (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-examples.html">Multi Targeting Desktop Browser Mobile (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-quiz.html">Multi Targeting Desktop Browser Mobile (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress.html">Background Services And Progress</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress-verbose.html">Background Services And Progress (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress-examples.html">Background Services And Progress (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress-quiz.html">Background Services And Progress (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia.html">Cicd For Avalonia</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia-verbose.html">Cicd For Avalonia (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia-examples.html">Cicd For Avalonia (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia-quiz.html">Cicd For Avalonia (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry.html">Logging Telemetry</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry-verbose.html">Logging Telemetry (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry-examples.html">Logging Telemetry (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry-quiz.html">Logging Telemetry (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing.html">Printing</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing-verbose.html">Printing (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing-examples.html">Printing (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing-quiz.html">Printing (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater.html">Auto Updater</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater-verbose.html">Auto Updater (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater-examples.html">Auto Updater (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater-quiz.html">Auto Updater (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive.html">Layout System Deep Dive</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive-verbose.html">Layout System Deep Dive (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive-examples.html">Layout System Deep Dive (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive-quiz.html">Layout System Deep Dive (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive.html">Animation System Deep Dive</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive-verbose.html">Animation System Deep Dive (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive-examples.html">Animation System Deep Dive (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive-quiz.html">Animation System Deep Dive (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference.html">Graphics Drawing Reference</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference-verbose.html">Graphics Drawing Reference (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference-examples.html">Graphics Drawing Reference (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference-quiz.html">Graphics Drawing Reference (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout.html">Container Queries Responsive Layout</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout-verbose.html">Container Queries Responsive Layout (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout-examples.html">Container Queries Responsive Layout (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout-quiz.html">Container Queries Responsive Layout (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features.html">Typography Text Features</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features-verbose.html">Typography Text Features (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features-examples.html">Typography Text Features (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features-quiz.html">Typography Text Features (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling.html">Performance Profiling</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling-verbose.html">Performance Profiling (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling-examples.html">Performance Profiling (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling-quiz.html">Performance Profiling (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows.html">Platform Specific Windows</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows-verbose.html">Platform Specific Windows (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows-examples.html">Platform Specific Windows (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows-quiz.html">Platform Specific Windows (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux.html">Platform Specific Macos Linux</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux-verbose.html">Platform Specific Macos Linux (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux-examples.html">Platform Specific Macos Linux (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux-quiz.html">Platform Specific Macos Linux (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload.html">Xaml Previewer Hot Reload</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload-verbose.html">Xaml Previewer Hot Reload (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload-examples.html">Xaml Previewer Hot Reload (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload-quiz.html">Xaml Previewer Hot Reload (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup.html">Custom Flyout Popup</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup-verbose.html">Custom Flyout Popup (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup-examples.html">Custom Flyout Popup (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup-quiz.html">Custom Flyout Popup (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Patterns</span><ul class="nav-items"><li class="nav-item"><a href="../../03-patterns/001-service-locator-vs-di.html">Service Locator Vs Di</a></li><li class="nav-item"><a href="../../03-patterns/002-plugin-architecture.html">Plugin Architecture</a></li><li class="nav-item"><a href="../../03-patterns/003-async-initialization.html">Async Initialization</a></li><li class="nav-item"><a href="../../03-patterns/004-state-management.html">State Management</a></li><li class="nav-item"><a href="../../03-patterns/005-repository-unit-of-work.html">Repository Unit Of Work</a></li><li class="nav-item"><a href="../../03-patterns/006-logging-patterns.html">Logging Patterns</a></li><li class="nav-item"><a href="../../03-patterns/007-editor-application-architecture.html">Editor Application Architecture</a></li><li class="nav-item"><a href="../../03-patterns/008-focus-keyboard-navigation.html">Focus Keyboard Navigation</a></li><li class="nav-item"><a href="../../03-patterns/008-toggle-state-pattern.html">Toggle State Pattern</a></li><li class="nav-item"><a href="../../03-patterns/009-lazy-load-virtual-scrolling.html">Lazy Load Virtual Scrolling</a></li><li class="nav-item"><a href="../../03-patterns/009-storage-file-io-pipeline.html">Storage File Io Pipeline</a></li><li class="nav-group"><span class="nav-group-label">Migration</span><ul class="nav-items"><li class="nav-item"><a href="../../04-migration/avalonia-11-to-12.html">Avalonia 11 To 12</a></li><li class="nav-item"><a href="../../04-migration/wpf-to-avalonia-key-mappings.html">Wpf To Avalonia Key Mappings</a></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></nav><main class="doc-content" id="docContent"><h1>040E — DataGrid Deep Dive: Real-World Examples</h1>
+<p><strong>What you'll learn:</strong> Two complete, production-inspired DataGrid scenarios covering editing with validation, row details, grouping, frozen columns, and column reordering.</p>
+<p><strong>Prerequisites:</strong> <a href="040-datagrid-deep-dive.html">040 — DataGrid Deep Dive</a>, <a href="040-datagrid-deep-dive-verbose.html">040V — DataGrid Deep Dive (verbose companion)</a></p>
+<hr />
+<h2>Example 1: Order Management Dashboard</h2>
+<h3>Goal</h3>
+<p>Build an order-tracking grid where users can edit line items inline, see expandable order summaries, and receive per-cell validation feedback. The grid must handle real-time total recalculation and prevent editing of shipped orders.</p>
+<h3>ViewModel</h3>
+<pre><code class="language-csharp">using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+
+public partial class OrderLineItem : ObservableObject
+{
+    public int Id { get; set; }
+
+    [ObservableProperty]
+    private string _product = &quot;&quot;;
+
+    [ObservableProperty]
+    private int _quantity;
+
+    [ObservableProperty]
+    private decimal _unitPrice;
+
+    public decimal Total =&gt; Quantity * UnitPrice;
+
+    partial void OnQuantityChanged(int value)
+    {
+        if (value &lt; 0) Quantity = 0;
+        OnPropertyChanged(nameof(Total));
+    }
+
+    partial void OnUnitPriceChanged(decimal value)
+    {
+        if (value &lt; 0) UnitPrice = 0;
+        OnPropertyChanged(nameof(Total));
+    }
+}
+
+public partial class SalesOrder : ObservableObject
+{
+    public int Id { get; set; }
+
+    [ObservableProperty]
+    private string _customer = &quot;&quot;;
+
+    [ObservableProperty]
+    private string _status = &quot;Pending&quot;; // Pending, Shipped, Cancelled
+
+    [ObservableProperty]
+    private ObservableCollection&lt;OrderLineItem&gt; _lineItems = new();
+
+    public decimal GrandTotal
+    {
+        get
+        {
+            decimal total = 0;
+            foreach (var item in LineItems)
+                total += item.Total;
+            return total;
+        }
+    }
+
+    public bool IsShipped =&gt; Status == &quot;Shipped&quot;;
+
+    public SalesOrder()
+    {
+        // Recalculate grand total whenever any line item changes
+        LineItems.CollectionChanged += (_, _) =&gt; OnPropertyChanged(nameof(GrandTotal));
+    }
+}
+
+public partial class OrderManagementViewModel : ObservableObject
+{
+    [ObservableProperty]
+    private ObservableCollection&lt;SalesOrder&gt; _orders = new();
+
+    [ObservableProperty]
+    private SalesOrder? _selectedOrder;
+
+    [ObservableProperty]
+    private string _validationMessage = &quot;&quot;;
+
+    private int _nextOrderId = 1;
+
+    public OrderManagementViewModel()
+    {
+        var order = new SalesOrder
+        {
+            Id = _nextOrderId++,
+            Customer = &quot;Acme Corp&quot;,
+            Status = &quot;Pending&quot;,
+            LineItems =
+            {
+                new OrderLineItem { Id = 1, Product = &quot;Widget A&quot;, Quantity = 10, UnitPrice = 5.99m },
+                new OrderLineItem { Id = 2, Product = &quot;Widget B&quot;, Quantity = 3, UnitPrice = 12.50m },
+            }
+        };
+        Orders.Add(order);
+    }
+
+    [RelayCommand]
+    private void AddOrder()
+    {
+        Orders.Add(new SalesOrder
+        {
+            Id = _nextOrderId++,
+            Customer = &quot;New Customer&quot;,
+            Status = &quot;Pending&quot;
+        });
+    }
+
+    [RelayCommand]
+    private void ShipOrder(SalesOrder? order)
+    {
+        if (order is null) return;
+        order.Status = &quot;Shipped&quot;;
+    }
+
+    public bool CanEditCell(SalesOrder order, string propertyName)
+    {
+        if (order.IsShipped)
+        {
+            ValidationMessage = &quot;Cannot edit shipped orders.&quot;;
+            return false;
+        }
+        return true;
+    }
+
+    public bool ValidateLineItem(OrderLineItem item)
+    {
+        if (string.IsNullOrWhiteSpace(item.Product))
+        {
+            ValidationMessage = &quot;Product name is required.&quot;;
+            return false;
+        }
+        if (item.Quantity &lt;= 0)
+        {
+            ValidationMessage = &quot;Quantity must be greater than zero.&quot;;
+            return false;
+        }
+        if (item.UnitPrice &lt; 0)
+        {
+            ValidationMessage = &quot;Unit price cannot be negative.&quot;;
+            return false;
+        }
+        ValidationMessage = &quot;&quot;;
+        return true;
+    }
+}
+</code></pre>
+<h3>View</h3>
+<pre><code class="language-xml">&lt;Window xmlns=&quot;https://github.com/avaloniaui&quot;
+        xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+        xmlns:vm=&quot;clr-namespace:MyApp.ViewModels&quot;
+        xmlns:models=&quot;clr-namespace:MyApp.Models&quot;
+        x:DataType=&quot;vm:OrderManagementViewModel&quot;
+        Title=&quot;Order Management&quot; Width=&quot;900&quot; Height=&quot;600&quot;&gt;
+  &lt;DockPanel&gt;
+    &lt;StackPanel DockPanel.Dock=&quot;Top&quot; Orientation=&quot;Horizontal&quot; Spacing=&quot;8&quot; Margin=&quot;8&quot;&gt;
+      &lt;Button Content=&quot;Add Order&quot; Command=&quot;{Binding AddOrderCommand}&quot; /&gt;
+      &lt;Button Content=&quot;Ship Selected&quot;
+              Command=&quot;{Binding ShipOrderCommand}&quot;
+              CommandParameter=&quot;{Binding SelectedOrder}&quot; /&gt;
+      &lt;TextBlock Text=&quot;{Binding ValidationMessage}&quot;
+                 Foreground=&quot;Red&quot; VerticalAlignment=&quot;Center&quot; /&gt;
+    &lt;/StackPanel&gt;
+
+    &lt;DataGrid ItemsSource=&quot;{Binding Orders}&quot;
+              SelectedItem=&quot;{Binding SelectedOrder}&quot;
+              AutoGenerateColumns=&quot;False&quot;
+              CanUserReorderColumns=&quot;True&quot;
+              CanUserResizeColumns=&quot;True&quot;
+              FrozenColumnCount=&quot;2&quot;
+              RowDetailsVisibilityMode=&quot;VisibleWhenSelected&quot;
+              x:DataType=&quot;vm:OrderManagementViewModel&quot;&gt;
+      &lt;DataGrid.Columns&gt;
+        &lt;DataGridTextColumn Header=&quot;ID&quot;
+                            Binding=&quot;{CompiledBinding Id}&quot;
+                            IsReadOnly=&quot;True&quot; Width=&quot;50&quot; /&gt;
+        &lt;DataGridTextColumn Header=&quot;Customer&quot;
+                            Binding=&quot;{CompiledBinding Customer, Mode=TwoWay}&quot;
+                            IsReadOnly=&quot;False&quot; Width=&quot;150&quot; /&gt;
+        &lt;DataGridTextColumn Header=&quot;Status&quot;
+                            Binding=&quot;{CompiledBinding Status}&quot;
+                            IsReadOnly=&quot;True&quot; Width=&quot;100&quot; /&gt;
+        &lt;DataGridTextColumn Header=&quot;Grand Total&quot;
+                            Binding=&quot;{CompiledBinding GrandTotal, StringFormat='{0:C}'}&quot;
+                            IsReadOnly=&quot;True&quot; Width=&quot;100&quot; /&gt;
+      &lt;/DataGrid.Columns&gt;
+
+      &lt;DataGrid.RowDetailsTemplate&gt;
+        &lt;DataTemplate x:DataType=&quot;models:SalesOrder&quot;&gt;
+          &lt;Border BorderBrush=&quot;LightGray&quot; BorderThickness=&quot;1&quot;
+                  CornerRadius=&quot;4&quot; Padding=&quot;8&quot; Margin=&quot;4&quot;&gt;
+            &lt;StackPanel Spacing=&quot;4&quot;&gt;
+              &lt;TextBlock Text=&quot;Line Items&quot; FontWeight=&quot;Bold&quot; /&gt;
+              &lt;DataGrid ItemsSource=&quot;{Binding LineItems}&quot;
+                        AutoGenerateColumns=&quot;False&quot;
+                        IsReadOnly=&quot;{Binding IsShipped}&quot;
+                        x:DataType=&quot;models:SalesOrder&quot;&gt;
+                &lt;DataGrid.Columns&gt;
+                  &lt;DataGridTextColumn Header=&quot;Product&quot;
+                                      Binding=&quot;{CompiledBinding Product, Mode=TwoWay}&quot;
+                                      Width=&quot;*&quot; /&gt;
+                  &lt;DataGridTextColumn Header=&quot;Qty&quot;
+                                      Binding=&quot;{CompiledBinding Quantity, Mode=TwoWay}&quot;
+                                      Width=&quot;60&quot; /&gt;
+                  &lt;DataGridTextColumn Header=&quot;Unit Price&quot;
+                                      Binding=&quot;{CompiledBinding UnitPrice, Mode=TwoWay, StringFormat='{0:C}'}&quot;
+                                      Width=&quot;80&quot; /&gt;
+                  &lt;DataGridTextColumn Header=&quot;Total&quot;
+                                      Binding=&quot;{CompiledBinding Total, StringFormat='{0:C}'}&quot;
+                                      IsReadOnly=&quot;True&quot; Width=&quot;80&quot; /&gt;
+                &lt;/DataGrid.Columns&gt;
+              &lt;/DataGrid&gt;
+            &lt;/StackPanel&gt;
+          &lt;/Border&gt;
+        &lt;/DataTemplate&gt;
+      &lt;/DataGrid.RowDetailsTemplate&gt;
+    &lt;/DataGrid&gt;
+  &lt;/DockPanel&gt;
+&lt;/Window&gt;
+</code></pre>
+<h3>How It Works</h3>
+<ol>
+<li><p><strong>Inline editing with conditional locks</strong> — The outer <code>DataGrid</code> binds customer names with <code>Mode=TwoWay</code>. The nested details grid uses <code>IsReadOnly=&quot;{Binding IsShipped}&quot;</code> — shipped orders get all cells locked. The <code>SelectedItem</code> binding on the outer grid enables the &quot;Ship Selected&quot; command.</p>
+</li>
+<li><p><strong>Row details for master-detail</strong> — <code>RowDetailsVisibilityMode=&quot;VisibleWhenSelected&quot;</code> shows the line-item sub-grid only for the selected order. The nested <code>DataGrid</code> inside <code>RowDetailsTemplate</code> binds to <code>LineItems</code> on the <code>SalesOrder</code> model. Nested DataGrids have full editing support including keyboard navigation.</p>
+</li>
+<li><p><strong>Grand total recalculation</strong> — <code>SalesOrder.GrandTotal</code> iterates <code>LineItems</code> and sums each item's <code>Total</code>. The <code>CollectionChanged</code> handler on <code>LineItems</code> raises <code>PropertyChanged(nameof(GrandTotal))</code> when items are added or removed. Individual line item property changes raise their own <code>Total</code> recalculation through the <code>OnQuantityChanged</code> and <code>OnUnitPriceChanged</code> partial methods.</p>
+</li>
+<li><p><strong>Validation</strong> — The ViewModel exposes <code>CanEditCell</code> and <code>ValidateLineItem</code> which are intended to be called from code-behind edit events. A real implementation would wire <code>CellEditEnding</code> to call these. The <code>ValidationMessage</code> property drives a red <code>TextBlock</code> above the grid.</p>
+</li>
+<li><p><strong>Frozen columns</strong> — <code>FrozenColumnCount=&quot;2&quot;</code> pins ID and Customer columns during horizontal scroll. The status and grand total columns scroll normally.</p>
+</li>
+</ol>
+<h3>Design Decisions and Trade-offs</h3>
+<ul>
+<li><strong>Nested DataGrid vs flat data with row details</strong>: A nested DataGrid in row details gives full column sorting and editing in the detail section. The cost is heavier visual tree per expanded row. For order line items (typically 1-20 items), this is fine.</li>
+<li><strong>IsShipped as a computed property</strong>: Using <code>IsReadOnly=&quot;{Binding IsShipped}&quot;</code> leverages the existing binding system instead of handling <code>BeginningEdit</code> events. The trade-off is that the entire sub-grid becomes read-only, not individual cells.</li>
+<li><strong>Grand total as a computed property</strong>: Recalculating on every change is simple and correct for small line-item sets. For large sets (100+ items), consider caching or batched recalculation.</li>
+</ul>
+<hr />
+<h2>Example 2: Employee Directory with Grouping and Column Reordering</h2>
+<h3>Goal</h3>
+<p>Present an employee list grouped by department, with frozen identifier columns and user-configurable column order. Include a search-as-you-type filter that narrows results across multiple fields.</p>
+<h3>ViewModel</h3>
+<pre><code class="language-csharp">using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
+
+public partial class Employee
+{
+    public int Id { get; set; }
+    public string FirstName { get; set; } = &quot;&quot;;
+    public string LastName { get; set; } = &quot;&quot;;
+    public string Department { get; set; } = &quot;&quot;;
+    public string JobTitle { get; set; } = &quot;&quot;;
+    public string Email { get; set; } = &quot;&quot;;
+    public string Phone { get; set; } = &quot;&quot;;
+    public DateTime HireDate { get; set; }
+    public bool IsActive { get; set; } = true;
+
+    public string FullName =&gt; $&quot;{FirstName} {LastName}&quot;;
+}
+
+public partial class EmployeeDirectoryViewModel : ObservableObject
+{
+    private List&lt;Employee&gt; _allEmployees = new();
+
+    [ObservableProperty]
+    private DataGridCollectionView? _groupedView;
+
+    [ObservableProperty]
+    private string _searchText = &quot;&quot;;
+
+    public EmployeeDirectoryViewModel()
+    {
+        LoadEmployees();
+    }
+
+    private void LoadEmployees()
+    {
+        _allEmployees = new List&lt;Employee&gt;
+        {
+            new() { Id = 1, FirstName = &quot;Alice&quot;, LastName = &quot;Johnson&quot;, Department = &quot;Engineering&quot;, JobTitle = &quot;Senior Dev&quot;, Email = &quot;alice@example.com&quot;, HireDate = new(2020, 3, 1), IsActive = true },
+            new() { Id = 2, FirstName = &quot;Bob&quot;, LastName = &quot;Smith&quot;, Department = &quot;Engineering&quot;, JobTitle = &quot;Junior Dev&quot;, Email = &quot;bob@example.com&quot;, HireDate = new(2023, 6, 15), IsActive = true },
+            new() { Id = 3, FirstName = &quot;Carol&quot;, LastName = &quot;Lee&quot;, Department = &quot;Marketing&quot;, JobTitle = &quot;Marketing Lead&quot;, Email = &quot;carol@example.com&quot;, HireDate = new(2021, 1, 10), IsActive = true },
+            new() { Id = 4, FirstName = &quot;David&quot;, LastName = &quot;Brown&quot;, Department = &quot;Marketing&quot;, JobTitle = &quot;Designer&quot;, Email = &quot;david@example.com&quot;, HireDate = new(2022, 9, 5), IsActive = false },
+            new() { Id = 5, FirstName = &quot;Eve&quot;, LastName = &quot;Davis&quot;, Department = &quot;Sales&quot;, JobTitle = &quot;Account Manager&quot;, Email = &quot;eve@example.com&quot;, HireDate = new(2019, 11, 20), IsActive = true },
+            new() { Id = 6, FirstName = &quot;Frank&quot;, LastName = &quot;Wilson&quot;, Department = &quot;Engineering&quot;, JobTitle = &quot;DevOps&quot;, Email = &quot;frank@example.com&quot;, HireDate = new(2021, 7, 8), IsActive = true },
+        };
+        RebuildView();
+    }
+
+    partial void OnSearchTextChanged(string value)
+    {
+        if (GroupedView is null) return;
+
+        if (string.IsNullOrWhiteSpace(value))
+        {
+            GroupedView.Filter = null;
+        }
+        else
+        {
+            var search = value.Trim();
+            GroupedView.Filter = item =&gt;
+            {
+                if (item is not Employee emp) return false;
+                return emp.FullName.Contains(search, StringComparison.OrdinalIgnoreCase)
+                    || emp.Department.Contains(search, StringComparison.OrdinalIgnoreCase)
+                    || emp.JobTitle.Contains(search, StringComparison.OrdinalIgnoreCase)
+                    || emp.Email.Contains(search, StringComparison.OrdinalIgnoreCase);
+            };
+        }
+        GroupedView.Refresh();
+    }
+
+    [RelayCommand]
+    private void GroupByDepartment()
+    {
+        RebuildView();
+    }
+
+    [RelayCommand]
+    private void ClearGrouping()
+    {
+        GroupedView = new DataGridCollectionView(_allEmployees);
+    }
+
+    private void RebuildView()
+    {
+        GroupedView = new DataGridCollectionView(_allEmployees);
+        GroupedView.GroupDescriptions.Add(
+            new DataGridPathGroupDescription(&quot;Department&quot;));
+        GroupedView.SortDescriptions.Add(
+            new DataGridSortDescription(&quot;LastName&quot;, ListSortDirection.Ascending));
+    }
+}
+</code></pre>
+<h3>View</h3>
+<pre><code class="language-xml">&lt;Window xmlns=&quot;https://github.com/avaloniaui&quot;
+        xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+        xmlns:vm=&quot;clr-namespace:MyApp.ViewModels&quot;
+        xmlns:models=&quot;clr-namespace:MyApp.Models&quot;
+        x:DataType=&quot;vm:EmployeeDirectoryViewModel&quot;
+        Title=&quot;Employee Directory&quot; Width=&quot;850&quot; Height=&quot;550&quot;&gt;
+  &lt;DockPanel&gt;
+    &lt;StackPanel DockPanel.Dock=&quot;Top&quot; Orientation=&quot;Horizontal&quot; Spacing=&quot;8&quot; Margin=&quot;8&quot;&gt;
+      &lt;TextBox Watermark=&quot;Search employees...&quot;
+               Text=&quot;{Binding SearchText}&quot;
+               Width=&quot;250&quot; /&gt;
+      &lt;Button Content=&quot;Group by Dept&quot; Command=&quot;{Binding GroupByDepartmentCommand}&quot; /&gt;
+      &lt;Button Content=&quot;Clear Grouping&quot; Command=&quot;{Binding ClearGroupingCommand}&quot; /&gt;
+    &lt;/StackPanel&gt;
+
+    &lt;DataGrid ItemsSource=&quot;{Binding GroupedView}&quot;
+              AutoGenerateColumns=&quot;False&quot;
+              CanUserReorderColumns=&quot;True&quot;
+              CanUserResizeColumns=&quot;True&quot;
+              CanUserSortColumns=&quot;True&quot;
+              FrozenColumnCount=&quot;1&quot;
+              AlternatingRowBackground=&quot;#F5F5F5&quot;
+              RowBackground=&quot;White&quot;
+              x:DataType=&quot;vm:EmployeeDirectoryViewModel&quot;&gt;
+      &lt;DataGrid.GroupStyle&gt;
+        &lt;ControlTheme x:Key=&quot;DataGridGroup&quot;&gt;
+          &lt;Setter Property=&quot;Foreground&quot; Value=&quot;{DynamicResource SystemAccentColor}&quot; /&gt;
+          &lt;Setter Property=&quot;FontWeight&quot; Value=&quot;SemiBold&quot; /&gt;
+          &lt;Setter Property=&quot;Padding&quot; Value=&quot;8,4&quot; /&gt;
+        &lt;/ControlTheme&gt;
+      &lt;/DataGrid.GroupStyle&gt;
+      &lt;DataGrid.Columns&gt;
+        &lt;DataGridTextColumn Header=&quot;ID&quot;
+                            Binding=&quot;{CompiledBinding Id}&quot;
+                            IsReadOnly=&quot;True&quot; Width=&quot;50&quot; /&gt;
+        &lt;DataGridTextColumn Header=&quot;First Name&quot;
+                            Binding=&quot;{CompiledBinding FirstName}&quot;
+                            Width=&quot;100&quot; /&gt;
+        &lt;DataGridTextColumn Header=&quot;Last Name&quot;
+                            Binding=&quot;{CompiledBinding LastName}&quot;
+                            Width=&quot;120&quot; /&gt;
+        &lt;DataGridTextColumn Header=&quot;Department&quot;
+                            Binding=&quot;{CompiledBinding Department}&quot;
+                            Width=&quot;120&quot; /&gt;
+        &lt;DataGridTextColumn Header=&quot;Job Title&quot;
+                            Binding=&quot;{CompiledBinding JobTitle}&quot;
+                            Width=&quot;150&quot; /&gt;
+        &lt;DataGridTextColumn Header=&quot;Email&quot;
+                            Binding=&quot;{CompiledBinding Email}&quot;
+                            Width=&quot;180&quot; /&gt;
+        &lt;DataGridTextColumn Header=&quot;Hire Date&quot;
+                            Binding=&quot;{CompiledBinding HireDate, StringFormat='{0:yyyy-MM-dd}'}&quot;
+                            Width=&quot;100&quot; /&gt;
+        &lt;DataGridCheckBoxColumn Header=&quot;Active&quot;
+                                Binding=&quot;{CompiledBinding IsActive}&quot;
+                                Width=&quot;60&quot; /&gt;
+      &lt;/DataGrid.Columns&gt;
+    &lt;/DataGrid&gt;
+  &lt;/DockPanel&gt;
+&lt;/Window&gt;
+</code></pre>
+<h3>How It Works</h3>
+<ol>
+<li><p><strong>Grouping via DataGridCollectionView</strong> — The constructor creates a <code>DataGridCollectionView</code> from the employee list and adds a <code>DataGridPathGroupDescription(&quot;Department&quot;)</code>. The grid renders group headers with department names. Each group row shows the department name and item count.</p>
+</li>
+<li><p><strong>Search-as-you-type filter</strong> — <code>OnSearchTextChanged</code> sets <code>GroupedView.Filter</code> to a predicate that checks <code>FullName</code>, <code>Department</code>, <code>JobTitle</code>, and <code>Email</code> against the search text. Calling <code>GroupedView.Refresh()</code> reapplies the filter. When search is cleared, <code>Filter</code> is set to <code>null</code> to show all items.</p>
+</li>
+<li><p><strong>Sorting</strong> — A <code>SortDescriptions</code> entry on <code>LastName</code> (ascending) is added in <code>RebuildView</code>. Users can also click column headers to change sort order because <code>CanUserSortColumns=&quot;True&quot;</code> (default).</p>
+</li>
+<li><p><strong>Frozen columns</strong> — <code>FrozenColumnCount=&quot;1&quot;</code> pins the ID column. Users can reorder remaining columns via drag-and-drop, but ID always stays leftmost.</p>
+</li>
+<li><p><strong>Alternating row colors</strong> — <code>AlternatingRowBackground=&quot;#F5F5F5&quot;</code> with <code>RowBackground=&quot;White&quot;</code> improves readability across grouped rows.</p>
+</li>
+<li><p><strong>Group style</strong> — <code>GroupStyle</code> applies a <code>ControlTheme</code> to group rows. The theme here just sets foreground color and font weight on the default group row template.</p>
+</li>
+</ol>
+<h3>Design Decisions and Trade-offs</h3>
+<ul>
+<li><strong>DataGridCollectionView.Filter vs rebuilding the tree</strong>: The filter approach avoids creating a new collection or copying data. It simply hides non-matching rows. Group headers remain visible if any child matches. The trade-off: filter predicates run on the UI thread, so very large datasets (50k+ items) should debounce keystrokes.</li>
+<li><strong>FrozenColumnCount vs column reordering</strong>: Frozen columns are index-based, so user reordering does not change which columns are frozen. If you need user-configurable frozen columns, add a context menu or toggle button that rebuilds the column list.</li>
+<li><strong>DataGridCollectionView limitation</strong>: Adding/removing employees requires replacing the view or calling <code>Refresh()</code>. For live-updating employee lists, consider wrapping the collection in an <code>ObservableCollection</code> and recreating the view after changes.</li>
+</ul>
+<hr />
+<h2>Comparison: What Each Example Demonstrates</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Example 1: Orders</th>
+<th>Example 2: Employees</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Primary DataGrid feature</strong></td>
+<td>Inline editing with validation</td>
+<td>Grouping with CollectionView</td>
+</tr>
+<tr>
+<td><strong>Row details</strong></td>
+<td>Nested DataGrid for line items</td>
+<td>Not used</td>
+</tr>
+<tr>
+<td><strong>Frozen columns</strong></td>
+<td>2 columns (ID, Customer)</td>
+<td>1 column (ID)</td>
+</tr>
+<tr>
+<td><strong>Column reordering</strong></td>
+<td>Enabled</td>
+<td>Enabled</td>
+</tr>
+<tr>
+<td><strong>Editing</strong></td>
+<td>TwoWay bindings, conditional IsReadOnly</td>
+<td>Read-only display</td>
+</tr>
+<tr>
+<td><strong>Filter/Search</strong></td>
+<td>Not implemented</td>
+<td>DataGridCollectionView.Filter predicate</td>
+</tr>
+<tr>
+<td><strong>Sorting</strong></td>
+<td>Default column-header sorting</td>
+<td>Programmatic + column-header sorting</td>
+</tr>
+<tr>
+<td><strong>Alternating rows</strong></td>
+<td>Not used</td>
+<td>Used</td>
+</tr>
+<tr>
+<td><strong>Grouping</strong></td>
+<td>Not used</td>
+<td>Grouped by Department</td>
+</tr>
+<tr>
+<td><strong>Validation</strong></td>
+<td>ViewModel methods + property clamping</td>
+<td>Not needed (read-only)</td>
+</tr>
+<tr>
+<td><strong>Data source</strong></td>
+<td>ObservableCollection of SalesOrder</td>
+<td>List of Employee wrapped in DataGridCollectionView</td>
+</tr>
+<tr>
+<td><strong>Key edge case</strong></td>
+<td>Shipped orders locked, negative values clamped</td>
+<td>Group headers with mixed filter results</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>See Also</h2>
+<ul>
+<li><a href="040-datagrid-deep-dive.html">040 — DataGrid Deep Dive</a></li>
+<li><a href="040-datagrid-deep-dive-verbose.html">040V — DataGrid Deep Dive (verbose companion)</a></li>
+<li><a href="015-item-lists.html">015 — Item Lists (ListBox, ItemsRepeater, DataGrid)</a></li>
+<li><a href="013-data-validation.html">013 — Data Validation</a></li>
+<li><a href="../advanced/036-virtualization-large-lists.html">036 — Virtualization and Large List Performance</a></li>
+<li><a href="https://docs.avaloniaui.net/controls/datagrid">Avalonia Docs: DataGrid</a></li>
+<li><a href="https://docs.avaloniaui.net/controls/datagrid/data-grid-collection-view">Avalonia Docs: DataGridCollectionView</a></li>
+</ul>
+</main><nav class="doc-toc" id="toc"></nav></div><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/powershell.min.js"></script><script src="../../_assets/js/search-index.js"></script><script>const CURRENT_PAGE="../../02-tutorials/intermediate/040-datagrid-deep-dive-examples.html";</script><script src="../../_assets/js/ssg.js"></script></body></html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>data templates — Avalonia Docs</title><link rel="stylesheet" href="../../_assets/css/ssg.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='12' font-size='12'>A</text></svg>"></head><body><div class="layout"><nav class="sidebar" id="sidebar"><div class="sidebar-header"><h2><a href="../../index.html" style="color:inherit;text-decoration:none">Avalonia Docs</a></h2></div><div class="search-box"><input type="text" id="searchInput" placeholder="Search docs..." autocomplete="off"></div><div id="searchResults" class="search-results" style="display:none"></div><ul class="nav-tree" id="navTree"><li class="nav-group"><span class="nav-group-label">Quick References</span><ul class="nav-items"><li class="nav-item"><a href="../../01-quick-refs/accessibility-automation.html">Accessibility Automation</a></li><li class="nav-item"><a href="../../01-quick-refs/avalonia-12-breaking-changes.html">Avalonia 12 Breaking Changes</a></li><li class="nav-item"><a href="../../01-quick-refs/binding-modes.html">Binding Modes</a></li><li class="nav-item"><a href="../../01-quick-refs/brushes-colors-reference.html">Brushes Colors Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/common-controls-reference.html">Common Controls Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/common-converters.html">Common Converters</a></li><li class="nav-item"><a href="../../01-quick-refs/control-themes.html">Control Themes</a></li><li class="nav-item"><a href="../../01-quick-refs/dispatcher-timers-quick-ref.html">Dispatcher Timers Quick Ref</a></li><li class="nav-item"><a href="../../01-quick-refs/font-typography-reference.html">Font Typography Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/icons-reference.html">Icons Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/input-gestures.html">Input Gestures</a></li><li class="nav-item"><a href="../../01-quick-refs/mvvm-source-generators.html">Mvvm Source Generators</a></li><li class="nav-item"><a href="../../01-quick-refs/naming-conventions.html">Naming Conventions</a></li><li class="nav-item"><a href="../../01-quick-refs/property-system-quick-ref.html">Property System Quick Ref</a></li><li class="nav-item"><a href="../../01-quick-refs/resource-dictionaries.html">Resource Dictionaries</a></li><li class="nav-item"><a href="../../01-quick-refs/routed-events-quick-ref.html">Routed Events Quick Ref</a></li><li class="nav-item"><a href="../../01-quick-refs/shapes-geometries.html">Shapes Geometries</a></li><li class="nav-item"><a href="../../01-quick-refs/xaml-selectors.html">Xaml Selectors</a></li><li class="nav-group"><span class="nav-group-label">Basics</span><ul class="nav-items"><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup.html">Project Setup</a></li><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup-verbose.html">Project Setup (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup-examples.html">Project Setup (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup-quiz.html">Project Setup (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding.html">Command Binding</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding-verbose.html">Command Binding (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding-examples.html">Command Binding (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding-quiz.html">Command Binding (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling.html">Basic Styling</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling-verbose.html">Basic Styling (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling-examples.html">Basic Styling (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling-quiz.html">Basic Styling (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters.html">Value Converters</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters-verbose.html">Value Converters (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters-examples.html">Value Converters (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters-quiz.html">Value Converters (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes.html">Binding Modes</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes-verbose.html">Binding Modes (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes-examples.html">Binding Modes (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes-quiz.html">Binding Modes (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources.html">Resources</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources-verbose.html">Resources (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources-examples.html">Resources (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources-quiz.html">Resources (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property.html">Observable Object Property</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property-verbose.html">Observable Object Property (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property-examples.html">Observable Object Property (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property-quiz.html">Observable Object Property (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command.html">Relay Command</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command-verbose.html">Relay Command (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command-examples.html">Relay Command (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command-quiz.html">Relay Command (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-examples.html">Data Templates (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-basics.html">Data Templates Basics</a></li><li class="nav-item active"><a href="../../02-tutorials/basics/009-data-templates-basics-verbose.html">Data Templates Basics (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-basics-quiz.html">Data Templates Basics (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics.html">Window Dialog Basics</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics-verbose.html">Window Dialog Basics (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics-examples.html">Window Dialog Basics (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics-quiz.html">Window Dialog Basics (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Intermediate</span><ul class="nav-items"><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings.html">Compiled Bindings</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings-verbose.html">Compiled Bindings (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings-examples.html">Compiled Bindings (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings-quiz.html">Compiled Bindings (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles.html">Control Themes Vs Styles</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles-verbose.html">Control Themes Vs Styles (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles-examples.html">Control Themes Vs Styles (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles-quiz.html">Control Themes Vs Styles (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation.html">Data Validation</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation-verbose.html">Data Validation (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation-examples.html">Data Validation (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation-quiz.html">Data Validation (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns.html">Imessenger Patterns</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns-verbose.html">Imessenger Patterns (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns-examples.html">Imessenger Patterns (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns-quiz.html">Imessenger Patterns (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists.html">Item Lists</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists-verbose.html">Item Lists (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists-examples.html">Item Lists (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists-quiz.html">Item Lists (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management.html">Window Dialog Management</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management-verbose.html">Window Dialog Management (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management-examples.html">Window Dialog Management (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management-quiz.html">Window Dialog Management (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching.html">Theme Switching</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching-verbose.html">Theme Switching (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching-examples.html">Theme Switching (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching-quiz.html">Theme Switching (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation.html">Navigation</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation-verbose.html">Navigation (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation-examples.html">Navigation (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation-quiz.html">Navigation (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop.html">Drag Drop</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop-verbose.html">Drag Drop (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop-examples.html">Drag Drop (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop-quiz.html">Drag Drop (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive.html">Datagrid Deep Dive</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive-verbose.html">Datagrid Deep Dive (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive-examples.html">Datagrid Deep Dive (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive-quiz.html">Datagrid Deep Dive (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray.html">Menus Context Menus Tray</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray-verbose.html">Menus Context Menus Tray (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray-examples.html">Menus Context Menus Tray (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray-quiz.html">Menus Context Menus Tray (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data.html">Treeview Hierarchical Data</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data-verbose.html">Treeview Hierarchical Data (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data-examples.html">Treeview Hierarchical Data (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data-quiz.html">Treeview Hierarchical Data (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization.html">Charts Data Visualization</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization-verbose.html">Charts Data Visualization (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization-examples.html">Charts Data Visualization (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization-quiz.html">Charts Data Visualization (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database.html">Sqlite Local Database</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database-verbose.html">Sqlite Local Database (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database-examples.html">Sqlite Local Database (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database-quiz.html">Sqlite Local Database (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events.html">Routed Events</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events-verbose.html">Routed Events (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events-examples.html">Routed Events (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events-quiz.html">Routed Events (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system.html">Property System</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system-verbose.html">Property System (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system-examples.html">Property System (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system-quiz.html">Property System (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher.html">Threading Dispatcher</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher-verbose.html">Threading Dispatcher (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher-examples.html">Threading Dispatcher (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher-quiz.html">Threading Dispatcher (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management.html">Focus Management</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management-verbose.html">Focus Management (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management-examples.html">Focus Management (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management-quiz.html">Focus Management (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys.html">Keyboard Hotkeys</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys-verbose.html">Keyboard Hotkeys (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys-examples.html">Keyboard Hotkeys (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys-quiz.html">Keyboard Hotkeys (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events.html">Input Events</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events-verbose.html">Input Events (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events-examples.html">Input Events (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events-quiz.html">Input Events (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers.html">Gesture Recognizers</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers-verbose.html">Gesture Recognizers (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers-examples.html">Gesture Recognizers (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers-quiz.html">Gesture Recognizers (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar.html">Scrollviewer Scrollbar</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar-verbose.html">Scrollviewer Scrollbar (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar-examples.html">Scrollviewer Scrollbar (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar-quiz.html">Scrollviewer Scrollbar (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input.html">Textbox Text Input</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input-verbose.html">Textbox Text Input (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input-examples.html">Textbox Text Input (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input-quiz.html">Textbox Text Input (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding.html">Multibinding Prioritybinding</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding-verbose.html">Multibinding Prioritybinding (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding-examples.html">Multibinding Prioritybinding (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding-quiz.html">Multibinding Prioritybinding (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views.html">Collection Views</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views-verbose.html">Collection Views (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views-examples.html">Collection Views (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views-quiz.html">Collection Views (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher.html">Clipboard Launcher</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher-verbose.html">Clipboard Launcher (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher-examples.html">Clipboard Launcher (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher-quiz.html">Clipboard Launcher (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service.html">Storage Service</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service-verbose.html">Storage Service (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service-examples.html">Storage Service (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service-quiz.html">Storage Service (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls.html">Selection Controls</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls-verbose.html">Selection Controls (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls-examples.html">Selection Controls (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls-quiz.html">Selection Controls (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls.html">Range Toggle Controls</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls-verbose.html">Range Toggle Controls (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls-examples.html">Range Toggle Controls (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls-quiz.html">Range Toggle Controls (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview.html">Tabcontrol Expander Splitview</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview-verbose.html">Tabcontrol Expander Splitview (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview-examples.html">Tabcontrol Expander Splitview (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview-quiz.html">Tabcontrol Expander Splitview (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Advanced</span><ul class="nav-items"><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls.html">Custom Templated Controls</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls-verbose.html">Custom Templated Controls (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls-examples.html">Custom Templated Controls (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls-quiz.html">Custom Templated Controls (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch.html">Custom Controls From Scratch</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch-verbose.html">Custom Controls From Scratch (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch-examples.html">Custom Controls From Scratch (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch-quiz.html">Custom Controls From Scratch (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors.html">Attached Properties Behaviors</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors-verbose.html">Attached Properties Behaviors (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors-examples.html">Attached Properties Behaviors (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors-quiz.html">Attached Properties Behaviors (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels.html">Custom Layout Panels</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels-verbose.html">Custom Layout Panels (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels-examples.html">Custom Layout Panels (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels-quiz.html">Custom Layout Panels (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions.html">Animation Transitions</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions-verbose.html">Animation Transitions (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions-examples.html">Animation Transitions (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions-quiz.html">Animation Transitions (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals.html">Compositor Custom Visuals</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals-verbose.html">Compositor Custom Visuals (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals-examples.html">Compositor Custom Visuals (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals-quiz.html">Compositor Custom Visuals (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation.html">Accessibility Automation</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation-verbose.html">Accessibility Automation (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation-examples.html">Accessibility Automation (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation-quiz.html">Accessibility Automation (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings.html">Advanced Composite Bindings</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings-verbose.html">Advanced Composite Bindings (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings-examples.html">Advanced Composite Bindings (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings-quiz.html">Advanced Composite Bindings (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia.html">Custom Drawing Skia</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia-verbose.html">Custom Drawing Skia (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia-examples.html">Custom Drawing Skia (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia-quiz.html">Custom Drawing Skia (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools.html">Avalonia Plus Devtools</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools-verbose.html">Avalonia Plus Devtools (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools-examples.html">Avalonia Plus Devtools (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools-quiz.html">Avalonia Plus Devtools (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging.html">Parcel Packaging</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging-verbose.html">Parcel Packaging (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging-examples.html">Parcel Packaging (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging-quiz.html">Parcel Packaging (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system.html">Custom Theme Design System</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system-verbose.html">Custom Theme Design System (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system-examples.html">Custom Theme Design System (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system-quiz.html">Custom Theme Design System (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring.html">Mvvm Di Wiring</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring-verbose.html">Mvvm Di Wiring (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring-examples.html">Mvvm Di Wiring (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring-quiz.html">Mvvm Di Wiring (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n.html">Localization I18n</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n-verbose.html">Localization I18n (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n-examples.html">Localization I18n (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n-quiz.html">Localization I18n (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services.html">File Pickers Platform Services</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services-verbose.html">File Pickers Platform Services (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services-examples.html">File Pickers Platform Services (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services-quiz.html">File Pickers Platform Services (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management.html">Custom Dialogs Window Management</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management-verbose.html">Custom Dialogs Window Management (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management-examples.html">Custom Dialogs Window Management (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management-quiz.html">Custom Dialogs Window Management (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists.html">Virtualization Large Lists</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists-verbose.html">Virtualization Large Lists (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists-examples.html">Virtualization Large Lists (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists-quiz.html">Virtualization Large Lists (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen.html">App Lifetimes Splash Screen</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen-verbose.html">App Lifetimes Splash Screen (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen-examples.html">App Lifetimes Splash Screen (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen-quiz.html">App Lifetimes Splash Screen (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing.html">Headless Testing</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing-verbose.html">Headless Testing (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing-examples.html">Headless Testing (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing-quiz.html">Headless Testing (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming.html">Nativeaot Trimming</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming-verbose.html">Nativeaot Trimming (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming-examples.html">Nativeaot Trimming (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming-quiz.html">Nativeaot Trimming (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile.html">Multi Targeting Desktop Browser Mobile</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-verbose.html">Multi Targeting Desktop Browser Mobile (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-examples.html">Multi Targeting Desktop Browser Mobile (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-quiz.html">Multi Targeting Desktop Browser Mobile (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress.html">Background Services And Progress</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress-verbose.html">Background Services And Progress (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress-examples.html">Background Services And Progress (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress-quiz.html">Background Services And Progress (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia.html">Cicd For Avalonia</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia-verbose.html">Cicd For Avalonia (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia-examples.html">Cicd For Avalonia (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia-quiz.html">Cicd For Avalonia (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry.html">Logging Telemetry</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry-verbose.html">Logging Telemetry (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry-examples.html">Logging Telemetry (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry-quiz.html">Logging Telemetry (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing.html">Printing</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing-verbose.html">Printing (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing-examples.html">Printing (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing-quiz.html">Printing (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater.html">Auto Updater</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater-verbose.html">Auto Updater (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater-examples.html">Auto Updater (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater-quiz.html">Auto Updater (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive.html">Layout System Deep Dive</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive-verbose.html">Layout System Deep Dive (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive-examples.html">Layout System Deep Dive (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive-quiz.html">Layout System Deep Dive (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive.html">Animation System Deep Dive</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive-verbose.html">Animation System Deep Dive (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive-examples.html">Animation System Deep Dive (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive-quiz.html">Animation System Deep Dive (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference.html">Graphics Drawing Reference</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference-verbose.html">Graphics Drawing Reference (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference-examples.html">Graphics Drawing Reference (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference-quiz.html">Graphics Drawing Reference (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout.html">Container Queries Responsive Layout</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout-verbose.html">Container Queries Responsive Layout (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout-examples.html">Container Queries Responsive Layout (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout-quiz.html">Container Queries Responsive Layout (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features.html">Typography Text Features</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features-verbose.html">Typography Text Features (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features-examples.html">Typography Text Features (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features-quiz.html">Typography Text Features (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling.html">Performance Profiling</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling-verbose.html">Performance Profiling (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling-examples.html">Performance Profiling (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling-quiz.html">Performance Profiling (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows.html">Platform Specific Windows</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows-verbose.html">Platform Specific Windows (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows-examples.html">Platform Specific Windows (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows-quiz.html">Platform Specific Windows (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux.html">Platform Specific Macos Linux</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux-verbose.html">Platform Specific Macos Linux (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux-examples.html">Platform Specific Macos Linux (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux-quiz.html">Platform Specific Macos Linux (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload.html">Xaml Previewer Hot Reload</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload-verbose.html">Xaml Previewer Hot Reload (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload-examples.html">Xaml Previewer Hot Reload (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload-quiz.html">Xaml Previewer Hot Reload (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup.html">Custom Flyout Popup</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup-verbose.html">Custom Flyout Popup (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup-examples.html">Custom Flyout Popup (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup-quiz.html">Custom Flyout Popup (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Patterns</span><ul class="nav-items"><li class="nav-item"><a href="../../03-patterns/001-service-locator-vs-di.html">Service Locator Vs Di</a></li><li class="nav-item"><a href="../../03-patterns/002-plugin-architecture.html">Plugin Architecture</a></li><li class="nav-item"><a href="../../03-patterns/003-async-initialization.html">Async Initialization</a></li><li class="nav-item"><a href="../../03-patterns/004-state-management.html">State Management</a></li><li class="nav-item"><a href="../../03-patterns/005-repository-unit-of-work.html">Repository Unit Of Work</a></li><li class="nav-item"><a href="../../03-patterns/006-logging-patterns.html">Logging Patterns</a></li><li class="nav-item"><a href="../../03-patterns/007-editor-application-architecture.html">Editor Application Architecture</a></li><li class="nav-item"><a href="../../03-patterns/008-focus-keyboard-navigation.html">Focus Keyboard Navigation</a></li><li class="nav-item"><a href="../../03-patterns/008-toggle-state-pattern.html">Toggle State Pattern</a></li><li class="nav-item"><a href="../../03-patterns/009-lazy-load-virtual-scrolling.html">Lazy Load Virtual Scrolling</a></li><li class="nav-item"><a href="../../03-patterns/009-storage-file-io-pipeline.html">Storage File Io Pipeline</a></li><li class="nav-group"><span class="nav-group-label">Migration</span><ul class="nav-items"><li class="nav-item"><a href="../../04-migration/avalonia-11-to-12.html">Avalonia 11 To 12</a></li><li class="nav-item"><a href="../../04-migration/wpf-to-avalonia-key-mappings.html">Wpf To Avalonia Key Mappings</a></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></nav><main class="doc-content" id="docContent"><h1>009V — Data Templates: An In-Depth Companion</h1>
+<p><strong>What you'll learn in this companion:</strong> Not just how to write a DataTemplate, but how Avalonia's template system actually works — resolution order, the IDataTemplate contract, compiled bindings, and why templates live in DataTemplates collections instead of resources.</p>
+<p><strong>Prerequisites:</strong> <a href="002-command-binding.html">002 — Command Binding</a>, <a href="007-observable-object-property.html">007 — ObservableObject &amp; ObservableProperty</a></p>
+<p><strong>You should already have read:</strong> <a href="009-data-templates-basics.html">009 — Data Templates Basics</a> for the quick-start version. This file goes deeper on every section.</p>
+<hr />
+<h2>1. What a DataTemplate Actually Is</h2>
+<p>A <code>DataTemplate</code> is a <strong>factory</strong>. When Avalonia needs to display an object that isn't a UI control (like a <code>TodoItem</code> — a plain C# class with no visual representation), it looks for a factory that can produce a control tree from that object. The <code>DataTemplate</code> is that factory: it takes data in, produces controls out.</p>
+<pre><code class="language-csharp">// Conceptually, this is what a DataTemplate does:
+public interface IDataTemplate
+{
+    bool Match(object data);        // &quot;Can I handle this type of data?&quot;
+    Control? Build(object? data);   // &quot;Give me a control tree for this specific data&quot;
+}
+</code></pre>
+<p>The XAML <code>&lt;DataTemplate&gt;</code> you write is the declarative version of implementing <code>Build</code>. Avalonia's XAML compiler translates your markup into the equivalent <code>Control</code> tree construction code.</p>
+<p>The <code>Match</code> method — Avalonia's way of deciding <em>which</em> template to use — is determined by the <code>DataType</code> attribute on the <code>DataTemplate</code>:</p>
+<pre><code class="language-xml">&lt;DataTemplate DataType=&quot;models:TodoItem&quot;&gt;
+  &lt;!-- Match returns true when the data object is a TodoItem (or a subclass) --&gt;
+  &lt;CheckBox Content=&quot;{Binding Title}&quot; IsChecked=&quot;{Binding IsDone}&quot; /&gt;
+&lt;/DataTemplate&gt;
+</code></pre>
+<p>This is the core concept: <strong>data in, controls out</strong>. The DataTemplate sits between your data objects and your visual tree, acting as the bridge. Every list, every content area, every dynamic view in your app ultimately relies on this mechanism.</p>
+<hr />
+<h2>2. Where Templates Live (and Why)</h2>
+<p>In WPF, templates go in <code>Resources</code>. In Avalonia, they go in <code>DataTemplates</code> — a dedicated collection on every <code>Control</code> and on <code>Application</code> itself.</p>
+<pre><code class="language-xml">&lt;!-- WPF way (doesn't work in Avalonia) --&gt;
+&lt;Window.Resources&gt;
+  &lt;DataTemplate DataType=&quot;{x:Type models:TodoItem}&quot;&gt; ... &lt;/DataTemplate&gt;
+&lt;/Window.Resources&gt;
+
+&lt;!-- Avalonia way --&gt;
+&lt;Window.DataTemplates&gt;
+  &lt;DataTemplate DataType=&quot;models:TodoItem&quot;&gt; ... &lt;/DataTemplate&gt;
+&lt;/Window.DataTemplates&gt;
+</code></pre>
+<p><strong>Why?</strong> Because separating templates into their own collection gives Avalonia a simpler, faster resolution path. Instead of searching through merged resource dictionaries (which have their own complex lookup rules for keys, themes, and variants), Avalonia walks a flat list of <code>IDataTemplate</code> objects up the logical tree. This makes template resolution predictable and performant.</p>
+<p>Every control that can host a data template has a <code>DataTemplates</code> property:</p>
+<table>
+<thead>
+<tr>
+<th>Host</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Application.DataTemplates</code></td>
+<td>Global — every control in the app</td>
+</tr>
+<tr>
+<td><code>Window.DataTemplates</code></td>
+<td>That window and everything inside it</td>
+</tr>
+<tr>
+<td><code>UserControl.DataTemplates</code></td>
+<td>That control and its children</td>
+</tr>
+<tr>
+<td><code>ItemsControl.DataTemplates</code></td>
+<td>Items inside this specific list control</td>
+</tr>
+<tr>
+<td><code>ContentControl.DataTemplates</code></td>
+<td>Content inside this single-content control</td>
+</tr>
+<tr>
+<td><code>DataTemplates</code> collection on <em>any</em> <code>Control</code></td>
+<td>That element's subtree</td>
+</tr>
+</tbody>
+</table>
+<p>You choose the level based on how widely you need the template available. Put shared templates on <code>Application</code> (or a resource dictionary merged into it), put page-specific templates on the <code>Window</code> or <code>UserControl</code>, and put narrowly-scoped templates directly on the list control.</p>
+<hr />
+<h2>3. Template Resolution Order (The Critical Detail)</h2>
+<p>When a <code>ContentPresenter</code> or <code>ItemsControl</code> needs to find a template for an item, it does not just check its own <code>DataTemplates</code>. It walks <strong>up</strong> the logical tree:</p>
+<pre><code>1. Check the control's own ItemTemplate / ContentTemplate property (if set)
+   │
+2. Walk up the logical tree, checking each ancestor's DataTemplates collection
+   │  (stops at the first IDataTemplateHost that has a matching template)
+   │
+3. Check Application.DataTemplates
+   │
+4. If nothing matched:
+   └─ Fall back to default rendering (ToString())
+</code></pre>
+<p>Step 2 is the one that surprises most developers. When you put a <code>DataTemplate</code> on a <code>Window</code>, every <code>ContentControl</code> and <code>ItemsControl</code> inside that window can find it. You don't need to repeat the template on each individual control.</p>
+<p><strong>Practical implications:</strong></p>
+<ul>
+<li>Put broadly-reusable templates as high as makes sense (Application or Window level)</li>
+<li>Put overrides as low as possible (on the specific control, where they shadow higher templates)</li>
+<li>If a template seems to not apply, the resolution might be finding a different match first</li>
+</ul>
+<hr />
+<h2>4. How Type Matching Works</h2>
+<p>Avalonia's <code>DataType</code> matching is more flexible than WPF's:</p>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>WPF</th>
+<th>Avalonia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exact type match</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Derived class match</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Interface match</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Abstract class match</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Because interface matching is supported, template order matters.</strong> If you have:</p>
+<pre><code class="language-xml">&lt;Window.DataTemplates&gt;
+  &lt;DataTemplate DataType=&quot;models:IEditableItem&quot;&gt; ... &lt;/DataTemplate&gt;
+  &lt;DataTemplate DataType=&quot;models:TodoItem&quot;&gt; ... &lt;/DataTemplate&gt;
+&lt;/Window.DataTemplates&gt;
+</code></pre>
+<p>And <code>TodoItem</code> implements <code>IEditableItem</code>, the first template (IEditableItem) will match all <code>TodoItem</code> instances because it's declared first. Either <code>TodoItem</code> gets the IEditableItem template (if ordered first), or it gets its own template (if ordered first). Place more-specific templates before more-general ones.</p>
+<p>This is the reverse of how you might think about it — the first match wins, not the best match.</p>
+<hr />
+<h2>5. ItemTemplate vs DataTemplates: What's the Difference?</h2>
+<p>This is one of the most common sources of confusion. Two properties with similar names, different purposes:</p>
+<h3>ItemTemplate (on ItemsControl / ListBox / ComboBox)</h3>
+<p><code>ItemTemplate</code> is a <strong>single</strong> <code>IDataTemplate</code> applied directly to the control. It is set inline:</p>
+<pre><code class="language-xml">&lt;ListBox ItemsSource=&quot;{Binding Items}&quot;&gt;
+  &lt;ListBox.ItemTemplate&gt;
+    &lt;DataTemplate x:DataType=&quot;models:TodoItem&quot;&gt;
+      &lt;TextBlock Text=&quot;{Binding Title}&quot; /&gt;
+    &lt;/DataTemplate&gt;
+  &lt;/ListBox.ItemTemplate&gt;
+&lt;/ListBox&gt;
+</code></pre>
+<p>This template applies only to this specific <code>ListBox</code> and only to its items. It is the most specific possible template location — it takes highest priority during resolution.</p>
+<h3>DataTemplates (collection on any control)</h3>
+<p><code>DataTemplates</code> is a <strong>collection</strong> of <code>IDataTemplate</code> objects that can be matched by type. It participates in the tree-walking resolution:</p>
+<pre><code class="language-xml">&lt;Window.DataTemplates&gt;
+  &lt;DataTemplate DataType=&quot;models:TodoItem&quot;&gt;
+    &lt;CheckBox Content=&quot;{Binding Title}&quot; IsChecked=&quot;{Binding IsDone}&quot; /&gt;
+  &lt;/DataTemplate&gt;
+&lt;/Window.DataTemplates&gt;
+</code></pre>
+<p>This template applies to every <code>ContentControl</code>, <code>ItemsControl</code>, <code>ListBox</code>, etc. inside the window where a <code>TodoItem</code> needs to be displayed.</p>
+<h3>Why both exist</h3>
+<p>Use <code>ItemTemplate</code> when you want a one-off template for a specific list. Use <code>DataTemplates</code> when you want the same template for every occurrence of a data type across a scope.</p>
+<p>You can also use both together: define the template in <code>DataTemplates</code> for reuse, then override in <code>ItemTemplate</code> for a specific list:</p>
+<pre><code class="language-xml">&lt;Window.DataTemplates&gt;
+  &lt;!-- Default: inline checkbox --&gt;
+  &lt;DataTemplate DataType=&quot;models:TodoItem&quot;&gt;
+    &lt;CheckBox Content=&quot;{Binding Title}&quot; IsChecked=&quot;{Binding IsDone}&quot; /&gt;
+  &lt;/DataTemplate&gt;
+&lt;/Window.DataTemplates&gt;
+
+&lt;!-- Override in this specific ListBox: just text --&gt;
+&lt;ListBox ItemsSource=&quot;{Binding Items}&quot;&gt;
+  &lt;ListBox.ItemTemplate&gt;
+    &lt;DataTemplate x:DataType=&quot;models:TodoItem&quot;&gt;
+      &lt;TextBlock Text=&quot;{Binding Title}&quot; /&gt;
+    &lt;/DataTemplate&gt;
+  &lt;/ListBox.ItemTemplate&gt;
+&lt;/ListBox&gt;
+</code></pre>
+<p>The <code>ItemTemplate</code> takes priority because it's checked first.</p>
+<hr />
+<h2>6. x:DataType and Compiled Bindings</h2>
+<p>Every code example in this tutorial uses <code>x:DataType</code>. This attribute tells the Avalonia XAML compiler what type the binding source will be, enabling <strong>compiled bindings</strong>:</p>
+<pre><code class="language-xml">&lt;DataTemplate x:DataType=&quot;models:TodoItem&quot;&gt;
+  &lt;CheckBox Content=&quot;{Binding Title}&quot;
+            IsChecked=&quot;{Binding IsDone}&quot; /&gt;
+&lt;/DataTemplate&gt;
+</code></pre>
+<p>Without <code>x:DataType</code>:</p>
+<ul>
+<li>Bindings use <strong>reflection</strong> at runtime to find <code>Title</code> and <code>IsDone</code></li>
+<li>A typo (<code>Titel</code>) silently fails at runtime — the binding resolves to nothing</li>
+<li>Performance is slightly worse because of the reflection overhead</li>
+</ul>
+<p>With <code>x:DataType</code>:</p>
+<ul>
+<li>The compiler checks at <strong>build time</strong> that <code>Title</code> and <code>IsDone</code> exist on <code>TodoItem</code></li>
+<li>A typo (<code>Titel</code>) produces a <strong>compile error</strong> — you catch it before running</li>
+<li>Bindings are resolved at compile time, making them faster</li>
+</ul>
+<p>If your project has <code>&lt;AvaloniaUseCompiledBindingsByDefault&gt;true&lt;/AvaloniaUseCompiledBindingsByDefault&gt;</code> in the <code>.csproj</code>, then <code>x:DataType</code> is required on every <code>DataTemplate</code> — the compiler will warn or error if it's missing.</p>
+<p>Note that <code>x:DataType</code> and <code>DataType</code> are different attributes:</p>
+<ul>
+<li><code>DataType</code> — used by the template matching system (<code>Match()</code>)</li>
+<li><code>x:DataType</code> — used by the XAML compiler for compiled binding validation</li>
+</ul>
+<p>You can (and should) set both to the same value:</p>
+<pre><code class="language-xml">&lt;DataTemplate DataType=&quot;models:TodoItem&quot;
+              x:DataType=&quot;models:TodoItem&quot;&gt;
+</code></pre>
+<p>Avalonia 12's XAML compiler also supports <code>{Binding}</code> (compiled when <code>x:DataType</code> is set), <code>{CompiledBinding}</code>, and <code>{ReflectionBinding}</code> (forces runtime reflection even when <code>x:DataType</code> is present).</p>
+<hr />
+<h2>7. The Full IDataTemplate Contract (Why Custom Selectors Work)</h2>
+<p>The <code>IDataTemplate</code> interface has exactly two methods:</p>
+<pre><code class="language-csharp">public interface IDataTemplate
+{
+    bool Match(object? data);
+    Control? Build(object? data);
+}
+</code></pre>
+<p><strong><code>Match</code></strong> is called first. It answers: <em>&quot;Should this template be used for this data object?&quot;</em> Avalonia iterates through available templates (checking <code>ItemTemplate</code> first, then walking up <code>DataTemplates</code> collections) and uses the first one whose <code>Match</code> returns <code>true</code>.</p>
+<p>For a <code>&lt;DataTemplate DataType=&quot;models:TodoItem&quot;&gt;</code>, the XAML compiler generates a <code>Match</code> method equivalent to:</p>
+<pre><code class="language-csharp">bool Match(object? data) =&gt; data is TodoItem;
+</code></pre>
+<p><strong><code>Build</code></strong> is called second. It creates the control tree. For a XAML <code>DataTemplate</code>, the compiler generates code that instantiates the XAML element tree and sets up bindings.</p>
+<p>A custom template selector works by implementing this interface yourself:</p>
+<pre><code class="language-csharp">public class ConditionalTemplateSelector : IDataTemplate
+{
+    public IDataTemplate DefaultTemplate { get; set; }
+    public IDataTemplate AlternateTemplate { get; set; }
+    public Func&lt;object, bool&gt; Condition { get; set; }
+
+    public bool Match(object? data) =&gt; true;  // Match everything
+
+    public Control? Build(object? data)
+    {
+        // Choose which template to delegate to at runtime
+        if (data is not null &amp;&amp; Condition(data))
+            return AlternateTemplate.Build(data);
+        return DefaultTemplate.Build(data);
+    }
+}
+</code></pre>
+<p>The key insight: <code>Match</code> decides <em>whether</em> the template applies. <code>Build</code> decides <em>what to create</em>. In the basic <code>DataTemplate</code>, both are derived from <code>DataType</code>. In a custom <code>IDataTemplate</code>, you control both independently.</p>
+<hr />
+<h2>8. Template Resolution Walkthrough (Step by Step)</h2>
+<p>Consider this scenario:</p>
+<pre><code class="language-xml">&lt;Window DataContext=&quot;{Binding ...}&quot; xmlns:models=&quot;using:MyApp.Models&quot;&gt;
+  &lt;Window.DataTemplates&gt;
+    &lt;DataTemplate DataType=&quot;models:TodoItem&quot;&gt;
+      &lt;CheckBox Content=&quot;{Binding Title}&quot; IsChecked=&quot;{Binding IsDone}&quot; /&gt;
+    &lt;/DataTemplate&gt;
+  &lt;/Window.DataTemplates&gt;
+
+  &lt;ListBox ItemsSource=&quot;{Binding Items}&quot;&gt;
+    &lt;!-- No ItemTemplate set — falls through to DataTemplates lookup --&gt;
+  &lt;/ListBox&gt;
+&lt;/Window&gt;
+</code></pre>
+<p>When Avalonia renders the first item in <code>Items</code>:</p>
+<ol>
+<li><code>ListBox</code> asks its generator to create a container for the first item (a <code>TodoItem</code>)</li>
+<li>It checks <code>ListBox.ItemTemplate</code> → <strong>null</strong> (not set), continue</li>
+<li>It walks to <code>ListBox</code>'s parent, the <code>Window</code>, and checks <code>Window.DataTemplates</code></li>
+<li>First template in <code>Window.DataTemplates</code>: <code>DataTemplate DataType=&quot;TodoItem&quot;</code></li>
+<li>Calls <code>Match(new TodoItem())</code> → <code>true</code> (type matches)</li>
+<li>Calls <code>Build(new TodoItem())</code> → creates <code>CheckBox</code>, sets <code>DataContext = TodoItem</code>, and bindings resolve <code>Title</code> and <code>IsDone</code></li>
+<li>The <code>CheckBox</code> becomes the visual for that list item</li>
+</ol>
+<p>Now change the <code>Window.DataTemplates</code> to have two templates where one is an interface:</p>
+<pre><code class="language-xml">&lt;Window.DataTemplates&gt;
+  &lt;DataTemplate DataType=&quot;models:ICompletable&quot;&gt; &lt;!-- interface --&gt;
+    &lt;TextBlock Text=&quot;{Binding Summary}&quot; Foreground=&quot;Gray&quot; /&gt;
+  &lt;/DataTemplate&gt;
+  &lt;DataTemplate DataType=&quot;models:TodoItem&quot;&gt;
+    &lt;CheckBox Content=&quot;{Binding Title}&quot; IsChecked=&quot;{Binding IsDone}&quot; /&gt;
+  &lt;/DataTemplate&gt;
+&lt;/Window.DataTemplates&gt;
+</code></pre>
+<p>If <code>TodoItem : ICompletable</code>, then the first template matches. Your <code>TodoItem</code> renders as a <code>TextBlock</code>, not a <code>CheckBox</code>. This is why template order matters: the first <code>Match</code> that returns <code>true</code> wins, regardless of whether a more-specific template appears later.</p>
+<hr />
+<h2>9. Common Mistakes and Why They Happen</h2>
+<h3>Mistake 1: Putting DataTemplate in Resources</h3>
+<pre><code class="language-xml">&lt;Window.Resources&gt;
+  &lt;DataTemplate DataType=&quot;models:TodoItem&quot;&gt; &lt;!-- won't be found --&gt;
+    &lt;CheckBox ... /&gt;
+  &lt;/DataTemplate&gt;
+&lt;/Window.Resources&gt;
+</code></pre>
+<p><strong>Why:</strong> <code>DataTemplates</code> and <code>Resources</code> are separate collections. Template resolution only checks <code>DataTemplates</code>, never <code>Resources</code>. Move it to <code>&lt;Window.DataTemplates&gt;</code>.</p>
+<h3>Mistake 2: Setting both ItemTemplate and DisplayMemberBinding</h3>
+<pre><code class="language-xml">&lt;ListBox ItemsSource=&quot;{Binding Items}&quot;
+         DisplayMemberBinding=&quot;{Binding Title}&quot;&gt;
+  &lt;ListBox.ItemTemplate&gt;
+    &lt;DataTemplate&gt; ... &lt;/DataTemplate&gt;
+  &lt;/ListBox.ItemTemplate&gt;
+&lt;/ListBox&gt;
+</code></pre>
+<p><strong>Why:</strong> They are mutually exclusive. Setting both causes an exception at runtime. <code>DisplayMemberBinding</code> is a shortcut that internally creates a <code>DataTemplate</code> with a single <code>TextBlock</code> — you can't have both that and an explicit <code>ItemTemplate</code>.</p>
+<h3>Mistake 3: Forgetting x:DataType and getting silent binding failures</h3>
+<pre><code class="language-xml">&lt;DataTemplate&gt;
+  &lt;TextBlock Text=&quot;{Binding Titel}&quot; /&gt; &lt;!-- typo: no x:DataType, no error --&gt;
+&lt;/DataTemplate&gt;
+</code></pre>
+<p><strong>Why:</strong> Without <code>x:DataType</code>, bindings use runtime reflection. The typo <code>Titel</code> silently resolves to nothing. With <code>x:DataType</code>, this would be a compile error.</p>
+<h3>Mistake 4: Template appears to not apply</h3>
+<pre><code class="language-xml">&lt;Window.DataTemplates&gt;
+  &lt;DataTemplate DataType=&quot;models:TodoItem&quot;&gt;...&lt;/DataTemplate&gt;
+&lt;/Window.DataTemplates&gt;
+</code></pre>
+<p>But the <code>ListBox</code> still shows <code>MyApp.Models.TodoItem</code> as plain text.</p>
+<p><strong>Why:</strong> The <code>ListBox</code> might have an <code>ItemTemplate</code> set in a style, or a control higher in the tree has an <code>ItemTemplate</code> set, or the <code>DataTemplates</code> collection is on a different branch of the logical tree that doesn't include this <code>ListBox</code>. Check each ancestor's <code>DataTemplates</code> and any applied styles.</p>
+<h3>Mistake 5: Interface template matches when you don't want it to</h3>
+<p>You add a template for <code>ISelectable</code> expecting it to only apply to certain types, but it matches everything that implements that interface.</p>
+<pre><code class="language-xml">&lt;DataTemplate DataType=&quot;models:ISelectable&quot;&gt;
+  &lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;
+&lt;/DataTemplate&gt;
+</code></pre>
+<p><strong>Why:</strong> Interface matching is a feature. Every class implementing <code>ISelectable</code> will match this template unless a more-specific template (concrete type) is declared before it. Put concrete-type templates first, interface templates last.</p>
+<hr />
+<h2>10. Performance Considerations</h2>
+<h3>Recycling</h3>
+<p>When <code>ListBox</code> virtualizes items (reuses containers instead of creating new ones for every item), it can also reuse the control tree <em>inside</em> the container if the template supports it. This is controlled by <code>IRecyclingDataTemplate</code>. The built-in <code>DataTemplate</code> does support recycling, but custom <code>IDataTemplate</code> implementations must opt in:</p>
+<pre><code class="language-csharp">public class MyTemplate : IDataTemplate, IRecyclingDataTemplate
+{
+    public Control? Build(object? data, Control? existing)
+    {
+        if (existing is MyControl existingControl)
+        {
+            existingControl.DataContext = data;
+            return existingControl;
+        }
+        return Build(data);
+    }
+}
+</code></pre>
+<h3>x:DataType performance</h3>
+<p>Compiled bindings avoid reflection at runtime. For lists with hundreds or thousands of items, this matters — reflection-based binding resolution adds measurable overhead per item per property. Always use <code>x:DataType</code> in templates that will be instantiated many times.</p>
+<h3>Template lookup cost</h3>
+<p>Template resolution walks the logical tree. For a deeply nested control with many <code>DataTemplates</code> collections at each level, resolution can be non-trivial. If you're seeing performance issues with template resolution, consider:</p>
+<ul>
+<li>Moving frequently-matched templates to <code>Application.DataTemplates</code> (shorter walk)</li>
+<li>Using <code>ItemTemplate</code> directly on the control (skips the tree walk entirely)</li>
+<li>Using <code>ContentTemplate</code> on <code>ContentControl</code> explicitly rather than relying on type matching</li>
+</ul>
+<hr />
+<h2>11. How DataTemplate Differs from ContentTemplate</h2>
+<p><code>ItemTemplate</code> is for items in a list. <code>ContentTemplate</code> is for a single piece of content:</p>
+<pre><code class="language-xml">&lt;!-- Single item: ContentTemplate --&gt;
+&lt;ContentControl Content=&quot;{Binding SelectedItem}&quot;&gt;
+  &lt;ContentControl.ContentTemplate&gt;
+    &lt;DataTemplate x:DataType=&quot;models:TodoItem&quot;&gt;
+      &lt;Border BorderBrush=&quot;Gray&quot; BorderThickness=&quot;1&quot; Padding=&quot;8&quot;&gt;
+        &lt;TextBlock Text=&quot;{Binding Title}&quot; FontSize=&quot;18&quot; /&gt;
+      &lt;/Border&gt;
+    &lt;/DataTemplate&gt;
+  &lt;/ContentControl.ContentTemplate&gt;
+&lt;/ContentControl&gt;
+</code></pre>
+<p>The resolution order is the same: <code>ContentTemplate</code> first, then <code>DataTemplates</code> tree walk, then <code>Application.DataTemplates</code>. The difference is only semantic — <code>ContentTemplate</code> applies to the single content object, <code>ItemTemplate</code> applies to each item in a collection.</p>
+<hr />
+<h2>Key Takeaways</h2>
+<ul>
+<li><code>DataTemplate</code> is a <strong>factory</strong> that converts data objects to control trees — it's not a visual element itself</li>
+<li>Templates live in <code>DataTemplates</code> collections, not <code>Resources</code> — a deliberate design choice for cleaner resolution</li>
+<li>Resolution walks up the tree: <code>ItemTemplate</code> → ancestor <code>DataTemplates</code> → <code>Application.DataTemplates</code></li>
+<li><code>DataType</code> determines type matching (supports interfaces and abstract classes)</li>
+<li><code>x:DataType</code> enables compiled bindings with build-time validation — always set it</li>
+<li>Template order matters because all types that match an interface will hit the interface template first</li>
+<li>Custom template selectors implement <code>IDataTemplate.Match</code> and <code>IDataTemplate.Build</code> directly</li>
+<li>Use <code>ItemTemplate</code> for one-off list templates, <code>DataTemplates</code> collection for reusable type-based templates</li>
+<li><code>ContentTemplate</code> on <code>ContentControl</code> follows the same resolution rules as <code>ItemTemplate</code></li>
+</ul>
+<hr />
+<h2>See Also</h2>
+<ul>
+<li><a href="009-data-templates-basics.html">009 — Data Templates Basics (original quick-start)</a></li>
+<li><a href="009-data-templates-examples.html">009X — Data Templates: Real-World Examples</a></li>
+<li><a href="../intermediate/015-item-lists.html">015 — Item Lists in Depth</a></li>
+<li><a href="../intermediate/043-treeview-hierarchical-data.html">043 — TreeView with Hierarchical Data</a></li>
+<li><a href="https://docs.avaloniaui.net/docs/data-binding/data-templates">Avalonia Docs: Data Templates</a></li>
+<li><a href="https://docs.avaloniaui.net/docs/data-templates/creating-data-templates-in-code">Avalonia Docs: IDataTemplate</a></li>
+</ul>
+</main><nav class="doc-toc" id="toc"></nav></div><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/powershell.min.js"></script><script src="../../_assets/js/search-index.js"></script><script>const CURRENT_PAGE="../../02-tutorials/basics/009-data-templates-basics-verbose.html";</script><script src="../../_assets/js/ssg.js"></script></body></html>

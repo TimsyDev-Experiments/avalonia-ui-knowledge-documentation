@@ -1,0 +1,735 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>data display — Avalonia Docs</title><link rel="stylesheet" href="../../_assets/css/ssg.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='12' font-size='12'>A</text></svg>"></head><body><div class="layout"><nav class="sidebar" id="sidebar"><div class="sidebar-header"><h2><a href="../../index.html" style="color:inherit;text-decoration:none">Avalonia Docs</a></h2></div><div class="search-box"><input type="text" id="searchInput" placeholder="Search docs..." autocomplete="off"></div><div id="searchResults" class="search-results" style="display:none"></div><ul class="nav-tree" id="navTree"><li class="nav-group"><span class="nav-group-label">Quick References</span><ul class="nav-items"><li class="nav-item"><a href="../../01-quick-refs/accessibility-automation.html">Accessibility Automation</a></li><li class="nav-item"><a href="../../01-quick-refs/avalonia-12-breaking-changes.html">Avalonia 12 Breaking Changes</a></li><li class="nav-item"><a href="../../01-quick-refs/binding-modes.html">Binding Modes</a></li><li class="nav-item"><a href="../../01-quick-refs/brushes-colors-reference.html">Brushes Colors Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/common-controls-reference.html">Common Controls Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/common-converters.html">Common Converters</a></li><li class="nav-item"><a href="../../01-quick-refs/control-themes.html">Control Themes</a></li><li class="nav-item"><a href="../../01-quick-refs/dispatcher-timers-quick-ref.html">Dispatcher Timers Quick Ref</a></li><li class="nav-item"><a href="../../01-quick-refs/font-typography-reference.html">Font Typography Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/icons-reference.html">Icons Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/input-gestures.html">Input Gestures</a></li><li class="nav-item"><a href="../../01-quick-refs/mvvm-source-generators.html">Mvvm Source Generators</a></li><li class="nav-item"><a href="../../01-quick-refs/naming-conventions.html">Naming Conventions</a></li><li class="nav-item"><a href="../../01-quick-refs/property-system-quick-ref.html">Property System Quick Ref</a></li><li class="nav-item"><a href="../../01-quick-refs/resource-dictionaries.html">Resource Dictionaries</a></li><li class="nav-item"><a href="../../01-quick-refs/routed-events-quick-ref.html">Routed Events Quick Ref</a></li><li class="nav-item"><a href="../../01-quick-refs/shapes-geometries.html">Shapes Geometries</a></li><li class="nav-item"><a href="../../01-quick-refs/xaml-selectors.html">Xaml Selectors</a></li><li class="nav-group"><span class="nav-group-label">Basics</span><ul class="nav-items"><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup.html">Project Setup</a></li><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup-verbose.html">Project Setup (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup-examples.html">Project Setup (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup-quiz.html">Project Setup (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding.html">Command Binding</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding-verbose.html">Command Binding (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding-examples.html">Command Binding (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding-quiz.html">Command Binding (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling.html">Basic Styling</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling-verbose.html">Basic Styling (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling-examples.html">Basic Styling (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling-quiz.html">Basic Styling (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters.html">Value Converters</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters-verbose.html">Value Converters (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters-examples.html">Value Converters (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters-quiz.html">Value Converters (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes.html">Binding Modes</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes-verbose.html">Binding Modes (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes-examples.html">Binding Modes (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes-quiz.html">Binding Modes (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources.html">Resources</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources-verbose.html">Resources (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources-examples.html">Resources (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources-quiz.html">Resources (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property.html">Observable Object Property</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property-verbose.html">Observable Object Property (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property-examples.html">Observable Object Property (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property-quiz.html">Observable Object Property (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command.html">Relay Command</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command-verbose.html">Relay Command (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command-examples.html">Relay Command (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command-quiz.html">Relay Command (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-examples.html">Data Templates (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-basics.html">Data Templates Basics</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-basics-verbose.html">Data Templates Basics (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-basics-quiz.html">Data Templates Basics (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics.html">Window Dialog Basics</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics-verbose.html">Window Dialog Basics (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics-examples.html">Window Dialog Basics (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics-quiz.html">Window Dialog Basics (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Intermediate</span><ul class="nav-items"><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings.html">Compiled Bindings</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings-verbose.html">Compiled Bindings (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings-examples.html">Compiled Bindings (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings-quiz.html">Compiled Bindings (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles.html">Control Themes Vs Styles</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles-verbose.html">Control Themes Vs Styles (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles-examples.html">Control Themes Vs Styles (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles-quiz.html">Control Themes Vs Styles (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation.html">Data Validation</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation-verbose.html">Data Validation (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation-examples.html">Data Validation (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation-quiz.html">Data Validation (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns.html">Imessenger Patterns</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns-verbose.html">Imessenger Patterns (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns-examples.html">Imessenger Patterns (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns-quiz.html">Imessenger Patterns (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists.html">Item Lists</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists-verbose.html">Item Lists (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists-examples.html">Item Lists (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists-quiz.html">Item Lists (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management.html">Window Dialog Management</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management-verbose.html">Window Dialog Management (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management-examples.html">Window Dialog Management (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management-quiz.html">Window Dialog Management (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching.html">Theme Switching</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching-verbose.html">Theme Switching (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching-examples.html">Theme Switching (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching-quiz.html">Theme Switching (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation.html">Navigation</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation-verbose.html">Navigation (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation-examples.html">Navigation (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation-quiz.html">Navigation (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop.html">Drag Drop</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop-verbose.html">Drag Drop (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop-examples.html">Drag Drop (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop-quiz.html">Drag Drop (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive.html">Datagrid Deep Dive</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive-verbose.html">Datagrid Deep Dive (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive-examples.html">Datagrid Deep Dive (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive-quiz.html">Datagrid Deep Dive (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray.html">Menus Context Menus Tray</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray-verbose.html">Menus Context Menus Tray (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray-examples.html">Menus Context Menus Tray (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray-quiz.html">Menus Context Menus Tray (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data.html">Treeview Hierarchical Data</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data-verbose.html">Treeview Hierarchical Data (in depth)</a></li><li class="nav-item active"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data-examples.html">Treeview Hierarchical Data (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data-quiz.html">Treeview Hierarchical Data (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization.html">Charts Data Visualization</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization-verbose.html">Charts Data Visualization (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization-examples.html">Charts Data Visualization (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization-quiz.html">Charts Data Visualization (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database.html">Sqlite Local Database</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database-verbose.html">Sqlite Local Database (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database-examples.html">Sqlite Local Database (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database-quiz.html">Sqlite Local Database (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events.html">Routed Events</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events-verbose.html">Routed Events (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events-examples.html">Routed Events (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events-quiz.html">Routed Events (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system.html">Property System</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system-verbose.html">Property System (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system-examples.html">Property System (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system-quiz.html">Property System (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher.html">Threading Dispatcher</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher-verbose.html">Threading Dispatcher (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher-examples.html">Threading Dispatcher (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher-quiz.html">Threading Dispatcher (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management.html">Focus Management</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management-verbose.html">Focus Management (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management-examples.html">Focus Management (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management-quiz.html">Focus Management (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys.html">Keyboard Hotkeys</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys-verbose.html">Keyboard Hotkeys (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys-examples.html">Keyboard Hotkeys (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys-quiz.html">Keyboard Hotkeys (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events.html">Input Events</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events-verbose.html">Input Events (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events-examples.html">Input Events (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events-quiz.html">Input Events (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers.html">Gesture Recognizers</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers-verbose.html">Gesture Recognizers (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers-examples.html">Gesture Recognizers (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers-quiz.html">Gesture Recognizers (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar.html">Scrollviewer Scrollbar</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar-verbose.html">Scrollviewer Scrollbar (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar-examples.html">Scrollviewer Scrollbar (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar-quiz.html">Scrollviewer Scrollbar (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input.html">Textbox Text Input</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input-verbose.html">Textbox Text Input (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input-examples.html">Textbox Text Input (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input-quiz.html">Textbox Text Input (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding.html">Multibinding Prioritybinding</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding-verbose.html">Multibinding Prioritybinding (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding-examples.html">Multibinding Prioritybinding (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding-quiz.html">Multibinding Prioritybinding (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views.html">Collection Views</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views-verbose.html">Collection Views (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views-examples.html">Collection Views (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views-quiz.html">Collection Views (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher.html">Clipboard Launcher</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher-verbose.html">Clipboard Launcher (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher-examples.html">Clipboard Launcher (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher-quiz.html">Clipboard Launcher (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service.html">Storage Service</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service-verbose.html">Storage Service (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service-examples.html">Storage Service (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service-quiz.html">Storage Service (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls.html">Selection Controls</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls-verbose.html">Selection Controls (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls-examples.html">Selection Controls (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls-quiz.html">Selection Controls (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls.html">Range Toggle Controls</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls-verbose.html">Range Toggle Controls (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls-examples.html">Range Toggle Controls (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls-quiz.html">Range Toggle Controls (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview.html">Tabcontrol Expander Splitview</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview-verbose.html">Tabcontrol Expander Splitview (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview-examples.html">Tabcontrol Expander Splitview (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview-quiz.html">Tabcontrol Expander Splitview (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Advanced</span><ul class="nav-items"><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls.html">Custom Templated Controls</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls-verbose.html">Custom Templated Controls (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls-examples.html">Custom Templated Controls (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls-quiz.html">Custom Templated Controls (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch.html">Custom Controls From Scratch</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch-verbose.html">Custom Controls From Scratch (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch-examples.html">Custom Controls From Scratch (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch-quiz.html">Custom Controls From Scratch (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors.html">Attached Properties Behaviors</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors-verbose.html">Attached Properties Behaviors (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors-examples.html">Attached Properties Behaviors (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors-quiz.html">Attached Properties Behaviors (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels.html">Custom Layout Panels</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels-verbose.html">Custom Layout Panels (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels-examples.html">Custom Layout Panels (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels-quiz.html">Custom Layout Panels (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions.html">Animation Transitions</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions-verbose.html">Animation Transitions (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions-examples.html">Animation Transitions (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions-quiz.html">Animation Transitions (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals.html">Compositor Custom Visuals</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals-verbose.html">Compositor Custom Visuals (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals-examples.html">Compositor Custom Visuals (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals-quiz.html">Compositor Custom Visuals (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation.html">Accessibility Automation</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation-verbose.html">Accessibility Automation (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation-examples.html">Accessibility Automation (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation-quiz.html">Accessibility Automation (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings.html">Advanced Composite Bindings</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings-verbose.html">Advanced Composite Bindings (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings-examples.html">Advanced Composite Bindings (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings-quiz.html">Advanced Composite Bindings (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia.html">Custom Drawing Skia</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia-verbose.html">Custom Drawing Skia (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia-examples.html">Custom Drawing Skia (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia-quiz.html">Custom Drawing Skia (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools.html">Avalonia Plus Devtools</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools-verbose.html">Avalonia Plus Devtools (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools-examples.html">Avalonia Plus Devtools (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools-quiz.html">Avalonia Plus Devtools (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging.html">Parcel Packaging</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging-verbose.html">Parcel Packaging (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging-examples.html">Parcel Packaging (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging-quiz.html">Parcel Packaging (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system.html">Custom Theme Design System</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system-verbose.html">Custom Theme Design System (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system-examples.html">Custom Theme Design System (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system-quiz.html">Custom Theme Design System (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring.html">Mvvm Di Wiring</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring-verbose.html">Mvvm Di Wiring (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring-examples.html">Mvvm Di Wiring (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring-quiz.html">Mvvm Di Wiring (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n.html">Localization I18n</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n-verbose.html">Localization I18n (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n-examples.html">Localization I18n (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n-quiz.html">Localization I18n (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services.html">File Pickers Platform Services</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services-verbose.html">File Pickers Platform Services (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services-examples.html">File Pickers Platform Services (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services-quiz.html">File Pickers Platform Services (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management.html">Custom Dialogs Window Management</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management-verbose.html">Custom Dialogs Window Management (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management-examples.html">Custom Dialogs Window Management (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management-quiz.html">Custom Dialogs Window Management (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists.html">Virtualization Large Lists</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists-verbose.html">Virtualization Large Lists (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists-examples.html">Virtualization Large Lists (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists-quiz.html">Virtualization Large Lists (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen.html">App Lifetimes Splash Screen</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen-verbose.html">App Lifetimes Splash Screen (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen-examples.html">App Lifetimes Splash Screen (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen-quiz.html">App Lifetimes Splash Screen (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing.html">Headless Testing</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing-verbose.html">Headless Testing (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing-examples.html">Headless Testing (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing-quiz.html">Headless Testing (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming.html">Nativeaot Trimming</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming-verbose.html">Nativeaot Trimming (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming-examples.html">Nativeaot Trimming (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming-quiz.html">Nativeaot Trimming (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile.html">Multi Targeting Desktop Browser Mobile</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-verbose.html">Multi Targeting Desktop Browser Mobile (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-examples.html">Multi Targeting Desktop Browser Mobile (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-quiz.html">Multi Targeting Desktop Browser Mobile (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress.html">Background Services And Progress</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress-verbose.html">Background Services And Progress (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress-examples.html">Background Services And Progress (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress-quiz.html">Background Services And Progress (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia.html">Cicd For Avalonia</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia-verbose.html">Cicd For Avalonia (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia-examples.html">Cicd For Avalonia (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia-quiz.html">Cicd For Avalonia (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry.html">Logging Telemetry</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry-verbose.html">Logging Telemetry (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry-examples.html">Logging Telemetry (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry-quiz.html">Logging Telemetry (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing.html">Printing</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing-verbose.html">Printing (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing-examples.html">Printing (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing-quiz.html">Printing (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater.html">Auto Updater</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater-verbose.html">Auto Updater (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater-examples.html">Auto Updater (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater-quiz.html">Auto Updater (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive.html">Layout System Deep Dive</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive-verbose.html">Layout System Deep Dive (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive-examples.html">Layout System Deep Dive (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive-quiz.html">Layout System Deep Dive (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive.html">Animation System Deep Dive</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive-verbose.html">Animation System Deep Dive (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive-examples.html">Animation System Deep Dive (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive-quiz.html">Animation System Deep Dive (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference.html">Graphics Drawing Reference</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference-verbose.html">Graphics Drawing Reference (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference-examples.html">Graphics Drawing Reference (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference-quiz.html">Graphics Drawing Reference (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout.html">Container Queries Responsive Layout</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout-verbose.html">Container Queries Responsive Layout (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout-examples.html">Container Queries Responsive Layout (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout-quiz.html">Container Queries Responsive Layout (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features.html">Typography Text Features</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features-verbose.html">Typography Text Features (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features-examples.html">Typography Text Features (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features-quiz.html">Typography Text Features (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling.html">Performance Profiling</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling-verbose.html">Performance Profiling (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling-examples.html">Performance Profiling (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling-quiz.html">Performance Profiling (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows.html">Platform Specific Windows</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows-verbose.html">Platform Specific Windows (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows-examples.html">Platform Specific Windows (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows-quiz.html">Platform Specific Windows (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux.html">Platform Specific Macos Linux</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux-verbose.html">Platform Specific Macos Linux (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux-examples.html">Platform Specific Macos Linux (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux-quiz.html">Platform Specific Macos Linux (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload.html">Xaml Previewer Hot Reload</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload-verbose.html">Xaml Previewer Hot Reload (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload-examples.html">Xaml Previewer Hot Reload (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload-quiz.html">Xaml Previewer Hot Reload (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup.html">Custom Flyout Popup</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup-verbose.html">Custom Flyout Popup (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup-examples.html">Custom Flyout Popup (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup-quiz.html">Custom Flyout Popup (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Patterns</span><ul class="nav-items"><li class="nav-item"><a href="../../03-patterns/001-service-locator-vs-di.html">Service Locator Vs Di</a></li><li class="nav-item"><a href="../../03-patterns/002-plugin-architecture.html">Plugin Architecture</a></li><li class="nav-item"><a href="../../03-patterns/003-async-initialization.html">Async Initialization</a></li><li class="nav-item"><a href="../../03-patterns/004-state-management.html">State Management</a></li><li class="nav-item"><a href="../../03-patterns/005-repository-unit-of-work.html">Repository Unit Of Work</a></li><li class="nav-item"><a href="../../03-patterns/006-logging-patterns.html">Logging Patterns</a></li><li class="nav-item"><a href="../../03-patterns/007-editor-application-architecture.html">Editor Application Architecture</a></li><li class="nav-item"><a href="../../03-patterns/008-focus-keyboard-navigation.html">Focus Keyboard Navigation</a></li><li class="nav-item"><a href="../../03-patterns/008-toggle-state-pattern.html">Toggle State Pattern</a></li><li class="nav-item"><a href="../../03-patterns/009-lazy-load-virtual-scrolling.html">Lazy Load Virtual Scrolling</a></li><li class="nav-item"><a href="../../03-patterns/009-storage-file-io-pipeline.html">Storage File Io Pipeline</a></li><li class="nav-group"><span class="nav-group-label">Migration</span><ul class="nav-items"><li class="nav-item"><a href="../../04-migration/avalonia-11-to-12.html">Avalonia 11 To 12</a></li><li class="nav-item"><a href="../../04-migration/wpf-to-avalonia-key-mappings.html">Wpf To Avalonia Key Mappings</a></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></nav><main class="doc-content" id="docContent"><h1>043E — TreeView with Hierarchical Data: Real-World Examples</h1>
+<p><strong>What you'll learn:</strong> Two complete scenarios — a project file explorer with lazy loading and search, and an organizational chart with drag support and expand-to-depth.</p>
+<p><strong>Prerequisites:</strong> <a href="043-treeview-hierarchical-data.html">043 — TreeView with Hierarchical Data</a>, <a href="043-treeview-hierarchical-data-verbose.html">043V — TreeView with Hierarchical Data (verbose companion)</a></p>
+<hr />
+<h2>Example 1: Project File Explorer with Lazy Loading and Search</h2>
+<h3>Goal</h3>
+<p>Build a file-system tree that lazily loads directory contents on expand, supports search-as-you-type with debounced filtering, and distinguishes folders from files with different icons and context actions.</p>
+<h3>ViewModel</h3>
+<pre><code class="language-csharp">using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+
+public partial class FileSystemNode : ObservableObject
+{
+    private bool _childrenLoaded;
+
+    public string Name { get; }
+    public string FullPath { get; }
+    public bool IsFolder { get; }
+    public string IconKey =&gt; IsFolder ? &quot;FolderIcon&quot; : &quot;FileIcon&quot;;
+
+    [ObservableProperty]
+    private bool _isExpanded;
+
+    [ObservableProperty]
+    private ObservableCollection&lt;FileSystemNode&gt; _children = new();
+
+    public FileSystemNode(string fullPath, bool isFolder)
+    {
+        FullPath = fullPath;
+        Name = System.IO.Path.GetFileName(fullPath);
+        if (string.IsNullOrEmpty(Name))
+            Name = fullPath; // Drive root
+        IsFolder = isFolder;
+
+        if (isFolder)
+        {
+            // Placeholder to show expand chevron
+            Children.Add(new FileSystemNode(&quot;&quot;, false) { Name = &quot;Loading...&quot; });
+        }
+    }
+
+    partial void OnIsExpandedChanged(bool value)
+    {
+        if (value &amp;&amp; IsFolder &amp;&amp; !_childrenLoaded)
+        {
+            _childrenLoaded = true;
+            _ = LoadChildrenAsync();
+        }
+    }
+
+    private async Task LoadChildrenAsync()
+    {
+        try
+        {
+            var children = new List&lt;FileSystemNode&gt;();
+
+            // Directories first
+            foreach (var dir in System.IO.Directory.EnumerateDirectories(FullPath))
+            {
+                if (!HasHiddenAttribute(dir))
+                    children.Add(new FileSystemNode(dir, true));
+            }
+
+            // Then files
+            foreach (var file in System.IO.Directory.EnumerateFiles(FullPath))
+            {
+                if (!HasHiddenAttribute(file))
+                    children.Add(new FileSystemNode(file, false));
+            }
+
+            // Sort: folders first by name, then files by name
+            var sorted = children
+                .OrderByDescending(n =&gt; n.IsFolder)
+                .ThenBy(n =&gt; n.Name, StringComparer.OrdinalIgnoreCase)
+                .ToList();
+
+            await Avalonia.Threading.Dispatcher.UIThread.InvokeAsync(() =&gt;
+            {
+                Children.Clear();
+                foreach (var node in sorted)
+                    Children.Add(node);
+            });
+        }
+        catch (UnauthorizedAccessException)
+        {
+            await Avalonia.Threading.Dispatcher.UIThread.InvokeAsync(() =&gt;
+            {
+                Children.Clear();
+                Children.Add(new FileSystemNode(&quot;&quot;, false) { Name = &quot;Access Denied&quot; });
+            });
+        }
+    }
+
+    private static bool HasHiddenAttribute(string path)
+    {
+        try
+        {
+            return (System.IO.File.GetAttributes(path) &amp; System.IO.FileAttributes.Hidden) != 0;
+        }
+        catch
+        {
+            return false;
+        }
+    }
+}
+
+public partial class FileExplorerViewModel : ObservableObject
+{
+    private List&lt;FileSystemNode&gt;? _allFiltered;
+
+    [ObservableProperty]
+    private ObservableCollection&lt;FileSystemNode&gt; _rootNodes = new();
+
+    [ObservableProperty]
+    private FileSystemNode? _selectedNode;
+
+    [ObservableProperty]
+    private string _searchText = &quot;&quot;;
+
+    [ObservableProperty]
+    private string _statusText = &quot;&quot;;
+
+    private CancellationTokenSource? _searchCts;
+
+    public FileExplorerViewModel()
+    {
+        // Start at drive roots
+        foreach (var drive in System.IO.DriveInfo.GetDrives()
+                     .Where(d =&gt; d.IsReady))
+        {
+            RootNodes.Add(new FileSystemNode(drive.RootDirectory.FullName, true));
+        }
+    }
+
+    partial void OnSelectedNodeChanged(FileSystemNode? value)
+    {
+        if (value is not null)
+        {
+            StatusText = value.IsFolder
+                ? $&quot;Folder: {value.FullPath}&quot;
+                : $&quot;File: {value.FullPath} ({GetFileSize(value.FullPath)})&quot;;
+        }
+    }
+
+    partial void OnSearchTextChanged(string value)
+    {
+        _searchCts?.Cancel();
+        _searchCts = new CancellationTokenSource();
+        var token = _searchCts.Token;
+
+        _ = Task.Run(async () =&gt;
+        {
+            await Task.Delay(300, token);
+            if (token.IsCancellationRequested) return;
+
+            var filtered = await BuildFilteredTreeAsync(value, token);
+            if (token.IsCancellationRequested) return;
+
+            await Avalonia.Threading.Dispatcher.UIThread.InvokeAsync(() =&gt;
+            {
+                RootNodes.Clear();
+                foreach (var node in filtered)
+                    RootNodes.Add(node);
+            });
+        }, token);
+    }
+
+    private async Task&lt;List&lt;FileSystemNode&gt;&gt; BuildFilteredTreeAsync(
+        string search, CancellationToken token)
+    {
+        if (string.IsNullOrWhiteSpace(search))
+        {
+            return await Task.Run(() =&gt;
+            {
+                var roots = new List&lt;FileSystemNode&gt;();
+                foreach (var drive in System.IO.DriveInfo.GetDrives()
+                             .Where(d =&gt; d.IsReady))
+                {
+                    roots.Add(new FileSystemNode(drive.RootDirectory.FullName, true));
+                }
+                return roots;
+            }, token);
+        }
+
+        // Walk a few levels deep to find matches
+        var results = new List&lt;FileSystemNode&gt;();
+        foreach (var drive in System.IO.DriveInfo.GetDrives().Where(d =&gt; d.IsReady))
+        {
+            token.ThrowIfCancellationRequested();
+            var matched = await SearchSubtreeAsync(
+                drive.RootDirectory.FullName, search, 0, 3, token);
+            if (matched is not null)
+                results.Add(matched);
+        }
+        return results;
+    }
+
+    private async Task&lt;FileSystemNode?&gt; SearchSubtreeAsync(
+        string path, string search, int depth, int maxDepth, CancellationToken token)
+    {
+        if (depth &gt; maxDepth) return null;
+        token.ThrowIfCancellationRequested();
+
+        var name = System.IO.Path.GetFileName(path);
+        if (string.IsNullOrEmpty(name)) name = path;
+        var isFolder = System.IO.Directory.Exists(path);
+        var matches = name.Contains(search, StringComparison.OrdinalIgnoreCase);
+
+        var childNodes = new List&lt;FileSystemNode&gt;();
+        if (isFolder &amp;&amp; depth &lt; maxDepth)
+        {
+            try
+            {
+                foreach (var entry in System.IO.Directory.EnumerateFileSystemEntries(path))
+                {
+                    token.ThrowIfCancellationRequested();
+                    var child = await SearchSubtreeAsync(
+                        entry, search, depth + 1, maxDepth, token);
+                    if (child is not null)
+                        childNodes.Add(child);
+                }
+            }
+            catch (UnauthorizedAccessException) { }
+        }
+
+        if (matches || childNodes.Count &gt; 0)
+        {
+            var node = new FileSystemNode(path, isFolder);
+            if (childNodes.Count &gt; 0)
+            {
+                node.Children.Clear();
+                foreach (var c in childNodes)
+                    node.Children.Add(c);
+            }
+            else if (!matches)
+            {
+                return null;
+            }
+            // Ensure placeholder for expandability if not loaded
+            if (isFolder &amp;&amp; node.Children.Count == 0 &amp;&amp; !matches)
+                return null;
+            return node;
+        }
+
+        return null;
+    }
+
+    private static string GetFileSize(string path)
+    {
+        try
+        {
+            var info = new System.IO.FileInfo(path);
+            if (info.Length &lt; 1024) return $&quot;{info.Length} B&quot;;
+            if (info.Length &lt; 1024 * 1024) return $&quot;{info.Length / 1024} KB&quot;;
+            return $&quot;{info.Length / (1024 * 1024):F1} MB&quot;;
+        }
+        catch { return &quot;Unknown&quot;; }
+    }
+
+    [RelayCommand]
+    private void ExpandAll()
+    {
+        _ = ExpandAllAsync(RootNodes, 0, 2);
+    }
+
+    private async Task ExpandAllAsync(
+        IEnumerable&lt;FileSystemNode&gt; nodes, int depth, int maxDepth)
+    {
+        if (depth &gt; maxDepth) return;
+
+        foreach (var node in nodes)
+        {
+            if (node.IsFolder)
+            {
+                node.IsExpanded = true;
+                // Small delay to let the UI breathe
+                await Task.Delay(10);
+                await ExpandAllAsync(node.Children, depth + 1, maxDepth);
+            }
+        }
+    }
+
+    [RelayCommand]
+    private void CollapseAll()
+    {
+        foreach (var node in RootNodes)
+            CollapseNode(node);
+    }
+
+    private void CollapseNode(FileSystemNode node)
+    {
+        node.IsExpanded = false;
+        foreach (var child in node.Children)
+            CollapseNode(child);
+    }
+}
+</code></pre>
+<h3>View</h3>
+<pre><code class="language-xml">&lt;Window xmlns=&quot;https://github.com/avaloniaui&quot;
+        xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+        xmlns:vm=&quot;clr-namespace:MyApp.ViewModels&quot;
+        xmlns:models=&quot;clr-namespace:MyApp.Models&quot;
+        x:DataType=&quot;vm:FileExplorerViewModel&quot;
+        Title=&quot;Project File Explorer&quot; Width=&quot;600&quot; Height=&quot;450&quot;&gt;
+  &lt;DockPanel&gt;
+    &lt;StackPanel DockPanel.Dock=&quot;Top&quot; Orientation=&quot;Horizontal&quot; Spacing=&quot;8&quot; Margin=&quot;8&quot;&gt;
+      &lt;TextBox Watermark=&quot;Search files and folders...&quot;
+               Text=&quot;{Binding SearchText}&quot;
+               Width=&quot;250&quot; /&gt;
+      &lt;Button Content=&quot;Expand to 2 Levels&quot; Command=&quot;{Binding ExpandAllCommand}&quot; /&gt;
+      &lt;Button Content=&quot;Collapse All&quot; Command=&quot;{Binding CollapseAllCommand}&quot; /&gt;
+    &lt;/StackPanel&gt;
+
+    &lt;TreeView ItemsSource=&quot;{Binding RootNodes}&quot;
+              SelectedItem=&quot;{Binding SelectedNode}&quot;
+              VirtualizingPanel.VirtualizationMode=&quot;Recycling&quot;
+              x:DataType=&quot;vm:FileExplorerViewModel&quot;&gt;
+      &lt;TreeView.Styles&gt;
+        &lt;Style Selector=&quot;TreeViewItem&quot;&gt;
+          &lt;Setter Property=&quot;IsExpanded&quot;
+                  Value=&quot;{Binding IsExpanded, Mode=TwoWay}&quot; /&gt;
+        &lt;/Style&gt;
+        &lt;Style Selector=&quot;TreeViewItem:empty /template/ ToggleButton#PART_ExpandCollapseChevron&quot;&gt;
+          &lt;Setter Property=&quot;IsVisible&quot; Value=&quot;False&quot; /&gt;
+        &lt;/Style&gt;
+        &lt;Style Selector=&quot;TreeViewItem:selected /template/ ContentPresenter#PART_HeaderPresenter&quot;&gt;
+          &lt;Setter Property=&quot;Background&quot;
+                  Value=&quot;{DynamicResource SystemAccentColor}&quot; /&gt;
+          &lt;Setter Property=&quot;Foreground&quot; Value=&quot;White&quot; /&gt;
+        &lt;/Style&gt;
+      &lt;/TreeView.Styles&gt;
+      &lt;TreeView.DataTemplates&gt;
+        &lt;TreeDataTemplate DataType=&quot;models:FileSystemNode&quot;
+                          ItemsSource=&quot;{Binding Children}&quot;
+                          x:DataType=&quot;models:FileSystemNode&quot;&gt;
+          &lt;StackPanel Orientation=&quot;Horizontal&quot; Spacing=&quot;6&quot;&gt;
+            &lt;PathIcon Data=&quot;{StaticResource FolderIcon}&quot;
+                      IsVisible=&quot;{Binding IsFolder}&quot; /&gt;
+            &lt;PathIcon Data=&quot;{StaticResource FileIcon}&quot;
+                      IsVisible=&quot;{Binding IsFolder, Converter={StaticResource BoolInvertConverter}}&quot; /&gt;
+            &lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;
+          &lt;/StackPanel&gt;
+        &lt;/TreeDataTemplate&gt;
+      &lt;/TreeView.DataTemplates&gt;
+    &lt;/TreeView&gt;
+
+    &lt;StatusBar DockPanel.Dock=&quot;Bottom&quot;&gt;
+      &lt;TextBlock Text=&quot;{Binding StatusText}&quot; /&gt;
+    &lt;/StatusBar&gt;
+  &lt;/DockPanel&gt;
+&lt;/Window&gt;
+</code></pre>
+<h3>How It Works</h3>
+<ol>
+<li><p><strong>Lazy loading with placeholder</strong> — Each <code>FileSystemNode</code> created as a folder starts with a single placeholder child (&quot;Loading...&quot;). This makes <code>HasItems = true</code> so the expand chevron appears. When the user expands, <code>OnIsExpandedChanged</code> triggers <code>LoadChildrenAsync</code>, which clears the placeholder and adds real children.</p>
+</li>
+<li><p><strong>Async directory enumeration</strong> — <code>LoadChildrenAsync</code> runs on a background thread via <code>Task.Run</code> (called from <code>_ = LoadChildrenAsync()</code> which starts the task). After gathering children, it marshals back to the UI thread with <code>Dispatcher.UIThread.InvokeAsync</code> to update the <code>ObservableCollection</code>.</p>
+</li>
+<li><p><strong>Debounced search</strong> — <code>OnSearchTextChanged</code> cancels any previous search via <code>CancellationTokenSource</code>, waits 300ms, then builds a filtered tree. The filter walks up to 3 levels deep and includes any node whose name matches or has a matching descendant. Results replace <code>RootNodes</code> entirely.</p>
+</li>
+<li><p><strong>Expand to depth</strong> — <code>ExpandAllAsync</code> recursively sets <code>IsExpanded = true</code> on nodes up to a maximum depth (2), with a 10ms delay between nodes to avoid blocking the UI thread. <code>CollapseAll</code> recursively sets <code>IsExpanded = false</code>.</p>
+</li>
+<li><p><strong>Status bar feedback</strong> — <code>OnSelectedNodeChanged</code> updates <code>StatusText</code> with the selected item's path and (for files) its size. The <code>StatusBar</code> at the bottom displays this.</p>
+</li>
+<li><p><strong>Type-conditional icons</strong> — The <code>TreeDataTemplate</code> shows either the <code>FolderIcon</code> or <code>FileIcon</code> based on the <code>IsFolder</code> property, using a <code>BoolInvertConverter</code> for the file icon visibility.</p>
+</li>
+</ol>
+<h3>Design Decisions and Trade-offs</h3>
+<ul>
+<li><strong>Background thread for enumeration</strong>: <code>Directory.EnumerateDirectories</code> is IO-bound and should not run on the UI thread. The async pattern keeps the UI responsive during expansion. The trade-off is complexity: cancellation tokens, thread marshaling, and error handling for <code>UnauthorizedAccessException</code>.</li>
+<li><strong>Placeholder pattern vs IsExpanded binding only</strong>: Without the placeholder, <code>OnIsExpandedChanged</code> would never fire because the chevron would not appear. The placeholder adds a brief &quot;Loading...&quot; flash. For a smoother UX, replace the placeholder with a loading spinner inside the <code>TreeDataTemplate</code>.</li>
+<li><strong>Search depth limit at 3</strong>: Walking the entire filesystem on every keystroke is impractical. The 3-level cap keeps search responsive. For deeper searches, add an explicit &quot;Search all&quot; button that runs without depth limit.</li>
+<li><strong>VirtualizationMode=&quot;Recycling&quot;</strong>: Reduces container creation overhead during expand/collapse. Without recycling, expanding a folder with 500 files creates 500 <code>TreeViewItem</code> instances; recycling reuses containers from collapsed nodes.</li>
+</ul>
+<hr />
+<h2>Example 2: Organizational Chart with Drag-to-Reparent</h2>
+<h3>Goal</h3>
+<p>Display a company org chart where managers can drag employees between teams, track selection in a detail panel, and collapse/expand business units.</p>
+<h3>ViewModel</h3>
+<pre><code class="language-csharp">using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+
+public partial class EmployeeNode : ObservableObject
+{
+    public int Id { get; set; }
+    public string Name { get; set; } = &quot;&quot;;
+    public string Title { get; set; } = &quot;&quot;;
+    public string Email { get; set; } = &quot;&quot;;
+    public string AvatarInitials =&gt; Name.Length &gt; 0
+        ? string.Join(&quot;&quot;, Name.Split(' ').Take(2).Select(w =&gt; w[0]))
+        : &quot;?&quot;;
+
+    [ObservableProperty]
+    private bool _isExpanded;
+
+    [ObservableProperty]
+    private ObservableCollection&lt;EmployeeNode&gt; _children = new();
+
+    public bool IsManager =&gt; Children.Count &gt; 0;
+}
+
+public partial class OrgChartViewModel : ObservableObject
+{
+    [ObservableProperty]
+    private ObservableCollection&lt;EmployeeNode&gt; _rootNodes = new();
+
+    [ObservableProperty]
+    private EmployeeNode? _selectedEmployee;
+
+    [ObservableProperty]
+    private string _detailText = &quot;Select an employee&quot;;
+
+    private int _nextId = 100;
+
+    public OrgChartViewModel()
+    {
+        BuildOrg();
+    }
+
+    private void BuildOrg()
+    {
+        var ceo = new EmployeeNode
+        {
+            Id = 1,
+            Name = &quot;Sarah Chen&quot;,
+            Title = &quot;CEO&quot;,
+            Email = &quot;sarah@company.com&quot;,
+            Children =
+            {
+                new EmployeeNode
+                {
+                    Id = 2, Name = &quot;Alice Johnson&quot;, Title = &quot;VP Engineering&quot;, Email = &quot;alice@company.com&quot;,
+                    Children =
+                    {
+                        new EmployeeNode { Id = 4, Name = &quot;Bob Smith&quot;, Title = &quot;Engineering Lead&quot;, Email = &quot;bob@company.com&quot; },
+                        new EmployeeNode { Id = 5, Name = &quot;Carol Lee&quot;, Title = &quot;Senior Dev&quot;, Email = &quot;carol@company.com&quot; },
+                    }
+                },
+                new EmployeeNode
+                {
+                    Id = 3, Name = &quot;David Brown&quot;, Title = &quot;VP Marketing&quot;, Email = &quot;david@company.com&quot;,
+                    Children =
+                    {
+                        new EmployeeNode { Id = 6, Name = &quot;Eve Davis&quot;, Title = &quot;Marketing Lead&quot;, Email = &quot;eve@company.com&quot; },
+                        new EmployeeNode { Id = 7, Name = &quot;Frank Wilson&quot;, Title = &quot;Designer&quot;, Email = &quot;frank@company.com&quot; },
+                    }
+                },
+            }
+        };
+        RootNodes.Add(ceo);
+    }
+
+    partial void OnSelectedEmployeeChanged(EmployeeNode? value)
+    {
+        DetailText = value is not null
+            ? $&quot;{value.Name}\n{value.Title}\n{value.Email}&quot;
+            : &quot;Select an employee&quot;;
+    }
+
+    [RelayCommand]
+    private void AddEmployee(EmployeeNode? manager)
+    {
+        if (manager is null) return;
+        _nextId++;
+        manager.Children.Add(new EmployeeNode
+        {
+            Id = _nextId,
+            Name = &quot;New Hire&quot;,
+            Title = &quot;Employee&quot;,
+            Email = $&quot;newhire{_nextId}@company.com&quot;,
+        });
+        manager.IsExpanded = true;
+    }
+
+    [RelayCommand]
+    private void RemoveEmployee(EmployeeNode? employee)
+    {
+        if (employee is null) return;
+
+        // Find and remove from parent
+        foreach (var root in RootNodes)
+        {
+            if (RemoveFromParent(root, employee))
+                break;
+        }
+    }
+
+    private bool RemoveFromParent(EmployeeNode parent, EmployeeNode target)
+    {
+        if (parent.Children.Remove(target))
+            return true;
+
+        foreach (var child in parent.Children)
+        {
+            if (RemoveFromParent(child, target))
+                return true;
+        }
+        return false;
+    }
+
+    [RelayCommand]
+    private void ReparentEmployee(EmployeeNode? employee)
+    {
+        // This would be triggered by a drag-drop operation.
+        // The actual drag-drop handling is done via Avalonia's DragDrop attached events.
+        // This command is a stub for programmatic reparenting.
+    }
+
+    [RelayCommand]
+    private void ExpandBusinessUnits()
+    {
+        foreach (var root in RootNodes)
+            ExpandToLevel(root, 2);
+    }
+
+    private void ExpandToLevel(EmployeeNode node, int depth)
+    {
+        if (depth &lt;= 0) return;
+        node.IsExpanded = true;
+        foreach (var child in node.Children)
+            ExpandToLevel(child, depth - 1);
+    }
+
+    [RelayCommand]
+    private void CollapseAll()
+    {
+        foreach (var root in RootNodes)
+            CollapseNode(root);
+    }
+
+    private void CollapseNode(EmployeeNode node)
+    {
+        node.IsExpanded = false;
+        foreach (var child in node.Children)
+            CollapseNode(child);
+    }
+}
+</code></pre>
+<h3>View</h3>
+<pre><code class="language-xml">&lt;Window xmlns=&quot;https://github.com/avaloniaui&quot;
+        xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+        xmlns:vm=&quot;clr-namespace:MyApp.ViewModels&quot;
+        xmlns:models=&quot;clr-namespace:MyApp.Models&quot;
+        x:DataType=&quot;vm:OrgChartViewModel&quot;
+        Title=&quot;Organizational Chart&quot; Width=&quot;700&quot; Height=&quot;500&quot;&gt;
+  &lt;DockPanel&gt;
+    &lt;StackPanel DockPanel.Dock=&quot;Top&quot; Orientation=&quot;Horizontal&quot; Spacing=&quot;8&quot; Margin=&quot;8&quot;&gt;
+      &lt;Button Content=&quot;Expand BUs&quot; Command=&quot;{Binding ExpandBusinessUnitsCommand}&quot; /&gt;
+      &lt;Button Content=&quot;Collapse All&quot; Command=&quot;{Binding CollapseAllCommand}&quot; /&gt;
+      &lt;Button Content=&quot;Add Employee&quot;
+              Command=&quot;{Binding AddEmployeeCommand}&quot;
+              CommandParameter=&quot;{Binding SelectedEmployee}&quot; /&gt;
+      &lt;Button Content=&quot;Remove Selected&quot;
+              Command=&quot;{Binding RemoveEmployeeCommand}&quot;
+              CommandParameter=&quot;{Binding SelectedEmployee}&quot; /&gt;
+    &lt;/StackPanel&gt;
+
+    &lt;Grid ColumnDefinitions=&quot;2*, *&quot; Margin=&quot;8&quot;&gt;
+      &lt;!-- TreeView --&gt;
+      &lt;TreeView ItemsSource=&quot;{Binding RootNodes}&quot;
+                SelectedItem=&quot;{Binding SelectedEmployee}&quot;
+                AllowDrop=&quot;True&quot;
+                VirtualizingPanel.VirtualizationMode=&quot;Recycling&quot;
+                x:DataType=&quot;vm:OrgChartViewModel&quot;&gt;
+        &lt;TreeView.Styles&gt;
+          &lt;Style Selector=&quot;TreeViewItem&quot;&gt;
+            &lt;Setter Property=&quot;IsExpanded&quot;
+                    Value=&quot;{Binding IsExpanded, Mode=TwoWay}&quot; /&gt;
+          &lt;/Style&gt;
+          &lt;Style Selector=&quot;TreeViewItem:empty /template/ ToggleButton#PART_ExpandCollapseChevron&quot;&gt;
+            &lt;Setter Property=&quot;IsVisible&quot; Value=&quot;False&quot; /&gt;
+          &lt;/Style&gt;
+          &lt;Style Selector=&quot;TreeViewItem:selected /template/ ContentPresenter#PART_HeaderPresenter&quot;&gt;
+            &lt;Setter Property=&quot;Background&quot;
+                    Value=&quot;{DynamicResource SystemAccentColor}&quot; /&gt;
+            &lt;Setter Property=&quot;Foreground&quot; Value=&quot;White&quot; /&gt;
+          &lt;/Style&gt;
+        &lt;/TreeView.Styles&gt;
+        &lt;TreeView.DataTemplates&gt;
+          &lt;TreeDataTemplate DataType=&quot;models:EmployeeNode&quot;
+                            ItemsSource=&quot;{Binding Children}&quot;
+                            x:DataType=&quot;models:EmployeeNode&quot;&gt;
+            &lt;StackPanel Orientation=&quot;Horizontal&quot; Spacing=&quot;8&quot;&gt;
+              &lt;Border Width=&quot;28&quot; Height=&quot;28&quot; CornerRadius=&quot;14&quot;
+                      Background=&quot;{DynamicResource SystemAccentColor}&quot;
+                      VerticalAlignment=&quot;Center&quot;&gt;
+                &lt;TextBlock Text=&quot;{Binding AvatarInitials}&quot;
+                           Foreground=&quot;White&quot;
+                           HorizontalAlignment=&quot;Center&quot;
+                           VerticalAlignment=&quot;Center&quot;
+                           FontSize=&quot;11&quot; FontWeight=&quot;Bold&quot; /&gt;
+              &lt;/Border&gt;
+              &lt;StackPanel VerticalAlignment=&quot;Center&quot;&gt;
+                &lt;TextBlock Text=&quot;{Binding Name}&quot; FontWeight=&quot;SemiBold&quot; /&gt;
+                &lt;TextBlock Text=&quot;{Binding Title}&quot; FontSize=&quot;11&quot; Foreground=&quot;Gray&quot; /&gt;
+              &lt;/StackPanel&gt;
+            &lt;/StackPanel&gt;
+          &lt;/TreeDataTemplate&gt;
+        &lt;/TreeView.DataTemplates&gt;
+      &lt;/TreeView&gt;
+
+      &lt;!-- Detail panel --&gt;
+      &lt;Border Grid.Column=&quot;1&quot; BorderBrush=&quot;LightGray&quot;
+              BorderThickness=&quot;1&quot; CornerRadius=&quot;6&quot; Padding=&quot;12&quot;
+              Margin=&quot;8,0,0,0&quot;&gt;
+        &lt;StackPanel Spacing=&quot;8&quot; VerticalAlignment=&quot;Top&quot;&gt;
+          &lt;TextBlock Text=&quot;Employee Details&quot;
+                     FontSize=&quot;16&quot; FontWeight=&quot;Bold&quot; /&gt;
+          &lt;TextBlock Text=&quot;{Binding DetailText}&quot;
+                     TextWrapping=&quot;Wrap&quot; /&gt;
+          &lt;Separator Margin=&quot;0,8&quot; /&gt;
+
+          &lt;TextBlock Text=&quot;Name: &quot; FontWeight=&quot;SemiBold&quot; /&gt;
+          &lt;TextBlock Text=&quot;{Binding SelectedEmployee.Name}&quot; /&gt;
+
+          &lt;TextBlock Text=&quot;Title: &quot; FontWeight=&quot;SemiBold&quot; /&gt;
+          &lt;TextBlock Text=&quot;{Binding SelectedEmployee.Title}&quot; /&gt;
+
+          &lt;TextBlock Text=&quot;Email: &quot; FontWeight=&quot;SemiBold&quot; /&gt;
+          &lt;TextBlock Text=&quot;{Binding SelectedEmployee.Email}&quot; /&gt;
+
+          &lt;TextBlock Text=&quot;Reports: &quot; FontWeight=&quot;SemiBold&quot; /&gt;
+          &lt;TextBlock Text=&quot;{Binding SelectedEmployee.Children.Count}&quot;
+                     x:DataType=&quot;models:EmployeeNode&quot; /&gt;
+        &lt;/StackPanel&gt;
+      &lt;/Border&gt;
+    &lt;/Grid&gt;
+  &lt;/DockPanel&gt;
+&lt;/Window&gt;
+</code></pre>
+<h3>How It Works</h3>
+<ol>
+<li><p><strong>TreeDataTemplate for org hierarchy</strong> — Each <code>EmployeeNode</code> has a <code>Children</code> collection for direct reports. The <code>TreeDataTemplate</code> binds <code>ItemsSource=&quot;{Binding Children}&quot;</code> to create recursive tree levels. Manager nodes get the expand chevron; leaf nodes (no children) get <code>:empty</code> pseudo-class hiding the chevron.</p>
+</li>
+<li><p><strong>Selection with detail panel</strong> — <code>SelectedItem=&quot;{Binding SelectedEmployee}&quot;</code> is a <code>TwoWay</code> binding. When the user clicks any node, <code>OnSelectedEmployeeChanged</code> updates the <code>DetailText</code> property with a multi-line string of name, title, and email. The right-side detail panel shows structured data bound to <code>SelectedEmployee.*</code>.</p>
+</li>
+<li><p><strong>Add/Remove employee</strong> — &quot;Add Employee&quot; adds a new <code>EmployeeNode</code> to the currently selected manager's <code>Children</code> and auto-expands the manager. &quot;Remove Selected&quot; recursively searches the tree to find and remove the selected node from its parent's <code>Children</code>.</p>
+</li>
+<li><p><strong>Expand to level</strong> — <code>ExpandBusinessUnitsCommand</code> calls <code>ExpandToLevel</code> which sets <code>IsExpanded = true</code> on root and first-level children (depth 2). The <code>IsExpanded</code> style binding propagates to the UI automatically.</p>
+</li>
+<li><p><strong>Avatar circle</strong> — Each node shows a colored circle with the employee's initials, generated from the <code>AvatarInitials</code> property (takes first character of first two name parts). The <code>Border</code> with <code>CornerRadius=&quot;14&quot;</code> creates the circular clip.</p>
+</li>
+<li><p><strong>Drag-drop readiness</strong> — <code>AllowDrop=&quot;True&quot;</code> is set on the TreeView. A full drag-drop implementation would handle <code>DragDrop.DragStart</code>, <code>DragDrop.Drop</code>, and drop-position indicators. The <code>ReparentEmployeeCommand</code> is a stub for the drop handler.</p>
+</li>
+</ol>
+<h3>Design Decisions and Trade-offs</h3>
+<ul>
+<li><strong>Recursive add/remove vs flat lookup</strong> — <code>RemoveFromParent</code> walks the entire tree recursively. For a flat org (100-200 employees) this is fine. For larger orgs, maintain a <code>Dictionary&lt;int, EmployeeNode&gt;</code> lookup for O(1) access.</li>
+<li><strong>Detail panel via SelectedEmployee binding vs event</strong> — Binding <code>SelectedEmployee</code> directly allows the detail panel to use sub-bindings (<code>SelectedEmployee.Name</code>, etc.). The trade-off: nullable sub-bindings require <code>x:DataType</code> on the detail panel's data context, or use <code>TargetNullValue</code>.</li>
+<li><strong>Single template for all nodes</strong> — Unlike the file explorer (which could use separate templates for managers vs ICs), the org chart uses one <code>TreeDataTemplate</code> for all <code>EmployeeNode</code> items. The UI distinguishes managers from ICs only by the expand chevron presence. This is simpler but gives less visual differentiation.</li>
+<li><strong>Expanded state persistence</strong> — The <code>IsExpanded</code> property is on each <code>EmployeeNode</code>. For large orgs, saving and restoring expanded state requires serializing the <code>IsExpanded</code> flag per node. This is straightforward to implement with JSON serialization.</li>
+</ul>
+<hr />
+<h2>Comparison: What Each Example Demonstrates</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Example 1: File Explorer</th>
+<th>Example 2: Org Chart</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data source</strong></td>
+<td>Real filesystem (IO-bound)</td>
+<td>In-memory model (flat)</td>
+</tr>
+<tr>
+<td><strong>Node types</strong></td>
+<td>Folders and files (single TreeDataTemplate)</td>
+<td>Employees with managers and ICs (single TreeDataTemplate)</td>
+</tr>
+<tr>
+<td><strong>Lazy loading</strong></td>
+<td>Async with placeholder + cancellation</td>
+<td>Not needed (full data loaded)</td>
+</tr>
+<tr>
+<td><strong>Search</strong></td>
+<td>Debounced, async, depth-limited</td>
+<td>Not implemented</td>
+</tr>
+<tr>
+<td><strong>Expand/collapse control</strong></td>
+<td>Expand to depth N, Collapse all</td>
+<td>Expand BUs (depth 2), Collapse all</td>
+</tr>
+<tr>
+<td><strong>Selection</strong></td>
+<td>Single, with status bar display</td>
+<td>Single, with detail panel</td>
+</tr>
+<tr>
+<td><strong>Drag/drop</strong></td>
+<td>Not implemented</td>
+<td>AllowDrop=True, command stub</td>
+</tr>
+<tr>
+<td><strong>Add/Remove</strong></td>
+<td>Not implemented</td>
+<td>Add to manager, remove from parent</td>
+</tr>
+<tr>
+<td><strong>Virtualization</strong></td>
+<td>Recycling mode</td>
+<td>Recycling mode</td>
+</tr>
+<tr>
+<td><strong>Key edge case</strong></td>
+<td>UnauthorizedAccessException for protected dirs</td>
+<td>Recursive remove from tree</td>
+</tr>
+<tr>
+<td><strong>Threading</strong></td>
+<td>Background IO with UI marshaling</td>
+<td>All on UI thread</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>See Also</h2>
+<ul>
+<li><a href="043-treeview-hierarchical-data.html">043 — TreeView with Hierarchical Data</a></li>
+<li><a href="043-treeview-hierarchical-data-verbose.html">043V — TreeView with Hierarchical Data (verbose companion)</a></li>
+<li><a href="../basics/009-data-templates-basics.html">009 — Data Templates Basics</a></li>
+<li><a href="015-item-lists.html">015 — Item Lists (ListBox, ItemsRepeater, DataGrid)</a></li>
+<li><a href="019-drag-drop.html">019 — Drag and Drop</a></li>
+<li><a href="../advanced/036-virtualization-large-lists.html">036 — Virtualization and Large List Performance</a></li>
+<li><a href="https://docs.avaloniaui.net/controls/treeview">Avalonia Docs: TreeView</a></li>
+<li><a href="https://docs.avaloniaui.net/controls/treeview/how-to-use-treeview-with-hierarchical-data">Avalonia Docs: TreeDataTemplate</a></li>
+</ul>
+</main><nav class="doc-toc" id="toc"></nav></div><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/powershell.min.js"></script><script src="../../_assets/js/search-index.js"></script><script>const CURRENT_PAGE="../../02-tutorials/intermediate/043-treeview-hierarchical-data-examples.html";</script><script src="../../_assets/js/ssg.js"></script></body></html>

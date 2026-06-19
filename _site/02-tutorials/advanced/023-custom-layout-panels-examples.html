@@ -1,0 +1,449 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>layout — Avalonia Docs</title><link rel="stylesheet" href="../../_assets/css/ssg.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='12' font-size='12'>A</text></svg>"></head><body><div class="layout"><nav class="sidebar" id="sidebar"><div class="sidebar-header"><h2><a href="../../index.html" style="color:inherit;text-decoration:none">Avalonia Docs</a></h2></div><div class="search-box"><input type="text" id="searchInput" placeholder="Search docs..." autocomplete="off"></div><div id="searchResults" class="search-results" style="display:none"></div><ul class="nav-tree" id="navTree"><li class="nav-group"><span class="nav-group-label">Quick References</span><ul class="nav-items"><li class="nav-item"><a href="../../01-quick-refs/accessibility-automation.html">Accessibility Automation</a></li><li class="nav-item"><a href="../../01-quick-refs/avalonia-12-breaking-changes.html">Avalonia 12 Breaking Changes</a></li><li class="nav-item"><a href="../../01-quick-refs/binding-modes.html">Binding Modes</a></li><li class="nav-item"><a href="../../01-quick-refs/brushes-colors-reference.html">Brushes Colors Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/common-controls-reference.html">Common Controls Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/common-converters.html">Common Converters</a></li><li class="nav-item"><a href="../../01-quick-refs/control-themes.html">Control Themes</a></li><li class="nav-item"><a href="../../01-quick-refs/dispatcher-timers-quick-ref.html">Dispatcher Timers Quick Ref</a></li><li class="nav-item"><a href="../../01-quick-refs/font-typography-reference.html">Font Typography Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/icons-reference.html">Icons Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/input-gestures.html">Input Gestures</a></li><li class="nav-item"><a href="../../01-quick-refs/mvvm-source-generators.html">Mvvm Source Generators</a></li><li class="nav-item"><a href="../../01-quick-refs/naming-conventions.html">Naming Conventions</a></li><li class="nav-item"><a href="../../01-quick-refs/property-system-quick-ref.html">Property System Quick Ref</a></li><li class="nav-item"><a href="../../01-quick-refs/resource-dictionaries.html">Resource Dictionaries</a></li><li class="nav-item"><a href="../../01-quick-refs/routed-events-quick-ref.html">Routed Events Quick Ref</a></li><li class="nav-item"><a href="../../01-quick-refs/shapes-geometries.html">Shapes Geometries</a></li><li class="nav-item"><a href="../../01-quick-refs/xaml-selectors.html">Xaml Selectors</a></li><li class="nav-group"><span class="nav-group-label">Basics</span><ul class="nav-items"><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup.html">Project Setup</a></li><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup-verbose.html">Project Setup (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup-examples.html">Project Setup (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup-quiz.html">Project Setup (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding.html">Command Binding</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding-verbose.html">Command Binding (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding-examples.html">Command Binding (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding-quiz.html">Command Binding (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling.html">Basic Styling</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling-verbose.html">Basic Styling (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling-examples.html">Basic Styling (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling-quiz.html">Basic Styling (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters.html">Value Converters</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters-verbose.html">Value Converters (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters-examples.html">Value Converters (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters-quiz.html">Value Converters (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes.html">Binding Modes</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes-verbose.html">Binding Modes (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes-examples.html">Binding Modes (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes-quiz.html">Binding Modes (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources.html">Resources</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources-verbose.html">Resources (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources-examples.html">Resources (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources-quiz.html">Resources (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property.html">Observable Object Property</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property-verbose.html">Observable Object Property (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property-examples.html">Observable Object Property (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property-quiz.html">Observable Object Property (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command.html">Relay Command</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command-verbose.html">Relay Command (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command-examples.html">Relay Command (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command-quiz.html">Relay Command (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-examples.html">Data Templates (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-basics.html">Data Templates Basics</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-basics-verbose.html">Data Templates Basics (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-basics-quiz.html">Data Templates Basics (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics.html">Window Dialog Basics</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics-verbose.html">Window Dialog Basics (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics-examples.html">Window Dialog Basics (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics-quiz.html">Window Dialog Basics (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Intermediate</span><ul class="nav-items"><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings.html">Compiled Bindings</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings-verbose.html">Compiled Bindings (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings-examples.html">Compiled Bindings (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings-quiz.html">Compiled Bindings (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles.html">Control Themes Vs Styles</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles-verbose.html">Control Themes Vs Styles (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles-examples.html">Control Themes Vs Styles (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles-quiz.html">Control Themes Vs Styles (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation.html">Data Validation</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation-verbose.html">Data Validation (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation-examples.html">Data Validation (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation-quiz.html">Data Validation (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns.html">Imessenger Patterns</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns-verbose.html">Imessenger Patterns (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns-examples.html">Imessenger Patterns (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns-quiz.html">Imessenger Patterns (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists.html">Item Lists</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists-verbose.html">Item Lists (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists-examples.html">Item Lists (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists-quiz.html">Item Lists (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management.html">Window Dialog Management</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management-verbose.html">Window Dialog Management (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management-examples.html">Window Dialog Management (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management-quiz.html">Window Dialog Management (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching.html">Theme Switching</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching-verbose.html">Theme Switching (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching-examples.html">Theme Switching (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching-quiz.html">Theme Switching (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation.html">Navigation</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation-verbose.html">Navigation (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation-examples.html">Navigation (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation-quiz.html">Navigation (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop.html">Drag Drop</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop-verbose.html">Drag Drop (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop-examples.html">Drag Drop (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop-quiz.html">Drag Drop (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive.html">Datagrid Deep Dive</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive-verbose.html">Datagrid Deep Dive (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive-examples.html">Datagrid Deep Dive (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive-quiz.html">Datagrid Deep Dive (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray.html">Menus Context Menus Tray</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray-verbose.html">Menus Context Menus Tray (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray-examples.html">Menus Context Menus Tray (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray-quiz.html">Menus Context Menus Tray (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data.html">Treeview Hierarchical Data</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data-verbose.html">Treeview Hierarchical Data (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data-examples.html">Treeview Hierarchical Data (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data-quiz.html">Treeview Hierarchical Data (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization.html">Charts Data Visualization</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization-verbose.html">Charts Data Visualization (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization-examples.html">Charts Data Visualization (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization-quiz.html">Charts Data Visualization (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database.html">Sqlite Local Database</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database-verbose.html">Sqlite Local Database (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database-examples.html">Sqlite Local Database (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database-quiz.html">Sqlite Local Database (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events.html">Routed Events</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events-verbose.html">Routed Events (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events-examples.html">Routed Events (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events-quiz.html">Routed Events (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system.html">Property System</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system-verbose.html">Property System (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system-examples.html">Property System (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system-quiz.html">Property System (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher.html">Threading Dispatcher</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher-verbose.html">Threading Dispatcher (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher-examples.html">Threading Dispatcher (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher-quiz.html">Threading Dispatcher (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management.html">Focus Management</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management-verbose.html">Focus Management (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management-examples.html">Focus Management (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management-quiz.html">Focus Management (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys.html">Keyboard Hotkeys</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys-verbose.html">Keyboard Hotkeys (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys-examples.html">Keyboard Hotkeys (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys-quiz.html">Keyboard Hotkeys (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events.html">Input Events</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events-verbose.html">Input Events (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events-examples.html">Input Events (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events-quiz.html">Input Events (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers.html">Gesture Recognizers</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers-verbose.html">Gesture Recognizers (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers-examples.html">Gesture Recognizers (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers-quiz.html">Gesture Recognizers (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar.html">Scrollviewer Scrollbar</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar-verbose.html">Scrollviewer Scrollbar (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar-examples.html">Scrollviewer Scrollbar (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar-quiz.html">Scrollviewer Scrollbar (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input.html">Textbox Text Input</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input-verbose.html">Textbox Text Input (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input-examples.html">Textbox Text Input (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input-quiz.html">Textbox Text Input (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding.html">Multibinding Prioritybinding</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding-verbose.html">Multibinding Prioritybinding (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding-examples.html">Multibinding Prioritybinding (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding-quiz.html">Multibinding Prioritybinding (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views.html">Collection Views</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views-verbose.html">Collection Views (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views-examples.html">Collection Views (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views-quiz.html">Collection Views (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher.html">Clipboard Launcher</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher-verbose.html">Clipboard Launcher (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher-examples.html">Clipboard Launcher (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher-quiz.html">Clipboard Launcher (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service.html">Storage Service</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service-verbose.html">Storage Service (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service-examples.html">Storage Service (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service-quiz.html">Storage Service (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls.html">Selection Controls</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls-verbose.html">Selection Controls (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls-examples.html">Selection Controls (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls-quiz.html">Selection Controls (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls.html">Range Toggle Controls</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls-verbose.html">Range Toggle Controls (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls-examples.html">Range Toggle Controls (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls-quiz.html">Range Toggle Controls (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview.html">Tabcontrol Expander Splitview</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview-verbose.html">Tabcontrol Expander Splitview (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview-examples.html">Tabcontrol Expander Splitview (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview-quiz.html">Tabcontrol Expander Splitview (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Advanced</span><ul class="nav-items"><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls.html">Custom Templated Controls</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls-verbose.html">Custom Templated Controls (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls-examples.html">Custom Templated Controls (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls-quiz.html">Custom Templated Controls (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch.html">Custom Controls From Scratch</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch-verbose.html">Custom Controls From Scratch (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch-examples.html">Custom Controls From Scratch (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch-quiz.html">Custom Controls From Scratch (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors.html">Attached Properties Behaviors</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors-verbose.html">Attached Properties Behaviors (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors-examples.html">Attached Properties Behaviors (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors-quiz.html">Attached Properties Behaviors (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels.html">Custom Layout Panels</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels-verbose.html">Custom Layout Panels (in depth)</a></li><li class="nav-item active"><a href="../../02-tutorials/advanced/023-custom-layout-panels-examples.html">Custom Layout Panels (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels-quiz.html">Custom Layout Panels (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions.html">Animation Transitions</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions-verbose.html">Animation Transitions (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions-examples.html">Animation Transitions (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions-quiz.html">Animation Transitions (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals.html">Compositor Custom Visuals</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals-verbose.html">Compositor Custom Visuals (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals-examples.html">Compositor Custom Visuals (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals-quiz.html">Compositor Custom Visuals (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation.html">Accessibility Automation</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation-verbose.html">Accessibility Automation (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation-examples.html">Accessibility Automation (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation-quiz.html">Accessibility Automation (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings.html">Advanced Composite Bindings</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings-verbose.html">Advanced Composite Bindings (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings-examples.html">Advanced Composite Bindings (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings-quiz.html">Advanced Composite Bindings (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia.html">Custom Drawing Skia</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia-verbose.html">Custom Drawing Skia (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia-examples.html">Custom Drawing Skia (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia-quiz.html">Custom Drawing Skia (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools.html">Avalonia Plus Devtools</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools-verbose.html">Avalonia Plus Devtools (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools-examples.html">Avalonia Plus Devtools (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools-quiz.html">Avalonia Plus Devtools (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging.html">Parcel Packaging</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging-verbose.html">Parcel Packaging (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging-examples.html">Parcel Packaging (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging-quiz.html">Parcel Packaging (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system.html">Custom Theme Design System</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system-verbose.html">Custom Theme Design System (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system-examples.html">Custom Theme Design System (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system-quiz.html">Custom Theme Design System (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring.html">Mvvm Di Wiring</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring-verbose.html">Mvvm Di Wiring (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring-examples.html">Mvvm Di Wiring (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring-quiz.html">Mvvm Di Wiring (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n.html">Localization I18n</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n-verbose.html">Localization I18n (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n-examples.html">Localization I18n (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n-quiz.html">Localization I18n (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services.html">File Pickers Platform Services</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services-verbose.html">File Pickers Platform Services (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services-examples.html">File Pickers Platform Services (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services-quiz.html">File Pickers Platform Services (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management.html">Custom Dialogs Window Management</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management-verbose.html">Custom Dialogs Window Management (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management-examples.html">Custom Dialogs Window Management (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management-quiz.html">Custom Dialogs Window Management (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists.html">Virtualization Large Lists</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists-verbose.html">Virtualization Large Lists (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists-examples.html">Virtualization Large Lists (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists-quiz.html">Virtualization Large Lists (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen.html">App Lifetimes Splash Screen</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen-verbose.html">App Lifetimes Splash Screen (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen-examples.html">App Lifetimes Splash Screen (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen-quiz.html">App Lifetimes Splash Screen (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing.html">Headless Testing</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing-verbose.html">Headless Testing (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing-examples.html">Headless Testing (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing-quiz.html">Headless Testing (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming.html">Nativeaot Trimming</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming-verbose.html">Nativeaot Trimming (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming-examples.html">Nativeaot Trimming (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming-quiz.html">Nativeaot Trimming (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile.html">Multi Targeting Desktop Browser Mobile</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-verbose.html">Multi Targeting Desktop Browser Mobile (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-examples.html">Multi Targeting Desktop Browser Mobile (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-quiz.html">Multi Targeting Desktop Browser Mobile (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress.html">Background Services And Progress</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress-verbose.html">Background Services And Progress (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress-examples.html">Background Services And Progress (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress-quiz.html">Background Services And Progress (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia.html">Cicd For Avalonia</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia-verbose.html">Cicd For Avalonia (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia-examples.html">Cicd For Avalonia (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia-quiz.html">Cicd For Avalonia (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry.html">Logging Telemetry</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry-verbose.html">Logging Telemetry (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry-examples.html">Logging Telemetry (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry-quiz.html">Logging Telemetry (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing.html">Printing</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing-verbose.html">Printing (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing-examples.html">Printing (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing-quiz.html">Printing (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater.html">Auto Updater</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater-verbose.html">Auto Updater (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater-examples.html">Auto Updater (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater-quiz.html">Auto Updater (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive.html">Layout System Deep Dive</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive-verbose.html">Layout System Deep Dive (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive-examples.html">Layout System Deep Dive (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive-quiz.html">Layout System Deep Dive (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive.html">Animation System Deep Dive</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive-verbose.html">Animation System Deep Dive (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive-examples.html">Animation System Deep Dive (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive-quiz.html">Animation System Deep Dive (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference.html">Graphics Drawing Reference</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference-verbose.html">Graphics Drawing Reference (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference-examples.html">Graphics Drawing Reference (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference-quiz.html">Graphics Drawing Reference (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout.html">Container Queries Responsive Layout</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout-verbose.html">Container Queries Responsive Layout (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout-examples.html">Container Queries Responsive Layout (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout-quiz.html">Container Queries Responsive Layout (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features.html">Typography Text Features</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features-verbose.html">Typography Text Features (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features-examples.html">Typography Text Features (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features-quiz.html">Typography Text Features (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling.html">Performance Profiling</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling-verbose.html">Performance Profiling (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling-examples.html">Performance Profiling (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling-quiz.html">Performance Profiling (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows.html">Platform Specific Windows</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows-verbose.html">Platform Specific Windows (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows-examples.html">Platform Specific Windows (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows-quiz.html">Platform Specific Windows (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux.html">Platform Specific Macos Linux</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux-verbose.html">Platform Specific Macos Linux (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux-examples.html">Platform Specific Macos Linux (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux-quiz.html">Platform Specific Macos Linux (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload.html">Xaml Previewer Hot Reload</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload-verbose.html">Xaml Previewer Hot Reload (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload-examples.html">Xaml Previewer Hot Reload (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload-quiz.html">Xaml Previewer Hot Reload (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup.html">Custom Flyout Popup</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup-verbose.html">Custom Flyout Popup (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup-examples.html">Custom Flyout Popup (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup-quiz.html">Custom Flyout Popup (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Patterns</span><ul class="nav-items"><li class="nav-item"><a href="../../03-patterns/001-service-locator-vs-di.html">Service Locator Vs Di</a></li><li class="nav-item"><a href="../../03-patterns/002-plugin-architecture.html">Plugin Architecture</a></li><li class="nav-item"><a href="../../03-patterns/003-async-initialization.html">Async Initialization</a></li><li class="nav-item"><a href="../../03-patterns/004-state-management.html">State Management</a></li><li class="nav-item"><a href="../../03-patterns/005-repository-unit-of-work.html">Repository Unit Of Work</a></li><li class="nav-item"><a href="../../03-patterns/006-logging-patterns.html">Logging Patterns</a></li><li class="nav-item"><a href="../../03-patterns/007-editor-application-architecture.html">Editor Application Architecture</a></li><li class="nav-item"><a href="../../03-patterns/008-focus-keyboard-navigation.html">Focus Keyboard Navigation</a></li><li class="nav-item"><a href="../../03-patterns/008-toggle-state-pattern.html">Toggle State Pattern</a></li><li class="nav-item"><a href="../../03-patterns/009-lazy-load-virtual-scrolling.html">Lazy Load Virtual Scrolling</a></li><li class="nav-item"><a href="../../03-patterns/009-storage-file-io-pipeline.html">Storage File Io Pipeline</a></li><li class="nav-group"><span class="nav-group-label">Migration</span><ul class="nav-items"><li class="nav-item"><a href="../../04-migration/avalonia-11-to-12.html">Avalonia 11 To 12</a></li><li class="nav-item"><a href="../../04-migration/wpf-to-avalonia-key-mappings.html">Wpf To Avalonia Key Mappings</a></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></nav><main class="doc-content" id="docContent"><h1>023E — Custom Layout Panels: Real-World Examples</h1>
+<p><strong>Applies to:</strong> <a href="023-custom-layout-panels.html">023 — Custom Layout Panels</a> | <a href="023-custom-layout-panels-verbose.html">023V — In-Depth Companion</a></p>
+<hr />
+<h2>Example 1: MasonryPanel</h2>
+<h3>Goal</h3>
+<p>A panel that arranges child elements in a masonry (Pinterest-style) layout. Items have varying heights but a fixed column width. The panel places each item in the column with the least total height. The number of columns is configurable or computed from the available width and a <code>ColumnWidth</code> property.</p>
+<h3>ViewModel</h3>
+<pre><code class="language-csharp">// ViewModels/GalleryViewModel.cs
+using System.Collections.ObjectModel;
+using Avalonia.Media;
+using CommunityToolkit.Mvvm.ComponentModel;
+
+namespace MyApp.ViewModels;
+
+public partial class CardItemViewModel : ObservableObject
+{
+    [ObservableProperty] private string _title = string.Empty;
+    [ObservableProperty] private string _description = string.Empty;
+    [ObservableProperty] private Color _accentColor = Colors.Gray;
+    [ObservableProperty] private double _cardHeight = 100;
+}
+
+public partial class GalleryViewModel : ObservableObject
+{
+    public ObservableCollection&lt;CardItemViewModel&gt; Cards { get; } = [];
+}
+</code></pre>
+<h3>XAML View</h3>
+<pre><code class="language-xml">&lt;!-- Views/GalleryView.axaml --&gt;
+&lt;UserControl xmlns=&quot;https://github.com/avaloniaui&quot;
+             xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+             xmlns:vm=&quot;using:MyApp.ViewModels&quot;
+             xmlns:controls=&quot;using:MyApp.Controls&quot;
+             x:DataType=&quot;vm:GalleryViewModel&quot;&gt;
+  &lt;ScrollViewer&gt;
+    &lt;controls:MasonryPanel ColumnWidth=&quot;240&quot;
+                            HorizontalAlignment=&quot;Center&quot;&gt;
+      &lt;ItemsControl ItemsSource=&quot;{Binding Cards}&quot;&gt;
+        &lt;ItemsControl.ItemsPanel&gt;
+          &lt;ItemsPanelTemplate&gt;
+            &lt;controls:MasonryPanel ColumnWidth=&quot;240&quot; /&gt;
+          &lt;/ItemsPanelTemplate&gt;
+        &lt;/ItemsControl.ItemsPanel&gt;
+        &lt;ItemsControl.ItemTemplate&gt;
+          &lt;DataTemplate x:DataType=&quot;vm:CardItemViewModel&quot;&gt;
+            &lt;Border Background=&quot;{Binding AccentColor}&quot;
+                    CornerRadius=&quot;8&quot; Margin=&quot;4&quot;
+                    Height=&quot;{Binding CardHeight}&quot;&gt;
+              &lt;StackPanel Margin=&quot;12&quot;&gt;
+                &lt;TextBlock Text=&quot;{Binding Title}&quot;
+                           FontWeight=&quot;Bold&quot; /&gt;
+                &lt;TextBlock Text=&quot;{Binding Description}&quot;
+                           TextWrapping=&quot;Wrap&quot; /&gt;
+              &lt;/StackPanel&gt;
+            &lt;/Border&gt;
+          &lt;/DataTemplate&gt;
+        &lt;/ItemsControl.ItemTemplate&gt;
+      &lt;/ItemsControl&gt;
+    &lt;/controls:MasonryPanel&gt;
+  &lt;/ScrollViewer&gt;
+&lt;/UserControl&gt;
+</code></pre>
+<h3>How It Works</h3>
+<ol>
+<li><code>MasonryPanel</code> extends <code>Panel</code>. It exposes <code>ColumnWidthProperty</code> (<code>double</code>, default 200) and <code>ColumnSpacingProperty</code> (<code>double</code>, default 8).</li>
+<li><code>MeasureOverride</code> computes the number of columns from <code>availableSize.Width</code>: <code>var columns = Math.Max(1, (int)((availableSize.Width + ColumnSpacing) / (ColumnWidth + ColumnSpacing)))</code>. Each child is measured with a constraint of <code>(ColumnWidth, availableSize.Height)</code>.</li>
+<li><code>ArrangeOverride</code> maintains an array of column heights. For each child, it finds the column index with the smallest height, arranges the child at that column's X position and current Y offset, and adds the child's height (plus spacing) to that column's accumulator.</li>
+<li><code>AffectsMeasure&lt;MasonryPanel&gt;(ColumnWidthProperty, ColumnSpacingProperty)</code> is registered in the static constructor.</li>
+</ol>
+<pre><code class="language-csharp">// Controls/MasonryPanel.cs
+using Avalonia;
+using Avalonia.Controls;
+using Avalonia.Layout;
+
+namespace MyApp.Controls;
+
+public class MasonryPanel : Panel
+{
+    public static readonly StyledProperty&lt;double&gt; ColumnWidthProperty =
+        AvaloniaProperty.Register&lt;MasonryPanel, double&gt;(nameof(ColumnWidth), 200);
+
+    public static readonly StyledProperty&lt;double&gt; ColumnSpacingProperty =
+        AvaloniaProperty.Register&lt;MasonryPanel, double&gt;(nameof(ColumnSpacing), 8);
+
+    public double ColumnWidth
+    {
+        get =&gt; GetValue(ColumnWidthProperty);
+        set =&gt; SetValue(ColumnWidthProperty, Math.Max(50, value));
+    }
+
+    public double ColumnSpacing
+    {
+        get =&gt; GetValue(ColumnSpacingProperty);
+        set =&gt; SetValue(ColumnSpacingProperty, Math.Max(0, value));
+    }
+
+    static MasonryPanel()
+    {
+        AffectsMeasure&lt;MasonryPanel&gt;(ColumnWidthProperty, ColumnSpacingProperty);
+    }
+
+    protected override Size MeasureOverride(Size availableSize)
+    {
+        var columnWidth = ColumnWidth;
+        var spacing = ColumnSpacing;
+        var columns = Math.Max(1, (int)((availableSize.Width + spacing) / (columnWidth + spacing)));
+
+        if (double.IsInfinity(availableSize.Width))
+            columns = 1;
+
+        var childConstraint = new Size(columnWidth, availableSize.Height);
+        var columnHeights = new double[columns];
+
+        foreach (var child in Children)
+        {
+            child.Measure(childConstraint);
+            var col = Array.IndexOf(columnHeights, columnHeights.Min());
+            columnHeights[col] += child.DesiredSize.Height + spacing;
+        }
+
+        var totalHeight = columnHeights.Length &gt; 0 ? columnHeights.Max() : 0;
+        return new Size(columns * (columnWidth + spacing) - spacing, totalHeight);
+    }
+
+    protected override Size ArrangeOverride(Size finalSize)
+    {
+        var columnWidth = ColumnWidth;
+        var spacing = ColumnSpacing;
+        var columns = Math.Max(1, (int)((finalSize.Width + spacing) / (columnWidth + spacing)));
+
+        if (double.IsInfinity(finalSize.Width))
+            columns = 1;
+
+        var columnHeights = new double[columns];
+
+        foreach (var child in Children)
+        {
+            var col = Array.IndexOf(columnHeights, columnHeights.Min());
+            var x = col * (columnWidth + spacing);
+            var y = columnHeights[col];
+            child.Arrange(new Rect(x, y, columnWidth, child.DesiredSize.Height));
+            columnHeights[col] += child.DesiredSize.Height + spacing;
+        }
+
+        return finalSize;
+    }
+}
+</code></pre>
+<h3>Design Decisions</h3>
+<ul>
+<li><strong>Fill-shortest-column algorithm.</strong> This produces a balanced layout without sorting items by height. The first item always goes in column 0, the second in column 1, etc., which gives the user control over relative ordering while minimizing height differences.</li>
+<li><strong><code>ColumnWidth</code> as a fixed value.</strong> Variable column widths (each column adapts to its content) would require a different algorithm (like <code>MultiColumnPanel</code>). Fixed-width masonry is simpler and matches the common Pinterest/Unsplash layout.</li>
+<li><strong>No <code>RowSpacing</code> separate from <code>ColumnSpacing</code>.</strong> A single <code>Spacing</code> property applies to both axes. If vertical and horizontal gaps need to differ, add a second property or defer to the consumer's margin on each child.</li>
+</ul>
+<h3>Edge Cases</h3>
+<ul>
+<li><strong>Fewer children than columns.</strong> Unused columns get no items and contribute no height. The panel returns the height of the tallest column as its desired size.</li>
+<li><strong>Zero or negative <code>ColumnWidth</code>.</strong> Clamp to a minimum of 50px in the property setter to avoid division by zero.</li>
+<li><strong><code>availableSize.Width</code> is <code>Infinity</code></strong> (e.g., inside a horizontal <code>StackPanel</code>). The panel cannot compute columns from infinite width. Fall back to a single column or a hardcoded default like 800px. Better: document that <code>MasonryPanel</code> should be used inside a <code>ScrollViewer</code> or a <code>Grid</code> row with constrained width.</li>
+<li><strong>Child <code>Margin</code>.</strong> MasonryPanel does <strong>not</strong> include child margin in column height tracking. Each child's final arrange size comes from <code>DesiredSize</code>, which already includes margin. The column accumulator adds <code>DesiredSize.Height + Spacing</code>.</li>
+<li><strong>Dynamic child height changes.</strong> The panel's <code>InvalidateMeasure()</code> is not automatically triggered when a child's height changes (e.g., via binding). Wire <code>EffectiveViewportChanged</code> or have the ViewModel notify via an event that re-measures the panel.</li>
+</ul>
+<hr />
+<h2>Example 2: AccordionPanel</h2>
+<h3>Goal</h3>
+<p>A vertical panel where items stack with a gap, but each item can be &quot;expanded&quot; to occupy more vertical space. Only one item is expanded at a time. Expanding an item pushes subsequent items down via a smooth layout transition. The panel exposes <code>ExpandedIndexProperty</code> and animates size changes.</p>
+<h3>ViewModel</h3>
+<pre><code class="language-csharp">// ViewModels/FaqViewModel.cs
+using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
+
+namespace MyApp.ViewModels;
+
+public partial class FaqItemViewModel : ObservableObject
+{
+    [ObservableProperty] private string _question = string.Empty;
+    [ObservableProperty] private string _answer = string.Empty;
+    [ObservableProperty] private bool _isExpanded;
+}
+
+public partial class FaqViewModel : ObservableObject
+{
+    public ObservableCollection&lt;FaqItemViewModel&gt; Items { get; } = [];
+
+    [ObservableProperty]
+    private int _expandedIndex = -1;
+
+    partial void OnExpandedIndexChanged(int value)
+    {
+        for (int i = 0; i &lt; Items.Count; i++)
+            Items[i].IsExpanded = i == value;
+    }
+}
+</code></pre>
+<h3>XAML View</h3>
+<pre><code class="language-xml">&lt;!-- Views/FaqView.axaml --&gt;
+&lt;UserControl xmlns=&quot;https://github.com/avaloniaui&quot;
+             xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+             xmlns:vm=&quot;using:MyApp.ViewModels&quot;
+             xmlns:controls=&quot;using:MyApp.Controls&quot;
+             x:DataType=&quot;vm:FaqViewModel&quot;&gt;
+  &lt;ScrollViewer&gt;
+    &lt;controls:AccordionPanel ExpandedIndex=&quot;{Binding ExpandedIndex, Mode=TwoWay}&quot;
+                              ItemSpacing=&quot;4&quot;&gt;
+      &lt;ItemsControl ItemsSource=&quot;{Binding Items}&quot;&gt;
+        &lt;ItemsControl.ItemsPanel&gt;
+          &lt;ItemsPanelTemplate&gt;
+            &lt;controls:AccordionPanel ExpandedIndex=&quot;{Binding $parent[ItemsControl].DataContext.ExpandedIndex, Mode=TwoWay}&quot;
+                                      ItemSpacing=&quot;4&quot; /&gt;
+          &lt;/ItemsPanelTemplate&gt;
+        &lt;/ItemsControl.ItemsPanel&gt;
+        &lt;ItemsControl.ItemTemplate&gt;
+          &lt;DataTemplate x:DataType=&quot;vm:FaqItemViewModel&quot;&gt;
+            &lt;Border Background=&quot;#f0f0f0&quot; CornerRadius=&quot;6&quot;
+                    Padding=&quot;12&quot;&gt;
+              &lt;StackPanel&gt;
+                &lt;TextBlock Text=&quot;{Binding Question}&quot;
+                           FontWeight=&quot;Bold&quot;
+                           PointerPressed=&quot;OnQuestionClicked&quot; /&gt;
+                &lt;TextBlock Text=&quot;{Binding Answer}&quot;
+                           TextWrapping=&quot;Wrap&quot;
+                           IsVisible=&quot;{Binding IsExpanded}&quot;
+                           Margin=&quot;0,8,0,0&quot; /&gt;
+              &lt;/StackPanel&gt;
+            &lt;/Border&gt;
+          &lt;/DataTemplate&gt;
+        &lt;/ItemsControl.ItemTemplate&gt;
+      &lt;/ItemsControl&gt;
+    &lt;/controls:AccordionPanel&gt;
+  &lt;/ScrollViewer&gt;
+&lt;/UserControl&gt;
+</code></pre>
+<h3>How It Works</h3>
+<ol>
+<li><code>AccordionPanel</code> extends <code>Panel</code>. It exposes <code>ExpandedIndexProperty</code> (<code>StyledProperty&lt;int&gt;</code>, <code>defaultBindingMode: TwoWay</code>, default -1) and <code>ItemSpacingProperty</code> (<code>StyledProperty&lt;double&gt;</code>, default 0).</li>
+<li><code>MeasureOverride</code> iterates children. For the expanded child, it passes <code>availableSize.Height</code> as the constraint (let it be as tall as it needs). For collapsed children, it constrains height to the collapsed size (e.g., the header-only height). The panel returns the sum of all child heights plus spacing.</li>
+<li><code>ArrangeOverride</code> positions children vertically. The expanded child gets its full desired height; collapsed children get their header-only height. The panel supports <code>RenderTransform</code> transitions by applying a <code>TranslateTransform</code> to children that shift position when the expanded index changes.</li>
+<li>When <code>ExpandedIndex</code> changes, the panel notifies the layout system via <code>InvalidateMeasure()</code>. Children below the expanded item will be pushed down.</li>
+</ol>
+<pre><code class="language-csharp">// Controls/AccordionPanel.cs
+using Avalonia;
+using Avalonia.Controls;
+using Avalonia.Layout;
+
+namespace MyApp.Controls;
+
+public class AccordionPanel : Panel
+{
+    private int _collapsedChildCount;
+
+    public static readonly StyledProperty&lt;int&gt; ExpandedIndexProperty =
+        AvaloniaProperty.Register&lt;AccordionPanel, int&gt;(nameof(ExpandedIndex), -1,
+            defaultBindingMode: Avalonia.Data.BindingMode.TwoWay);
+
+    public static readonly StyledProperty&lt;double&gt; ItemSpacingProperty =
+        AvaloniaProperty.Register&lt;AccordionPanel, double&gt;(nameof(ItemSpacing), 0);
+
+    public int ExpandedIndex
+    {
+        get =&gt; GetValue(ExpandedIndexProperty);
+        set =&gt; SetValue(ExpandedIndexProperty, value);
+    }
+
+    public double ItemSpacing
+    {
+        get =&gt; GetValue(ItemSpacingProperty);
+        set =&gt; SetValue(ItemSpacingProperty, Math.Max(0, value));
+    }
+
+    static AccordionPanel()
+    {
+        AffectsMeasure&lt;AccordionPanel&gt;(ExpandedIndexProperty, ItemSpacingProperty);
+    }
+
+    protected override Size MeasureOverride(Size availableSize)
+    {
+        var expanded = ExpandedIndex;
+        var spacing = ItemSpacing;
+        double totalHeight = 0;
+        _collapsedChildCount = 0;
+
+        for (int i = 0; i &lt; Children.Count; i++)
+        {
+            var child = Children[i];
+            if (i == expanded)
+            {
+                child.Measure(availableSize);
+            }
+            else
+            {
+                child.Measure(new Size(availableSize.Width, 0));
+                _collapsedChildCount++;
+            }
+
+            totalHeight += child.DesiredSize.Height;
+            if (i &lt; Children.Count - 1)
+                totalHeight += spacing;
+        }
+
+        return new Size(availableSize.Width, totalHeight);
+    }
+
+    protected override Size ArrangeOverride(Size finalSize)
+    {
+        var expanded = ExpandedIndex;
+        var spacing = ItemSpacing;
+        double y = 0;
+
+        for (int i = 0; i &lt; Children.Count; i++)
+        {
+            var child = Children[i];
+            var childHeight = child.DesiredSize.Height;
+            child.Arrange(new Rect(0, y, finalSize.Width, childHeight));
+            y += childHeight + spacing;
+        }
+
+        return finalSize;
+    }
+}
+</code></pre>
+<h3>Design Decisions</h3>
+<ul>
+<li><strong><code>ExpandedIndex</code> on the panel, not per-item.</strong> The panel tracks which item is expanded. This enforces the single-expansion constraint at the layout level. The ViewModel mirrors this via <code>OnExpandedIndexChanged</code> for per-item state (e.g., showing/hiding answer text).</li>
+<li><strong>Header-only size for collapsed items.</strong> The panel measures each collapsed child only for its minimum (header) size. The consumer controls the collapsed appearance via <code>IsExpanded</code> bindings on inner elements; the panel controls the layout slot.</li>
+<li><strong>Smooth expansion.</strong> The panel does not animate directly. Instead, it applies a <code>RenderTransform</code> transition on each child via the <code>Transitions</code> property. Consumers add <code>&lt;DoubleTransition Property=&quot;RenderTransform.TranslateY&quot; Duration=&quot;0:0:0.2&quot; /&gt;</code> on child elements for automatic animation.</li>
+</ul>
+<h3>Edge Cases</h3>
+<ul>
+<li><strong><code>ExpandedIndex</code> set to -1 (nothing expanded).</strong> All children are measured and arranged at their header-only height. The panel returns the sum of header heights.</li>
+<li><strong><code>ExpandedIndex</code> set to a value &gt;= <code>Children.Count</code>.</strong> Clamp to <code>Children.Count - 1</code> in the property setter. If <code>Children.Count</code> is 0, ignore the set.</li>
+<li><strong>Rapid expansion switching.</strong> Each <code>ExpandedIndex</code> change triggers <code>InvalidateMeasure()</code>. The layout system processes these sequentially. No special debouncing is needed at the panel level, but the consumer should avoid setting the index faster than the layout pass completes.</li>
+<li><strong>Child removal during expanded state.</strong> If the expanded child is removed from <code>Children</code>, set <code>ExpandedIndex</code> to 0 (or -1 if now empty) and re-measure.</li>
+</ul>
+<hr />
+<h2>Testing</h2>
+<h3>Example 1: MasonryPanel</h3>
+<pre><code class="language-csharp">[AvaloniaFact]
+public void MasonryPanel_ArrangesChildrenInSeparateColumns()
+{
+    var panel = new MasonryPanel { ColumnWidth = 100, ColumnSpacing = 10 };
+    for (int i = 0; i &lt; 3; i++)
+    {
+        panel.Children.Add(new Border { Width = 100, Height = 80 });
+    }
+    panel.Measure(new Size(350, double.PositiveInfinity));
+    panel.Arrange(new Rect(0, 0, 350, panel.DesiredSize.Height));
+
+    var xPositions = panel.Children.Select(c =&gt; c.Bounds.X).Distinct().Count();
+    xPositions.Should().Be(3);
+}
+
+[AvaloniaFact]
+public void MasonryPanel_MeasureWithInfiniteWidth_FallsBackToOneColumn()
+{
+    var panel = new MasonryPanel { ColumnWidth = 200, ColumnSpacing = 0 };
+    panel.Children.Add(new Border { Width = 200, Height = 50 });
+    panel.Children.Add(new Border { Width = 200, Height = 50 });
+
+    panel.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
+    panel.DesiredSize.Width.Should().Be(200);
+}
+</code></pre>
+<h3>Example 2: AccordionPanel</h3>
+<pre><code class="language-csharp">[AvaloniaFact]
+public void AccordionPanel_ExpandedChild_GetsFullHeight()
+{
+    var panel = new AccordionPanel { ItemSpacing = 4 };
+    var child1 = new Border { Width = 200, Height = 30 };
+    var child2 = new Border { Width = 200, Height = 100 };
+    panel.Children.Add(child1);
+    panel.Children.Add(child2);
+
+    panel.ExpandedIndex = 1;
+    panel.Measure(new Size(200, double.PositiveInfinity));
+    panel.Arrange(new Rect(0, 0, 200, panel.DesiredSize.Height));
+
+    child2.Bounds.Height.Should().Be(100);
+    child1.Bounds.Y.Should().Be(0);
+    child2.Bounds.Y.Should().BeGreaterThan(child1.Bounds.Y);
+}
+
+[AvaloniaFact]
+public void AccordionPanel_NoExpandedItem_AllCollapsed()
+{
+    var panel = new AccordionPanel();
+    panel.Children.Add(new Border { Width = 200, Height = 50 });
+    panel.Children.Add(new Border { Width = 200, Height = 50 });
+
+    panel.ExpandedIndex = -1;
+    panel.Measure(new Size(200, double.PositiveInfinity));
+    panel.Arrange(new Rect(0, 0, 200, panel.DesiredSize.Height));
+
+    panel.Children[0].Bounds.Height.Should().Be(50);
+    panel.Children[1].Bounds.Height.Should().Be(50);
+}
+</code></pre>
+<h2>What These Examples Demonstrate</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>MasonryPanel</th>
+<th>AccordionPanel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Layout axis</strong></td>
+<td>Horizontal (multiple columns, short-column fill)</td>
+<td>Vertical (single column, expanded + collapsed)</td>
+</tr>
+<tr>
+<td><strong>Algorithm</strong></td>
+<td>Shortest-column greedy</td>
+<td>Fixed-position with one variable-height slot</td>
+</tr>
+<tr>
+<td><strong>Property that affects layout</strong></td>
+<td><code>ColumnWidth</code>, <code>ColumnSpacing</code></td>
+<td><code>ExpandedIndex</code>, <code>ItemSpacing</code></td>
+</tr>
+<tr>
+<td><strong>Measure strategy</strong></td>
+<td>Uniform child width, variable height per item</td>
+<td>Two modes: full-height (expanded) vs header-only (collapsed)</td>
+</tr>
+<tr>
+<td><strong>Smooth transitions</strong></td>
+<td>Not applicable (layout is static once arranged)</td>
+<td>Consumer adds <code>DoubleTransition</code> on children</td>
+</tr>
+<tr>
+<td><strong>Dynamic child changes</strong></td>
+<td>Height changes require external invalidation</td>
+<td><code>ExpandedIndex</code> change triggers <code>InvalidateMeasure</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>See Also</h2>
+<ul>
+<li><a href="023-custom-layout-panels.html">023 — Custom Layout Panels</a></li>
+<li><a href="023-custom-layout-panels-verbose.html">023V — Custom Layout Panels (verbose companion)</a></li>
+<li><a href="021-custom-controls-from-scratch.html">021 — Custom Controls from Scratch</a> — Control base patterns used by Panel</li>
+<li><a href="024-animation-transitions.html">024 — Animation &amp; Transitions</a> — <code>RenderTransform</code> transitions for smooth layout changes</li>
+<li><a href="021-custom-controls-from-scratch.html">021 — Custom Controls from Scratch</a> — measure/arrange patterns in depth</li>
+<li><a href="https://docs.avaloniaui.net/docs/layout/custom-layout">Avalonia Docs: Custom Layout</a></li>
+</ul>
+</main><nav class="doc-toc" id="toc"></nav></div><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/powershell.min.js"></script><script src="../../_assets/js/search-index.js"></script><script>const CURRENT_PAGE="../../02-tutorials/advanced/023-custom-layout-panels-examples.html";</script><script src="../../_assets/js/ssg.js"></script></body></html>

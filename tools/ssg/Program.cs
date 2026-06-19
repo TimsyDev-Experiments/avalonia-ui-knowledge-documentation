@@ -60,11 +60,15 @@ foreach (var doc in docs)
 {
     var outPath = Path.Combine(outputDir, Path.ChangeExtension(doc.Path, ".html"));
     Directory.CreateDirectory(Path.GetDirectoryName(outPath)!);
-    File.WriteAllText(outPath, RenderPage(doc, navJson, searchJson));
+    File.WriteAllText(outPath, RenderPage(doc, navJson));
 }
 
 var idx = docs.FirstOrDefault(d => d.Path == "00-index.md");
-if (idx != null) File.WriteAllText(Path.Combine(outputDir, "index.html"), RenderPage(idx, navJson, searchJson));
+if (idx != null) File.WriteAllText(Path.Combine(outputDir, "index.html"), RenderPage(idx, navJson));
+
+// Write search index as a separate JS file
+File.WriteAllText(Path.Combine(outputDir, "_assets", "js", "search-index.js"),
+    $"const SEARCH_INDEX={searchJson};const NAV_INDEX={navJson};");
 
 Console.WriteLine($"Done ({Directory.GetFiles(outputDir, "*.html", SearchOption.AllDirectories).Length} pages)");
 
@@ -189,7 +193,7 @@ static int GetVariantOrder(string path)
     return 0;
 }
 
-static string RenderPage(DocEntry doc, string navJson, string searchJson)
+static string RenderPage(DocEntry doc, string navJson)
 {
     var depth = doc.Path.Count(c => c == '/');
     var root = depth == 0 ? "." : string.Join("/", Enumerable.Repeat("..", depth));
@@ -221,7 +225,7 @@ static string RenderPage(DocEntry doc, string navJson, string searchJson)
     sb.Append("</main><nav class=\"doc-toc\" id=\"toc\"></nav></div>");
     sb.Append("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js\"></script>");
     sb.Append("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/powershell.min.js\"></script>");
-    sb.Append("<script>const SEARCH_INDEX=").Append(searchJson).Append(";const NAV_INDEX=").Append(navJson).Append(";const CURRENT_PAGE=\"").Append(root).Append("/").Append(EscapeJs(current)).Append("\";</script>");
+    sb.Append("<script src=\"").Append(root).Append("/_assets/js/search-index.js\"></script><script>const CURRENT_PAGE=\"").Append(root).Append("/").Append(EscapeJs(current)).Append("\";</script>");
     sb.Append("<script src=\"").Append(root).Append("/_assets/js/ssg.js\"></script></body></html>");
     return sb.ToString();
 }

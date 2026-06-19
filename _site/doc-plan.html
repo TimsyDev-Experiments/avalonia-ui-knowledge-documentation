@@ -1,0 +1,1127 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Doc Plan — Phase 2 Topic Expansion — Avalonia Docs</title><link rel="stylesheet" href="./_assets/css/ssg.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='12' font-size='12'>A</text></svg>"></head><body><div class="layout"><nav class="sidebar" id="sidebar"><div class="sidebar-header"><h2><a href="./index.html" style="color:inherit;text-decoration:none">Avalonia Docs</a></h2></div><div class="search-box"><input type="text" id="searchInput" placeholder="Search docs..." autocomplete="off"></div><div id="searchResults" class="search-results" style="display:none"></div><ul class="nav-tree" id="navTree"><li class="nav-group"><span class="nav-group-label">Quick References</span><ul class="nav-items"><li class="nav-item"><a href="./01-quick-refs/accessibility-automation.html">Accessibility Automation</a></li><li class="nav-item"><a href="./01-quick-refs/avalonia-12-breaking-changes.html">Avalonia 12 Breaking Changes</a></li><li class="nav-item"><a href="./01-quick-refs/binding-modes.html">Binding Modes</a></li><li class="nav-item"><a href="./01-quick-refs/brushes-colors-reference.html">Brushes Colors Reference</a></li><li class="nav-item"><a href="./01-quick-refs/common-controls-reference.html">Common Controls Reference</a></li><li class="nav-item"><a href="./01-quick-refs/common-converters.html">Common Converters</a></li><li class="nav-item"><a href="./01-quick-refs/control-themes.html">Control Themes</a></li><li class="nav-item"><a href="./01-quick-refs/dispatcher-timers-quick-ref.html">Dispatcher Timers Quick Ref</a></li><li class="nav-item"><a href="./01-quick-refs/font-typography-reference.html">Font Typography Reference</a></li><li class="nav-item"><a href="./01-quick-refs/icons-reference.html">Icons Reference</a></li><li class="nav-item"><a href="./01-quick-refs/input-gestures.html">Input Gestures</a></li><li class="nav-item"><a href="./01-quick-refs/mvvm-source-generators.html">Mvvm Source Generators</a></li><li class="nav-item"><a href="./01-quick-refs/naming-conventions.html">Naming Conventions</a></li><li class="nav-item"><a href="./01-quick-refs/property-system-quick-ref.html">Property System Quick Ref</a></li><li class="nav-item"><a href="./01-quick-refs/resource-dictionaries.html">Resource Dictionaries</a></li><li class="nav-item"><a href="./01-quick-refs/routed-events-quick-ref.html">Routed Events Quick Ref</a></li><li class="nav-item"><a href="./01-quick-refs/shapes-geometries.html">Shapes Geometries</a></li><li class="nav-item"><a href="./01-quick-refs/xaml-selectors.html">Xaml Selectors</a></li><li class="nav-group"><span class="nav-group-label">Basics</span><ul class="nav-items"><li class="nav-item"><a href="./02-tutorials/basics/001-project-setup.html">Project Setup</a></li><li class="nav-item"><a href="./02-tutorials/basics/001-project-setup-verbose.html">Project Setup (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/basics/001-project-setup-examples.html">Project Setup (examples)</a></li><li class="nav-item"><a href="./02-tutorials/basics/001-project-setup-quiz.html">Project Setup (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/basics/002-command-binding.html">Command Binding</a></li><li class="nav-item"><a href="./02-tutorials/basics/002-command-binding-verbose.html">Command Binding (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/basics/002-command-binding-examples.html">Command Binding (examples)</a></li><li class="nav-item"><a href="./02-tutorials/basics/002-command-binding-quiz.html">Command Binding (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/basics/003-basic-styling.html">Basic Styling</a></li><li class="nav-item"><a href="./02-tutorials/basics/003-basic-styling-verbose.html">Basic Styling (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/basics/003-basic-styling-examples.html">Basic Styling (examples)</a></li><li class="nav-item"><a href="./02-tutorials/basics/003-basic-styling-quiz.html">Basic Styling (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/basics/004-value-converters.html">Value Converters</a></li><li class="nav-item"><a href="./02-tutorials/basics/004-value-converters-verbose.html">Value Converters (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/basics/004-value-converters-examples.html">Value Converters (examples)</a></li><li class="nav-item"><a href="./02-tutorials/basics/004-value-converters-quiz.html">Value Converters (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/basics/005-binding-modes.html">Binding Modes</a></li><li class="nav-item"><a href="./02-tutorials/basics/005-binding-modes-verbose.html">Binding Modes (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/basics/005-binding-modes-examples.html">Binding Modes (examples)</a></li><li class="nav-item"><a href="./02-tutorials/basics/005-binding-modes-quiz.html">Binding Modes (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/basics/006-resources.html">Resources</a></li><li class="nav-item"><a href="./02-tutorials/basics/006-resources-verbose.html">Resources (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/basics/006-resources-examples.html">Resources (examples)</a></li><li class="nav-item"><a href="./02-tutorials/basics/006-resources-quiz.html">Resources (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/basics/007-observable-object-property.html">Observable Object Property</a></li><li class="nav-item"><a href="./02-tutorials/basics/007-observable-object-property-verbose.html">Observable Object Property (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/basics/007-observable-object-property-examples.html">Observable Object Property (examples)</a></li><li class="nav-item"><a href="./02-tutorials/basics/007-observable-object-property-quiz.html">Observable Object Property (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/basics/008-relay-command.html">Relay Command</a></li><li class="nav-item"><a href="./02-tutorials/basics/008-relay-command-verbose.html">Relay Command (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/basics/008-relay-command-examples.html">Relay Command (examples)</a></li><li class="nav-item"><a href="./02-tutorials/basics/008-relay-command-quiz.html">Relay Command (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/basics/009-data-templates-examples.html">Data Templates (examples)</a></li><li class="nav-item"><a href="./02-tutorials/basics/009-data-templates-basics.html">Data Templates Basics</a></li><li class="nav-item"><a href="./02-tutorials/basics/009-data-templates-basics-verbose.html">Data Templates Basics (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/basics/009-data-templates-basics-quiz.html">Data Templates Basics (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/basics/010-window-dialog-basics.html">Window Dialog Basics</a></li><li class="nav-item"><a href="./02-tutorials/basics/010-window-dialog-basics-verbose.html">Window Dialog Basics (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/basics/010-window-dialog-basics-examples.html">Window Dialog Basics (examples)</a></li><li class="nav-item"><a href="./02-tutorials/basics/010-window-dialog-basics-quiz.html">Window Dialog Basics (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Intermediate</span><ul class="nav-items"><li class="nav-item"><a href="./02-tutorials/intermediate/011-compiled-bindings.html">Compiled Bindings</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/011-compiled-bindings-verbose.html">Compiled Bindings (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/011-compiled-bindings-examples.html">Compiled Bindings (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/011-compiled-bindings-quiz.html">Compiled Bindings (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/012-control-themes-vs-styles.html">Control Themes Vs Styles</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/012-control-themes-vs-styles-verbose.html">Control Themes Vs Styles (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/012-control-themes-vs-styles-examples.html">Control Themes Vs Styles (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/012-control-themes-vs-styles-quiz.html">Control Themes Vs Styles (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/013-data-validation.html">Data Validation</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/013-data-validation-verbose.html">Data Validation (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/013-data-validation-examples.html">Data Validation (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/013-data-validation-quiz.html">Data Validation (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/014-imessenger-patterns.html">Imessenger Patterns</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/014-imessenger-patterns-verbose.html">Imessenger Patterns (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/014-imessenger-patterns-examples.html">Imessenger Patterns (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/014-imessenger-patterns-quiz.html">Imessenger Patterns (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/015-item-lists.html">Item Lists</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/015-item-lists-verbose.html">Item Lists (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/015-item-lists-examples.html">Item Lists (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/015-item-lists-quiz.html">Item Lists (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/016-window-dialog-management.html">Window Dialog Management</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/016-window-dialog-management-verbose.html">Window Dialog Management (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/016-window-dialog-management-examples.html">Window Dialog Management (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/016-window-dialog-management-quiz.html">Window Dialog Management (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/017-theme-switching.html">Theme Switching</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/017-theme-switching-verbose.html">Theme Switching (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/017-theme-switching-examples.html">Theme Switching (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/017-theme-switching-quiz.html">Theme Switching (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/018-navigation.html">Navigation</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/018-navigation-verbose.html">Navigation (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/018-navigation-examples.html">Navigation (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/018-navigation-quiz.html">Navigation (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/019-drag-drop.html">Drag Drop</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/019-drag-drop-verbose.html">Drag Drop (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/019-drag-drop-examples.html">Drag Drop (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/019-drag-drop-quiz.html">Drag Drop (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/040-datagrid-deep-dive.html">Datagrid Deep Dive</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/040-datagrid-deep-dive-verbose.html">Datagrid Deep Dive (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/040-datagrid-deep-dive-examples.html">Datagrid Deep Dive (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/040-datagrid-deep-dive-quiz.html">Datagrid Deep Dive (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/041-menus-context-menus-tray.html">Menus Context Menus Tray</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/041-menus-context-menus-tray-verbose.html">Menus Context Menus Tray (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/041-menus-context-menus-tray-examples.html">Menus Context Menus Tray (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/041-menus-context-menus-tray-quiz.html">Menus Context Menus Tray (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/043-treeview-hierarchical-data.html">Treeview Hierarchical Data</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/043-treeview-hierarchical-data-verbose.html">Treeview Hierarchical Data (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/043-treeview-hierarchical-data-examples.html">Treeview Hierarchical Data (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/043-treeview-hierarchical-data-quiz.html">Treeview Hierarchical Data (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/047-charts-data-visualization.html">Charts Data Visualization</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/047-charts-data-visualization-verbose.html">Charts Data Visualization (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/047-charts-data-visualization-examples.html">Charts Data Visualization (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/047-charts-data-visualization-quiz.html">Charts Data Visualization (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/048-sqlite-local-database.html">Sqlite Local Database</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/048-sqlite-local-database-verbose.html">Sqlite Local Database (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/048-sqlite-local-database-examples.html">Sqlite Local Database (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/048-sqlite-local-database-quiz.html">Sqlite Local Database (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/051-routed-events.html">Routed Events</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/051-routed-events-verbose.html">Routed Events (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/051-routed-events-examples.html">Routed Events (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/051-routed-events-quiz.html">Routed Events (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/052-property-system.html">Property System</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/052-property-system-verbose.html">Property System (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/052-property-system-examples.html">Property System (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/052-property-system-quiz.html">Property System (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/053-threading-dispatcher.html">Threading Dispatcher</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/053-threading-dispatcher-verbose.html">Threading Dispatcher (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/053-threading-dispatcher-examples.html">Threading Dispatcher (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/053-threading-dispatcher-quiz.html">Threading Dispatcher (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/054-focus-management.html">Focus Management</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/054-focus-management-verbose.html">Focus Management (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/054-focus-management-examples.html">Focus Management (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/054-focus-management-quiz.html">Focus Management (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/055-keyboard-hotkeys.html">Keyboard Hotkeys</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/055-keyboard-hotkeys-verbose.html">Keyboard Hotkeys (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/055-keyboard-hotkeys-examples.html">Keyboard Hotkeys (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/055-keyboard-hotkeys-quiz.html">Keyboard Hotkeys (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/056-input-events.html">Input Events</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/056-input-events-verbose.html">Input Events (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/056-input-events-examples.html">Input Events (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/056-input-events-quiz.html">Input Events (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/057-gesture-recognizers.html">Gesture Recognizers</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/057-gesture-recognizers-verbose.html">Gesture Recognizers (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/057-gesture-recognizers-examples.html">Gesture Recognizers (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/057-gesture-recognizers-quiz.html">Gesture Recognizers (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/058-scrollviewer-scrollbar.html">Scrollviewer Scrollbar</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/058-scrollviewer-scrollbar-verbose.html">Scrollviewer Scrollbar (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/058-scrollviewer-scrollbar-examples.html">Scrollviewer Scrollbar (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/058-scrollviewer-scrollbar-quiz.html">Scrollviewer Scrollbar (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/059-textbox-text-input.html">Textbox Text Input</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/059-textbox-text-input-verbose.html">Textbox Text Input (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/059-textbox-text-input-examples.html">Textbox Text Input (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/059-textbox-text-input-quiz.html">Textbox Text Input (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/060-multibinding-prioritybinding.html">Multibinding Prioritybinding</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/060-multibinding-prioritybinding-verbose.html">Multibinding Prioritybinding (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/060-multibinding-prioritybinding-examples.html">Multibinding Prioritybinding (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/060-multibinding-prioritybinding-quiz.html">Multibinding Prioritybinding (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/061-collection-views.html">Collection Views</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/061-collection-views-verbose.html">Collection Views (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/061-collection-views-examples.html">Collection Views (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/061-collection-views-quiz.html">Collection Views (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/062-clipboard-launcher.html">Clipboard Launcher</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/062-clipboard-launcher-verbose.html">Clipboard Launcher (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/062-clipboard-launcher-examples.html">Clipboard Launcher (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/062-clipboard-launcher-quiz.html">Clipboard Launcher (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/063-storage-service.html">Storage Service</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/063-storage-service-verbose.html">Storage Service (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/063-storage-service-examples.html">Storage Service (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/063-storage-service-quiz.html">Storage Service (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/064-selection-controls.html">Selection Controls</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/064-selection-controls-verbose.html">Selection Controls (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/064-selection-controls-examples.html">Selection Controls (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/064-selection-controls-quiz.html">Selection Controls (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/065-range-toggle-controls.html">Range Toggle Controls</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/065-range-toggle-controls-verbose.html">Range Toggle Controls (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/065-range-toggle-controls-examples.html">Range Toggle Controls (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/065-range-toggle-controls-quiz.html">Range Toggle Controls (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/066-tabcontrol-expander-splitview.html">Tabcontrol Expander Splitview</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/066-tabcontrol-expander-splitview-verbose.html">Tabcontrol Expander Splitview (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/066-tabcontrol-expander-splitview-examples.html">Tabcontrol Expander Splitview (examples)</a></li><li class="nav-item"><a href="./02-tutorials/intermediate/066-tabcontrol-expander-splitview-quiz.html">Tabcontrol Expander Splitview (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Advanced</span><ul class="nav-items"><li class="nav-item"><a href="./02-tutorials/advanced/020-custom-templated-controls.html">Custom Templated Controls</a></li><li class="nav-item"><a href="./02-tutorials/advanced/020-custom-templated-controls-verbose.html">Custom Templated Controls (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/020-custom-templated-controls-examples.html">Custom Templated Controls (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/020-custom-templated-controls-quiz.html">Custom Templated Controls (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/021-custom-controls-from-scratch.html">Custom Controls From Scratch</a></li><li class="nav-item"><a href="./02-tutorials/advanced/021-custom-controls-from-scratch-verbose.html">Custom Controls From Scratch (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/021-custom-controls-from-scratch-examples.html">Custom Controls From Scratch (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/021-custom-controls-from-scratch-quiz.html">Custom Controls From Scratch (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/022-attached-properties-behaviors.html">Attached Properties Behaviors</a></li><li class="nav-item"><a href="./02-tutorials/advanced/022-attached-properties-behaviors-verbose.html">Attached Properties Behaviors (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/022-attached-properties-behaviors-examples.html">Attached Properties Behaviors (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/022-attached-properties-behaviors-quiz.html">Attached Properties Behaviors (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/023-custom-layout-panels.html">Custom Layout Panels</a></li><li class="nav-item"><a href="./02-tutorials/advanced/023-custom-layout-panels-verbose.html">Custom Layout Panels (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/023-custom-layout-panels-examples.html">Custom Layout Panels (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/023-custom-layout-panels-quiz.html">Custom Layout Panels (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/024-animation-transitions.html">Animation Transitions</a></li><li class="nav-item"><a href="./02-tutorials/advanced/024-animation-transitions-verbose.html">Animation Transitions (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/024-animation-transitions-examples.html">Animation Transitions (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/024-animation-transitions-quiz.html">Animation Transitions (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/025-compositor-custom-visuals.html">Compositor Custom Visuals</a></li><li class="nav-item"><a href="./02-tutorials/advanced/025-compositor-custom-visuals-verbose.html">Compositor Custom Visuals (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/025-compositor-custom-visuals-examples.html">Compositor Custom Visuals (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/025-compositor-custom-visuals-quiz.html">Compositor Custom Visuals (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/026-accessibility-automation.html">Accessibility Automation</a></li><li class="nav-item"><a href="./02-tutorials/advanced/026-accessibility-automation-verbose.html">Accessibility Automation (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/026-accessibility-automation-examples.html">Accessibility Automation (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/026-accessibility-automation-quiz.html">Accessibility Automation (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/027-advanced-composite-bindings.html">Advanced Composite Bindings</a></li><li class="nav-item"><a href="./02-tutorials/advanced/027-advanced-composite-bindings-verbose.html">Advanced Composite Bindings (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/027-advanced-composite-bindings-examples.html">Advanced Composite Bindings (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/027-advanced-composite-bindings-quiz.html">Advanced Composite Bindings (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/028-custom-drawing-skia.html">Custom Drawing Skia</a></li><li class="nav-item"><a href="./02-tutorials/advanced/028-custom-drawing-skia-verbose.html">Custom Drawing Skia (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/028-custom-drawing-skia-examples.html">Custom Drawing Skia (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/028-custom-drawing-skia-quiz.html">Custom Drawing Skia (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/029-avalonia-plus-devtools.html">Avalonia Plus Devtools</a></li><li class="nav-item"><a href="./02-tutorials/advanced/029-avalonia-plus-devtools-verbose.html">Avalonia Plus Devtools (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/029-avalonia-plus-devtools-examples.html">Avalonia Plus Devtools (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/029-avalonia-plus-devtools-quiz.html">Avalonia Plus Devtools (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/030-parcel-packaging.html">Parcel Packaging</a></li><li class="nav-item"><a href="./02-tutorials/advanced/030-parcel-packaging-verbose.html">Parcel Packaging (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/030-parcel-packaging-examples.html">Parcel Packaging (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/030-parcel-packaging-quiz.html">Parcel Packaging (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/031-custom-theme-design-system.html">Custom Theme Design System</a></li><li class="nav-item"><a href="./02-tutorials/advanced/031-custom-theme-design-system-verbose.html">Custom Theme Design System (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/031-custom-theme-design-system-examples.html">Custom Theme Design System (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/031-custom-theme-design-system-quiz.html">Custom Theme Design System (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/032-mvvm-di-wiring.html">Mvvm Di Wiring</a></li><li class="nav-item"><a href="./02-tutorials/advanced/032-mvvm-di-wiring-verbose.html">Mvvm Di Wiring (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/032-mvvm-di-wiring-examples.html">Mvvm Di Wiring (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/032-mvvm-di-wiring-quiz.html">Mvvm Di Wiring (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/033-localization-i18n.html">Localization I18n</a></li><li class="nav-item"><a href="./02-tutorials/advanced/033-localization-i18n-verbose.html">Localization I18n (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/033-localization-i18n-examples.html">Localization I18n (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/033-localization-i18n-quiz.html">Localization I18n (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/034-file-pickers-platform-services.html">File Pickers Platform Services</a></li><li class="nav-item"><a href="./02-tutorials/advanced/034-file-pickers-platform-services-verbose.html">File Pickers Platform Services (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/034-file-pickers-platform-services-examples.html">File Pickers Platform Services (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/034-file-pickers-platform-services-quiz.html">File Pickers Platform Services (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/035-custom-dialogs-window-management.html">Custom Dialogs Window Management</a></li><li class="nav-item"><a href="./02-tutorials/advanced/035-custom-dialogs-window-management-verbose.html">Custom Dialogs Window Management (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/035-custom-dialogs-window-management-examples.html">Custom Dialogs Window Management (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/035-custom-dialogs-window-management-quiz.html">Custom Dialogs Window Management (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/036-virtualization-large-lists.html">Virtualization Large Lists</a></li><li class="nav-item"><a href="./02-tutorials/advanced/036-virtualization-large-lists-verbose.html">Virtualization Large Lists (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/036-virtualization-large-lists-examples.html">Virtualization Large Lists (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/036-virtualization-large-lists-quiz.html">Virtualization Large Lists (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/037-app-lifetimes-splash-screen.html">App Lifetimes Splash Screen</a></li><li class="nav-item"><a href="./02-tutorials/advanced/037-app-lifetimes-splash-screen-verbose.html">App Lifetimes Splash Screen (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/037-app-lifetimes-splash-screen-examples.html">App Lifetimes Splash Screen (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/037-app-lifetimes-splash-screen-quiz.html">App Lifetimes Splash Screen (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/038-headless-testing.html">Headless Testing</a></li><li class="nav-item"><a href="./02-tutorials/advanced/038-headless-testing-verbose.html">Headless Testing (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/038-headless-testing-examples.html">Headless Testing (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/038-headless-testing-quiz.html">Headless Testing (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/039-nativeaot-trimming.html">Nativeaot Trimming</a></li><li class="nav-item"><a href="./02-tutorials/advanced/039-nativeaot-trimming-verbose.html">Nativeaot Trimming (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/039-nativeaot-trimming-examples.html">Nativeaot Trimming (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/039-nativeaot-trimming-quiz.html">Nativeaot Trimming (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile.html">Multi Targeting Desktop Browser Mobile</a></li><li class="nav-item"><a href="./02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-verbose.html">Multi Targeting Desktop Browser Mobile (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-examples.html">Multi Targeting Desktop Browser Mobile (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-quiz.html">Multi Targeting Desktop Browser Mobile (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/044-background-services-and-progress.html">Background Services And Progress</a></li><li class="nav-item"><a href="./02-tutorials/advanced/044-background-services-and-progress-verbose.html">Background Services And Progress (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/044-background-services-and-progress-examples.html">Background Services And Progress (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/044-background-services-and-progress-quiz.html">Background Services And Progress (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/045-cicd-for-avalonia.html">Cicd For Avalonia</a></li><li class="nav-item"><a href="./02-tutorials/advanced/045-cicd-for-avalonia-verbose.html">Cicd For Avalonia (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/045-cicd-for-avalonia-examples.html">Cicd For Avalonia (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/045-cicd-for-avalonia-quiz.html">Cicd For Avalonia (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/046-logging-telemetry.html">Logging Telemetry</a></li><li class="nav-item"><a href="./02-tutorials/advanced/046-logging-telemetry-verbose.html">Logging Telemetry (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/046-logging-telemetry-examples.html">Logging Telemetry (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/046-logging-telemetry-quiz.html">Logging Telemetry (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/049-printing.html">Printing</a></li><li class="nav-item"><a href="./02-tutorials/advanced/049-printing-verbose.html">Printing (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/049-printing-examples.html">Printing (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/049-printing-quiz.html">Printing (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/050-auto-updater.html">Auto Updater</a></li><li class="nav-item"><a href="./02-tutorials/advanced/050-auto-updater-verbose.html">Auto Updater (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/050-auto-updater-examples.html">Auto Updater (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/050-auto-updater-quiz.html">Auto Updater (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/080-layout-system-deep-dive.html">Layout System Deep Dive</a></li><li class="nav-item"><a href="./02-tutorials/advanced/080-layout-system-deep-dive-verbose.html">Layout System Deep Dive (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/080-layout-system-deep-dive-examples.html">Layout System Deep Dive (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/080-layout-system-deep-dive-quiz.html">Layout System Deep Dive (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/081-animation-system-deep-dive.html">Animation System Deep Dive</a></li><li class="nav-item"><a href="./02-tutorials/advanced/081-animation-system-deep-dive-verbose.html">Animation System Deep Dive (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/081-animation-system-deep-dive-examples.html">Animation System Deep Dive (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/081-animation-system-deep-dive-quiz.html">Animation System Deep Dive (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/082-graphics-drawing-reference.html">Graphics Drawing Reference</a></li><li class="nav-item"><a href="./02-tutorials/advanced/082-graphics-drawing-reference-verbose.html">Graphics Drawing Reference (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/082-graphics-drawing-reference-examples.html">Graphics Drawing Reference (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/082-graphics-drawing-reference-quiz.html">Graphics Drawing Reference (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/083-container-queries-responsive-layout.html">Container Queries Responsive Layout</a></li><li class="nav-item"><a href="./02-tutorials/advanced/083-container-queries-responsive-layout-verbose.html">Container Queries Responsive Layout (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/083-container-queries-responsive-layout-examples.html">Container Queries Responsive Layout (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/083-container-queries-responsive-layout-quiz.html">Container Queries Responsive Layout (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/084-typography-text-features.html">Typography Text Features</a></li><li class="nav-item"><a href="./02-tutorials/advanced/084-typography-text-features-verbose.html">Typography Text Features (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/084-typography-text-features-examples.html">Typography Text Features (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/084-typography-text-features-quiz.html">Typography Text Features (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/085-performance-profiling.html">Performance Profiling</a></li><li class="nav-item"><a href="./02-tutorials/advanced/085-performance-profiling-verbose.html">Performance Profiling (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/085-performance-profiling-examples.html">Performance Profiling (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/085-performance-profiling-quiz.html">Performance Profiling (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/086-platform-specific-windows.html">Platform Specific Windows</a></li><li class="nav-item"><a href="./02-tutorials/advanced/086-platform-specific-windows-verbose.html">Platform Specific Windows (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/086-platform-specific-windows-examples.html">Platform Specific Windows (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/086-platform-specific-windows-quiz.html">Platform Specific Windows (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/087-platform-specific-macos-linux.html">Platform Specific Macos Linux</a></li><li class="nav-item"><a href="./02-tutorials/advanced/087-platform-specific-macos-linux-verbose.html">Platform Specific Macos Linux (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/087-platform-specific-macos-linux-examples.html">Platform Specific Macos Linux (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/087-platform-specific-macos-linux-quiz.html">Platform Specific Macos Linux (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/088-xaml-previewer-hot-reload.html">Xaml Previewer Hot Reload</a></li><li class="nav-item"><a href="./02-tutorials/advanced/088-xaml-previewer-hot-reload-verbose.html">Xaml Previewer Hot Reload (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/088-xaml-previewer-hot-reload-examples.html">Xaml Previewer Hot Reload (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/088-xaml-previewer-hot-reload-quiz.html">Xaml Previewer Hot Reload (quiz)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/089-custom-flyout-popup.html">Custom Flyout Popup</a></li><li class="nav-item"><a href="./02-tutorials/advanced/089-custom-flyout-popup-verbose.html">Custom Flyout Popup (in depth)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/089-custom-flyout-popup-examples.html">Custom Flyout Popup (examples)</a></li><li class="nav-item"><a href="./02-tutorials/advanced/089-custom-flyout-popup-quiz.html">Custom Flyout Popup (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Patterns</span><ul class="nav-items"><li class="nav-item"><a href="./03-patterns/001-service-locator-vs-di.html">Service Locator Vs Di</a></li><li class="nav-item"><a href="./03-patterns/002-plugin-architecture.html">Plugin Architecture</a></li><li class="nav-item"><a href="./03-patterns/003-async-initialization.html">Async Initialization</a></li><li class="nav-item"><a href="./03-patterns/004-state-management.html">State Management</a></li><li class="nav-item"><a href="./03-patterns/005-repository-unit-of-work.html">Repository Unit Of Work</a></li><li class="nav-item"><a href="./03-patterns/006-logging-patterns.html">Logging Patterns</a></li><li class="nav-item"><a href="./03-patterns/007-editor-application-architecture.html">Editor Application Architecture</a></li><li class="nav-item"><a href="./03-patterns/008-focus-keyboard-navigation.html">Focus Keyboard Navigation</a></li><li class="nav-item"><a href="./03-patterns/008-toggle-state-pattern.html">Toggle State Pattern</a></li><li class="nav-item"><a href="./03-patterns/009-lazy-load-virtual-scrolling.html">Lazy Load Virtual Scrolling</a></li><li class="nav-item"><a href="./03-patterns/009-storage-file-io-pipeline.html">Storage File Io Pipeline</a></li><li class="nav-group"><span class="nav-group-label">Migration</span><ul class="nav-items"><li class="nav-item"><a href="./04-migration/avalonia-11-to-12.html">Avalonia 11 To 12</a></li><li class="nav-item"><a href="./04-migration/wpf-to-avalonia-key-mappings.html">Wpf To Avalonia Key Mappings</a></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></nav><main class="doc-content" id="docContent"><h1>Doc Plan — Phase 2 Topic Expansion</h1>
+<p>Extends the existing 217 docs with 24 new tutorial topics plus quick-refs and patterns.
+Target: cover the major Avalonia 12 API surfaces not yet documented.</p>
+<hr />
+<h2>Conventions</h2>
+<ul>
+<li><strong>Effort</strong> = core + verbose + examples + quiz (full 4-file treatment). Quick-refs are standalone.</li>
+<li><strong>Numbering</strong>: new intermediate topics in the 051–075 range, advanced in 080–099.</li>
+<li><strong>Prerequisites</strong> reference existing doc numbers so readers can chain sequentially.</li>
+</ul>
+<hr />
+<h2>Phase 1 — Foundations</h2>
+<p>These fill gaps that affect comprehension of many existing docs. Start here.</p>
+<h3>1. 051 — Routed Events (Intermediate)</h3>
+<p><strong>Effort</strong>: 16h · <strong>Prerequisites</strong>: 001, 002</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Est.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Verbose</td>
+<td>6h</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Quiz</td>
+<td>2h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core content</strong>:</p>
+<ul>
+<li>Bubble / tunnel / direct routing strategies</li>
+<li><code>RoutedEvent</code> registration (<code>RoutingStrategies</code>)</li>
+<li><code>AddHandler</code> / <code>AddClassHandler</code></li>
+<li><code>handledEventsToo</code> pattern</li>
+<li>Custom <code>RoutedEventArgs</code> subclass</li>
+<li>Common Avalonia routed events table</li>
+<li>v12 changes (input event hierarchy)</li>
+</ul>
+<h3>2. 052 — Property System (Intermediate)</h3>
+<p><strong>Effort</strong>: 18h · <strong>Prerequisites</strong>: 001, 007, 022</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Est.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>5h</td>
+</tr>
+<tr>
+<td>Verbose</td>
+<td>6h</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Quiz</td>
+<td>3h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core content</strong>:</p>
+<ul>
+<li><code>StyledProperty&lt;T&gt;</code> — inheritance, default, styling</li>
+<li><code>DirectProperty&lt;T&gt;</code> — no inheritance, perf</li>
+<li><code>AttachedProperty</code> — extending foreign objects</li>
+<li><code>AvaloniaProperty.Register</code> vs <code>RegisterDirect</code> vs <code>RegisterAttached</code></li>
+<li>Value precedence (local &gt; style &gt; default)</li>
+<li>Metadata — <code>PropertyMetadata</code>, <code>FrameworkPropertyMetadata</code></li>
+<li>Property change callbacks (<code>OnPropertyChanged</code>)</li>
+<li><code>AddOwner</code> pattern</li>
+<li><code>Inherits</code> / <code>OverridesDefaultValue</code></li>
+</ul>
+<h3>3. 053 — Threading &amp; Dispatcher (Intermediate)</h3>
+<p><strong>Effort</strong>: 14h · <strong>Prerequisites</strong>: 001</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Est.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Verbose</td>
+<td>5h</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Quiz</td>
+<td>2h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core content</strong>:</p>
+<ul>
+<li><code>Dispatcher.UIThread</code> / <code>DispatcherPriority</code></li>
+<li><code>InvokeAsync</code> / <code>Post</code></li>
+<li><code>AvaloniaSynchronizationContext</code></li>
+<li><code>DispatcherTimer</code> vs <code>System.Timers.Timer</code></li>
+<li>Background thread safety rules</li>
+<li>v12: multiple-dispatcher support</li>
+<li><code>MainThread</code> attribute</li>
+</ul>
+<hr />
+<h2>Phase 2 — Input &amp; Interaction</h2>
+<h3>4. 054 — Focus Management (Intermediate)</h3>
+<p><strong>Effort</strong>: 12h · <strong>Prerequisites</strong>: 001, 051</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Est.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Verbose</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Quiz</td>
+<td>2h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core content</strong>:</p>
+<ul>
+<li><code>FocusManager</code> / <code>IFocusManager</code></li>
+<li><code>Focus()</code> / <code>IsFocused</code></li>
+<li>Tab navigation (<code>IsTabStop</code>, <code>TabIndex</code>, <code>TabNavigation</code>)</li>
+<li>Arrow-key navigation in lists</li>
+<li>Focus scopes (<code>FocusScope</code>)</li>
+<li><code>GotFocusEvent</code> / <code>LostFocusEvent</code> / v12 <code>FocusChangedEventArgs</code></li>
+<li>Programmatic focus with <code>TopLevel.FocusManager</code></li>
+</ul>
+<h3>5. 055 — Keyboard &amp; Hotkeys (Intermediate)</h3>
+<p><strong>Effort</strong>: 12h · <strong>Prerequisites</strong>: 002, 051</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Est.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Verbose</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Quiz</td>
+<td>2h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core content</strong>:</p>
+<ul>
+<li><code>KeyBinding</code> / <code>KeyGesture</code></li>
+<li><code>HotKey</code> property on menu items, buttons</li>
+<li><code>ICommand</code> + keyboard shortcut wiring</li>
+<li>Access keys / <code>AccessText</code> (v12)</li>
+<li><code>OnKeyDown</code> / <code>OnTextInput</code> overrides</li>
+<li>Global hotkeys (platform limits)</li>
+<li><code>Key</code> enum reference</li>
+</ul>
+<h3>6. 056 — Gestures (Intermediate)</h3>
+<p><strong>Effort</strong>: 12h · <strong>Prerequisites</strong>: 001, 051</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Est.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Verbose</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Quiz</td>
+<td>2h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core content</strong>:</p>
+<ul>
+<li><code>ScrollGesture</code>, <code>PinchGesture</code>, <code>PullGesture</code></li>
+<li>Gesture recognizer setup</li>
+<li><code>GestureRecognizer</code> base class</li>
+<li>Custom gesture recognizers</li>
+<li><code>PointerPressed</code> / <code>PointerMoved</code> / <code>PointerReleased</code> combo</li>
+<li>v12: gestures moved to <code>InputElement</code></li>
+</ul>
+<hr />
+<h2>Phase 3 — Data &amp; Binding</h2>
+<h3>7. 057 — MultiBinding &amp; PriorityBinding (Intermediate)</h3>
+<p><strong>Effort</strong>: 12h · <strong>Prerequisites</strong>: 004, 011, 027</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Est.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Verbose</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Quiz</td>
+<td>2h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core content</strong>:</p>
+<ul>
+<li><code>MultiBinding</code> syntax</li>
+<li><code>IMultiValueConverter</code> / <code>FuncMultiValueConverter</code></li>
+<li>v12: <code>IReadOnlyList&lt;object?&gt;</code> change</li>
+<li><code>PriorityBinding</code> fallback chain</li>
+<li>Named <code>StringFormat</code> placeholders</li>
+<li>When to use vs composite bindings</li>
+</ul>
+<h3>8. 058 — Collection Views (Intermediate)</h3>
+<p><strong>Effort</strong>: 14h · <strong>Prerequisites</strong>: 009, 015</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Est.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Verbose</td>
+<td>5h</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Quiz</td>
+<td>2h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core content</strong>:</p>
+<ul>
+<li><code>DataGridCollectionView</code> / <code>CollectionView</code></li>
+<li>Sorting bound data in UI</li>
+<li>Filtering with predicates</li>
+<li>Grouping with header templates</li>
+<li><code>IEditableCollectionView</code></li>
+<li><code>ICollectionViewLiveShaping</code> for real-time</li>
+<li><code>DeferRefresh</code> batching</li>
+</ul>
+<hr />
+<h2>Phase 4 — Platform Services</h2>
+<h3>9. 059 — Clipboard &amp; Launcher (Intermediate)</h3>
+<p><strong>Effort</strong>: 10h · <strong>Prerequisites</strong>: 001</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Est.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Verbose</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Quiz</td>
+<td>2h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core content</strong>:</p>
+<ul>
+<li><code>TopLevel.Clipboard</code> — <code>SetTextAsync</code> / <code>GetTextAsync</code></li>
+<li>Clipboard data formats (HTML, RTF, files)</li>
+<li><code>Launcher.LaunchUriAsync</code> / <code>LaunchFileAsync</code></li>
+<li>Platform compatibility</li>
+<li>Secure clipboard handling</li>
+</ul>
+<h3>10. 060 — Storage Service (Intermediate)</h3>
+<p><strong>Effort</strong>: 14h · <strong>Prerequisites</strong>: 034</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Est.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Verbose</td>
+<td>5h</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Quiz</td>
+<td>2h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core content</strong>:</p>
+<ul>
+<li><code>IStorageProvider</code> from <code>TopLevel</code></li>
+<li><code>OpenFilePickerAsync</code> / <code>SaveFilePickerAsync</code> / <code>OpenFolderPickerAsync</code></li>
+<li><code>FilePickerFileType</code> filters</li>
+<li>Storage bookmarks (persisting access)</li>
+<li><code>StorageItem</code> — <code>GetParentAsync</code>, <code>GetItemsAsync</code>, <code>MoveAsync</code></li>
+<li>Platform behavior matrix</li>
+</ul>
+<hr />
+<h2>Phase 5 — Controls Deep Dives</h2>
+<h3>11. 061 — TextBox &amp; Text Input (Intermediate)</h3>
+<p><strong>Effort</strong>: 14h · <strong>Prerequisites</strong>: 001</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Est.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Verbose</td>
+<td>5h</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Quiz</td>
+<td>2h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core content</strong>:</p>
+<ul>
+<li><code>TextBox</code> properties (<code>Text</code>, <code>Watermark</code>, <code>MaxLength</code>, <code>AcceptsReturn</code>, <code>TextWrapping</code>)</li>
+<li>Input validation and filtering</li>
+<li>Selection (selection start/length, selected text)</li>
+<li>Undo/redo</li>
+<li><code>AutoComplete</code> / suggestion</li>
+<li><code>OnTextInput</code> / IME support</li>
+<li><code>PasswordBox</code> companion</li>
+</ul>
+<h3>12. 062 — Selection Controls: ComboBox, ListBox (Intermediate)</h3>
+<p><strong>Effort</strong>: 14h · <strong>Prerequisites</strong>: 009, 015</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Est.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Verbose</td>
+<td>5h</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Quiz</td>
+<td>2h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core content</strong>:</p>
+<ul>
+<li><code>ComboBox</code> — <code>IsDropDownOpen</code>, <code>MaxDropDownHeight</code>, editable mode</li>
+<li><code>ComboBox</code> virtualized dropdown</li>
+<li><code>ListBox</code> — selection modes, multi-select</li>
+<li><code>ListBoxItem</code> styling</li>
+<li><code>AutoCompleteBox</code> — <code>FilterMode</code>, <code>ItemTemplate</code></li>
+<li>Dropdown vs flyout vs popup</li>
+</ul>
+<h3>13. 063 — Range &amp; Toggle Controls (Intermediate)</h3>
+<p><strong>Effort</strong>: 12h · <strong>Prerequisites</strong>: 002, 003</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Est.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Verbose</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Quiz</td>
+<td>2h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core content</strong>:</p>
+<ul>
+<li><code>Slider</code> — <code>Minimum</code>, <code>Maximum</code>, <code>TickFrequency</code>, <code>IsSnapToTickEnabled</code></li>
+<li><code>ProgressBar</code> — <code>IsIndeterminate</code>, <code>ShowProgressText</code></li>
+<li><code>NumericUpDown</code> — <code>Value</code>, <code>Increment</code>, <code>FormatString</code>, min/max validation</li>
+<li><code>CheckBox</code> — <code>IsThreeState</code>, <code>IsChecked</code></li>
+<li><code>RadioButton</code> — grouped behavior</li>
+<li><code>ToggleSwitch</code> — <code>OffContent</code>/<code>OnContent</code>, thumb styling</li>
+<li>Command wiring for all</li>
+</ul>
+<h3>14. 064 — TabControl, Expander, SplitView (Intermediate)</h3>
+<p><strong>Effort</strong>: 14h · <strong>Prerequisites</strong>: 009</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Est.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Verbose</td>
+<td>5h</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Quiz</td>
+<td>2h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core content</strong>:</p>
+<ul>
+<li><code>TabControl</code> / <code>TabStrip</code> — <code>TabStripPlacement</code>, <code>TabItem</code> styling</li>
+<li><code>TabControl</code> content reuse / virtualization</li>
+<li><code>Expander</code> — <code>ExpandDirection</code>, <code>Header</code>, content animation</li>
+<li><code>SplitView</code> — <code>DisplayMode</code> (Inline/Overlay/Compact), <code>PanePlacement</code></li>
+<li><code>SplitView</code> command bar / hamburger pattern</li>
+<li><code>ToolTip</code> — <code>Placement</code>, <code>ShowDelay</code>, content</li>
+<li><code>FlyoutBase</code> — <code>ShowAt</code>, <code>FlyoutPresenter</code> styling</li>
+</ul>
+<hr />
+<h2>Phase 6 — Advanced Rendering &amp; Layout</h2>
+<h3>15. 080 — Layout System Deep Dive (Advanced)</h3>
+<p><strong>Effort</strong>: 18h · <strong>Prerequisites</strong>: 023</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Est.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>5h</td>
+</tr>
+<tr>
+<td>Verbose</td>
+<td>6h</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Quiz</td>
+<td>3h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core content</strong>:</p>
+<ul>
+<li>Measure pass: <code>MeasureOverride</code>, <code>Measure</code>, <code>DesiredSize</code></li>
+<li>Arrange pass: <code>ArrangeOverride</code>, <code>Arrange</code>, <code>Bounds</code>, <code>BoundingBox</code></li>
+<li>Layout rounding and pixel snapping</li>
+<li><code>Layoutable</code> — <code>Width</code>, <code>Height</code>, <code>Margin</code>, <code>Padding</code>, <code>HorizontalAlignment</code>, <code>VerticalAlignment</code></li>
+<li><code>EffectiveViewportChanged</code> (v12)</li>
+<li><code>LayoutManager</code> — <code>ExecuteLayoutPass</code></li>
+<li>Invalidation — <code>InvalidateMeasure</code> vs <code>InvalidateArrange</code></li>
+<li>Layout zones and overlay layer</li>
+</ul>
+<h3>16. 081 — Animation System Deep Dive (Advanced)</h3>
+<p><strong>Effort</strong>: 18h · <strong>Prerequisites</strong>: 024</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Est.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>5h</td>
+</tr>
+<tr>
+<td>Verbose</td>
+<td>6h</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Quiz</td>
+<td>3h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core content</strong>:</p>
+<ul>
+<li><code>KeyFrame</code> animation — <code>KeyTime</code>, <code>KeySpline</code>, <code>KeyFrameType</code></li>
+<li>Animation settings — <code>Duration</code>, <code>Delay</code>, <code>FillMode</code>, <code>IterationCount</code>, <code>PlaybackDirection</code></li>
+<li>Control transitions — property, style, theme-level</li>
+<li>Page transitions — <code>CrossFade</code>, <code>SlideIn</code>, custom</li>
+<li>Composition animations — <code>CompositionCustomVisual</code></li>
+<li>Easing functions — all types (<code>CubicBezier</code>, <code>Elastic</code>, <code>Bounce</code>, etc.)</li>
+<li><code>PlaybackBehavior</code> — stop on invisible</li>
+<li>Animation performance considerations</li>
+</ul>
+<h3>17. 082 — Graphics &amp; Drawing Reference (Advanced)</h3>
+<p><strong>Effort</strong>: 20h · <strong>Prerequisites</strong>: 028</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Est.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>5h</td>
+</tr>
+<tr>
+<td>Verbose</td>
+<td>7h</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>5h</td>
+</tr>
+<tr>
+<td>Quiz</td>
+<td>3h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core content</strong>:</p>
+<ul>
+<li>Brushes — <code>SolidColorBrush</code>, <code>LinearGradientBrush</code>, <code>RadialGradientBrush</code>, <code>ImageBrush</code>, <code>VisualBrush</code>, <code>ImmutableBrush</code></li>
+<li>Transforms — <code>RotateTransform</code>, <code>ScaleTransform</code>, <code>TranslateTransform</code>, <code>TransformGroup</code>, <code>RenderTransform</code> vs <code>LayoutTransform</code></li>
+<li>Shapes — <code>Path</code>, <code>Geometry</code>, <code>RectangleGeometry</code>, <code>EllipseGeometry</code>, <code>CombinedGeometry</code></li>
+<li><code>DrawingContext</code> operations — <code>DrawLine</code>, <code>DrawRectangle</code>, <code>DrawEllipse</code>, <code>DrawGeometry</code>, <code>DrawText</code>, <code>DrawImage</code></li>
+<li>Hit testing with geometries</li>
+<li>Clipping and masking (<code>OpacityMask</code>, <code>Clip</code>)</li>
+<li>Effects — <code>DropShadowEffect</code>, <code>BlurEffect</code></li>
+<li>Bitmap blend modes, image interpolation</li>
+<li>Text rendering — <code>FormattedText</code>, <code>Typeface</code>, <code>TextLayout</code></li>
+</ul>
+<hr />
+<h2>Phase 7 — Platform &amp; Performance</h2>
+<h3>18. 083 — Container Queries (Intermediate)</h3>
+<p><strong>Effort</strong>: 10h · <strong>Prerequisites</strong>: 003</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Est.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Verbose</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Quiz</td>
+<td>1h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core content</strong>:</p>
+<ul>
+<li><code>ContainerQuery</code> syntax and selectors</li>
+<li><code>@container</code> in styles</li>
+<li>Width/height-based responsive triggers</li>
+<li>Nesting container queries</li>
+<li>Container query units (<code>cqw</code>, <code>cqh</code>, <code>cqi</code>, <code>cqb</code>)</li>
+</ul>
+<h3>19. 084 — Typography &amp; Custom Fonts (Intermediate)</h3>
+<p><strong>Effort</strong>: 12h · <strong>Prerequisites</strong>: 003</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Est.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Verbose</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Quiz</td>
+<td>2h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core content</strong>:</p>
+<ul>
+<li><code>FontManager</code> — available fonts, fallback chains</li>
+<li><code>FontFamily</code> URI schemes — <code>avares://</code>, <code>fonts://</code></li>
+<li>Font weight / style / stretch reference</li>
+<li><code>TextElement</code> attached properties</li>
+<li>Custom font loading at startup</li>
+<li>v12 font parser changes</li>
+<li><code>GlyphRun</code> for advanced text layout</li>
+</ul>
+<h3>20. 085 — Performance Optimization (Advanced)</h3>
+<p><strong>Effort</strong>: 16h · <strong>Prerequisites</strong>: 036, 080</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Est.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Verbose</td>
+<td>5h</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Quiz</td>
+<td>3h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core content</strong>:</p>
+<ul>
+<li>Reducing visual tree depth</li>
+<li><code>RenderOptions</code> — <code>BitmapInterpolationMode</code>, <code>EdgeMode</code></li>
+<li>Async binding with <code>AsyncConverter</code> to avoid UI thread blocking</li>
+<li>Virtualization — <code>ItemsRepeater</code> virtualization modes</li>
+<li><code>CompositionCustomVisual</code> for GPU compute</li>
+<li>Layout pass debugging</li>
+<li>Profiling with DevTools</li>
+</ul>
+<h3>21. 086 — Platform Integration — Windows (Advanced)</h3>
+<p><strong>Effort</strong>: 14h · <strong>Prerequisites</strong>: 037</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Est.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Verbose</td>
+<td>5h</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Quiz</td>
+<td>2h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core content</strong>:</p>
+<ul>
+<li>Win32 window handle access (<code>TryGetPlatformHandle</code>)</li>
+<li>Mica / Acrylic backdrop</li>
+<li>Custom titlebar — <code>Window.ExtendClientAreaToTitleBar</code></li>
+<li>Per-monitor DPI awareness</li>
+<li>Dark mode detection</li>
+<li>System tray (TrayIcon)</li>
+<li><code>NativeControlHost</code> for WinForms interop</li>
+<li>UIA accessibility bridge</li>
+</ul>
+<h3>22. 087 — Platform Integration — macOS &amp; Linux (Advanced)</h3>
+<p><strong>Effort</strong>: 12h · <strong>Prerequisites</strong>: 037</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Est.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Verbose</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Quiz</td>
+<td>2h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core content</strong>:</p>
+<ul>
+<li>macOS — native menus, dock icon, URL scheme registration, NSView embedding</li>
+<li>Linux — X11/Wayland specifics, <code>NativeControlHost</code>, app indicators</li>
+</ul>
+<hr />
+<h2>Phase 8 — Developer Experience</h2>
+<h3>23. 088 — XAML Live Previewer (Intermediate)</h3>
+<p><strong>Effort</strong>: 8h · <strong>Prerequisites</strong>: 001</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Est.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Verbose</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Quiz</td>
+<td>1h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core content</strong>:</p>
+<ul>
+<li>Enabling previewer in Rider / VS</li>
+<li>Design-time data context (<code>d:DataContext</code>)</li>
+<li><code>d:DesignWidth</code> / <code>d:DesignHeight</code></li>
+<li>Design-time resources and converters</li>
+<li>Previewer troubleshooting</li>
+</ul>
+<h3>24. 089 — Custom Flyout (Advanced)</h3>
+<p><strong>Effort</strong>: 10h · <strong>Prerequisites</strong>: 051</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Est.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Verbose</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>3h</td>
+</tr>
+<tr>
+<td>Quiz</td>
+<td>1h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core content</strong>:</p>
+<ul>
+<li><code>FlyoutBase</code> / <code>PopupFlyoutBase</code></li>
+<li><code>CustomFlyout</code> with placement modes</li>
+<li><code>FlyoutPresenter</code> styling</li>
+<li>Light-dismiss behavior</li>
+<li>Nested flyout patterns</li>
+</ul>
+<hr />
+<h2>Quick-Ref Expansions</h2>
+<table>
+<thead>
+<tr>
+<th>Ref</th>
+<th>Topic</th>
+<th>Effort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q08</td>
+<td>Routed Events Quick Ref</td>
+<td>1h</td>
+</tr>
+<tr>
+<td>Q09</td>
+<td>Property System Quick Ref</td>
+<td>1h</td>
+</tr>
+<tr>
+<td>Q10</td>
+<td>Dispatcher &amp; Timers Quick Ref</td>
+<td>1h</td>
+</tr>
+<tr>
+<td>Q11</td>
+<td>Input Gestures Quick Ref</td>
+<td>1h</td>
+</tr>
+<tr>
+<td>Q12</td>
+<td>Brushes &amp; Colors Reference</td>
+<td>1h</td>
+</tr>
+<tr>
+<td>Q13</td>
+<td>Font &amp; Typography Reference</td>
+<td>1h</td>
+</tr>
+</tbody>
+</table>
+<h2>Pattern Expansions</h2>
+<table>
+<thead>
+<tr>
+<th>Ref</th>
+<th>Topic</th>
+<th>Effort</th>
+<th>Prereqs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P008</td>
+<td>Focus &amp; Keyboard Navigation</td>
+<td>2h</td>
+<td>054, 055</td>
+</tr>
+<tr>
+<td>P009</td>
+<td>Storage &amp; File I/O Pipeline</td>
+<td>2h</td>
+<td>060</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Build Order Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Topics</th>
+<th>Total Effort</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 — Foundations</td>
+<td>051, 052, 053</td>
+<td>48h</td>
+<td>Unlocks understanding of many other docs</td>
+</tr>
+<tr>
+<td>2 — Input</td>
+<td>054, 055, 056</td>
+<td>36h</td>
+<td>Builds on routed events (051)</td>
+</tr>
+<tr>
+<td>3 — Data</td>
+<td>057, 058</td>
+<td>26h</td>
+<td>Extends existing binding coverage</td>
+</tr>
+<tr>
+<td>4 — Services</td>
+<td>059, 060</td>
+<td>24h</td>
+<td>Small, well-scoped topics</td>
+</tr>
+<tr>
+<td>5 — Controls</td>
+<td>061, 062, 063, 064</td>
+<td>54h</td>
+<td>Highest user-facing value</td>
+</tr>
+<tr>
+<td>6 — Rendering</td>
+<td>080, 081, 082</td>
+<td>56h</td>
+<td>Large but deepens existing 023/024/028</td>
+</tr>
+<tr>
+<td>7 — Platform</td>
+<td>083, 084, 085, 086, 087</td>
+<td>64h</td>
+<td>Performance is high-need</td>
+</tr>
+<tr>
+<td>8 — Dev UX</td>
+<td>088, 089</td>
+<td>18h</td>
+<td>Lightweight wrap-up</td>
+</tr>
+<tr>
+<td>Quick-refs</td>
+<td>Q08–Q13</td>
+<td>6h</td>
+<td>Can be written incrementally</td>
+</tr>
+<tr>
+<td>Patterns</td>
+<td>P008–P009</td>
+<td>4h</td>
+<td>Final polish</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total estimated effort</strong>: ~336 hours for all 24 full-topic treatments plus quick-refs and patterns.</p>
+<hr />
+<h2>Appendices</h2>
+<h3>Overlapping / Merged Topics</h3>
+<p>Some gaps are narrow enough to fold into existing docs rather than creating new topics:</p>
+<table>
+<thead>
+<tr>
+<th>Gap</th>
+<th>Merge Into</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Launcher</code> service</td>
+<td>059 — Clipboard &amp; Launcher</td>
+</tr>
+<tr>
+<td><code>NumericUpDown</code>, <code>Slider</code></td>
+<td>063 — Range &amp; Toggle Controls</td>
+</tr>
+<tr>
+<td><code>CheckBox</code>, <code>RadioButton</code>, <code>ToggleSwitch</code></td>
+<td>063 — Range &amp; Toggle Controls</td>
+</tr>
+<tr>
+<td><code>ToolTip</code></td>
+<td>064 — TabControl, Expander, SplitView</td>
+</tr>
+<tr>
+<td><code>AccessText</code></td>
+<td>055 — Keyboard &amp; Hotkeys</td>
+</tr>
+<tr>
+<td>Perf (partial)</td>
+<td>036 — Virtualization</td>
+</tr>
+</tbody>
+</table>
+<h3>Deferred Topics</h3>
+<p>The following were identified in the gap audit but are too narrow or advanced for Phase 2:</p>
+<ul>
+<li>Appium UI testing (niche, tooling-dependent)</li>
+<li>Docker deployment (devops, not framework)</li>
+<li>Generic types in XAML (rare)</li>
+<li>Code-only UI deep dive (well-covered by existing patterns)</li>
+<li>Custom ItemsPanel (covered implicitly by 023)</li>
+<li>Unhandled exception handling (can fold into 053)</li>
+<li>Insets manager (mobile-only)</li>
+<li>AI tools / Pro licensing (commercial, not framework)</li>
+</ul>
+<h3>Slotting New Quick-Refs</h3>
+<p>Current Q01–Q07 sequence continues with Q08–Q13. Files go under <code>01-quick-refs/</code>.</p>
+<h3>Slotting New Patterns</h3>
+<p>Current P001–P007 sequence continues with P008–P009. Files go under <code>03-patterns/</code>.</p>
+</main><nav class="doc-toc" id="toc"></nav></div><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/powershell.min.js"></script><script src="./_assets/js/search-index.js"></script><script>const CURRENT_PAGE="./doc-plan.html";</script><script src="./_assets/js/ssg.js"></script></body></html>

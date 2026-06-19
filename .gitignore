@@ -12,4 +12,4 @@ obj/
 *.dylib
 *.cache
 Thumbs.db
-_site/
+# _site/

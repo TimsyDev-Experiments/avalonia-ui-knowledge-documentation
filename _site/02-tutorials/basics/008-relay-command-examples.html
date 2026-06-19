@@ -1,0 +1,505 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>commands — Avalonia Docs</title><link rel="stylesheet" href="../../_assets/css/ssg.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='12' font-size='12'>A</text></svg>"></head><body><div class="layout"><nav class="sidebar" id="sidebar"><div class="sidebar-header"><h2><a href="../../index.html" style="color:inherit;text-decoration:none">Avalonia Docs</a></h2></div><div class="search-box"><input type="text" id="searchInput" placeholder="Search docs..." autocomplete="off"></div><div id="searchResults" class="search-results" style="display:none"></div><ul class="nav-tree" id="navTree"><li class="nav-group"><span class="nav-group-label">Quick References</span><ul class="nav-items"><li class="nav-item"><a href="../../01-quick-refs/accessibility-automation.html">Accessibility Automation</a></li><li class="nav-item"><a href="../../01-quick-refs/avalonia-12-breaking-changes.html">Avalonia 12 Breaking Changes</a></li><li class="nav-item"><a href="../../01-quick-refs/binding-modes.html">Binding Modes</a></li><li class="nav-item"><a href="../../01-quick-refs/brushes-colors-reference.html">Brushes Colors Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/common-controls-reference.html">Common Controls Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/common-converters.html">Common Converters</a></li><li class="nav-item"><a href="../../01-quick-refs/control-themes.html">Control Themes</a></li><li class="nav-item"><a href="../../01-quick-refs/dispatcher-timers-quick-ref.html">Dispatcher Timers Quick Ref</a></li><li class="nav-item"><a href="../../01-quick-refs/font-typography-reference.html">Font Typography Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/icons-reference.html">Icons Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/input-gestures.html">Input Gestures</a></li><li class="nav-item"><a href="../../01-quick-refs/mvvm-source-generators.html">Mvvm Source Generators</a></li><li class="nav-item"><a href="../../01-quick-refs/naming-conventions.html">Naming Conventions</a></li><li class="nav-item"><a href="../../01-quick-refs/property-system-quick-ref.html">Property System Quick Ref</a></li><li class="nav-item"><a href="../../01-quick-refs/resource-dictionaries.html">Resource Dictionaries</a></li><li class="nav-item"><a href="../../01-quick-refs/routed-events-quick-ref.html">Routed Events Quick Ref</a></li><li class="nav-item"><a href="../../01-quick-refs/shapes-geometries.html">Shapes Geometries</a></li><li class="nav-item"><a href="../../01-quick-refs/xaml-selectors.html">Xaml Selectors</a></li><li class="nav-group"><span class="nav-group-label">Basics</span><ul class="nav-items"><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup.html">Project Setup</a></li><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup-verbose.html">Project Setup (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup-examples.html">Project Setup (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup-quiz.html">Project Setup (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding.html">Command Binding</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding-verbose.html">Command Binding (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding-examples.html">Command Binding (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding-quiz.html">Command Binding (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling.html">Basic Styling</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling-verbose.html">Basic Styling (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling-examples.html">Basic Styling (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling-quiz.html">Basic Styling (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters.html">Value Converters</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters-verbose.html">Value Converters (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters-examples.html">Value Converters (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters-quiz.html">Value Converters (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes.html">Binding Modes</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes-verbose.html">Binding Modes (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes-examples.html">Binding Modes (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes-quiz.html">Binding Modes (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources.html">Resources</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources-verbose.html">Resources (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources-examples.html">Resources (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources-quiz.html">Resources (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property.html">Observable Object Property</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property-verbose.html">Observable Object Property (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property-examples.html">Observable Object Property (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property-quiz.html">Observable Object Property (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command.html">Relay Command</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command-verbose.html">Relay Command (in depth)</a></li><li class="nav-item active"><a href="../../02-tutorials/basics/008-relay-command-examples.html">Relay Command (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command-quiz.html">Relay Command (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-examples.html">Data Templates (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-basics.html">Data Templates Basics</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-basics-verbose.html">Data Templates Basics (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-basics-quiz.html">Data Templates Basics (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics.html">Window Dialog Basics</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics-verbose.html">Window Dialog Basics (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics-examples.html">Window Dialog Basics (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics-quiz.html">Window Dialog Basics (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Intermediate</span><ul class="nav-items"><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings.html">Compiled Bindings</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings-verbose.html">Compiled Bindings (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings-examples.html">Compiled Bindings (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings-quiz.html">Compiled Bindings (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles.html">Control Themes Vs Styles</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles-verbose.html">Control Themes Vs Styles (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles-examples.html">Control Themes Vs Styles (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles-quiz.html">Control Themes Vs Styles (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation.html">Data Validation</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation-verbose.html">Data Validation (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation-examples.html">Data Validation (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation-quiz.html">Data Validation (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns.html">Imessenger Patterns</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns-verbose.html">Imessenger Patterns (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns-examples.html">Imessenger Patterns (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns-quiz.html">Imessenger Patterns (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists.html">Item Lists</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists-verbose.html">Item Lists (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists-examples.html">Item Lists (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists-quiz.html">Item Lists (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management.html">Window Dialog Management</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management-verbose.html">Window Dialog Management (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management-examples.html">Window Dialog Management (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management-quiz.html">Window Dialog Management (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching.html">Theme Switching</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching-verbose.html">Theme Switching (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching-examples.html">Theme Switching (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching-quiz.html">Theme Switching (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation.html">Navigation</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation-verbose.html">Navigation (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation-examples.html">Navigation (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation-quiz.html">Navigation (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop.html">Drag Drop</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop-verbose.html">Drag Drop (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop-examples.html">Drag Drop (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop-quiz.html">Drag Drop (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive.html">Datagrid Deep Dive</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive-verbose.html">Datagrid Deep Dive (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive-examples.html">Datagrid Deep Dive (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive-quiz.html">Datagrid Deep Dive (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray.html">Menus Context Menus Tray</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray-verbose.html">Menus Context Menus Tray (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray-examples.html">Menus Context Menus Tray (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray-quiz.html">Menus Context Menus Tray (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data.html">Treeview Hierarchical Data</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data-verbose.html">Treeview Hierarchical Data (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data-examples.html">Treeview Hierarchical Data (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data-quiz.html">Treeview Hierarchical Data (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization.html">Charts Data Visualization</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization-verbose.html">Charts Data Visualization (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization-examples.html">Charts Data Visualization (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization-quiz.html">Charts Data Visualization (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database.html">Sqlite Local Database</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database-verbose.html">Sqlite Local Database (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database-examples.html">Sqlite Local Database (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database-quiz.html">Sqlite Local Database (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events.html">Routed Events</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events-verbose.html">Routed Events (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events-examples.html">Routed Events (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events-quiz.html">Routed Events (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system.html">Property System</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system-verbose.html">Property System (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system-examples.html">Property System (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system-quiz.html">Property System (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher.html">Threading Dispatcher</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher-verbose.html">Threading Dispatcher (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher-examples.html">Threading Dispatcher (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher-quiz.html">Threading Dispatcher (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management.html">Focus Management</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management-verbose.html">Focus Management (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management-examples.html">Focus Management (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management-quiz.html">Focus Management (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys.html">Keyboard Hotkeys</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys-verbose.html">Keyboard Hotkeys (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys-examples.html">Keyboard Hotkeys (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys-quiz.html">Keyboard Hotkeys (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events.html">Input Events</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events-verbose.html">Input Events (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events-examples.html">Input Events (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events-quiz.html">Input Events (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers.html">Gesture Recognizers</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers-verbose.html">Gesture Recognizers (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers-examples.html">Gesture Recognizers (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers-quiz.html">Gesture Recognizers (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar.html">Scrollviewer Scrollbar</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar-verbose.html">Scrollviewer Scrollbar (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar-examples.html">Scrollviewer Scrollbar (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar-quiz.html">Scrollviewer Scrollbar (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input.html">Textbox Text Input</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input-verbose.html">Textbox Text Input (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input-examples.html">Textbox Text Input (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input-quiz.html">Textbox Text Input (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding.html">Multibinding Prioritybinding</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding-verbose.html">Multibinding Prioritybinding (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding-examples.html">Multibinding Prioritybinding (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding-quiz.html">Multibinding Prioritybinding (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views.html">Collection Views</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views-verbose.html">Collection Views (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views-examples.html">Collection Views (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views-quiz.html">Collection Views (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher.html">Clipboard Launcher</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher-verbose.html">Clipboard Launcher (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher-examples.html">Clipboard Launcher (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher-quiz.html">Clipboard Launcher (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service.html">Storage Service</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service-verbose.html">Storage Service (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service-examples.html">Storage Service (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service-quiz.html">Storage Service (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls.html">Selection Controls</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls-verbose.html">Selection Controls (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls-examples.html">Selection Controls (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls-quiz.html">Selection Controls (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls.html">Range Toggle Controls</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls-verbose.html">Range Toggle Controls (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls-examples.html">Range Toggle Controls (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls-quiz.html">Range Toggle Controls (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview.html">Tabcontrol Expander Splitview</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview-verbose.html">Tabcontrol Expander Splitview (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview-examples.html">Tabcontrol Expander Splitview (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview-quiz.html">Tabcontrol Expander Splitview (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Advanced</span><ul class="nav-items"><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls.html">Custom Templated Controls</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls-verbose.html">Custom Templated Controls (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls-examples.html">Custom Templated Controls (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls-quiz.html">Custom Templated Controls (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch.html">Custom Controls From Scratch</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch-verbose.html">Custom Controls From Scratch (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch-examples.html">Custom Controls From Scratch (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch-quiz.html">Custom Controls From Scratch (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors.html">Attached Properties Behaviors</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors-verbose.html">Attached Properties Behaviors (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors-examples.html">Attached Properties Behaviors (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors-quiz.html">Attached Properties Behaviors (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels.html">Custom Layout Panels</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels-verbose.html">Custom Layout Panels (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels-examples.html">Custom Layout Panels (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels-quiz.html">Custom Layout Panels (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions.html">Animation Transitions</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions-verbose.html">Animation Transitions (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions-examples.html">Animation Transitions (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions-quiz.html">Animation Transitions (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals.html">Compositor Custom Visuals</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals-verbose.html">Compositor Custom Visuals (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals-examples.html">Compositor Custom Visuals (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals-quiz.html">Compositor Custom Visuals (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation.html">Accessibility Automation</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation-verbose.html">Accessibility Automation (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation-examples.html">Accessibility Automation (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation-quiz.html">Accessibility Automation (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings.html">Advanced Composite Bindings</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings-verbose.html">Advanced Composite Bindings (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings-examples.html">Advanced Composite Bindings (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings-quiz.html">Advanced Composite Bindings (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia.html">Custom Drawing Skia</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia-verbose.html">Custom Drawing Skia (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia-examples.html">Custom Drawing Skia (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia-quiz.html">Custom Drawing Skia (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools.html">Avalonia Plus Devtools</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools-verbose.html">Avalonia Plus Devtools (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools-examples.html">Avalonia Plus Devtools (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools-quiz.html">Avalonia Plus Devtools (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging.html">Parcel Packaging</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging-verbose.html">Parcel Packaging (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging-examples.html">Parcel Packaging (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging-quiz.html">Parcel Packaging (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system.html">Custom Theme Design System</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system-verbose.html">Custom Theme Design System (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system-examples.html">Custom Theme Design System (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system-quiz.html">Custom Theme Design System (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring.html">Mvvm Di Wiring</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring-verbose.html">Mvvm Di Wiring (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring-examples.html">Mvvm Di Wiring (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring-quiz.html">Mvvm Di Wiring (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n.html">Localization I18n</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n-verbose.html">Localization I18n (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n-examples.html">Localization I18n (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n-quiz.html">Localization I18n (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services.html">File Pickers Platform Services</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services-verbose.html">File Pickers Platform Services (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services-examples.html">File Pickers Platform Services (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services-quiz.html">File Pickers Platform Services (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management.html">Custom Dialogs Window Management</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management-verbose.html">Custom Dialogs Window Management (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management-examples.html">Custom Dialogs Window Management (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management-quiz.html">Custom Dialogs Window Management (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists.html">Virtualization Large Lists</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists-verbose.html">Virtualization Large Lists (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists-examples.html">Virtualization Large Lists (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists-quiz.html">Virtualization Large Lists (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen.html">App Lifetimes Splash Screen</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen-verbose.html">App Lifetimes Splash Screen (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen-examples.html">App Lifetimes Splash Screen (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen-quiz.html">App Lifetimes Splash Screen (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing.html">Headless Testing</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing-verbose.html">Headless Testing (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing-examples.html">Headless Testing (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing-quiz.html">Headless Testing (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming.html">Nativeaot Trimming</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming-verbose.html">Nativeaot Trimming (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming-examples.html">Nativeaot Trimming (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming-quiz.html">Nativeaot Trimming (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile.html">Multi Targeting Desktop Browser Mobile</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-verbose.html">Multi Targeting Desktop Browser Mobile (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-examples.html">Multi Targeting Desktop Browser Mobile (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-quiz.html">Multi Targeting Desktop Browser Mobile (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress.html">Background Services And Progress</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress-verbose.html">Background Services And Progress (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress-examples.html">Background Services And Progress (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress-quiz.html">Background Services And Progress (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia.html">Cicd For Avalonia</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia-verbose.html">Cicd For Avalonia (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia-examples.html">Cicd For Avalonia (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia-quiz.html">Cicd For Avalonia (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry.html">Logging Telemetry</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry-verbose.html">Logging Telemetry (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry-examples.html">Logging Telemetry (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry-quiz.html">Logging Telemetry (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing.html">Printing</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing-verbose.html">Printing (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing-examples.html">Printing (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing-quiz.html">Printing (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater.html">Auto Updater</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater-verbose.html">Auto Updater (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater-examples.html">Auto Updater (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater-quiz.html">Auto Updater (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive.html">Layout System Deep Dive</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive-verbose.html">Layout System Deep Dive (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive-examples.html">Layout System Deep Dive (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive-quiz.html">Layout System Deep Dive (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive.html">Animation System Deep Dive</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive-verbose.html">Animation System Deep Dive (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive-examples.html">Animation System Deep Dive (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive-quiz.html">Animation System Deep Dive (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference.html">Graphics Drawing Reference</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference-verbose.html">Graphics Drawing Reference (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference-examples.html">Graphics Drawing Reference (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference-quiz.html">Graphics Drawing Reference (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout.html">Container Queries Responsive Layout</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout-verbose.html">Container Queries Responsive Layout (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout-examples.html">Container Queries Responsive Layout (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout-quiz.html">Container Queries Responsive Layout (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features.html">Typography Text Features</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features-verbose.html">Typography Text Features (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features-examples.html">Typography Text Features (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features-quiz.html">Typography Text Features (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling.html">Performance Profiling</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling-verbose.html">Performance Profiling (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling-examples.html">Performance Profiling (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling-quiz.html">Performance Profiling (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows.html">Platform Specific Windows</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows-verbose.html">Platform Specific Windows (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows-examples.html">Platform Specific Windows (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows-quiz.html">Platform Specific Windows (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux.html">Platform Specific Macos Linux</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux-verbose.html">Platform Specific Macos Linux (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux-examples.html">Platform Specific Macos Linux (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux-quiz.html">Platform Specific Macos Linux (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload.html">Xaml Previewer Hot Reload</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload-verbose.html">Xaml Previewer Hot Reload (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload-examples.html">Xaml Previewer Hot Reload (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload-quiz.html">Xaml Previewer Hot Reload (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup.html">Custom Flyout Popup</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup-verbose.html">Custom Flyout Popup (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup-examples.html">Custom Flyout Popup (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup-quiz.html">Custom Flyout Popup (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Patterns</span><ul class="nav-items"><li class="nav-item"><a href="../../03-patterns/001-service-locator-vs-di.html">Service Locator Vs Di</a></li><li class="nav-item"><a href="../../03-patterns/002-plugin-architecture.html">Plugin Architecture</a></li><li class="nav-item"><a href="../../03-patterns/003-async-initialization.html">Async Initialization</a></li><li class="nav-item"><a href="../../03-patterns/004-state-management.html">State Management</a></li><li class="nav-item"><a href="../../03-patterns/005-repository-unit-of-work.html">Repository Unit Of Work</a></li><li class="nav-item"><a href="../../03-patterns/006-logging-patterns.html">Logging Patterns</a></li><li class="nav-item"><a href="../../03-patterns/007-editor-application-architecture.html">Editor Application Architecture</a></li><li class="nav-item"><a href="../../03-patterns/008-focus-keyboard-navigation.html">Focus Keyboard Navigation</a></li><li class="nav-item"><a href="../../03-patterns/008-toggle-state-pattern.html">Toggle State Pattern</a></li><li class="nav-item"><a href="../../03-patterns/009-lazy-load-virtual-scrolling.html">Lazy Load Virtual Scrolling</a></li><li class="nav-item"><a href="../../03-patterns/009-storage-file-io-pipeline.html">Storage File Io Pipeline</a></li><li class="nav-group"><span class="nav-group-label">Migration</span><ul class="nav-items"><li class="nav-item"><a href="../../04-migration/avalonia-11-to-12.html">Avalonia 11 To 12</a></li><li class="nav-item"><a href="../../04-migration/wpf-to-avalonia-key-mappings.html">Wpf To Avalonia Key Mappings</a></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></nav><main class="doc-content" id="docContent"><h1>008X — RelayCommand in Depth: Real-World Examples</h1>
+<p><strong>What you'll build:</strong> A file-upload manager with cancellation and progress, and a retry-enabled data-loading command — two scenarios that demonstrate async command patterns, <code>CancellationToken</code> injection, <code>IProgress&lt;T&gt;</code> binding, and fallback execution.</p>
+<p><strong>Prerequisites:</strong> <a href="008-relay-command.html">008 — RelayCommand in Depth</a>. The <a href="008-relay-command-verbose.html">verbose companion</a> covers the <code>AsyncRelayCommand</code> internal implementation, <code>CancellationToken</code> injection mechanics, and manual <code>ICommand</code> alternatives.</p>
+<hr />
+<h2>Example 1: File Upload Manager with Cancellation and Progress</h2>
+<p><strong>Goal:</strong> Create an upload panel where each file upload is an async command with a cancellable progress bar and status text. Multiple uploads can run concurrently, each with its own progress tracking.</p>
+<p>This scenario demonstrates <code>CancellationToken</code> injection for cancellation, <code>IProgress&lt;T&gt;</code> for per-item progress, and binding to <code>IsRunning</code> and <code>Progress</code> on individual command instances.</p>
+<h3>Upload job model</h3>
+<pre><code class="language-csharp">// Models/UploadJob.cs
+using CommunityToolkit.Mvvm.ComponentModel;
+
+namespace MyApp.Models;
+
+public partial class UploadJob : ObservableObject
+{
+    [ObservableProperty]
+    private string _fileName = string.Empty;
+
+    [ObservableProperty]
+    private long _fileSize;
+
+    [ObservableProperty]
+    private string _status = &quot;Pending&quot;;
+
+    [ObservableProperty]
+    private double _progress; // 0.0 to 1.0
+
+    [ObservableProperty]
+    private bool _isUploading;
+}
+</code></pre>
+<h3>ViewModel</h3>
+<pre><code class="language-csharp">// ViewModels/UploadViewModel.cs
+using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using MyApp.Models;
+
+namespace MyApp.ViewModels;
+
+public partial class UploadViewModel : ObservableObject
+{
+    public ObservableCollection&lt;UploadJob&gt; Jobs { get; } = new();
+
+    [ObservableProperty]
+    private UploadJob? _selectedJob;
+
+    [RelayCommand]
+    private void AddFile()
+    {
+        Jobs.Add(new UploadJob
+        {
+            FileName = $&quot;file_{Jobs.Count + 1}.bin&quot;,
+            FileSize = new Random().Next(1024, 10_485_760), // 1 KB - 10 MB
+            Status = &quot;Pending&quot;,
+        });
+    }
+
+    [RelayCommand]
+    private async Task UploadAsync(UploadJob? job, CancellationToken token)
+    {
+        if (job is null) return;
+
+        job.Status = &quot;Uploading...&quot;;
+        job.IsUploading = true;
+        job.Progress = 0;
+
+        var progress = new Progress&lt;double&gt;(p =&gt;
+        {
+            job.Progress = p;
+        });
+
+        try
+        {
+            // Simulate chunked upload with progress
+            var totalChunks = 20;
+            for (var i = 0; i &lt; totalChunks; i++)
+            {
+                token.ThrowIfCancellationRequested();
+
+                // Simulate network send
+                await Task.Delay(200, token);
+
+                var pct = (i + 1.0) / totalChunks;
+                (progress as IProgress&lt;double&gt;).Report(pct);
+            }
+
+            job.Status = &quot;Completed&quot;;
+            job.Progress = 1.0;
+        }
+        catch (OperationCanceledException)
+        {
+            job.Status = &quot;Cancelled&quot;;
+            job.Progress = 0;
+        }
+        finally
+        {
+            job.IsUploading = false;
+        }
+    }
+
+    [RelayCommand]
+    private void CancelSelected()
+    {
+        if (SelectedJob is not null)
+        {
+            SelectedJob.Status = &quot;Cancelled&quot;;
+            SelectedJob.IsUploading = false;
+            // Real cancellation requires the CancellationTokenSource —
+            // see the &quot;How It Works&quot; section below
+        }
+    }
+
+    [RelayCommand]
+    private void ClearCompleted()
+    {
+        var completed = Jobs.Where(j =&gt; j.Status is &quot;Completed&quot; or &quot;Cancelled&quot;).ToList();
+        foreach (var job in completed)
+            Jobs.Remove(job);
+    }
+}
+</code></pre>
+<h3>Upload command with external cancellation</h3>
+<p>The <code>UploadAsync</code> method above uses <code>CancellationToken</code> from the command's internal source. To cancel from outside, the ViewModel must hold the token source:</p>
+<pre><code class="language-csharp">// Alternative: ViewModel with external cancellation support
+private CancellationTokenSource? _uploadCts;
+
+[RelayCommand]
+private async Task UploadWithCancelAsync(UploadJob? job)
+{
+    if (job is null) return;
+
+    _uploadCts?.Cancel();
+    _uploadCts = new CancellationTokenSource();
+    var token = _uploadCts.Token;
+
+    job.Status = &quot;Uploading...&quot;;
+    job.IsUploading = true;
+
+    try
+    {
+        for (var i = 0; i &lt; 100; i += 5)
+        {
+            token.ThrowIfCancellationRequested();
+            await Task.Delay(100, token);
+            job.Progress = i / 100.0;
+        }
+        job.Status = &quot;Completed&quot;;
+    }
+    catch (OperationCanceledException)
+    {
+        job.Status = &quot;Cancelled&quot;;
+    }
+    finally
+    {
+        job.IsUploading = false;
+    }
+}
+
+[RelayCommand]
+private void CancelUpload()
+{
+    _uploadCts?.Cancel();
+}
+</code></pre>
+<h3>View</h3>
+<pre><code class="language-xml">&lt;!-- Views/UploadView.axaml --&gt;
+&lt;UserControl xmlns=&quot;https://github.com/avaloniaui&quot;
+             xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+             xmlns:vm=&quot;using:MyApp.ViewModels&quot;
+             xmlns:models=&quot;using:MyApp.Models&quot;
+             x:Class=&quot;MyApp.Views.UploadView&quot;
+             x:DataType=&quot;vm:UploadViewModel&quot;&gt;
+
+  &lt;DockPanel Margin=&quot;16&quot;&gt;
+
+    &lt;!-- Toolbar --&gt;
+    &lt;StackPanel DockPanel.Dock=&quot;Top&quot; Orientation=&quot;Horizontal&quot; Gap=&quot;8&quot; Margin=&quot;0,0,0,8&quot;&gt;
+      &lt;Button Content=&quot;Add File&quot; Command=&quot;{Binding AddFileCommand}&quot; /&gt;
+      &lt;Button Content=&quot;Cancel Selected&quot; Command=&quot;{Binding CancelSelectedCommand}&quot; /&gt;
+      &lt;Button Content=&quot;Clear Completed&quot; Command=&quot;{Binding ClearCompletedCommand}&quot; /&gt;
+    &lt;/StackPanel&gt;
+
+    &lt;!-- Job list --&gt;
+    &lt;ListBox ItemsSource=&quot;{Binding Jobs}&quot;
+             SelectedItem=&quot;{Binding SelectedJob, Mode=TwoWay}&quot;&gt;
+      &lt;ListBox.ItemTemplate&gt;
+        &lt;DataTemplate x:DataType=&quot;models:UploadJob&quot;&gt;
+          &lt;Border Margin=&quot;4,2&quot; Padding=&quot;8&quot; CornerRadius=&quot;6&quot;
+                  BorderBrush=&quot;#ddd&quot; BorderThickness=&quot;1&quot;&gt;
+            &lt;Grid ColumnDefinitions=&quot;*,Auto,120&quot; Gap=&quot;8&quot;&gt;
+              &lt;StackPanel&gt;
+                &lt;TextBlock Text=&quot;{Binding FileName}&quot; FontWeight=&quot;SemiBold&quot; /&gt;
+                &lt;TextBlock Text=&quot;{Binding Status}&quot; FontSize=&quot;11&quot; Foreground=&quot;Gray&quot; /&gt;
+              &lt;/StackPanel&gt;
+
+              &lt;Button Grid.Column=&quot;1&quot;
+                      Content=&quot;Upload&quot;
+                      Command=&quot;{Binding $parent[Window].DataContext.UploadCommand}&quot;
+                      CommandParameter=&quot;{Binding .}&quot;
+                      IsVisible=&quot;{Binding IsUploading, Converter={StaticResource InverseBool}}&quot; /&gt;
+
+              &lt;ProgressBar Grid.Column=&quot;2&quot;
+                           Value=&quot;{Binding Progress}&quot;
+                           IsVisible=&quot;{Binding IsUploading}&quot;
+                           VerticalAlignment=&quot;Center&quot; /&gt;
+            &lt;/Grid&gt;
+          &lt;/Border&gt;
+        &lt;/DataTemplate&gt;
+      &lt;/ListBox.ItemTemplate&gt;
+    &lt;/ListBox&gt;
+  &lt;/DockPanel&gt;
+&lt;/UserControl&gt;
+</code></pre>
+<h3>How it works</h3>
+<ol>
+<li><strong><code>UploadAsync(UploadJob? job, CancellationToken token)</code></strong> is an async command with a typed parameter and injected <code>CancellationToken</code>. The source generator detects <code>CancellationToken</code> and removes it from the external parameter list — the command exposes <code>IAsyncRelayCommand&lt;UploadJob?&gt;</code>.</li>
+<li><strong><code>token.ThrowIfCancellationRequested()</code></strong> is called in each chunk loop. When the token is cancelled, <code>OperationCanceledException</code> is thrown. The catch block sets the job status to &quot;Cancelled&quot;.</li>
+<li><strong>Progress reporting through <code>IProgress&lt;double&gt;</code>:</strong> The <code>progress</code> local is created in the command body. Progress is reported after each chunk. In this example, progress is written to <code>job.Progress</code> directly — the <code>IProgress&lt;double&gt;</code> pattern lets the progress callback marshal to the UI thread automatically.</li>
+<li><strong>External cancellation via <code>CancellationTokenSource</code>:</strong> The alternative <code>UploadWithCancelAsync</code> pattern stores the token source in a field. The <code>CancelUpload</code> command cancels it, which cancels the running upload. The <code>_uploadCts?.Cancel()</code> call is safe — if no upload is running, <code>_uploadCts</code> is null.</li>
+<li><strong>Command binding from DataTemplate:</strong> The Upload button in the <code>DataTemplate</code> uses <code>$parent[Window].DataContext.UploadCommand</code> to reach the parent ViewModel's command (since the <code>DataTemplate</code>'s <code>x:DataType</code> is <code>UploadJob</code>, not <code>UploadViewModel</code>). The <code>CommandParameter</code> passes the current job.</li>
+</ol>
+<h3>Design decisions and edge cases</h3>
+<ul>
+<li><strong>Token injection vs manual token source:</strong> The injected <code>CancellationToken</code> is managed by <code>AsyncRelayCommand</code> internally — it creates and disposes the token source per execution. This works for self-contained cancellation (cancelling only that command). For cross-command cancellation (Cancel button), store the token source in a field and create it in the command body.</li>
+<li><strong>Multiple concurrent uploads:</strong> Each <code>UploadAsync</code> call gets its own <code>CancellationToken</code>. Uploads run concurrently via <code>Task.WhenAll</code> if the calling code starts them together. The <code>UploadCommand.IsRunning</code> binds to the last-executed instance — per-job <code>IsRunning</code> is tracked in <code>UploadJob.IsUploading</code>.</li>
+<li><strong><code>OperationCanceledException</code> handling:</strong> Always catch <code>OperationCanceledException</code> in async commands that accept <code>CancellationToken</code>. If unhandled, the exception propagates to <code>ExecutionTask</code> and becomes an unobserved task exception.</li>
+<li><strong>Progress granularity:</strong> 20 chunks with 200 ms delay gives a 4-second simulated upload. Adjust the chunk count and delay to match real transfer characteristics. For real file uploads, report progress from the <code>HttpClient</code>'s <code>HttpContent</code> progress stream.</li>
+</ul>
+<hr />
+<h2>Example 2: Retry-Enabled Data Loader</h2>
+<p><strong>Goal:</strong> Load data from a service with automatic retry on failure. The command exposes a retry count, error state, and loading status. Each retry attempt updates the status message.</p>
+<p>The built-in <code>AsyncRelayCommand</code> does not support retry. This example uses a combination of <code>[RelayCommand]</code> with manual retry logic in the method body, exposing retry state through observable properties.</p>
+<h3>ViewModel</h3>
+<pre><code class="language-csharp">// ViewModels/DataLoaderViewModel.cs
+using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+
+namespace MyApp.ViewModels;
+
+public partial class DataLoaderViewModel : ObservableObject
+{
+    [ObservableProperty]
+    private string _statusMessage = &quot;Ready&quot;;
+
+    [ObservableProperty]
+    private int _retryCount;
+
+    [ObservableProperty]
+    private bool _hasError;
+
+    [ObservableProperty]
+    private bool _isLoaded;
+
+    public ObservableCollection&lt;string&gt; Items { get; } = new();
+
+    private const int MaxRetries = 3;
+
+    [RelayCommand]
+    private async Task LoadDataAsync(CancellationToken token)
+    {
+        IsLoaded = false;
+        HasError = false;
+        RetryCount = 0;
+
+        for (var attempt = 1; attempt &lt;= MaxRetries; attempt++)
+        {
+            token.ThrowIfCancellationRequested();
+
+            StatusMessage = attempt == 1
+                ? &quot;Loading...&quot;
+                : $&quot;Retrying ({attempt}/{MaxRetries})...&quot;;
+
+            try
+            {
+                var data = await FetchDataAsync(token);
+
+                // Success — populate items
+                Items.Clear();
+                foreach (var item in data)
+                    Items.Add(item);
+
+                IsLoaded = true;
+                StatusMessage = $&quot;Loaded {Items.Count} items&quot;;
+                HasError = false;
+                return;
+            }
+            catch (HttpRequestException ex)
+            {
+                RetryCount = attempt;
+                StatusMessage = $&quot;Attempt {attempt} failed: {ex.Message}&quot;;
+
+                if (attempt &gt;= MaxRetries)
+                {
+                    HasError = true;
+                    StatusMessage = $&quot;Failed after {MaxRetries} attempts&quot;;
+                }
+                else if (!token.IsCancellationRequested)
+                {
+                    // Wait before retrying with exponential back-off
+                    var delay = TimeSpan.FromMilliseconds(500 * Math.Pow(2, attempt - 1));
+                    await Task.Delay(delay, token);
+                }
+            }
+        }
+    }
+
+    private static async Task&lt;List&lt;string&gt;&gt; FetchDataAsync(CancellationToken token)
+    {
+        // Simulate an unreliable service
+        await Task.Delay(300, token);
+
+        // Simulate intermittent failure (60% chance of failure)
+        if (Random.Shared.NextDouble() &lt; 0.6)
+            throw new HttpRequestException(&quot;Service temporarily unavailable&quot;);
+
+        return new List&lt;string&gt;
+        {
+            &quot;Item A&quot;, &quot;Item B&quot;, &quot;Item C&quot;,
+            &quot;Item D&quot;, &quot;Item E&quot;,
+        };
+    }
+
+    [RelayCommand]
+    private async Task LoadDataWithCustomRetryAsync()
+    {
+        // Reset state
+        IsLoaded = false;
+        HasError = false;
+
+        // Use a custom retry policy with exponential back-off
+        var policy = new RetryPolicy
+        {
+            MaxRetries = 5,
+            BaseDelayMs = 200,
+            OnRetry = (attempt, ex) =&gt;
+            {
+                RetryCount = attempt;
+                StatusMessage = $&quot;Retry {attempt}: {ex.Message}&quot;;
+            },
+        };
+
+        try
+        {
+            var data = await policy.ExecuteAsync(ct =&gt; FetchDataAsync(ct));
+            Items.Clear();
+            foreach (var item in data)
+                Items.Add(item);
+            IsLoaded = true;
+            StatusMessage = &quot;Loaded successfully&quot;;
+        }
+        catch (Exception ex)
+        {
+            HasError = true;
+            StatusMessage = $&quot;Failed: {ex.Message}&quot;;
+        }
+    }
+}
+
+// Simple retry policy helper (not part of CommunityToolkit.Mvvm)
+public class RetryPolicy
+{
+    public int MaxRetries { get; set; } = 3;
+    public int BaseDelayMs { get; set; } = 200;
+    public Action&lt;int, Exception&gt;? OnRetry { get; set; }
+
+    public async Task&lt;T&gt; ExecuteAsync&lt;T&gt;(Func&lt;CancellationToken, Task&lt;T&gt;&gt; operation, CancellationToken ct = default)
+    {
+        var attempts = 0;
+        while (true)
+        {
+            ct.ThrowIfCancellationRequested();
+            try
+            {
+                return await operation(ct);
+            }
+            catch (Exception ex) when (ex is not OperationCanceledException)
+            {
+                attempts++;
+                if (attempts &gt;= MaxRetries)
+                    throw;
+
+                OnRetry?.Invoke(attempts, ex);
+                var delay = TimeSpan.FromMilliseconds(BaseDelayMs * Math.Pow(2, attempts - 1));
+                await Task.Delay(delay, ct);
+            }
+        }
+    }
+}
+</code></pre>
+<h3>View</h3>
+<pre><code class="language-xml">&lt;!-- Views/DataLoaderView.axaml --&gt;
+&lt;UserControl xmlns=&quot;https://github.com/avaloniaui&quot;
+             xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+             xmlns:vm=&quot;using:MyApp.ViewModels&quot;
+             x:Class=&quot;MyApp.Views.DataLoaderView&quot;
+             x:DataType=&quot;vm:DataLoaderViewModel&quot;&gt;
+
+  &lt;StackPanel Margin=&quot;24&quot; Spacing=&quot;12&quot; MaxWidth=&quot;400&quot;&gt;
+
+    &lt;!-- Status bar --&gt;
+    &lt;TextBlock Text=&quot;{Binding StatusMessage, Mode=OneWay}&quot;
+               Foreground=&quot;{Binding HasError, Converter={StaticResource BoolToColor}}&quot;
+               FontSize=&quot;12&quot; /&gt;
+
+    &lt;!-- Retry indicator --&gt;
+    &lt;ProgressBar IsIndeterminate=&quot;{Binding LoadDataCommand.IsRunning}&quot;
+                 IsVisible=&quot;{Binding LoadDataCommand.IsRunning}&quot; /&gt;
+
+    &lt;!-- Action buttons --&gt;
+    &lt;StackPanel Orientation=&quot;Horizontal&quot; Gap=&quot;8&quot;&gt;
+      &lt;Button Content=&quot;Load Data&quot;
+              Command=&quot;{Binding LoadDataCommand}&quot; /&gt;
+      &lt;Button Content=&quot;Load (Custom Retry)&quot;
+              Command=&quot;{Binding LoadDataWithCustomRetryCommand}&quot; /&gt;
+    &lt;/StackPanel&gt;
+
+    &lt;!-- Retry count --&gt;
+    &lt;TextBlock Text=&quot;{Binding RetryCount, StringFormat='Retry attempts: {0}'}&quot;
+               FontSize=&quot;11&quot;
+               Foreground=&quot;Gray&quot;
+               IsVisible=&quot;{Binding RetryCount, Converter={StaticResource PositiveToBool}}&quot; /&gt;
+
+    &lt;!-- Loaded items --&gt;
+    &lt;ListBox ItemsSource=&quot;{Binding Items}&quot;
+             IsVisible=&quot;{Binding IsLoaded}&quot;&gt;
+      &lt;ListBox.ItemTemplate&gt;
+        &lt;DataTemplate x:DataType=&quot;x:String&quot;&gt;
+          &lt;TextBlock Text=&quot;{Binding .}&quot; Margin=&quot;4,2&quot; /&gt;
+        &lt;/DataTemplate&gt;
+      &lt;/ListBox.ItemTemplate&gt;
+    &lt;/ListBox&gt;
+
+    &lt;!-- Error state --&gt;
+    &lt;Border IsVisible=&quot;{Binding HasError}&quot;
+            Background=&quot;#fef2f2&quot;
+            BorderBrush=&quot;#dc2626&quot;
+            BorderThickness=&quot;1&quot;
+            CornerRadius=&quot;6&quot;
+            Padding=&quot;12&quot;&gt;
+      &lt;StackPanel Gap=&quot;4&quot;&gt;
+        &lt;TextBlock Text=&quot;Loading failed&quot;
+                   FontWeight=&quot;Bold&quot;
+                   Foreground=&quot;#dc2626&quot; /&gt;
+        &lt;TextBlock Text=&quot;Check your connection and try again.&quot;
+                   FontSize=&quot;11&quot; /&gt;
+        &lt;Button Content=&quot;Retry&quot;
+                Command=&quot;{Binding LoadDataCommand}&quot; /&gt;
+      &lt;/StackPanel&gt;
+    &lt;/Border&gt;
+  &lt;/StackPanel&gt;
+&lt;/UserControl&gt;
+</code></pre>
+<h3>How it works</h3>
+<ol>
+<li><strong><code>LoadDataAsync(CancellationToken token)</code></strong> retries up to <code>MaxRetries</code> times inside a <code>for</code> loop. Each attempt calls <code>FetchDataAsync(token)</code>. On success, items are loaded and the loop returns. On <code>HttpRequestException</code>, the loop increments <code>RetryCount</code> and waits with exponential back-off before the next attempt.</li>
+<li><strong><code>StatusMessage</code> updates</strong> on each attempt — &quot;Loading...&quot;, &quot;Retrying (2/3)...&quot;, &quot;Attempt 2 failed: ...&quot;. These observable properties drive the status <code>TextBlock</code> in the view.</li>
+<li><strong><code>HasError</code> indicates persistent failure</strong> after exhausting all retries. The view shows an error banner with a Retry button when <code>HasError</code> is true.</li>
+<li><strong><code>LoadDataCommand.IsRunning</code></strong> is bound to the <code>ProgressBar</code>. The async command manages the <code>IsRunning</code> state — the progress bar shows automatically while the command is executing and hides when it completes (success or failure).</li>
+<li><strong>The <code>RetryPolicy</code> helper class</strong> in the alternative <code>LoadDataWithCustomRetryAsync</code> method separates retry logic from the command method. This is a cleaner separation — the command only deals with success/failure, and the policy handles the retry mechanics.</li>
+<li><strong>Exponential back-off</strong> (<code>500ms × 2^(attempt-1)</code>): 500ms, 1000ms, 2000ms. This prevents hammering the failing service. The <code>Task.Delay</code> respects the <code>CancellationToken</code>, so the retry wait is cancelled if the user cancels the command.</li>
+</ol>
+<h3>Design decisions and edge cases</h3>
+<ul>
+<li><strong>Retry loop vs <code>RetryPolicy</code> class:</strong> The inline retry loop in <code>LoadDataAsync</code> is self-contained and easy to read. The <code>RetryPolicy</code> class is reusable across commands. Choose based on whether retry logic is a one-off requirement or a cross-cutting concern.</li>
+<li><strong>What happens on the last failed attempt?</strong> The <code>for</code> loop exits after <code>MaxRetries</code> without <code>return</code>. <code>HasError</code> becomes <code>true</code>. The <code>StatusMessage</code> is set to &quot;Failed after N attempts.&quot; The error banner appears with a Retry button that re-runs the command from scratch.</li>
+<li><strong><code>HttpRequestException</code> is the retry trigger:</strong> Real code should distinguish between retriable (HTTP 500, timeout, network error) and non-retriable (HTTP 400, 404) failures. Catch only retriable exceptions in the retry loop; let non-retriable exceptions propagate to the outer catch.</li>
+<li><strong>Cancellation during retry delay:</strong> The <code>Task.Delay(delay, token)</code> accepts the cancellation token. If the user cancels during the back-off wait, <code>OperationCanceledException</code> is thrown and bubbles up. The <code>LoadDataCommand</code>'s <code>ExecutionTask</code> then contains the cancelled exception — the view can bind to it if needed.</li>
+<li><strong><code>Items.Clear()</code> before repopulating:</strong> If a previous load succeeded, the items list is cleared on the next load attempt. This prevents stale data from showing during the next load. An alternative is to keep the old items visible until the new data arrives (replace at the end).</li>
+</ul>
+<hr />
+<h2>What These Examples Demonstrate</h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Command technique</th>
+<th>What to learn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File upload manager</td>
+<td><code>CancellationToken</code> injection + <code>IProgress&lt;double&gt;</code></td>
+<td>External cancellation, progress reporting, per-item command execution</td>
+</tr>
+<tr>
+<td>Retry-enabled loader</td>
+<td>Manual retry loop + <code>RetryPolicy</code> helper</td>
+<td>Retry patterns with <code>AsyncRelayCommand</code>, exponential back-off, error state management</td>
+</tr>
+</tbody>
+</table>
+<p>The upload manager focuses on <em>cancellable progress</em> — a common pattern for any long-running operation. The data loader focuses on <em>resilience</em> — retrying on failure with user-visibile status. Together they cover async command patterns beyond the trivial button click.</p>
+<h2>See Also</h2>
+<ul>
+<li><a href="008-relay-command.html">008 — RelayCommand in Depth</a></li>
+<li><a href="008-relay-command-verbose.html">008V — Verbose Companion</a></li>
+<li><a href="002-command-binding.html">002 — Command Binding</a></li>
+<li><a href="002-command-binding-verbose.html">002V — Command Binding (verbose companion)</a></li>
+<li><a href="007-observable-object-property.html">007 — ObservableObject &amp; ObservableProperty</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/relaycommand">CommunityToolkit.Mvvm Docs: RelayCommand</a></li>
+</ul>
+</main><nav class="doc-toc" id="toc"></nav></div><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/powershell.min.js"></script><script src="../../_assets/js/search-index.js"></script><script>const CURRENT_PAGE="../../02-tutorials/basics/008-relay-command-examples.html";</script><script src="../../_assets/js/ssg.js"></script></body></html>

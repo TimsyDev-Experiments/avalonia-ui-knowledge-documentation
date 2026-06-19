@@ -1,0 +1,593 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>rendering — Avalonia Docs</title><link rel="stylesheet" href="../../_assets/css/ssg.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='12' font-size='12'>A</text></svg>"></head><body><div class="layout"><nav class="sidebar" id="sidebar"><div class="sidebar-header"><h2><a href="../../index.html" style="color:inherit;text-decoration:none">Avalonia Docs</a></h2></div><div class="search-box"><input type="text" id="searchInput" placeholder="Search docs..." autocomplete="off"></div><div id="searchResults" class="search-results" style="display:none"></div><ul class="nav-tree" id="navTree"><li class="nav-group"><span class="nav-group-label">Quick References</span><ul class="nav-items"><li class="nav-item"><a href="../../01-quick-refs/accessibility-automation.html">Accessibility Automation</a></li><li class="nav-item"><a href="../../01-quick-refs/avalonia-12-breaking-changes.html">Avalonia 12 Breaking Changes</a></li><li class="nav-item"><a href="../../01-quick-refs/binding-modes.html">Binding Modes</a></li><li class="nav-item"><a href="../../01-quick-refs/brushes-colors-reference.html">Brushes Colors Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/common-controls-reference.html">Common Controls Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/common-converters.html">Common Converters</a></li><li class="nav-item"><a href="../../01-quick-refs/control-themes.html">Control Themes</a></li><li class="nav-item"><a href="../../01-quick-refs/dispatcher-timers-quick-ref.html">Dispatcher Timers Quick Ref</a></li><li class="nav-item"><a href="../../01-quick-refs/font-typography-reference.html">Font Typography Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/icons-reference.html">Icons Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/input-gestures.html">Input Gestures</a></li><li class="nav-item"><a href="../../01-quick-refs/mvvm-source-generators.html">Mvvm Source Generators</a></li><li class="nav-item"><a href="../../01-quick-refs/naming-conventions.html">Naming Conventions</a></li><li class="nav-item"><a href="../../01-quick-refs/property-system-quick-ref.html">Property System Quick Ref</a></li><li class="nav-item"><a href="../../01-quick-refs/resource-dictionaries.html">Resource Dictionaries</a></li><li class="nav-item"><a href="../../01-quick-refs/routed-events-quick-ref.html">Routed Events Quick Ref</a></li><li class="nav-item"><a href="../../01-quick-refs/shapes-geometries.html">Shapes Geometries</a></li><li class="nav-item"><a href="../../01-quick-refs/xaml-selectors.html">Xaml Selectors</a></li><li class="nav-group"><span class="nav-group-label">Basics</span><ul class="nav-items"><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup.html">Project Setup</a></li><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup-verbose.html">Project Setup (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup-examples.html">Project Setup (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup-quiz.html">Project Setup (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding.html">Command Binding</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding-verbose.html">Command Binding (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding-examples.html">Command Binding (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding-quiz.html">Command Binding (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling.html">Basic Styling</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling-verbose.html">Basic Styling (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling-examples.html">Basic Styling (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling-quiz.html">Basic Styling (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters.html">Value Converters</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters-verbose.html">Value Converters (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters-examples.html">Value Converters (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters-quiz.html">Value Converters (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes.html">Binding Modes</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes-verbose.html">Binding Modes (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes-examples.html">Binding Modes (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes-quiz.html">Binding Modes (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources.html">Resources</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources-verbose.html">Resources (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources-examples.html">Resources (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources-quiz.html">Resources (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property.html">Observable Object Property</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property-verbose.html">Observable Object Property (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property-examples.html">Observable Object Property (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property-quiz.html">Observable Object Property (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command.html">Relay Command</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command-verbose.html">Relay Command (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command-examples.html">Relay Command (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command-quiz.html">Relay Command (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-examples.html">Data Templates (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-basics.html">Data Templates Basics</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-basics-verbose.html">Data Templates Basics (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-basics-quiz.html">Data Templates Basics (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics.html">Window Dialog Basics</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics-verbose.html">Window Dialog Basics (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics-examples.html">Window Dialog Basics (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics-quiz.html">Window Dialog Basics (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Intermediate</span><ul class="nav-items"><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings.html">Compiled Bindings</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings-verbose.html">Compiled Bindings (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings-examples.html">Compiled Bindings (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings-quiz.html">Compiled Bindings (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles.html">Control Themes Vs Styles</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles-verbose.html">Control Themes Vs Styles (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles-examples.html">Control Themes Vs Styles (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles-quiz.html">Control Themes Vs Styles (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation.html">Data Validation</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation-verbose.html">Data Validation (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation-examples.html">Data Validation (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation-quiz.html">Data Validation (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns.html">Imessenger Patterns</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns-verbose.html">Imessenger Patterns (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns-examples.html">Imessenger Patterns (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns-quiz.html">Imessenger Patterns (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists.html">Item Lists</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists-verbose.html">Item Lists (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists-examples.html">Item Lists (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists-quiz.html">Item Lists (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management.html">Window Dialog Management</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management-verbose.html">Window Dialog Management (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management-examples.html">Window Dialog Management (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management-quiz.html">Window Dialog Management (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching.html">Theme Switching</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching-verbose.html">Theme Switching (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching-examples.html">Theme Switching (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching-quiz.html">Theme Switching (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation.html">Navigation</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation-verbose.html">Navigation (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation-examples.html">Navigation (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation-quiz.html">Navigation (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop.html">Drag Drop</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop-verbose.html">Drag Drop (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop-examples.html">Drag Drop (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop-quiz.html">Drag Drop (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive.html">Datagrid Deep Dive</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive-verbose.html">Datagrid Deep Dive (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive-examples.html">Datagrid Deep Dive (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive-quiz.html">Datagrid Deep Dive (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray.html">Menus Context Menus Tray</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray-verbose.html">Menus Context Menus Tray (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray-examples.html">Menus Context Menus Tray (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray-quiz.html">Menus Context Menus Tray (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data.html">Treeview Hierarchical Data</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data-verbose.html">Treeview Hierarchical Data (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data-examples.html">Treeview Hierarchical Data (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data-quiz.html">Treeview Hierarchical Data (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization.html">Charts Data Visualization</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization-verbose.html">Charts Data Visualization (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization-examples.html">Charts Data Visualization (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization-quiz.html">Charts Data Visualization (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database.html">Sqlite Local Database</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database-verbose.html">Sqlite Local Database (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database-examples.html">Sqlite Local Database (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database-quiz.html">Sqlite Local Database (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events.html">Routed Events</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events-verbose.html">Routed Events (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events-examples.html">Routed Events (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events-quiz.html">Routed Events (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system.html">Property System</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system-verbose.html">Property System (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system-examples.html">Property System (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system-quiz.html">Property System (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher.html">Threading Dispatcher</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher-verbose.html">Threading Dispatcher (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher-examples.html">Threading Dispatcher (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher-quiz.html">Threading Dispatcher (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management.html">Focus Management</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management-verbose.html">Focus Management (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management-examples.html">Focus Management (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management-quiz.html">Focus Management (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys.html">Keyboard Hotkeys</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys-verbose.html">Keyboard Hotkeys (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys-examples.html">Keyboard Hotkeys (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys-quiz.html">Keyboard Hotkeys (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events.html">Input Events</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events-verbose.html">Input Events (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events-examples.html">Input Events (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events-quiz.html">Input Events (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers.html">Gesture Recognizers</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers-verbose.html">Gesture Recognizers (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers-examples.html">Gesture Recognizers (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers-quiz.html">Gesture Recognizers (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar.html">Scrollviewer Scrollbar</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar-verbose.html">Scrollviewer Scrollbar (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar-examples.html">Scrollviewer Scrollbar (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar-quiz.html">Scrollviewer Scrollbar (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input.html">Textbox Text Input</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input-verbose.html">Textbox Text Input (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input-examples.html">Textbox Text Input (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input-quiz.html">Textbox Text Input (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding.html">Multibinding Prioritybinding</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding-verbose.html">Multibinding Prioritybinding (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding-examples.html">Multibinding Prioritybinding (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding-quiz.html">Multibinding Prioritybinding (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views.html">Collection Views</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views-verbose.html">Collection Views (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views-examples.html">Collection Views (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views-quiz.html">Collection Views (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher.html">Clipboard Launcher</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher-verbose.html">Clipboard Launcher (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher-examples.html">Clipboard Launcher (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher-quiz.html">Clipboard Launcher (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service.html">Storage Service</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service-verbose.html">Storage Service (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service-examples.html">Storage Service (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service-quiz.html">Storage Service (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls.html">Selection Controls</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls-verbose.html">Selection Controls (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls-examples.html">Selection Controls (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls-quiz.html">Selection Controls (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls.html">Range Toggle Controls</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls-verbose.html">Range Toggle Controls (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls-examples.html">Range Toggle Controls (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls-quiz.html">Range Toggle Controls (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview.html">Tabcontrol Expander Splitview</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview-verbose.html">Tabcontrol Expander Splitview (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview-examples.html">Tabcontrol Expander Splitview (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview-quiz.html">Tabcontrol Expander Splitview (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Advanced</span><ul class="nav-items"><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls.html">Custom Templated Controls</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls-verbose.html">Custom Templated Controls (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls-examples.html">Custom Templated Controls (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls-quiz.html">Custom Templated Controls (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch.html">Custom Controls From Scratch</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch-verbose.html">Custom Controls From Scratch (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch-examples.html">Custom Controls From Scratch (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch-quiz.html">Custom Controls From Scratch (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors.html">Attached Properties Behaviors</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors-verbose.html">Attached Properties Behaviors (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors-examples.html">Attached Properties Behaviors (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors-quiz.html">Attached Properties Behaviors (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels.html">Custom Layout Panels</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels-verbose.html">Custom Layout Panels (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels-examples.html">Custom Layout Panels (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels-quiz.html">Custom Layout Panels (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions.html">Animation Transitions</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions-verbose.html">Animation Transitions (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions-examples.html">Animation Transitions (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions-quiz.html">Animation Transitions (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals.html">Compositor Custom Visuals</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals-verbose.html">Compositor Custom Visuals (in depth)</a></li><li class="nav-item active"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals-examples.html">Compositor Custom Visuals (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals-quiz.html">Compositor Custom Visuals (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation.html">Accessibility Automation</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation-verbose.html">Accessibility Automation (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation-examples.html">Accessibility Automation (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation-quiz.html">Accessibility Automation (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings.html">Advanced Composite Bindings</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings-verbose.html">Advanced Composite Bindings (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings-examples.html">Advanced Composite Bindings (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings-quiz.html">Advanced Composite Bindings (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia.html">Custom Drawing Skia</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia-verbose.html">Custom Drawing Skia (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia-examples.html">Custom Drawing Skia (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia-quiz.html">Custom Drawing Skia (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools.html">Avalonia Plus Devtools</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools-verbose.html">Avalonia Plus Devtools (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools-examples.html">Avalonia Plus Devtools (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools-quiz.html">Avalonia Plus Devtools (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging.html">Parcel Packaging</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging-verbose.html">Parcel Packaging (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging-examples.html">Parcel Packaging (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging-quiz.html">Parcel Packaging (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system.html">Custom Theme Design System</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system-verbose.html">Custom Theme Design System (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system-examples.html">Custom Theme Design System (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system-quiz.html">Custom Theme Design System (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring.html">Mvvm Di Wiring</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring-verbose.html">Mvvm Di Wiring (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring-examples.html">Mvvm Di Wiring (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring-quiz.html">Mvvm Di Wiring (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n.html">Localization I18n</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n-verbose.html">Localization I18n (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n-examples.html">Localization I18n (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n-quiz.html">Localization I18n (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services.html">File Pickers Platform Services</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services-verbose.html">File Pickers Platform Services (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services-examples.html">File Pickers Platform Services (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services-quiz.html">File Pickers Platform Services (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management.html">Custom Dialogs Window Management</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management-verbose.html">Custom Dialogs Window Management (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management-examples.html">Custom Dialogs Window Management (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management-quiz.html">Custom Dialogs Window Management (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists.html">Virtualization Large Lists</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists-verbose.html">Virtualization Large Lists (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists-examples.html">Virtualization Large Lists (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists-quiz.html">Virtualization Large Lists (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen.html">App Lifetimes Splash Screen</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen-verbose.html">App Lifetimes Splash Screen (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen-examples.html">App Lifetimes Splash Screen (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen-quiz.html">App Lifetimes Splash Screen (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing.html">Headless Testing</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing-verbose.html">Headless Testing (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing-examples.html">Headless Testing (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing-quiz.html">Headless Testing (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming.html">Nativeaot Trimming</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming-verbose.html">Nativeaot Trimming (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming-examples.html">Nativeaot Trimming (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming-quiz.html">Nativeaot Trimming (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile.html">Multi Targeting Desktop Browser Mobile</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-verbose.html">Multi Targeting Desktop Browser Mobile (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-examples.html">Multi Targeting Desktop Browser Mobile (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-quiz.html">Multi Targeting Desktop Browser Mobile (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress.html">Background Services And Progress</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress-verbose.html">Background Services And Progress (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress-examples.html">Background Services And Progress (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress-quiz.html">Background Services And Progress (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia.html">Cicd For Avalonia</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia-verbose.html">Cicd For Avalonia (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia-examples.html">Cicd For Avalonia (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia-quiz.html">Cicd For Avalonia (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry.html">Logging Telemetry</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry-verbose.html">Logging Telemetry (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry-examples.html">Logging Telemetry (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry-quiz.html">Logging Telemetry (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing.html">Printing</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing-verbose.html">Printing (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing-examples.html">Printing (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing-quiz.html">Printing (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater.html">Auto Updater</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater-verbose.html">Auto Updater (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater-examples.html">Auto Updater (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater-quiz.html">Auto Updater (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive.html">Layout System Deep Dive</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive-verbose.html">Layout System Deep Dive (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive-examples.html">Layout System Deep Dive (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive-quiz.html">Layout System Deep Dive (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive.html">Animation System Deep Dive</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive-verbose.html">Animation System Deep Dive (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive-examples.html">Animation System Deep Dive (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive-quiz.html">Animation System Deep Dive (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference.html">Graphics Drawing Reference</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference-verbose.html">Graphics Drawing Reference (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference-examples.html">Graphics Drawing Reference (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference-quiz.html">Graphics Drawing Reference (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout.html">Container Queries Responsive Layout</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout-verbose.html">Container Queries Responsive Layout (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout-examples.html">Container Queries Responsive Layout (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout-quiz.html">Container Queries Responsive Layout (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features.html">Typography Text Features</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features-verbose.html">Typography Text Features (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features-examples.html">Typography Text Features (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features-quiz.html">Typography Text Features (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling.html">Performance Profiling</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling-verbose.html">Performance Profiling (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling-examples.html">Performance Profiling (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling-quiz.html">Performance Profiling (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows.html">Platform Specific Windows</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows-verbose.html">Platform Specific Windows (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows-examples.html">Platform Specific Windows (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows-quiz.html">Platform Specific Windows (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux.html">Platform Specific Macos Linux</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux-verbose.html">Platform Specific Macos Linux (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux-examples.html">Platform Specific Macos Linux (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux-quiz.html">Platform Specific Macos Linux (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload.html">Xaml Previewer Hot Reload</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload-verbose.html">Xaml Previewer Hot Reload (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload-examples.html">Xaml Previewer Hot Reload (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload-quiz.html">Xaml Previewer Hot Reload (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup.html">Custom Flyout Popup</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup-verbose.html">Custom Flyout Popup (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup-examples.html">Custom Flyout Popup (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup-quiz.html">Custom Flyout Popup (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Patterns</span><ul class="nav-items"><li class="nav-item"><a href="../../03-patterns/001-service-locator-vs-di.html">Service Locator Vs Di</a></li><li class="nav-item"><a href="../../03-patterns/002-plugin-architecture.html">Plugin Architecture</a></li><li class="nav-item"><a href="../../03-patterns/003-async-initialization.html">Async Initialization</a></li><li class="nav-item"><a href="../../03-patterns/004-state-management.html">State Management</a></li><li class="nav-item"><a href="../../03-patterns/005-repository-unit-of-work.html">Repository Unit Of Work</a></li><li class="nav-item"><a href="../../03-patterns/006-logging-patterns.html">Logging Patterns</a></li><li class="nav-item"><a href="../../03-patterns/007-editor-application-architecture.html">Editor Application Architecture</a></li><li class="nav-item"><a href="../../03-patterns/008-focus-keyboard-navigation.html">Focus Keyboard Navigation</a></li><li class="nav-item"><a href="../../03-patterns/008-toggle-state-pattern.html">Toggle State Pattern</a></li><li class="nav-item"><a href="../../03-patterns/009-lazy-load-virtual-scrolling.html">Lazy Load Virtual Scrolling</a></li><li class="nav-item"><a href="../../03-patterns/009-storage-file-io-pipeline.html">Storage File Io Pipeline</a></li><li class="nav-group"><span class="nav-group-label">Migration</span><ul class="nav-items"><li class="nav-item"><a href="../../04-migration/avalonia-11-to-12.html">Avalonia 11 To 12</a></li><li class="nav-item"><a href="../../04-migration/wpf-to-avalonia-key-mappings.html">Wpf To Avalonia Key Mappings</a></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></nav><main class="doc-content" id="docContent"><h1>025E — Compositor &amp; Custom Visuals: Real-World Examples</h1>
+<p><strong>Applies to:</strong> <a href="025-compositor-custom-visuals.html">025 — Compositor &amp; Custom Visuals</a> | <a href="025-compositor-custom-visuals-verbose.html">025V — In-Depth Companion</a></p>
+<hr />
+<h2>Example 1: ParallaxStarfield</h2>
+<h3>Goal</h3>
+<p>A background control that renders hundreds of stars moving at different speeds to create a parallax depth effect. Stars are <code>Visual</code> subclasses positioned and transformed by the compositor via <code>RequestCompositionUpdate</code>. The control uses no layout — all positioning is done through <code>Bounds</code> and <code>RenderTransform</code>.</p>
+<h3>ViewModel</h3>
+<pre><code class="language-csharp">// ViewModels/SpaceViewModel.cs
+using CommunityToolkit.Mvvm.ComponentModel;
+
+namespace MyApp.ViewModels;
+
+public partial class SpaceViewModel : ObservableObject
+{
+    [ObservableProperty]
+    private bool _isAnimating = true;
+}
+</code></pre>
+<h3>XAML View</h3>
+<pre><code class="language-xml">&lt;!-- Views/SpaceView.axaml --&gt;
+&lt;UserControl xmlns=&quot;https://github.com/avaloniaui&quot;
+             xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+             xmlns:vm=&quot;using:MyApp.ViewModels&quot;
+             xmlns:controls=&quot;using:MyApp.Controls&quot;
+             x:DataType=&quot;vm:SpaceViewModel&quot;&gt;
+  &lt;Grid&gt;
+    &lt;controls:ParallaxStarfield StarCount=&quot;300&quot;
+                                 Speed=&quot;0.5&quot;
+                                 StarSizeMin=&quot;1&quot;
+                                 StarSizeMax=&quot;3&quot;
+                                 IsAnimating=&quot;{Binding IsAnimating}&quot; /&gt;
+  &lt;/Grid&gt;
+&lt;/UserControl&gt;
+</code></pre>
+<h3>How It Works</h3>
+<ol>
+<li><code>ParallaxStarfield</code> extends <code>Control</code>. It creates N <code>Star</code> objects (a <code>Visual</code> subclass) in its constructor and adds them to <code>VisualChildren</code>.</li>
+<li>Each <code>Star</code> has:
+<ul>
+<li><code>Position</code> (Point) — the star's current coordinates.</li>
+<li><code>Depth</code> (0.0–1.0) — determines speed multiplier and opacity. Deep stars move slower and are dimmer.</li>
+<li><code>Radius</code> (1–3) — rendered as a filled ellipse in <code>Render(DrawingContext)</code>.</li>
+</ul>
+</li>
+<li>In <code>OnAttachedToVisualTree</code>, the control calls <code>Compositor?.RequestCompositionUpdate(OnFrame)</code>. The returned <code>IDisposable</code> is stored and disposed in <code>OnDetachedFromVisualTree</code>.</li>
+<li><code>OnFrame(Compositor, CompositionUpdateEventArgs)</code> iterates all stars. Each star's position is updated: <code>position.X -= speed * depth * deltaTime</code>. Stars that exit the left edge are recycled to the right edge with a random Y and depth.</li>
+<li>The <code>Star.Render</code> override draws a small ellipse. Because <code>InvalidateVisual()</code> is called on each <code>Star</code> every frame, the compositor re-renders them. However, since the stars are small (1–3px ellipses) and the compositor caches their drawing, the per-frame cost is low.</li>
+</ol>
+<h3>C# Implementation</h3>
+<pre><code class="language-csharp">// Controls/ParallaxStarfield.cs
+using Avalonia;
+using Avalonia.Media;
+using Avalonia.Media.Immutable;
+
+namespace MyApp.Controls;
+
+public class Star : Visual
+{
+    public Point Position { get; set; }
+    public double Depth { get; set; }
+    public double Radius { get; set; } = 1.5;
+
+    public override void Render(DrawingContext context)
+    {
+        var opacity = 0.3 + (0.7 * Depth);
+        var color = new ImmutableSolidColorBrush(Colors.White, opacity);
+        context.FillEllipse(color, new Rect(Position.X - Radius, Position.Y - Radius, Radius * 2, Radius * 2));
+    }
+}
+
+public class ParallaxStarfield : Control
+{
+    private readonly Random _random = new();
+    private Star[]? _stars;
+    private IDisposable? _compositionRequest;
+    private TimeSpan _lastTick;
+
+    public static readonly StyledProperty&lt;int&gt; StarCountProperty =
+        AvaloniaProperty.Register&lt;ParallaxStarfield, int&gt;(nameof(StarCount), 200);
+
+    public static readonly StyledProperty&lt;double&gt; SpeedProperty =
+        AvaloniaProperty.Register&lt;ParallaxStarfield, double&gt;(nameof(Speed), 0.5);
+
+    public static readonly StyledProperty&lt;double&gt; StarSizeMinProperty =
+        AvaloniaProperty.Register&lt;ParallaxStarfield, double&gt;(nameof(StarSizeMin), 1);
+
+    public static readonly StyledProperty&lt;double&gt; StarSizeMaxProperty =
+        AvaloniaProperty.Register&lt;ParallaxStarfield, double&gt;(nameof(StarSizeMax), 3);
+
+    public static readonly StyledProperty&lt;bool&gt; IsAnimatingProperty =
+        AvaloniaProperty.Register&lt;ParallaxStarfield, bool&gt;(nameof(IsAnimating), true);
+
+    public int StarCount
+    {
+        get =&gt; GetValue(StarCountProperty);
+        set =&gt; SetValue(StarCountProperty, value);
+    }
+
+    public double Speed
+    {
+        get =&gt; GetValue(SpeedProperty);
+        set =&gt; SetValue(SpeedProperty, value);
+    }
+
+    public double StarSizeMin
+    {
+        get =&gt; GetValue(StarSizeMinProperty);
+        set =&gt; SetValue(StarSizeMinProperty, value);
+    }
+
+    public double StarSizeMax
+    {
+        get =&gt; GetValue(StarSizeMaxProperty);
+        set =&gt; SetValue(StarSizeMaxProperty, value);
+    }
+
+    public bool IsAnimating
+    {
+        get =&gt; GetValue(IsAnimatingProperty);
+        set =&gt; SetValue(IsAnimatingProperty, value);
+    }
+
+    static ParallaxStarfield()
+    {
+        AffectsRender&lt;ParallaxStarfield&gt;(StarCountProperty, SpeedProperty,
+            StarSizeMinProperty, StarSizeMaxProperty, IsAnimatingProperty);
+    }
+
+    protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
+    {
+        base.OnPropertyChanged(change);
+        if (change.Property == StarCountProperty)
+            RecreateStars();
+    }
+
+    private void RecreateStars()
+    {
+        if (_stars is not null)
+            foreach (var star in _stars)
+                VisualChildren.Remove(star);
+
+        var count = Math.Max(0, StarCount);
+        _stars = new Star[count];
+
+        for (int i = 0; i &lt; count; i++)
+        {
+            var star = new Star
+            {
+                Position = new Point(
+                    _random.NextDouble() * (Bounds.Width &gt; 0 ? Bounds.Width : 800),
+                    _random.NextDouble() * (Bounds.Height &gt; 0 ? Bounds.Height : 600)),
+                Depth = _random.NextDouble(),
+                Radius = StarSizeMin + _random.NextDouble() * (StarSizeMax - StarSizeMin),
+            };
+            _stars[i] = star;
+            VisualChildren.Add(star);
+        }
+    }
+
+    protected override void OnAttachedToVisualTree(VisualTreeAttachmentEventArgs e)
+    {
+        base.OnAttachedToVisualTree(e);
+        RecreateStars();
+        _compositionRequest = Compositor?.RequestCompositionUpdate(OnFrame);
+    }
+
+    protected override void OnDetachedFromVisualTree(VisualTreeAttachmentEventArgs e)
+    {
+        base.OnDetachedFromVisualTree(e);
+        _compositionRequest?.Dispose();
+        _compositionRequest = null;
+    }
+
+    private void OnFrame(Compositor compositor, CompositionUpdateEventArgs args)
+    {
+        if (!IsAnimating || _stars is null) return;
+
+        var dt = (args.TotalTime - _lastTick).TotalSeconds;
+        _lastTick = args.TotalTime;
+        if (dt &lt;= 0 || dt &gt; 0.1) dt = 0.016;
+
+        var width = Bounds.Width;
+        var height = Bounds.Height;
+        if (width &lt;= 0 || height &lt;= 0) return;
+
+        foreach (var star in _stars)
+        {
+            star.Position = new Point(
+                star.Position.X - (Speed * (0.2 + 0.8 * star.Depth) * dt * 60),
+                star.Position.Y);
+
+            if (star.Position.X &lt; -star.Radius)
+            {
+                star.Position = new Point(
+                    width + star.Radius,
+                    _random.NextDouble() * height);
+                star.Depth = _random.NextDouble();
+                star.Radius = StarSizeMin + _random.NextDouble() * (StarSizeMax - StarSizeMin);
+            }
+
+            star.InvalidateVisual();
+        }
+    }
+
+    protected override Size MeasureOverride(Size availableSize)
+    {
+        return availableSize;
+    }
+}
+</code></pre>
+<hr />
+<h3>Design Decisions</h3>
+<ul>
+<li><strong><code>Visual</code> subclass over drawing all stars in one <code>Render</code> override.</strong> Each <code>Star</code> has its own transform and dirty state. The compositor can independently track which stars moved. Drawing all 300 stars in a single <code>Render</code> call would require a single <code>InvalidateVisual()</code> on the parent, which redraws everything — including stars that did not move.</li>
+<li><strong>Depth as a simple float.</strong> Three depth layers (far/medium/near) would be simpler but less smooth. Continuous depth values (0.0–1.0) produce a natural parallax spread. Map depth to speed multiplier (0.2–1.0) and opacity (0.3–1.0).</li>
+<li><strong>Recycling stars at the right edge.</strong> When a star's X goes below 0, reset <code>X = Bounds.Width</code> and randomize Y and depth. This avoids allocating new <code>Star</code> objects or managing a pool.</li>
+<li><strong>No <code>MeasureOverride</code>.</strong> The starfield fills the parent. <code>MeasureOverride</code> returns <code>availableSize</code> unchanged. Stars are never measured — they are positioned manually via <code>Bounds</code>.</li>
+</ul>
+<h3>Edge Cases</h3>
+<ul>
+<li><strong><code>Bounds</code> is empty (height or width = 0) during startup.</strong> The control has not been laid out yet. Stars cannot be placed at valid positions. Defer star creation to <code>ArrangeOverride</code> or the first <code>OnFrame</code> call when <code>Bounds.Width &gt; 0</code>.</li>
+<li><strong>Compositor is null (designer, unit test).</strong> Guard all compositor calls with <code>Compositor?.RequestCompositionUpdate(...)</code>. In design mode, the stars remain at their initial positions and never move.</li>
+<li><strong>Window resize.</strong> <code>Bounds</code> changes. Stars that are now outside the new bounds should be repositioned. In <code>OnFrame</code>, clamp star positions to the current <code>Bounds</code>.</li>
+<li><strong>Star count is very large (1000+).</strong> Each <code>Star</code> is a <code>Visual</code> — a lightweight node, but 1000 nodes still consume memory. For 5000+ particles, use a single custom <code>Visual</code> that draws all particles in its <code>Render</code> override via a shared vertex buffer pattern.</li>
+</ul>
+<hr />
+<h2>Example 2: MiniMapControl</h2>
+<h3>Goal</h3>
+<p>A minimap overlay that shows a scaled-down view of a scrollable content area. The minimap renders the content at low resolution using <code>RenderTargetBitmap</code>. A draggable viewport rectangle on the minimap indicates the visible region and allows the user to scroll the main content by dragging.</p>
+<h3>ViewModel</h3>
+<pre><code class="language-csharp">// ViewModels/EditorViewModel.cs
+using Avalonia;
+using CommunityToolkit.Mvvm.ComponentModel;
+
+namespace MyApp.ViewModels;
+
+public partial class EditorViewModel : ObservableObject
+{
+    [ObservableProperty]
+    private double _scrollOffsetX;
+
+    [ObservableProperty]
+    private double _scrollOffsetY;
+
+    [ObservableProperty]
+    private double _scrollableWidth = 2000;
+
+    [ObservableProperty]
+    private double _scrollableHeight = 2000;
+
+    [ObservableProperty]
+    private double _viewportWidth = 800;
+
+    [ObservableProperty]
+    private double _viewportHeight = 600;
+}
+</code></pre>
+<h3>XAML View</h3>
+<pre><code class="language-xml">&lt;!-- Views/EditorView.axaml --&gt;
+&lt;UserControl xmlns=&quot;https://github.com/avaloniaui&quot;
+             xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+             xmlns:vm=&quot;using:MyApp.ViewModels&quot;
+             xmlns:controls=&quot;using:MyApp.Controls&quot;
+             x:DataType=&quot;vm:EditorViewModel&quot;&gt;
+  &lt;Grid&gt;
+    &lt;!-- Main scrollable content --&gt;
+    &lt;ScrollViewer x:Name=&quot;MainScroll&quot;
+                  HorizontalScrollBarVisibility=&quot;Auto&quot;
+                  VerticalScrollBarVisibility=&quot;Auto&quot;&gt;
+      &lt;controls:CanvasControl Width=&quot;{Binding ScrollableWidth}&quot;
+                               Height=&quot;{Binding ScrollableHeight}&quot; /&gt;
+    &lt;/ScrollViewer&gt;
+
+    &lt;!-- Minimap overlay in bottom-right corner --&gt;
+    &lt;Border Background=&quot;#CC1a1a2e&quot; CornerRadius=&quot;8&quot;
+            VerticalAlignment=&quot;Bottom&quot; HorizontalAlignment=&quot;Right&quot;
+            Margin=&quot;16&quot; Padding=&quot;4&quot;
+            Width=&quot;200&quot; Height=&quot;150&quot;&gt;
+      &lt;controls:MiniMapControl
+          ScrollableWidth=&quot;{Binding ScrollableWidth}&quot;
+          ScrollableHeight=&quot;{Binding ScrollableHeight}&quot;
+          ViewportWidth=&quot;{Binding ViewportWidth}&quot;
+          ViewportHeight=&quot;{Binding ViewportHeight}&quot;
+          ScrollOffsetX=&quot;{Binding ScrollOffsetX, Mode=TwoWay}&quot;
+          ScrollOffsetY=&quot;{Binding ScrollOffsetY, Mode=TwoWay}&quot;
+          SourceElement=&quot;{Binding #MainScroll.Content}&quot; /&gt;
+    &lt;/Border&gt;
+  &lt;/Grid&gt;
+&lt;/UserControl&gt;
+</code></pre>
+<h3>How It Works</h3>
+<ol>
+<li><code>MiniMapControl</code> extends <code>Control</code>. It takes a <code>SourceElement</code> (<code>Control?</code>), the scrollable content dimensions, and the current scroll offsets (two-way binding).</li>
+<li>In <code>Render(DrawingContext)</code>, the control:
+<ul>
+<li>Computes the scale factor: <code>scaleX = Bounds.Width / ScrollableWidth</code>, <code>scaleY = Bounds.Height / ScrollableHeight</code>.</li>
+<li>Creates a <code>RenderTargetBitmap</code> at the minimap's pixel size if the source content has changed (tracked by a version counter or hash).</li>
+<li>Renders the source element into the <code>RenderTargetBitmap</code> via <code>RenderTargetBitmap.Render(SourceElement)</code>.</li>
+<li>Draws the bitmap scaled to fit the control bounds.</li>
+<li>Draws a translucent rectangle representing the viewport: <code>new Rect(ScrollOffsetX * scaleX, ScrollOffsetY * scaleY, ViewportWidth * scaleX, ViewportHeight * scaleY)</code>.</li>
+</ul>
+</li>
+<li>The minimap handles pointer input for viewport dragging:
+<ul>
+<li><code>OnPointerPressed</code> records the drag start position and the scroll offset at that point.</li>
+<li><code>OnPointerMoved</code> during drag computes the new scroll offset: <code>newScrollX = (pointerX / scaleX) - viewportWidth / 2</code>.</li>
+<li><code>OnPointerReleased</code> ends the drag.</li>
+<li>The new scroll offsets are written to the two-way bound properties, which the <code>ScrollViewer</code> reflects via its own bindings.</li>
+</ul>
+</li>
+</ol>
+<h3>C# Implementation</h3>
+<pre><code class="language-csharp">// Controls/MiniMapControl.cs
+using Avalonia;
+using Avalonia.Media;
+using Avalonia.Media.Immutable;
+using Avalonia.Media.Imaging;
+
+namespace MyApp.Controls;
+
+public class MiniMapControl : Control
+{
+    private bool _isDragging;
+    private Point _dragStart;
+    private double _dragStartOffsetX;
+    private double _dragStartOffsetY;
+    private RenderTargetBitmap? _cachedBitmap;
+    private int _sourceVersion;
+
+    public static readonly StyledProperty&lt;Control?&gt; SourceElementProperty =
+        AvaloniaProperty.Register&lt;MiniMapControl, Control?&gt;(nameof(SourceElement));
+
+    public static readonly StyledProperty&lt;double&gt; ScrollableWidthProperty =
+        AvaloniaProperty.Register&lt;MiniMapControl, double&gt;(nameof(ScrollableWidth), 1);
+
+    public static readonly StyledProperty&lt;double&gt; ScrollableHeightProperty =
+        AvaloniaProperty.Register&lt;MiniMapControl, double&gt;(nameof(ScrollableHeight), 1);
+
+    public static readonly StyledProperty&lt;double&gt; ViewportWidthProperty =
+        AvaloniaProperty.Register&lt;MiniMapControl, double&gt;(nameof(ViewportWidth), 100);
+
+    public static readonly StyledProperty&lt;double&gt; ViewportHeightProperty =
+        AvaloniaProperty.Register&lt;MiniMapControl, double&gt;(nameof(ViewportHeight), 100);
+
+    public static readonly StyledProperty&lt;double&gt; ScrollOffsetXProperty =
+        AvaloniaProperty.Register&lt;MiniMapControl, double&gt;(nameof(ScrollOffsetX), 0,
+            defaultBindingMode: Avalonia.Data.BindingMode.TwoWay);
+
+    public static readonly StyledProperty&lt;double&gt; ScrollOffsetYProperty =
+        AvaloniaProperty.Register&lt;MiniMapControl, double&gt;(nameof(ScrollOffsetY), 0,
+            defaultBindingMode: Avalonia.Data.BindingMode.TwoWay);
+
+    public Control? SourceElement
+    {
+        get =&gt; GetValue(SourceElementProperty);
+        set =&gt; SetValue(SourceElementProperty, value);
+    }
+
+    public double ScrollableWidth
+    {
+        get =&gt; GetValue(ScrollableWidthProperty);
+        set =&gt; SetValue(ScrollableWidthProperty, value);
+    }
+
+    public double ScrollableHeight
+    {
+        get =&gt; GetValue(ScrollableHeightProperty);
+        set =&gt; SetValue(ScrollableHeightProperty, value);
+    }
+
+    public double ViewportWidth
+    {
+        get =&gt; GetValue(ViewportWidthProperty);
+        set =&gt; SetValue(ViewportWidthProperty, value);
+    }
+
+    public double ViewportHeight
+    {
+        get =&gt; GetValue(ViewportHeightProperty);
+        set =&gt; SetValue(ViewportHeightProperty, value);
+    }
+
+    public double ScrollOffsetX
+    {
+        get =&gt; GetValue(ScrollOffsetXProperty);
+        set =&gt; SetValue(ScrollOffsetXProperty, value);
+    }
+
+    public double ScrollOffsetY
+    {
+        get =&gt; GetValue(ScrollOffsetYProperty);
+        set =&gt; SetValue(ScrollOffsetYProperty, value);
+    }
+
+    static MiniMapControl()
+    {
+        AffectsRender&lt;MiniMapControl&gt;(SourceElementProperty, ScrollableWidthProperty,
+            ScrollableHeightProperty, ViewportWidthProperty, ViewportHeightProperty,
+            ScrollOffsetXProperty, ScrollOffsetYProperty);
+    }
+
+    public override void Render(DrawingContext context)
+    {
+        var scW = ScrollableWidth;
+        var scH = ScrollableHeight;
+        if (scW &lt;= 0 || scH &lt;= 0) return;
+
+        var scaleX = Bounds.Width / scW;
+        var scaleY = Bounds.Height / scH;
+
+        if (SourceElement is not null &amp;&amp; SourceElement.IsAttachedToVisualTree)
+        {
+            var srcVersion = SourceElement.GetValue(Visual.BoundsProperty.GetHashCode());
+            if (_cachedBitmap is null)
+            {
+                _cachedBitmap = new RenderTargetBitmap(
+                    Math.Max(1, (int)Bounds.Width),
+                    Math.Max(1, (int)Bounds.Height));
+            }
+            _cachedBitmap.Render(SourceElement);
+            context.DrawImage(_cachedBitmap, new Rect(0, 0, Bounds.Width, Bounds.Height));
+        }
+
+        var vpX = ScrollOffsetX * scaleX;
+        var vpY = ScrollOffsetY * scaleY;
+        var vpW = ViewportWidth * scaleX;
+        var vpH = ViewportHeight * scaleY;
+
+        var viewportRect = new Rect(vpX, vpY, vpW, vpH);
+        context.FillRectangle(new ImmutableSolidColorBrush(Colors.White, 0.15), viewportRect);
+        context.DrawRectangle(new ImmutablePen(Colors.White, 1), viewportRect);
+    }
+
+    protected override void OnPointerPressed(PointerPressedEventArgs e)
+    {
+        var point = e.GetPosition(this);
+        _isDragging = true;
+        _dragStart = point;
+        _dragStartOffsetX = ScrollOffsetX;
+        _dragStartOffsetY = ScrollOffsetY;
+        e.Pointer.Capture(this);
+        e.Handled = true;
+    }
+
+    protected override void OnPointerMoved(PointerEventArgs e)
+    {
+        if (!_isDragging) return;
+
+        var point = e.GetPosition(this);
+        var scW = ScrollableWidth;
+        var scH = ScrollableHeight;
+        var vpW = ViewportWidth;
+        var vpH = ViewportHeight;
+
+        var scaleX = Bounds.Width / scW;
+        var scaleY = Bounds.Height / scH;
+
+        var deltaX = (point.X - _dragStart.X) / scaleX;
+        var deltaY = (point.Y - _dragStart.Y) / scaleY;
+
+        ScrollOffsetX = Math.Clamp(_dragStartOffsetX + deltaX, 0, scW - vpW);
+        ScrollOffsetY = Math.Clamp(_dragStartOffsetY + deltaY, 0, scH - vpH);
+    }
+
+    protected override void OnPointerReleased(PointerReleasedEventArgs e)
+    {
+        if (_isDragging)
+        {
+            _isDragging = false;
+            e.Pointer.Capture(null);
+            e.Handled = true;
+        }
+    }
+}
+</code></pre>
+<hr />
+<h3>Design Decisions</h3>
+<ul>
+<li><strong><code>RenderTargetBitmap.Render()</code> for content capture.</strong> This renders the source element into an off-screen bitmap. It is not real-time — call it only when the source content changes (throttled to max 5 times per second). Do not call it per frame.</li>
+<li><strong>Throttled re-render.</strong> If the source content changes frequently (e.g., during canvas drawing), debounce the re-render with a 200ms timer. The minimap does not need to update at 60fps — 5fps is sufficient for navigation context.</li>
+<li><strong>Viewport rectangle as a visual indicator.</strong> A semi-transparent <code>Color</code> fill with a white border makes the viewport clearly visible. The rectangle is drawn in <code>Render</code> using <code>context.FillRectangle</code> and <code>context.DrawRectangle</code>.</li>
+<li><strong>Scale constrained to fit.</strong> If the content is smaller than the minimap in one dimension, center it rather than stretching. This prevents distortion for documents that are primarily one orientation.</li>
+</ul>
+<h3>Edge Cases</h3>
+<ul>
+<li><strong><code>SourceElement</code> is null.</strong> Draw a placeholder message &quot;No content&quot; and disable pointer interaction.</li>
+<li><strong><code>ScrollableWidth</code> or <code>ScrollableHeight</code> is 0 (no content).</strong> The scale factors become <code>Infinity</code>. Guard with <code>if (ScrollableWidth &lt;= 0 || ScrollableHeight &lt;= 0) return</code>.</li>
+<li><strong><code>RenderTargetBitmap.Render()</code> on a null source or unmounted element.</strong> Call only when <code>SourceElement</code> is non-null and attached to a visual tree. Check <code>SourceElement.IsAttachedToVisualTree</code>.</li>
+<li><strong>Drag goes outside minimap bounds.</strong> Clamp the computed scroll offset to <code>0</code> to <code>(ScrollableWidth - ViewportWidth)</code>. This prevents the viewport from extending beyond the content area.</li>
+<li><strong>Content is smaller than viewport (no scrolling needed).</strong> Hide the minimap viewport rectangle entirely, or show it at full size with a &quot;fit&quot; indicator.</li>
+</ul>
+<hr />
+<h2>Testing</h2>
+<h3>Example 1: ParallaxStarfield</h3>
+<pre><code class="language-csharp">[AvaloniaFact]
+public void ParallaxStarfield_CreatesStarsOnAttach()
+{
+    var starfield = new ParallaxStarfield { StarCount = 50 };
+    starfield.Measure(new Size(800, 600));
+    starfield.Arrange(new Rect(0, 0, 800, 600));
+
+    starfield.VisualChildren.Count.Should().Be(50);
+}
+
+[AvaloniaFact]
+public void ParallaxStarfield_StarCountChange_RecreatesStars()
+{
+    var starfield = new ParallaxStarfield { StarCount = 10 };
+    starfield.Measure(new Size(800, 600));
+    starfield.Arrange(new Rect(0, 0, 800, 600));
+
+    starfield.StarCount = 20;
+    starfield.VisualChildren.Count.Should().Be(20);
+}
+</code></pre>
+<h3>Example 2: MiniMapControl</h3>
+<pre><code class="language-csharp">[AvaloniaFact]
+public void MiniMapControl_ScrollOffsetChange_UpdatesTwoWayBinding()
+{
+    var vm = new EditorViewModel();
+    var minimap = new MiniMapControl
+    {
+        DataContext = vm,
+        ScrollableWidth = 2000,
+        ScrollableHeight = 2000,
+        ViewportWidth = 800,
+        ViewportHeight = 600,
+    };
+    ((IBindable)minimap).Bind(MiniMapControl.ScrollOffsetXProperty,
+        new Binding(&quot;ScrollOffsetX&quot;, BindingMode.TwoWay));
+    ((IBindable)minimap).Bind(MiniMapControl.ScrollOffsetYProperty,
+        new Binding(&quot;ScrollOffsetY&quot;, BindingMode.TwoWay));
+
+    minimap.ScrollOffsetX = 250;
+    minimap.ScrollOffsetY = 150;
+
+    vm.ScrollOffsetX.Should().Be(250);
+    vm.ScrollOffsetY.Should().Be(150);
+}
+</code></pre>
+<h2>What These Examples Demonstrate</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>ParallaxStarfield</th>
+<th>MiniMapControl</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Visual type</strong></td>
+<td>Multiple lightweight <code>Visual</code> subclasses</td>
+<td>Single <code>Control</code> with <code>Render</code> override</td>
+</tr>
+<tr>
+<td><strong>Update mechanism</strong></td>
+<td><code>RequestCompositionUpdate</code> frame callback</td>
+<td><code>InvalidateVisual()</code> on source content change</td>
+</tr>
+<tr>
+<td><strong>Rendering</strong></td>
+<td>Per-star <code>Render(DrawingContext)</code></td>
+<td><code>RenderTargetBitmap</code> off-screen capture</td>
+</tr>
+<tr>
+<td><strong>Performance focus</strong></td>
+<td>Many (300+) independently moving elements</td>
+<td>Infrequent bitmap re-render, stable after capture</td>
+</tr>
+<tr>
+<td><strong>Input handling</strong></td>
+<td>None</td>
+<td>Pointer press/move/release for viewport drag</td>
+</tr>
+<tr>
+<td><strong>UI thread impact</strong></td>
+<td>Low (simple coordinate math per frame)</td>
+<td>Low except during bitmap re-render (throttled)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>See Also</h2>
+<ul>
+<li><a href="025-compositor-custom-visuals.html">025 — Compositor &amp; Custom Visuals</a></li>
+<li><a href="025-compositor-custom-visuals-verbose.html">025V — Compositor &amp; Custom Visuals (verbose companion)</a></li>
+<li><a href="024-animation-transitions.html">024 — Animation &amp; Transitions</a> — UI-thread animation alternative</li>
+<li><a href="021-custom-controls-from-scratch.html">021 — Custom Controls from Scratch</a> — <code>Render(DrawingContext)</code> basics</li>
+<li><a href="025-compositor-custom-visuals.html">025 — Compositor &amp; Custom Visuals</a> — the compositor rendering model in depth</li>
+<li><a href="https://docs.avaloniaui.net/docs/concepts/compositor">Avalonia Docs: Compositor</a></li>
+</ul>
+</main><nav class="doc-toc" id="toc"></nav></div><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/powershell.min.js"></script><script src="../../_assets/js/search-index.js"></script><script>const CURRENT_PAGE="../../02-tutorials/advanced/025-compositor-custom-visuals-examples.html";</script><script src="../../_assets/js/ssg.js"></script></body></html>

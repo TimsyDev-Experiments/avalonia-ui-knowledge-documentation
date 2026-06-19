@@ -1,0 +1,533 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>windowing — Avalonia Docs</title><link rel="stylesheet" href="../../_assets/css/ssg.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='12' font-size='12'>A</text></svg>"></head><body><div class="layout"><nav class="sidebar" id="sidebar"><div class="sidebar-header"><h2><a href="../../index.html" style="color:inherit;text-decoration:none">Avalonia Docs</a></h2></div><div class="search-box"><input type="text" id="searchInput" placeholder="Search docs..." autocomplete="off"></div><div id="searchResults" class="search-results" style="display:none"></div><ul class="nav-tree" id="navTree"><li class="nav-group"><span class="nav-group-label">Quick References</span><ul class="nav-items"><li class="nav-item"><a href="../../01-quick-refs/accessibility-automation.html">Accessibility Automation</a></li><li class="nav-item"><a href="../../01-quick-refs/avalonia-12-breaking-changes.html">Avalonia 12 Breaking Changes</a></li><li class="nav-item"><a href="../../01-quick-refs/binding-modes.html">Binding Modes</a></li><li class="nav-item"><a href="../../01-quick-refs/brushes-colors-reference.html">Brushes Colors Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/common-controls-reference.html">Common Controls Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/common-converters.html">Common Converters</a></li><li class="nav-item"><a href="../../01-quick-refs/control-themes.html">Control Themes</a></li><li class="nav-item"><a href="../../01-quick-refs/dispatcher-timers-quick-ref.html">Dispatcher Timers Quick Ref</a></li><li class="nav-item"><a href="../../01-quick-refs/font-typography-reference.html">Font Typography Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/icons-reference.html">Icons Reference</a></li><li class="nav-item"><a href="../../01-quick-refs/input-gestures.html">Input Gestures</a></li><li class="nav-item"><a href="../../01-quick-refs/mvvm-source-generators.html">Mvvm Source Generators</a></li><li class="nav-item"><a href="../../01-quick-refs/naming-conventions.html">Naming Conventions</a></li><li class="nav-item"><a href="../../01-quick-refs/property-system-quick-ref.html">Property System Quick Ref</a></li><li class="nav-item"><a href="../../01-quick-refs/resource-dictionaries.html">Resource Dictionaries</a></li><li class="nav-item"><a href="../../01-quick-refs/routed-events-quick-ref.html">Routed Events Quick Ref</a></li><li class="nav-item"><a href="../../01-quick-refs/shapes-geometries.html">Shapes Geometries</a></li><li class="nav-item"><a href="../../01-quick-refs/xaml-selectors.html">Xaml Selectors</a></li><li class="nav-group"><span class="nav-group-label">Basics</span><ul class="nav-items"><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup.html">Project Setup</a></li><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup-verbose.html">Project Setup (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup-examples.html">Project Setup (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/001-project-setup-quiz.html">Project Setup (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding.html">Command Binding</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding-verbose.html">Command Binding (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding-examples.html">Command Binding (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/002-command-binding-quiz.html">Command Binding (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling.html">Basic Styling</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling-verbose.html">Basic Styling (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling-examples.html">Basic Styling (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/003-basic-styling-quiz.html">Basic Styling (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters.html">Value Converters</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters-verbose.html">Value Converters (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters-examples.html">Value Converters (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/004-value-converters-quiz.html">Value Converters (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes.html">Binding Modes</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes-verbose.html">Binding Modes (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes-examples.html">Binding Modes (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/005-binding-modes-quiz.html">Binding Modes (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources.html">Resources</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources-verbose.html">Resources (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources-examples.html">Resources (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/006-resources-quiz.html">Resources (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property.html">Observable Object Property</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property-verbose.html">Observable Object Property (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property-examples.html">Observable Object Property (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/007-observable-object-property-quiz.html">Observable Object Property (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command.html">Relay Command</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command-verbose.html">Relay Command (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command-examples.html">Relay Command (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/008-relay-command-quiz.html">Relay Command (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-examples.html">Data Templates (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-basics.html">Data Templates Basics</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-basics-verbose.html">Data Templates Basics (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/009-data-templates-basics-quiz.html">Data Templates Basics (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics.html">Window Dialog Basics</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics-verbose.html">Window Dialog Basics (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics-examples.html">Window Dialog Basics (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/basics/010-window-dialog-basics-quiz.html">Window Dialog Basics (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Intermediate</span><ul class="nav-items"><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings.html">Compiled Bindings</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings-verbose.html">Compiled Bindings (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings-examples.html">Compiled Bindings (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/011-compiled-bindings-quiz.html">Compiled Bindings (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles.html">Control Themes Vs Styles</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles-verbose.html">Control Themes Vs Styles (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles-examples.html">Control Themes Vs Styles (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/012-control-themes-vs-styles-quiz.html">Control Themes Vs Styles (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation.html">Data Validation</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation-verbose.html">Data Validation (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation-examples.html">Data Validation (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/013-data-validation-quiz.html">Data Validation (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns.html">Imessenger Patterns</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns-verbose.html">Imessenger Patterns (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns-examples.html">Imessenger Patterns (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/014-imessenger-patterns-quiz.html">Imessenger Patterns (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists.html">Item Lists</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists-verbose.html">Item Lists (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists-examples.html">Item Lists (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/015-item-lists-quiz.html">Item Lists (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management.html">Window Dialog Management</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management-verbose.html">Window Dialog Management (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management-examples.html">Window Dialog Management (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/016-window-dialog-management-quiz.html">Window Dialog Management (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching.html">Theme Switching</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching-verbose.html">Theme Switching (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching-examples.html">Theme Switching (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/017-theme-switching-quiz.html">Theme Switching (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation.html">Navigation</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation-verbose.html">Navigation (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation-examples.html">Navigation (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/018-navigation-quiz.html">Navigation (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop.html">Drag Drop</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop-verbose.html">Drag Drop (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop-examples.html">Drag Drop (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/019-drag-drop-quiz.html">Drag Drop (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive.html">Datagrid Deep Dive</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive-verbose.html">Datagrid Deep Dive (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive-examples.html">Datagrid Deep Dive (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/040-datagrid-deep-dive-quiz.html">Datagrid Deep Dive (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray.html">Menus Context Menus Tray</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray-verbose.html">Menus Context Menus Tray (in depth)</a></li><li class="nav-item active"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray-examples.html">Menus Context Menus Tray (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/041-menus-context-menus-tray-quiz.html">Menus Context Menus Tray (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data.html">Treeview Hierarchical Data</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data-verbose.html">Treeview Hierarchical Data (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data-examples.html">Treeview Hierarchical Data (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/043-treeview-hierarchical-data-quiz.html">Treeview Hierarchical Data (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization.html">Charts Data Visualization</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization-verbose.html">Charts Data Visualization (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization-examples.html">Charts Data Visualization (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/047-charts-data-visualization-quiz.html">Charts Data Visualization (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database.html">Sqlite Local Database</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database-verbose.html">Sqlite Local Database (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database-examples.html">Sqlite Local Database (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/048-sqlite-local-database-quiz.html">Sqlite Local Database (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events.html">Routed Events</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events-verbose.html">Routed Events (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events-examples.html">Routed Events (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/051-routed-events-quiz.html">Routed Events (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system.html">Property System</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system-verbose.html">Property System (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system-examples.html">Property System (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/052-property-system-quiz.html">Property System (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher.html">Threading Dispatcher</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher-verbose.html">Threading Dispatcher (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher-examples.html">Threading Dispatcher (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/053-threading-dispatcher-quiz.html">Threading Dispatcher (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management.html">Focus Management</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management-verbose.html">Focus Management (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management-examples.html">Focus Management (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/054-focus-management-quiz.html">Focus Management (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys.html">Keyboard Hotkeys</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys-verbose.html">Keyboard Hotkeys (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys-examples.html">Keyboard Hotkeys (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/055-keyboard-hotkeys-quiz.html">Keyboard Hotkeys (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events.html">Input Events</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events-verbose.html">Input Events (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events-examples.html">Input Events (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/056-input-events-quiz.html">Input Events (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers.html">Gesture Recognizers</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers-verbose.html">Gesture Recognizers (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers-examples.html">Gesture Recognizers (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/057-gesture-recognizers-quiz.html">Gesture Recognizers (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar.html">Scrollviewer Scrollbar</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar-verbose.html">Scrollviewer Scrollbar (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar-examples.html">Scrollviewer Scrollbar (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/058-scrollviewer-scrollbar-quiz.html">Scrollviewer Scrollbar (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input.html">Textbox Text Input</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input-verbose.html">Textbox Text Input (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input-examples.html">Textbox Text Input (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/059-textbox-text-input-quiz.html">Textbox Text Input (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding.html">Multibinding Prioritybinding</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding-verbose.html">Multibinding Prioritybinding (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding-examples.html">Multibinding Prioritybinding (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/060-multibinding-prioritybinding-quiz.html">Multibinding Prioritybinding (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views.html">Collection Views</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views-verbose.html">Collection Views (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views-examples.html">Collection Views (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/061-collection-views-quiz.html">Collection Views (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher.html">Clipboard Launcher</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher-verbose.html">Clipboard Launcher (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher-examples.html">Clipboard Launcher (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/062-clipboard-launcher-quiz.html">Clipboard Launcher (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service.html">Storage Service</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service-verbose.html">Storage Service (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service-examples.html">Storage Service (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/063-storage-service-quiz.html">Storage Service (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls.html">Selection Controls</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls-verbose.html">Selection Controls (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls-examples.html">Selection Controls (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/064-selection-controls-quiz.html">Selection Controls (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls.html">Range Toggle Controls</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls-verbose.html">Range Toggle Controls (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls-examples.html">Range Toggle Controls (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/065-range-toggle-controls-quiz.html">Range Toggle Controls (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview.html">Tabcontrol Expander Splitview</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview-verbose.html">Tabcontrol Expander Splitview (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview-examples.html">Tabcontrol Expander Splitview (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/intermediate/066-tabcontrol-expander-splitview-quiz.html">Tabcontrol Expander Splitview (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Advanced</span><ul class="nav-items"><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls.html">Custom Templated Controls</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls-verbose.html">Custom Templated Controls (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls-examples.html">Custom Templated Controls (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/020-custom-templated-controls-quiz.html">Custom Templated Controls (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch.html">Custom Controls From Scratch</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch-verbose.html">Custom Controls From Scratch (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch-examples.html">Custom Controls From Scratch (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/021-custom-controls-from-scratch-quiz.html">Custom Controls From Scratch (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors.html">Attached Properties Behaviors</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors-verbose.html">Attached Properties Behaviors (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors-examples.html">Attached Properties Behaviors (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/022-attached-properties-behaviors-quiz.html">Attached Properties Behaviors (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels.html">Custom Layout Panels</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels-verbose.html">Custom Layout Panels (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels-examples.html">Custom Layout Panels (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/023-custom-layout-panels-quiz.html">Custom Layout Panels (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions.html">Animation Transitions</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions-verbose.html">Animation Transitions (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions-examples.html">Animation Transitions (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/024-animation-transitions-quiz.html">Animation Transitions (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals.html">Compositor Custom Visuals</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals-verbose.html">Compositor Custom Visuals (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals-examples.html">Compositor Custom Visuals (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/025-compositor-custom-visuals-quiz.html">Compositor Custom Visuals (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation.html">Accessibility Automation</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation-verbose.html">Accessibility Automation (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation-examples.html">Accessibility Automation (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/026-accessibility-automation-quiz.html">Accessibility Automation (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings.html">Advanced Composite Bindings</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings-verbose.html">Advanced Composite Bindings (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings-examples.html">Advanced Composite Bindings (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/027-advanced-composite-bindings-quiz.html">Advanced Composite Bindings (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia.html">Custom Drawing Skia</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia-verbose.html">Custom Drawing Skia (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia-examples.html">Custom Drawing Skia (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/028-custom-drawing-skia-quiz.html">Custom Drawing Skia (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools.html">Avalonia Plus Devtools</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools-verbose.html">Avalonia Plus Devtools (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools-examples.html">Avalonia Plus Devtools (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/029-avalonia-plus-devtools-quiz.html">Avalonia Plus Devtools (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging.html">Parcel Packaging</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging-verbose.html">Parcel Packaging (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging-examples.html">Parcel Packaging (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/030-parcel-packaging-quiz.html">Parcel Packaging (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system.html">Custom Theme Design System</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system-verbose.html">Custom Theme Design System (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system-examples.html">Custom Theme Design System (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/031-custom-theme-design-system-quiz.html">Custom Theme Design System (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring.html">Mvvm Di Wiring</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring-verbose.html">Mvvm Di Wiring (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring-examples.html">Mvvm Di Wiring (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/032-mvvm-di-wiring-quiz.html">Mvvm Di Wiring (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n.html">Localization I18n</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n-verbose.html">Localization I18n (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n-examples.html">Localization I18n (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/033-localization-i18n-quiz.html">Localization I18n (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services.html">File Pickers Platform Services</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services-verbose.html">File Pickers Platform Services (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services-examples.html">File Pickers Platform Services (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/034-file-pickers-platform-services-quiz.html">File Pickers Platform Services (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management.html">Custom Dialogs Window Management</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management-verbose.html">Custom Dialogs Window Management (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management-examples.html">Custom Dialogs Window Management (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/035-custom-dialogs-window-management-quiz.html">Custom Dialogs Window Management (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists.html">Virtualization Large Lists</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists-verbose.html">Virtualization Large Lists (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists-examples.html">Virtualization Large Lists (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/036-virtualization-large-lists-quiz.html">Virtualization Large Lists (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen.html">App Lifetimes Splash Screen</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen-verbose.html">App Lifetimes Splash Screen (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen-examples.html">App Lifetimes Splash Screen (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/037-app-lifetimes-splash-screen-quiz.html">App Lifetimes Splash Screen (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing.html">Headless Testing</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing-verbose.html">Headless Testing (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing-examples.html">Headless Testing (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/038-headless-testing-quiz.html">Headless Testing (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming.html">Nativeaot Trimming</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming-verbose.html">Nativeaot Trimming (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming-examples.html">Nativeaot Trimming (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/039-nativeaot-trimming-quiz.html">Nativeaot Trimming (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile.html">Multi Targeting Desktop Browser Mobile</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-verbose.html">Multi Targeting Desktop Browser Mobile (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-examples.html">Multi Targeting Desktop Browser Mobile (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/042-multi-targeting-desktop-browser-mobile-quiz.html">Multi Targeting Desktop Browser Mobile (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress.html">Background Services And Progress</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress-verbose.html">Background Services And Progress (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress-examples.html">Background Services And Progress (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/044-background-services-and-progress-quiz.html">Background Services And Progress (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia.html">Cicd For Avalonia</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia-verbose.html">Cicd For Avalonia (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia-examples.html">Cicd For Avalonia (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/045-cicd-for-avalonia-quiz.html">Cicd For Avalonia (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry.html">Logging Telemetry</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry-verbose.html">Logging Telemetry (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry-examples.html">Logging Telemetry (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/046-logging-telemetry-quiz.html">Logging Telemetry (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing.html">Printing</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing-verbose.html">Printing (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing-examples.html">Printing (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/049-printing-quiz.html">Printing (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater.html">Auto Updater</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater-verbose.html">Auto Updater (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater-examples.html">Auto Updater (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/050-auto-updater-quiz.html">Auto Updater (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive.html">Layout System Deep Dive</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive-verbose.html">Layout System Deep Dive (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive-examples.html">Layout System Deep Dive (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/080-layout-system-deep-dive-quiz.html">Layout System Deep Dive (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive.html">Animation System Deep Dive</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive-verbose.html">Animation System Deep Dive (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive-examples.html">Animation System Deep Dive (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/081-animation-system-deep-dive-quiz.html">Animation System Deep Dive (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference.html">Graphics Drawing Reference</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference-verbose.html">Graphics Drawing Reference (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference-examples.html">Graphics Drawing Reference (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/082-graphics-drawing-reference-quiz.html">Graphics Drawing Reference (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout.html">Container Queries Responsive Layout</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout-verbose.html">Container Queries Responsive Layout (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout-examples.html">Container Queries Responsive Layout (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/083-container-queries-responsive-layout-quiz.html">Container Queries Responsive Layout (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features.html">Typography Text Features</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features-verbose.html">Typography Text Features (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features-examples.html">Typography Text Features (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/084-typography-text-features-quiz.html">Typography Text Features (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling.html">Performance Profiling</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling-verbose.html">Performance Profiling (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling-examples.html">Performance Profiling (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/085-performance-profiling-quiz.html">Performance Profiling (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows.html">Platform Specific Windows</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows-verbose.html">Platform Specific Windows (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows-examples.html">Platform Specific Windows (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/086-platform-specific-windows-quiz.html">Platform Specific Windows (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux.html">Platform Specific Macos Linux</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux-verbose.html">Platform Specific Macos Linux (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux-examples.html">Platform Specific Macos Linux (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/087-platform-specific-macos-linux-quiz.html">Platform Specific Macos Linux (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload.html">Xaml Previewer Hot Reload</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload-verbose.html">Xaml Previewer Hot Reload (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload-examples.html">Xaml Previewer Hot Reload (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/088-xaml-previewer-hot-reload-quiz.html">Xaml Previewer Hot Reload (quiz)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup.html">Custom Flyout Popup</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup-verbose.html">Custom Flyout Popup (in depth)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup-examples.html">Custom Flyout Popup (examples)</a></li><li class="nav-item"><a href="../../02-tutorials/advanced/089-custom-flyout-popup-quiz.html">Custom Flyout Popup (quiz)</a></li><li class="nav-group"><span class="nav-group-label">Patterns</span><ul class="nav-items"><li class="nav-item"><a href="../../03-patterns/001-service-locator-vs-di.html">Service Locator Vs Di</a></li><li class="nav-item"><a href="../../03-patterns/002-plugin-architecture.html">Plugin Architecture</a></li><li class="nav-item"><a href="../../03-patterns/003-async-initialization.html">Async Initialization</a></li><li class="nav-item"><a href="../../03-patterns/004-state-management.html">State Management</a></li><li class="nav-item"><a href="../../03-patterns/005-repository-unit-of-work.html">Repository Unit Of Work</a></li><li class="nav-item"><a href="../../03-patterns/006-logging-patterns.html">Logging Patterns</a></li><li class="nav-item"><a href="../../03-patterns/007-editor-application-architecture.html">Editor Application Architecture</a></li><li class="nav-item"><a href="../../03-patterns/008-focus-keyboard-navigation.html">Focus Keyboard Navigation</a></li><li class="nav-item"><a href="../../03-patterns/008-toggle-state-pattern.html">Toggle State Pattern</a></li><li class="nav-item"><a href="../../03-patterns/009-lazy-load-virtual-scrolling.html">Lazy Load Virtual Scrolling</a></li><li class="nav-item"><a href="../../03-patterns/009-storage-file-io-pipeline.html">Storage File Io Pipeline</a></li><li class="nav-group"><span class="nav-group-label">Migration</span><ul class="nav-items"><li class="nav-item"><a href="../../04-migration/avalonia-11-to-12.html">Avalonia 11 To 12</a></li><li class="nav-item"><a href="../../04-migration/wpf-to-avalonia-key-mappings.html">Wpf To Avalonia Key Mappings</a></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></nav><main class="doc-content" id="docContent"><h1>041E — Menus, Context Menus, and System Tray: Real-World Examples</h1>
+<p><strong>What you'll learn:</strong> Two complete scenarios covering a dynamic document editor menu system and a background service app with system tray and context menus.</p>
+<p><strong>Prerequisites:</strong> <a href="041-menus-context-menus-tray.html">041 — Menus, Context Menus, and System Tray</a>, <a href="041-menus-context-menus-tray-verbose.html">041V — Menus, Context Menus, and System Tray (verbose companion)</a></p>
+<hr />
+<h2>Example 1: Document Editor with Dynamic Menu and Recent Files</h2>
+<h3>Goal</h3>
+<p>Build a document editor with a top-level menu that dynamically populates a &quot;Recent Files&quot; submenu from user settings, supports checkable toggles for view options, and registers platform-appropriate keyboard shortcuts.</p>
+<h3>ViewModel</h3>
+<pre><code class="language-csharp">using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+
+public partial class RecentFile
+{
+    public string Path { get; set; } = &quot;&quot;;
+    public string DisplayName =&gt; System.IO.Path.GetFileName(Path);
+}
+
+public partial class DocumentEditorViewModel : ObservableObject
+{
+    [ObservableProperty]
+    private string _documentText = &quot;&quot;;
+
+    [ObservableProperty]
+    private string _currentFile = &quot;&quot;;
+
+    [ObservableProperty]
+    private bool _showStatusBar = true;
+
+    [ObservableProperty]
+    private bool _wordWrap = true;
+
+    [ObservableProperty]
+    private ObservableCollection&lt;RecentFile&gt; _recentFiles = new();
+
+    public string Title =&gt; string.IsNullOrEmpty(CurrentFile)
+        ? &quot;Untitled - Document Editor&quot;
+        : $&quot;{System.IO.Path.GetFileName(CurrentFile)} - Document Editor&quot;;
+
+    public DocumentEditorViewModel()
+    {
+        // Simulate loading recent files from settings
+        RecentFiles = new ObservableCollection&lt;RecentFile&gt;
+        {
+            new() { Path = @&quot;C:\docs\report.txt&quot; },
+            new() { Path = @&quot;C:\docs\notes.txt&quot; },
+            new() { Path = @&quot;C:\docs\README.md&quot; },
+        };
+    }
+
+    [RelayCommand]
+    private void NewDocument()
+    {
+        DocumentText = &quot;&quot;;
+        CurrentFile = &quot;&quot;;
+        OnPropertyChanged(nameof(Title));
+    }
+
+    [RelayCommand]
+    private async Task OpenDocument()
+    {
+        // In a real app, use StorageProvider.OpenFilePickerAsync
+        CurrentFile = @&quot;C:\docs\sample.txt&quot;;
+        DocumentText = &quot;Sample content...&quot;;
+        OnPropertyChanged(nameof(Title));
+    }
+
+    [RelayCommand]
+    private async Task SaveDocument()
+    {
+        if (string.IsNullOrEmpty(CurrentFile))
+        {
+            await SaveAsDocument();
+            return;
+        }
+        // Save logic
+    }
+
+    [RelayCommand]
+    private async Task SaveAsDocument()
+    {
+        // In a real app, use StorageProvider.SaveFilePickerAsync
+    }
+
+    [RelayCommand]
+    private void OpenRecentFile(RecentFile? file)
+    {
+        if (file is null) return;
+        CurrentFile = file.Path;
+        DocumentText = &quot;Loaded content...&quot;;
+        OnPropertyChanged(nameof(Title));
+    }
+
+    [RelayCommand]
+    private void Exit()
+    {
+        if (Application.Current?.ApplicationLifetime
+            is IClassicDesktopStyleApplicationLifetime desktop)
+        {
+            desktop.Shutdown();
+        }
+    }
+
+    [RelayCommand]
+    private void ShowAbout()
+    {
+        // Show about dialog
+    }
+}
+</code></pre>
+<h3>View</h3>
+<pre><code class="language-xml">&lt;Window xmlns=&quot;https://github.com/avaloniaui&quot;
+        xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+        xmlns:vm=&quot;clr-namespace:MyApp.ViewModels&quot;
+        xmlns:models=&quot;clr-namespace:MyApp.Models&quot;
+        x:DataType=&quot;vm:DocumentEditorViewModel&quot;
+        Title=&quot;{Binding Title}&quot; Width=&quot;800&quot; Height=&quot;500&quot;&gt;
+  &lt;DockPanel&gt;
+    &lt;Menu DockPanel.Dock=&quot;Top&quot;&gt;
+      &lt;MenuItem Header=&quot;_File&quot;&gt;
+        &lt;MenuItem Header=&quot;_New&quot; Command=&quot;{Binding NewDocumentCommand}&quot;
+                  InputGesture=&quot;^N&quot; /&gt;
+        &lt;MenuItem Header=&quot;_Open...&quot; Command=&quot;{Binding OpenDocumentCommand}&quot;
+                  InputGesture=&quot;^O&quot; /&gt;
+        &lt;MenuItem Header=&quot;_Save&quot; Command=&quot;{Binding SaveDocumentCommand}&quot;
+                  InputGesture=&quot;^S&quot; /&gt;
+        &lt;MenuItem Header=&quot;Save _As...&quot; Command=&quot;{Binding SaveAsDocumentCommand}&quot; /&gt;
+
+        &lt;!-- Dynamic recent files submenu --&gt;
+        &lt;MenuItem Header=&quot;Recent _Files&quot;
+                  ItemsSource=&quot;{Binding RecentFiles}&quot;&gt;
+          &lt;MenuItem.Icon&gt;
+            &lt;PathIcon Data=&quot;{StaticResource ClockIcon}&quot; /&gt;
+          &lt;/MenuItem.Icon&gt;
+          &lt;MenuItem.ItemTemplate&gt;
+            &lt;DataTemplate x:DataType=&quot;models:RecentFile&quot;&gt;
+              &lt;MenuItem Header=&quot;{Binding DisplayName}&quot;
+                        Command=&quot;{Binding $parent[Menu].DataContext.OpenRecentFileCommand}&quot;
+                        CommandParameter=&quot;{Binding}&quot; /&gt;
+            &lt;/DataTemplate&gt;
+          &lt;/MenuItem.ItemTemplate&gt;
+        &lt;/MenuItem&gt;
+
+        &lt;Separator /&gt;
+        &lt;MenuItem Header=&quot;E_xit&quot; Command=&quot;{Binding ExitCommand}&quot;
+                  InputGesture=&quot;Alt+F4&quot; /&gt;
+      &lt;/MenuItem&gt;
+
+      &lt;MenuItem Header=&quot;_Edit&quot;&gt;
+        &lt;MenuItem Header=&quot;_Undo&quot; InputGesture=&quot;^Z&quot; /&gt;
+        &lt;MenuItem Header=&quot;_Redo&quot; InputGesture=&quot;^Y&quot; /&gt;
+        &lt;Separator /&gt;
+        &lt;MenuItem Header=&quot;Cu_t&quot; InputGesture=&quot;^X&quot; /&gt;
+        &lt;MenuItem Header=&quot;_Copy&quot; InputGesture=&quot;^C&quot; /&gt;
+        &lt;MenuItem Header=&quot;_Paste&quot; InputGesture=&quot;^V&quot; /&gt;
+      &lt;/MenuItem&gt;
+
+      &lt;MenuItem Header=&quot;_View&quot;&gt;
+        &lt;MenuItem Header=&quot;_Status Bar&quot;
+                  IsChecked=&quot;{Binding ShowStatusBar}&quot;
+                  ToggleType=&quot;CheckBox&quot; /&gt;
+        &lt;MenuItem Header=&quot;_Word Wrap&quot;
+                  IsChecked=&quot;{Binding WordWrap}&quot;
+                  ToggleType=&quot;CheckBox&quot; /&gt;
+      &lt;/MenuItem&gt;
+
+      &lt;MenuItem Header=&quot;_Help&quot;&gt;
+        &lt;MenuItem Header=&quot;_About&quot; Command=&quot;{Binding ShowAboutCommand}&quot; /&gt;
+      &lt;/MenuItem&gt;
+    &lt;/Menu&gt;
+
+    &lt;TextBox AcceptsReturn=&quot;True&quot;
+             Text=&quot;{Binding DocumentText}&quot;
+             Margin=&quot;8&quot; /&gt;
+
+    &lt;StatusBar DockPanel.Dock=&quot;Bottom&quot;
+               IsVisible=&quot;{Binding ShowStatusBar}&quot;&gt;
+      &lt;TextBlock Text=&quot;Ready&quot; /&gt;
+    &lt;/StatusBar&gt;
+  &lt;/DockPanel&gt;
+&lt;/Window&gt;
+</code></pre>
+<h3>How It Works</h3>
+<ol>
+<li><p><strong>Dynamic submenu with data binding</strong> — The &quot;Recent Files&quot; <code>MenuItem</code> uses <code>ItemsSource=&quot;{Binding RecentFiles}&quot;</code> and a <code>MenuItem.ItemTemplate</code> to render each <code>RecentFile</code> as a child <code>MenuItem</code>. The command binding uses <code>$parent[Menu].DataContext.OpenRecentFileCommand</code> to reach the window-level ViewModel because each item's <code>DataContext</code> is the <code>RecentFile</code> model, not the ViewModel.</p>
+</li>
+<li><p><strong>Checkable items</strong> — &quot;Status Bar&quot; and &quot;Word Wrap&quot; use <code>IsChecked=&quot;{Binding ...}&quot;</code> with <code>ToggleType=&quot;CheckBox&quot;</code>. The bindings are <code>TwoWay</code> by default, so toggling the menu item updates the ViewModel property and the <code>StatusBar</code> visibility responds via <code>IsVisible=&quot;{Binding ShowStatusBar}&quot;</code>.</p>
+</li>
+<li><p><strong>Cross-platform input gestures</strong> — The <code>^</code> prefix maps to <code>Ctrl</code> on Windows/Linux and <code>Cmd</code> on macOS. <code>^S</code> becomes Ctrl+S on Windows, Cmd+S on macOS. The <code>Alt+F4</code> for Exit is Windows-specific; on macOS the Quit menu item is provided by the system's application menu.</p>
+</li>
+<li><p><strong>Dynamic title</strong> — The window title binds to a computed <code>Title</code> property that updates when <code>CurrentFile</code> changes via <code>OnPropertyChanged(nameof(Title))</code> in the file commands.</p>
+</li>
+<li><p><strong>Icon on submenu header</strong> — The &quot;Recent Files&quot; parent menu item has a <code>PathIcon</code> in its <code>Icon</code> slot, showing a clock icon next to the text.</p>
+</li>
+</ol>
+<h3>Design Decisions and Trade-offs</h3>
+<ul>
+<li><strong>MenuItem.ItemTemplate vs building MenuItems in code</strong>: Data-bound submenus are simpler for read-only lists. The trade-off is that <code>InputGesture</code> cannot be set inside a <code>DataTemplate</code> (it's not a bindable property). For recent files this is fine — keyboard shortcuts for recent files are uncommon.</li>
+<li><strong>$parent binding for command</strong>: <code>$parent[Menu].DataContext</code> walks up the visual tree to find a <code>Menu</code> ancestor and accesses its <code>DataContext</code>. This is fragile if the menu structure changes (e.g., wrapping in another container). An alternative is to use <code>x:Reference</code> to name the window.</li>
+<li><strong>Separator placement</strong>: The <code>Separator</code> between Save As and Recent Files is part of the static menu markup. If Recent Files is empty, the separator still shows. To hide it, bind <code>IsVisible</code> on the separator or build the menu programmatically.</li>
+</ul>
+<hr />
+<h2>Example 2: Background Service App with System Tray and Context Menus</h2>
+<h3>Goal</h3>
+<p>Create a utility app that runs in the system tray, provides a context menu on log entries to copy or delete, and minimizes to tray instead of closing.</p>
+<h3>ViewModel</h3>
+<pre><code class="language-csharp">using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+
+public partial class LogEntry : ObservableObject
+{
+    public DateTime Timestamp { get; set; }
+    public string Level { get; set; } = &quot;Info&quot;; // Info, Warning, Error
+    public string Message { get; set; } = &quot;&quot;;
+    public string Source { get; set; } = &quot;&quot;;
+}
+
+public partial class BackgroundServiceViewModel : ObservableObject
+{
+    [ObservableProperty]
+    private ObservableCollection&lt;LogEntry&gt; _logEntries = new();
+
+    [ObservableProperty]
+    private LogEntry? _selectedLogEntry;
+
+    [ObservableProperty]
+    private bool _isRunning = true;
+
+    [ObservableProperty]
+    private string _statusText = &quot;Service Running&quot;;
+
+    private int _entryCounter;
+
+    public BackgroundServiceViewModel()
+    {
+        // Seed with sample entries
+        AddEntry(&quot;Info&quot;, &quot;Service started&quot;, &quot;BackgroundWorker&quot;);
+        AddEntry(&quot;Info&quot;, @&quot;Monitoring directory: C:\logs\incoming&quot;, &quot;FileWatcher&quot;);
+    }
+
+    private void AddEntry(string level, string message, string source)
+    {
+        _entryCounter++;
+        LogEntries.Insert(0, new LogEntry
+        {
+            Timestamp = DateTime.Now,
+            Level = level,
+            Message = message,
+            Source = source,
+        });
+
+        // Keep only last 1000 entries
+        while (LogEntries.Count &gt; 1000)
+            LogEntries.RemoveAt(LogEntries.Count - 1);
+    }
+
+    [RelayCommand]
+    private void CopyLogEntry(LogEntry? entry)
+    {
+        if (entry is null) return;
+        var text = $&quot;[{entry.Timestamp:yyyy-MM-dd HH:mm:ss}] [{entry.Level}] {entry.Message} ({entry.Source})&quot;;
+        _ = CopyToClipboardAsync(text);
+    }
+
+    private async Task CopyToClipboardAsync(string text)
+    {
+        var topLevel = TopLevel.GetTopLevel(
+            Application.Current?.ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop
+                ? desktop.MainWindow
+                : null);
+        if (topLevel?.Clipboard is not null)
+            await topLevel.Clipboard.SetTextAsync(text);
+    }
+
+    [RelayCommand]
+    private void DeleteLogEntry(LogEntry? entry)
+    {
+        if (entry is not null)
+            LogEntries.Remove(entry);
+    }
+
+    [RelayCommand]
+    private void ClearAllLogs()
+    {
+        LogEntries.Clear();
+    }
+
+    [RelayCommand]
+    private void ShowWindow()
+    {
+        if (Application.Current?.ApplicationLifetime
+            is IClassicDesktopStyleApplicationLifetime desktop)
+        {
+            desktop.MainWindow?.Show();
+            desktop.MainWindow?.Activate();
+        }
+    }
+
+    [RelayCommand]
+    private void ExitApplication()
+    {
+        if (Application.Current?.ApplicationLifetime
+            is IClassicDesktopStyleApplicationLifetime desktop)
+        {
+            desktop.Shutdown();
+        }
+    }
+
+    [RelayCommand]
+    private void StopService()
+    {
+        IsRunning = false;
+        StatusText = &quot;Service Stopped&quot;;
+    }
+
+    [RelayCommand]
+    private void StartService()
+    {
+        IsRunning = true;
+        StatusText = &quot;Service Running&quot;;
+    }
+}
+</code></pre>
+<h3>View</h3>
+<pre><code class="language-xml">&lt;Window xmlns=&quot;https://github.com/avaloniaui&quot;
+        xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+        xmlns:vm=&quot;clr-namespace:MyApp.ViewModels&quot;
+        xmlns:models=&quot;clr-namespace:MyApp.Models&quot;
+        x:DataType=&quot;vm:BackgroundServiceViewModel&quot;
+        Title=&quot;Background Service Monitor&quot; Width=&quot;700&quot; Height=&quot;450&quot;&gt;
+
+  &lt;!-- System tray icon --&gt;
+  &lt;TrayIcon.Icons&gt;
+    &lt;TrayIcons&gt;
+      &lt;TrayIcon Icon=&quot;/Assets/app-icon.ico&quot;
+                ToolTipText=&quot;Background Service Monitor&quot;&gt;
+        &lt;TrayIcon.Menu&gt;
+          &lt;NativeMenu&gt;
+            &lt;NativeMenuItem Header=&quot;Show Window&quot;
+                            Command=&quot;{Binding ShowWindowCommand}&quot; /&gt;
+            &lt;NativeMenuItem Header=&quot;Start Service&quot;
+                            Command=&quot;{Binding StartServiceCommand}&quot; /&gt;
+            &lt;NativeMenuItem Header=&quot;Stop Service&quot;
+                            Command=&quot;{Binding StopServiceCommand}&quot; /&gt;
+            &lt;NativeMenuItemSeparator /&gt;
+            &lt;NativeMenuItem Header=&quot;Exit&quot;
+                            Command=&quot;{Binding ExitApplicationCommand}&quot; /&gt;
+          &lt;/NativeMenu&gt;
+        &lt;/TrayIcon.Menu&gt;
+      &lt;/TrayIcon&gt;
+    &lt;/TrayIcons&gt;
+  &lt;/TrayIcon.Icons&gt;
+
+  &lt;DockPanel&gt;
+    &lt;!-- Toolbar --&gt;
+    &lt;StackPanel DockPanel.Dock=&quot;Top&quot; Orientation=&quot;Horizontal&quot; Spacing=&quot;8&quot; Margin=&quot;8&quot;&gt;
+      &lt;Button Content=&quot;Start&quot; Command=&quot;{Binding StartServiceCommand}&quot; /&gt;
+      &lt;Button Content=&quot;Stop&quot; Command=&quot;{Binding StopServiceCommand}&quot; /&gt;
+      &lt;Button Content=&quot;Clear All&quot; Command=&quot;{Binding ClearAllLogsCommand}&quot; /&gt;
+      &lt;TextBlock Text=&quot;{Binding StatusText}&quot;
+                 VerticalAlignment=&quot;Center&quot; Margin=&quot;16,0,0,0&quot;
+                 FontWeight=&quot;SemiBold&quot; /&gt;
+    &lt;/StackPanel&gt;
+
+    &lt;!-- Log entries list with context menu --&gt;
+    &lt;ListBox ItemsSource=&quot;{Binding LogEntries}&quot;
+             SelectedItem=&quot;{Binding SelectedLogEntry}&quot;&gt;
+      &lt;ListBox.ItemTemplate&gt;
+        &lt;DataTemplate x:DataType=&quot;models:LogEntry&quot;&gt;
+          &lt;Grid ColumnDefinitions=&quot;Auto,Auto,*&quot; Margin=&quot;2,0&quot;&gt;
+            &lt;TextBlock Text=&quot;{Binding Timestamp, StringFormat='{0:HH:mm:ss}'}&quot;
+                       FontFamily=&quot;Consolas&quot; Margin=&quot;0,0,8,0&quot; /&gt;
+            &lt;TextBlock Grid.Column=&quot;1&quot;
+                       Text=&quot;{Binding Level}&quot;
+                       FontWeight=&quot;Bold&quot;
+                       Foreground=&quot;{Binding Level, Converter={StaticResource LogLevelToColorConverter}}&quot;
+                       Width=&quot;60&quot; /&gt;
+            &lt;TextBlock Grid.Column=&quot;2&quot;
+                       Text=&quot;{Binding Message}&quot;
+                       TextTrimming=&quot;CharacterEllipsis&quot; /&gt;
+          &lt;/Grid&gt;
+          &lt;DataTemplate.DataType&gt;
+            &lt;x:Type TypeName=&quot;models:LogEntry&quot; /&gt;
+          &lt;/DataTemplate.DataType&gt;
+        &lt;/DataTemplate&gt;
+      &lt;/ListBox.ItemTemplate&gt;
+
+      &lt;!-- Context menu on each log entry --&gt;
+      &lt;ListBox.Styles&gt;
+        &lt;Style Selector=&quot;ListBoxItem&quot;&gt;
+          &lt;Setter Property=&quot;ContextMenu&quot;&gt;
+            &lt;Setter.Value&gt;
+              &lt;ContextMenu&gt;
+                &lt;MenuItem Header=&quot;_Copy&quot;
+                          Command=&quot;{Binding $parent[ListBox].DataContext.CopyLogEntryCommand}&quot;
+                          CommandParameter=&quot;{Binding}&quot; /&gt;
+                &lt;MenuItem Header=&quot;_Delete&quot;
+                          Command=&quot;{Binding $parent[ListBox].DataContext.DeleteLogEntryCommand}&quot;
+                          CommandParameter=&quot;{Binding}&quot; /&gt;
+                &lt;Separator /&gt;
+                &lt;MenuItem Header=&quot;Clear _All&quot;
+                          Command=&quot;{Binding $parent[ListBox].DataContext.ClearAllLogsCommand}&quot; /&gt;
+              &lt;/ContextMenu&gt;
+            &lt;/Setter.Value&gt;
+          &lt;/Setter&gt;
+        &lt;/Style&gt;
+      &lt;/ListBox.Styles&gt;
+    &lt;/ListBox&gt;
+
+    &lt;!-- Status bar --&gt;
+    &lt;StatusBar DockPanel.Dock=&quot;Bottom&quot;&gt;
+      &lt;TextBlock Text=&quot;{Binding StatusText}&quot; /&gt;
+      &lt;Separator /&gt;
+      &lt;TextBlock Text=&quot;{Binding LogEntries.Count, StringFormat='{0} entries'}&quot; /&gt;
+    &lt;/StatusBar&gt;
+  &lt;/DockPanel&gt;
+&lt;/Window&gt;
+</code></pre>
+<h3>Code-Behind (Minimize to Tray)</h3>
+<pre><code class="language-csharp">public partial class MainWindow : Window
+{
+    public MainWindow()
+    {
+        InitializeComponent();
+    }
+
+    protected override void OnClosing(WindowClosingEventArgs e)
+    {
+        if (e.CloseReason == WindowCloseReason.User)
+        {
+            e.Cancel = true;
+            Hide();
+        }
+        base.OnClosing(e);
+    }
+}
+</code></pre>
+<h3>How It Works</h3>
+<ol>
+<li><p><strong>System tray with NativeMenu</strong> — The <code>TrayIcon</code> is declared via the <code>TrayIcon.Icons</code> attached property on the Window. Its <code>Menu</code> is a <code>NativeMenu</code> with four items: Show Window, Start Service, Stop Service, and Exit. These commands reach the ViewModel via compiled bindings. The icon registers with the OS when the window is first shown.</p>
+</li>
+<li><p><strong>Minimize to tray</strong> — <code>OnClosing</code> intercepts the close button (<code>WindowCloseReason.User</code>) and hides the window instead of closing. The application keeps running with the tray icon active. <code>ShowWindowCommand</code> calls <code>MainWindow.Show()</code> and <code>Activate()</code> to restore. <code>ExitApplicationCommand</code> calls <code>desktop.Shutdown()</code> for clean termination.</p>
+</li>
+<li><p><strong>Context menu on ListBox items</strong> — A style setter on <code>ListBoxItem</code> assigns a <code>ContextMenu</code> with Copy, Delete, and Clear All options. The commands use <code>$parent[ListBox].DataContext</code> to reach the ViewModel because the <code>ContextMenu</code>'s DataContext would otherwise be the <code>LogEntry</code> item. The <code>CommandParameter=&quot;{Binding}&quot;</code> passes the clicked log entry.</p>
+</li>
+<li><p><strong>Clipboard copy</strong> — <code>CopyLogEntryCommand</code> formats the entry as a structured text line and writes it to the clipboard via <code>TopLevel.Clipboard.SetTextAsync</code>. The <code>TopLevel.GetTopLevel</code> helper retrieves the current window's top-level object to access platform services.</p>
+</li>
+<li><p><strong>Dynamic entry trimming</strong> — <code>AddEntry</code> inserts new logs at index 0 (newest first) and removes entries beyond 1000 to cap memory usage. This prevents unbounded growth in a long-running background service.</p>
+</li>
+</ol>
+<h3>Design Decisions and Trade-offs</h3>
+<ul>
+<li><strong>ContextMenu via style setter vs attached in DataTemplate</strong>: A style setter applies the context menu uniformly to all <code>ListBoxItem</code> containers. If you need different menus per log level (e.g., Error entries get a &quot;Show Details&quot; option), use an <code>ItemTemplate</code> with conditional content or a <code>DataTemplateSelector</code>.</li>
+<li><strong>NativeMenu vs Menu for tray</strong>: <code>TrayIcon</code> only accepts <code>NativeMenu</code>, not <code>Menu</code>. This is enforced at the API level. <code>NativeMenu</code> does not support <code>ItemsSource</code> binding, so all tray menu items must be declared statically in XAML or built programmatically in code-behind.</li>
+<li><strong>$parent[ListBox] binding</strong>: The context menu items use <code>$parent[ListBox]</code> to escape the <code>ListBoxItem</code>'s data context. If you restructure the layout (e.g., wrapping in a <code>ScrollViewer</code>), the <code>$parent</code> path breaks. An alternative is to use <code>x:Reference</code> with a named <code>ListBox</code>.</li>
+<li><strong>WindowCloseReason filtering</strong>: Only intercepting <code>WindowCloseReason.User</code> ensures that OS shutdown or application quit does not get blocked. The <code>WindowManagerClosing</code> reason should always proceed to close.</li>
+</ul>
+<hr />
+<h2>Comparison: What Each Example Demonstrates</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Example 1: Document Editor</th>
+<th>Example 2: Background Service</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Menu type</strong></td>
+<td>Top-level <code>Menu</code></td>
+<td><code>NativeMenu</code> in system tray, <code>ContextMenu</code> on list items</td>
+</tr>
+<tr>
+<td><strong>Dynamic content</strong></td>
+<td>Data-bound &quot;Recent Files&quot; submenu</td>
+<td>Not needed (static tray menu)</td>
+</tr>
+<tr>
+<td><strong>Checkable items</strong></td>
+<td>Yes — ShowStatusBar, WordWrap</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Input gestures</strong></td>
+<td><code>^N</code>, <code>^O</code>, <code>^S</code> etc.</td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Context menu</strong></td>
+<td>Not used</td>
+<td>Right-click on log entries</td>
+</tr>
+<tr>
+<td><strong>System tray</strong></td>
+<td>Not used</td>
+<td>Full tray icon with menu</td>
+</tr>
+<tr>
+<td><strong>Minimize to tray</strong></td>
+<td>Not used</td>
+<td>OnClosing interception</td>
+</tr>
+<tr>
+<td><strong>Clipboard integration</strong></td>
+<td>Not used</td>
+<td>Copy log entry to clipboard</td>
+</tr>
+<tr>
+<td><strong>Platform awareness</strong></td>
+<td><code>^</code> prefix for cross-platform modifiers</td>
+<td>WindowCloseReason filtering for OS shutdown</td>
+</tr>
+<tr>
+<td><strong>Key edge case</strong></td>
+<td>Empty recent files shows orphan separator</td>
+<td>1000-entry cap prevents memory growth</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>See Also</h2>
+<ul>
+<li><a href="041-menus-context-menus-tray.html">041 — Menus, Context Menus, and System Tray</a></li>
+<li><a href="041-menus-context-menus-tray-verbose.html">041V — Menus, Context Menus, and System Tray (verbose companion)</a></li>
+<li><a href="../basics/010-window-dialog-basics.html">010 — Window Basics and Dialog Basics</a></li>
+<li><a href="../advanced/035-custom-dialogs-window-management.html">035 — Custom Dialogs and Window Management</a></li>
+<li><a href="https://docs.avaloniaui.net/controls/navigation/trayicon">Avalonia Docs: TrayIcon</a></li>
+<li><a href="https://docs.avaloniaui.net/controls/navigation/menu">Avalonia Docs: Menu</a></li>
+<li><a href="https://docs.avaloniaui.net/controls/navigation/nativemenu">Avalonia Docs: NativeMenu</a></li>
+</ul>
+</main><nav class="doc-toc" id="toc"></nav></div><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/powershell.min.js"></script><script src="../../_assets/js/search-index.js"></script><script>const CURRENT_PAGE="../../02-tutorials/intermediate/041-menus-context-menus-tray-examples.html";</script><script src="../../_assets/js/ssg.js"></script></body></html>
